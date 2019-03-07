@@ -1,0 +1,27 @@
+// Buttons
+// ==========================================================================
+
+.btn, 
+button, 
+.button,
+input[type="submit"] {
+	display: block;
+	padding: 0 20px!important;
+	color: $light-color!important;
+	text-align: center!important;
+	line-height: 30px!important;
+	font-weight: 300!important;
+	line-height: 30px!important;
+	text-decoration: none!important;
+	text-transform: uppercase!important;
+	background-color: $primary-color!important;
+	border: 0px!important;
+	border-radius: 2px!important;
+	box-shadow: 2px 2px 8px 0 rgba(84, 84, 84, 0.37)!important;
+	transition: .3s ease-out!important;
+	cursor: pointer!important;
+	@extend .shadow;
+	&:hover {
+		background-color: $primary-color-dark!important;
+	}
+}
