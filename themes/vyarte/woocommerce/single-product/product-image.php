@@ -33,20 +33,18 @@ $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_cl
 	'images',
 ) );
 ?>
-<div class="col s12 m6 <?php echo esc_attr( implode( ' ', array_map( 'sanitize_html_class', $wrapper_classes ) ) ); ?>" data-columns="<?php echo esc_attr( $columns ); ?>" style="opacity: 0; transition: opacity .25s ease-in-out;">
-	<figure class="woocommerce-product-gallery__wrapper">
+<div class="col s12 m6 relative <?php echo esc_attr( implode( ' ', array_map( 'sanitize_html_class', $wrapper_classes ) ) ); ?>" data-columns="<?php echo esc_attr( $columns ); ?>" style="opacity: 0; transition: opacity .25s ease-in-out;">
+
+	<div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-timeout="0" data-cycle-slides="> div" data-cycle-prev="#prevGallery" data-cycle-next="#nextGallery">
+
 		<?php
-		if ( $product->get_image_id() ) {
-			$html = wc_get_gallery_image_html( $post_thumbnail_id, true );
-		} else {
-			$html  = '<div class="woocommerce-product-gallery__image--placeholder">';
-			$html .= sprintf( '<img src="%s" alt="%s" class="wp-post-image responsive-img" />', esc_url( wc_placeholder_img_src( 'woocommerce_single' ) ), esc_html__( 'Awaiting product image', 'woocommerce' ) );
-			$html .= '</div>';
-		}
+		$image_attributes = wp_get_attachment_image_src( $post_thumbnail_id, 'large' );
+		if ( $image_attributes ) : ?>
+			<div class="bg-image bg-contain" style="background-image: url(<?php echo $image_attributes[0]; ?>)"></div>
+		<?php endif;
+		do_action( 'woocommerce_product_thumbnails' ); ?>
 
-		echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $post_thumbnail_id ); // phpcs:disable WordPress.XSS.EscapeOutput.OutputNotEscaped
-
-		do_action( 'woocommerce_product_thumbnails' );
-		?>
-	</figure>
+	</div> <!-- end cycle-slideshow -->
+	<a href=# id="prevGallery" class="hide"><em class="icon-left-open"></em></a> 
+	<a href=# id="nextGallery" class="hide"><em class="icon-right-open"></em></a>		
 </div>

@@ -59,9 +59,9 @@
 		<header class="js-header row">
 			<nav class="container">
 				<a href="<?php echo SITEURL; ?>"><img src="<?php echo THEMEPATH; ?>images/identidad/logo.png"></a>
-				<em id="btn-open-nav" class="icon-user hide-on-med-and-up"></em>
+				<em id="btn-open-nav" class="icon-menu hide-on-med-and-up"></em>
 				<ul itemscope>
-					<em id="btn-close-nav" class="icon-user hide-on-med-and-up"></em>
+					<em id="btn-close-nav" class="icon-close hide-on-med-and-up"></em>
 					<?php
 						$menu_name = 'top_menu';
 

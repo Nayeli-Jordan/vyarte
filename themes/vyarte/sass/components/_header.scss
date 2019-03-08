@@ -4,7 +4,7 @@ header.js-header {
 	nav {
 		position: relative;
 		height: 80px;
-		z-index: 99;
+		z-index: 999;
 		@media #{$sm-and-down} {
 			height: 50px;
 			img { width: 50px; }

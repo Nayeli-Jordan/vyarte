@@ -64,6 +64,22 @@
 }
 
 #single-product {
+	.cycle-slideshow .bg-image {
+	    width: 100%;
+	    height: 400px;
+	}
+	#prevGallery, #nextGallery {
+		position: absolute;
+		top: 40%;
+		color: $primary-color-light;
+		cursor: pointer;
+		z-index: 100;
+		em { font-size: 30px; }
+		&:hover {
+			color: $primary-color-dark;
+		}
+	}
+	#nextGallery { right: 10px; }
 	#reviews {
 		@extend .row-complete;
 		#comments {

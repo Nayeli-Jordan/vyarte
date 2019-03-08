@@ -72,8 +72,8 @@
 								<a href=""><em class="icon-twitter-squared"></em></a>
 							</div>
 							<p>Contáctanos</p>
-							<p><em class="icon-phone-circled"></em>044 55 18339080</p>
-							<p><em class="icon-mail-alt"></em>contacto@vyarte.com</p>
+							<p><a href="tel:+5518339080"><em class="icon-phone-circled"></em>044 55 18339080</a></p>
+							<p><a href="" id="contact-email"><em class="icon-mail-alt"></em>contacto<span>@</span>vyarte.com</a></p>
 	 					</div>
 	 				</div>
 	 				<div class="text-center">

@@ -2,3 +2,23 @@
 
 2019-03-08T18:31:28+00:00 CRITICAL syntax error, unexpected 'remove_action' (T_STRING) in C:\Users\Tony\Documents\sites\vyarte\wp-content\themes\vyarte\functions.php on line 128
 
+2019-03-08T19:47:00+00:00 CRITICAL syntax error, unexpected '.' in C:\Users\Tony\Documents\sites\vyarte\wp-content\themes\vyarte\woocommerce\single-product\product-image.php on line 49
+
+2019-03-08T19:51:11+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function wp_get_attachment_image(), 0 passed in C:\Users\Tony\Documents\sites\vyarte\wp-content\themes\vyarte\woocommerce\single-product\product-thumbnails.php on line 31 and at least 1 expected in C:\Users\Tony\Documents\sites\vyarte\wp-includes\media.php:871
+Stack trace:
+#0 C:\Users\Tony\Documents\sites\vyarte\wp-content\themes\vyarte\woocommerce\single-product\product-thumbnails.php(31): wp_get_attachment_image()
+#1 C:\Users\Tony\Documents\sites\vyarte\wp-content\plugins\woocommerce\includes\wc-core-functions.php(211): include('C:\\Users\\Tony\\D...')
+#2 C:\Users\Tony\Documents\sites\vyarte\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1377): wc_get_template('single-product/...')
+#3 C:\Users\Tony\Documents\sites\vyarte\wp-includes\class-wp-hook.php(286): woocommerce_show_product_thumbnails('')
+#4 C:\Users\Tony\Documents\sites\vyarte\wp-includes\class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#5 C:\Users\Tony\Documents\sites\vya in C:\Users\Tony\Documents\sites\vyarte\wp-includes\media.php on line 871
+
+2019-03-08T19:51:42+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function wp_get_attachment_image(), 0 passed in C:\Users\Tony\Documents\sites\vyarte\wp-content\themes\vyarte\woocommerce\single-product\product-thumbnails.php on line 31 and at least 1 expected in C:\Users\Tony\Documents\sites\vyarte\wp-includes\media.php:871
+Stack trace:
+#0 C:\Users\Tony\Documents\sites\vyarte\wp-content\themes\vyarte\woocommerce\single-product\product-thumbnails.php(31): wp_get_attachment_image()
+#1 C:\Users\Tony\Documents\sites\vyarte\wp-content\plugins\woocommerce\includes\wc-core-functions.php(211): include('C:\\Users\\Tony\\D...')
+#2 C:\Users\Tony\Documents\sites\vyarte\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1377): wc_get_template('single-product/...')
+#3 C:\Users\Tony\Documents\sites\vyarte\wp-includes\class-wp-hook.php(286): woocommerce_show_product_thumbnails('')
+#4 C:\Users\Tony\Documents\sites\vyarte\wp-includes\class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#5 C:\Users\Tony\Documents\sites\vya in C:\Users\Tony\Documents\sites\vyarte\wp-includes\media.php on line 871
+

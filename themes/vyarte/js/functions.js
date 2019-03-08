@@ -49,7 +49,8 @@ var $=jQuery.noConflict();
 			$('body').removeClass('overflow-hide');
 		});
 
-		//Single Product - Review 
+		//Single Product
+		//Review 
 		$(".comment_container .description p").click(function() {
 			var idComment = $(this).parent().parent().parent().attr('id');
 			console.log(idComment);
@@ -58,6 +59,16 @@ var $=jQuery.noConflict();
 
 		$(".comment_container .description p.active").click(function() {
 			$('#' + idComment + ' .description p.active').removeClass('active');
+		});
+		//Gallery
+		if ($('.galleryImage').length) {
+			$('#prevGallery, #nextGallery').removeClass('hide');
+		}	
+
+
+		/*Email*/
+		$("#contact-email").click(function() {
+			$(this).attr('href', 'mailto:contacto@vyarte.com');
 		});
 	});
 })(jQuery);

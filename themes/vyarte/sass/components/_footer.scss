@@ -21,7 +21,7 @@ footer {
 				a {
 					color: $light-color;
 					@extend .transition;
-					&:hover { color: $primary-color; }
+					&:hover { color: $primary-color-light; }
 				}
 			}
 		}
@@ -32,18 +32,23 @@ footer {
 				margin-right: 5px;
 				color: $light-color;
 				@extend .transition;
-				&:hover { color: $primary-color; }
+				&:hover { color: $primary-color-light; }
 				em {
 					font-size: 20px;
 					&.icon-twitter-squared { font-size: 24px; }
 				}
 			}
 		}
-		.icon-phone-circled, .icon-mail-alt { 
-			display: inline-block;
-			margin-right: 5px;
-			font-size: 16px; 
-			vertical-align: middle;
+		a {
+			color: $light-color;
+			.icon-phone-circled, .icon-mail-alt { 
+				display: inline-block;
+				margin-right: 5px;
+				font-size: 16px; 
+				vertical-align: middle;
+			}
+			@extend .transition;
+			&:hover { color: $primary-color-light; }
 		}
 	}
 	.icons-pago {
