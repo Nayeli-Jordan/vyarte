@@ -26,7 +26,7 @@ if ( ! comments_open() ) {
 }
 
 ?>
-<div id="reviews" class="woocommerce-Reviews row">
+<div id="reviews" class="woocommerce-Reviews row clear">
 	<?php if ( get_option( 'woocommerce_review_rating_verification_required' ) === 'no' || wc_customer_bought_product( '', get_current_user_id(), $product->get_id() ) ) : ?>
 
 		<div id="review_form_wrapper" class="col s12 m6">

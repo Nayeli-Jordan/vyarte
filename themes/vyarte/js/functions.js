@@ -29,13 +29,23 @@ var $=jQuery.noConflict();
 		// } 
 
 		// Modal
-		$(".open-modal").click(function() {
+		/*$(".open-modal").click(function() {
 			var idModal = $(this).attr('id');
 			$('#modal-' + idModal).show();
 			$('body').addClass('overflow-hide');
 		});
 		$(".close-modal, .exit-modal").click(function() {
 			$('.modal').hide();
+			$('body').removeClass('overflow-hide');
+		});*/
+
+		// Nav Mobile
+		$("#btn-open-nav").click(function() {
+			$('.js-header nav > ul').addClass('open');
+			$('body').addClass('overflow-hide');
+		});
+		$("#btn-close-nav").click(function() {
+			$('.js-header nav > ul').removeClass('open');
 			$('body').removeClass('overflow-hide');
 		});
 
