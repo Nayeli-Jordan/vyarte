@@ -1,4 +1,4 @@
-header {
+header.js-header {
 	text-transform: uppercase;
 	@extend .shadow;
 	nav {
@@ -41,6 +41,7 @@ header {
 					display: inline-block;
 					padding: 0 5px;
 					font-size: 14px;
+					font-weight: 700; 
 					line-height: 30px;
 					color: $text-color;
 					@extend .transition;
@@ -60,7 +61,7 @@ header {
 					em { 
 						font-size: 20px; 
 						&.icon-basket, &.icon-user { font-size: 22px; }
-						&.icon-twitter-squared { font-size: 24px; }
+						&.icon-twitter-squared { font-size: 25px; }
 					}
 				}	
 			} 

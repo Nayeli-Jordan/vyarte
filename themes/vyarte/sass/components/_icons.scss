@@ -68,3 +68,8 @@
 .icon-facebook-rect:before { content: '\f301'; } /* '' */
 .icon-twitter-squared:before { content: '\f304'; } /* '' */
 .icon-instagram-filled:before { content: '\f31f'; } /* '' */
+
+.icon-twitter-squared:before {
+	position: relative;
+	top: 2px;
+}

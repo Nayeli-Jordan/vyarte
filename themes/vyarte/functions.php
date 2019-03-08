@@ -57,6 +57,8 @@ add_theme_support( 'post-thumbnails' );
 add_action('after_setup_theme', 'add_top_menu');
 function add_top_menu(){
 	register_nav_menu('top_menu',__('Top menu'));
+	register_nav_menu('footer_menu',__('Footer menu'));
+	register_nav_menu('vyarte_menu',__('Vyarte menu'));
 }
 
 //Delimitar número palabras excerpt
@@ -112,6 +114,7 @@ function woocommerce_support() {
 }
 
 //Cambiar texto btn´s
+add_filter( 'woocommerce_product_single_add_to_cart_text', 'woo_custom_cart_button_text' );
 add_filter( 'woocommerce_product_add_to_cart_text', 'woo_custom_cart_button_text' );
  
 function woo_custom_cart_button_text() {
@@ -119,8 +122,13 @@ function woo_custom_cart_button_text() {
 }
 
 //Hook orden
+/* Products */
+remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
+/*Single*/
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 add_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 5 );
+/*Shop - Archive*/
+remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 
 
 /**

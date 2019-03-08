@@ -2,7 +2,24 @@
 // Woccommerce
 // ==========================================================================
 
+/* Filtro productos */
+.woocommerce-ordering {
+	float: right;
+    height: 30px;
+    max-width: 200px;
+    select {
+		height: 30px;
+		margin: 0px;
+    	@extend .shadow-left;
+    }
+}
+
 .main-body ul.products[class*=columns-] {
+	/* Corregir limites container */
+	display: inline-block;
+	width: calc(100% + 20px);
+	margin-left: -10px;
+	margin-bottom: 0px;
 	li.product {
 		float: left!important;
 		width: 20%!important;
@@ -48,6 +65,7 @@
 
 #single-product {
 	#reviews {
+		@extend .row-complete;
 		#comments {
 			& > h2 span { color: $primary-color; }
 			ol {

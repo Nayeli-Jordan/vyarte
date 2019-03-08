@@ -40,7 +40,7 @@
 		<meta http-equiv="cleartype" content="on">
 
 		<!-- Google font(s) -->
-		<!-- <link href="https://fonts.googleapis.com/css?family=Rancho|Open+Sans:400" rel="stylesheet"> -->
+		<link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
 
 		<!--Style-->
 		<link type="text/css" rel="stylesheet" href="<?php echo THEMEPATH; ?>stylesheets/styles.css" media="screen,projection, print" />
@@ -58,7 +58,7 @@
 	<body>
 		<header class="js-header row">
 			<nav class="container">
-				<img src="<?php echo THEMEPATH; ?>images/identidad/logo.png">
+				<a href="<?php echo SITEURL; ?>"><img src="<?php echo THEMEPATH; ?>images/identidad/logo.png"></a>
 				<em id="btn-open-nav" class="icon-user hide-on-med-and-up"></em>
 				<ul itemscope>
 					<em id="btn-close-nav" class="icon-user hide-on-med-and-up"></em>
@@ -94,7 +94,7 @@
 						<a href="" class="margin-right-10"><em class="icon-twitter-squared "></em></a>			
 						<a href=""><em class="icon-basket"></em></a>			
 						<a href=""><em class="icon-user"></em></a>			
-						<a href=""><em class="icon-search"></em></a>						
+						<a href=""><em class="icon-search"></em></a>
 					</div>
 				</ul>
 			</nav>

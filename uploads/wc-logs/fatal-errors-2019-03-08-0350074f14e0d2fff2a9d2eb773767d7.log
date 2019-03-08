@@ -1,2 +1,4 @@
 2019-03-08T15:33:30+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\Users\Tony\Documents\sites\vyarte\wp-admin\includes\class-wp-internal-pointers.php on line 15
 
+2019-03-08T18:31:28+00:00 CRITICAL syntax error, unexpected 'remove_action' (T_STRING) in C:\Users\Tony\Documents\sites\vyarte\wp-content\themes\vyarte\functions.php on line 128
+

@@ -1,4 +1,53 @@
 footer {
 	position: relative;
-	background-color: #6ba8b2
+	padding: 30px 0;
+	background-color: #555555;
+	color: $light-color;
+	clear: both;
+	.row {
+		padding-bottom: 20px;
+		margin-bottom: 20px;
+		border-bottom: 1px solid $light-color;
+		.title-nav-footer {
+			margin-bottom: 5px;
+			color: $primary-color;
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+		ul {
+			margin: 0px;
+			li {
+				list-style-type: none;
+				a {
+					color: $light-color;
+					@extend .transition;
+					&:hover { color: $primary-color; }
+				}
+			}
+		}
+		.icons-redes {
+			margin-left: -10px;
+			margin-bottom: 10px;
+			a {
+				margin-right: 5px;
+				color: $light-color;
+				@extend .transition;
+				&:hover { color: $primary-color; }
+				em {
+					font-size: 20px;
+					&.icon-twitter-squared { font-size: 24px; }
+				}
+			}
+		}
+		.icon-phone-circled, .icon-mail-alt { 
+			display: inline-block;
+			margin-right: 5px;
+			font-size: 16px; 
+			vertical-align: middle;
+		}
+	}
+	.icons-pago {
+		font-size: 26px;
+		margin: 0 5px;
+	}
 }
