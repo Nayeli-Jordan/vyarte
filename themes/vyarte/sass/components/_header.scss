@@ -1,10 +1,30 @@
 header {
-	ul {
-		li {
+	text-transform: uppercase;
+	nav {
+		padding: 10px 0;
+		ul {
+			float: right;
 			display: inline-block;
-			a {
-				
+			max-width: calc(100% - 100px);
+			margin: 0px;
+			transform: translateY(50%);
+			li {
+				display: inline-block;
+				a {
+					display: inline-block;
+					padding: 0 5px;
+					line-height: 30px;
+					color: $text-color;
+					@extend .transition;
+					&:hover, &.active { color: $primary-color-dark; }
+				}
 			}
+			a.icon-nav {
+				color: $text-color;
+				@extend .transition;
+				&:hover { color: $primary-color-dark; }
+			}	
 		}		
 	}
+
 }

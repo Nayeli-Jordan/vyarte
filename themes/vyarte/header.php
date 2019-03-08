@@ -56,8 +56,9 @@
 		<?php wp_head(); ?>
 	</head>
 	<body>
-		<header class="js-header">			
-			<nav>
+		<header class="js-header row">
+			<nav class="container">
+				<img src="<?php echo THEMEPATH; ?>images/identidad/logo.png">
 				<ul class="mb-nav" itemscope>
 					<?php
 						$menu_name = 'top_menu';
@@ -84,7 +85,13 @@
 							}
 						}
 						echo $menu_list;
-					?>					
+					?>
+					<a href="" class="icon-nav"><em class="icon-instagram-filled margin-left-10"></em></a>			
+					<a href="" class="icon-nav"><em class="icon-facebook-rect"></em></a>			
+					<a href="" class="icon-nav"><em class="icon-twitter-squared margin-right-10"></em></a>			
+					<a href="" class="icon-nav"><em class="icon-basket"></em></a>			
+					<a href="" class="icon-nav"><em class="icon-user"></em></a>			
+					<a href="" class="icon-nav"><em class="icon-search"></em></a>			
 				</ul>
 			</nav>
 		</header>
