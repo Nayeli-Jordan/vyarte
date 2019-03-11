@@ -92,8 +92,8 @@
 						<a href=""><em class="icon-instagram-filled margin-left-10"></em></a>			
 						<a href=""><em class="icon-facebook-rect"></em></a>			
 						<a href="" class="margin-right-10"><em class="icon-twitter-squared "></em></a>			
-						<a href=""><em class="icon-basket"></em></a>			
-						<a href=""><em class="icon-user"></em></a>			
+						<a href="<?php echo SITEURL; ?>carrito"><em class="icon-basket"><span><?php echo WC()->cart->get_cart_contents_count(); ?></span></a></em>
+						<a href="<?php echo SITEURL; ?>cuenta"><em class="icon-user"></em></a>
 						<a href=""><em class="icon-search"></em></a>
 					</div>
 				</ul>
