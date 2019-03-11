@@ -1957,12 +1957,12 @@ input[type="submit"]:hover,
 button,
 .button,
 input[type="submit"],
-.added_to_cart, header.js-header {
+.added_to_cart, header.js-header, header.js-header nav ul .searchProduct {
   box-shadow: 4px 4px 10px 0 rgba(84, 84, 84, 0.2);
 }
 
 /* line 12, ../sass/components/_effects.scss */
-.shadowDoble, .woocommerce table.cart td.actions .input-text, .woocommerce .quantity .qty, header.js-header nav ul .icons-nav a em.icon-basket span, header.js-header nav ul .icons-nav a em.icon-user span {
+.shadowDoble, .woocommerce table.cart td.actions .input-text, .woocommerce .quantity .qty, header.js-header nav ul .icons-nav a em.icon-basket span, header.js-header nav ul .icons-nav .customLink em.icon-basket span, header.js-header nav ul .icons-nav a em.icon-user span, header.js-header nav ul .icons-nav .customLink em.icon-user span {
   box-shadow: 4px 4px 10px 0 rgba(84, 84, 84, 0.2), 0px -1px 6px 0 rgba(84, 84, 84, 0.2);
 }
 
@@ -1990,7 +1990,7 @@ input[type="submit"],
 }
 
 /* line 30, ../sass/components/_effects.scss */
-.transition, #faqs .content-faq h3 em, header.js-header nav ul, header.js-header nav ul li a, header.js-header nav ul .icons-nav a, footer .row ul li a, footer .row .icons-redes a, footer .row a {
+.transition, #faqs .content-faq h3 em, header.js-header nav ul, header.js-header nav ul li a, header.js-header nav ul li .customLink, header.js-header nav ul .icons-nav a, header.js-header nav ul .icons-nav .customLink, footer .row ul li a, footer .row .icons-redes a, footer .row a {
   -webkit-transition: .3s ease-out;
   -moz-transition: .3s ease-out;
   transition: .3s ease-out;
@@ -8559,52 +8559,54 @@ header.js-header nav ul li {
   display: inline-block;
 }
 /* line 40, ../sass/components/_header.scss */
-header.js-header nav ul li a {
+header.js-header nav ul li a, header.js-header nav ul li .customLink {
   display: inline-block;
   padding: 0 5px;
   font-size: 14px;
   font-weight: 700;
   line-height: 30px;
   color: #555555;
+  cursor: pointer;
 }
-/* line 48, ../sass/components/_header.scss */
-header.js-header nav ul li a:hover, header.js-header nav ul li a.active {
+/* line 49, ../sass/components/_header.scss */
+header.js-header nav ul li a:hover, header.js-header nav ul li a.active, header.js-header nav ul li .customLink:hover, header.js-header nav ul li .customLink.active {
   color: #5a9ea9;
 }
-/* line 51, ../sass/components/_header.scss */
+/* line 52, ../sass/components/_header.scss */
 header.js-header nav ul .icons-nav {
   display: inline-block;
   float: right;
 }
-/* line 54, ../sass/components/_header.scss */
-header.js-header nav ul .icons-nav a {
+/* line 55, ../sass/components/_header.scss */
+header.js-header nav ul .icons-nav a, header.js-header nav ul .icons-nav .customLink {
   display: inline-block;
   margin-right: 5px;
   color: #555555;
   line-height: 30px;
+  cursor: pointer;
 }
-/* line 60, ../sass/components/_header.scss */
-header.js-header nav ul .icons-nav a:hover {
+/* line 62, ../sass/components/_header.scss */
+header.js-header nav ul .icons-nav a:hover, header.js-header nav ul .icons-nav .customLink:hover {
   color: #5a9ea9;
 }
-/* line 61, ../sass/components/_header.scss */
-header.js-header nav ul .icons-nav a em {
+/* line 63, ../sass/components/_header.scss */
+header.js-header nav ul .icons-nav a em, header.js-header nav ul .icons-nav .customLink em {
   font-size: 20px;
 }
-/* line 63, ../sass/components/_header.scss */
-header.js-header nav ul .icons-nav a em.icon-basket, header.js-header nav ul .icons-nav a em.icon-user {
+/* line 65, ../sass/components/_header.scss */
+header.js-header nav ul .icons-nav a em.icon-basket, header.js-header nav ul .icons-nav a em.icon-user, header.js-header nav ul .icons-nav .customLink em.icon-basket, header.js-header nav ul .icons-nav .customLink em.icon-user {
   font-size: 22px;
 }
-/* line 64, ../sass/components/_header.scss */
-header.js-header nav ul .icons-nav a em.icon-twitter-squared {
+/* line 66, ../sass/components/_header.scss */
+header.js-header nav ul .icons-nav a em.icon-twitter-squared, header.js-header nav ul .icons-nav .customLink em.icon-twitter-squared {
   font-size: 25px;
 }
-/* line 65, ../sass/components/_header.scss */
-header.js-header nav ul .icons-nav a em.icon-basket {
+/* line 67, ../sass/components/_header.scss */
+header.js-header nav ul .icons-nav a em.icon-basket, header.js-header nav ul .icons-nav .customLink em.icon-basket {
   position: relative;
 }
-/* line 67, ../sass/components/_header.scss */
-header.js-header nav ul .icons-nav a em.icon-basket span {
+/* line 69, ../sass/components/_header.scss */
+header.js-header nav ul .icons-nav a em.icon-basket span, header.js-header nav ul .icons-nav .customLink em.icon-basket span {
   position: absolute;
   right: -9px;
   top: 12px;
@@ -8615,13 +8617,13 @@ header.js-header nav ul .icons-nav a em.icon-basket span {
   background-color: #fff;
   border-radius: 50%;
   z-index: -1;
-}
-/* line 81, ../sass/components/_header.scss */
-header.js-header nav ul .icons-nav a em.icon-user {
-  position: relative;
 }
 /* line 83, ../sass/components/_header.scss */
-header.js-header nav ul .icons-nav a em.icon-user span {
+header.js-header nav ul .icons-nav a em.icon-user, header.js-header nav ul .icons-nav .customLink em.icon-user {
+  position: relative;
+}
+/* line 85, ../sass/components/_header.scss */
+header.js-header nav ul .icons-nav a em.icon-user span, header.js-header nav ul .icons-nav .customLink em.icon-user span {
   position: absolute;
   right: -9px;
   top: 12px;
@@ -8632,6 +8634,23 @@ header.js-header nav ul .icons-nav a em.icon-user span {
   background-color: #fff;
   border-radius: 50%;
   z-index: -1;
+}
+/* line 100, ../sass/components/_header.scss */
+header.js-header nav ul .icons-nav a#linkSearchProduct.active, header.js-header nav ul .icons-nav .customLink#linkSearchProduct.active {
+  color: #6ba8b2;
+}
+/* line 103, ../sass/components/_header.scss */
+header.js-header nav ul .searchProduct {
+  position: absolute;
+  right: 0px;
+  top: -100px;
+  min-width: 280px;
+  padding: 20px;
+  background-color: #fff;
+}
+/* line 111, ../sass/components/_header.scss */
+header.js-header nav ul .searchProduct.active {
+  top: 60px;
 }
 @media only screen and (min-width: 601px) and (max-width: 992px) {
   /* line 20, ../sass/components/_header.scss */
@@ -8639,7 +8658,7 @@ header.js-header nav ul .icons-nav a em.icon-user span {
     margin-top: 40px;
     margin-bottom: 10px;
   }
-  /* line 103, ../sass/components/_header.scss */
+  /* line 118, ../sass/components/_header.scss */
   header.js-header nav ul .icons-nav {
     position: absolute;
     top: 5px;
@@ -8659,22 +8678,22 @@ header.js-header nav ul .icons-nav a em.icon-user span {
     background-color: #fff;
     box-shadow: -2px 2px 6px 0 rgba(84, 84, 84, 0.2);
   }
-  /* line 119, ../sass/components/_header.scss */
+  /* line 134, ../sass/components/_header.scss */
   header.js-header nav ul li {
     display: block;
   }
-  /* line 121, ../sass/components/_header.scss */
+  /* line 136, ../sass/components/_header.scss */
   header.js-header nav ul li a {
     display: block;
     line-height: 40px;
     padding: 0 20px;
   }
-  /* line 125, ../sass/components/_header.scss */
+  /* line 140, ../sass/components/_header.scss */
   header.js-header nav ul li a:hover {
     color: #fff;
     background-color: #6ba8b2;
   }
-  /* line 131, ../sass/components/_header.scss */
+  /* line 146, ../sass/components/_header.scss */
   header.js-header nav ul .icons-nav {
     float: none;
     margin-top: 20px;

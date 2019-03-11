@@ -37,13 +37,14 @@ header.js-header {
 			}
 			li {
 				display: inline-block;
-				a {
+				a, .customLink {
 					display: inline-block;
 					padding: 0 5px;
 					font-size: 14px;
 					font-weight: 700; 
 					line-height: 30px;
 					color: $text-color;
+					cursor: pointer;
 					@extend .transition;
 					&:hover, &.active { color: $primary-color-dark; }
 				}
@@ -51,11 +52,12 @@ header.js-header {
 			.icons-nav {
 				display: inline-block;
 				float: right;
-				a {
+				a, .customLink {
 					display: inline-block;
 					margin-right: 5px;
 					color: $text-color;
 					line-height: 30px;
+					cursor: pointer;
 					@extend .transition;
 					&:hover { color: $primary-color-dark; }
 					em { 
@@ -95,8 +97,21 @@ header.js-header {
 							}
 						}
 					}
+					&#linkSearchProduct.active { color: $primary-color; }
 				}	
 			} 
+			.searchProduct {
+				position: absolute;
+				right: 0px;
+				top: -100px;
+				min-width: 280px;
+				padding: 20px;
+				background-color: #fff;
+				@extend .shadow;
+				&.active {
+					top: 60px;
+				}
+			}
 			@media #{$medium-only} {
 				margin-top: 40px;
 				margin-bottom: 10px;

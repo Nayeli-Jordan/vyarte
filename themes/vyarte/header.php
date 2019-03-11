@@ -86,10 +86,16 @@
 									}
 									if ($description === 'tienda' && is_shop()) {
 										$currentPage	='active';
-									}								
+									}							
 								}
 
-								$menu_list .='<li itemprop="actionOption" class="' . $class . '"><a href="' . $url . '" class="' . $currentPage . '">' . $title . '</a></li>';
+								/*Eliminar link contacto*/
+								if ($title === 'Contacto') {
+									$menu_list .='<li itemprop="actionOption" class="' . $class . '"><p class="customLink ' . $currentPage . '">' . $title . '</p></li>';	
+								} else {
+									$menu_list .='<li itemprop="actionOption" class="' . $class . '"><a href="' . $url . '" class="' . $currentPage . '">' . $title . '</a></li>';	
+								}
+
 							}
 						}
 						echo $menu_list;
@@ -100,7 +106,10 @@
 						<a href="" class="margin-right-10"><em class="icon-twitter-squared "></em></a>			
 						<a href="<?php echo SITEURL; ?>carrito"><em class="icon-basket"><span><?php echo WC()->cart->get_cart_contents_count(); ?></span></a></em>
 						<a href="<?php echo SITEURL; ?>cuenta"><em class="icon-user"></em></a>
-						<a href=""><em class="icon-search"></em></a>
+						<p id="linkSearchProduct" class="customLink"><em class="icon-search"></em></p>
+					</div>
+					<div class="searchProduct">
+						<?php echo do_shortcode( '[aws_search_form]' ); ?>
 					</div>
 				</ul>
 			</nav>

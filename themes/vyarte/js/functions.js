@@ -49,6 +49,15 @@ var $=jQuery.noConflict();
 			$('body').removeClass('overflow-hide');
 		});
 
+		/*Buscador*/
+		$("#linkSearchProduct").click(function() {
+			if($(this).hasClass('active')){
+				$('#linkSearchProduct, .searchProduct').removeClass('active');
+			} else {
+				$('#linkSearchProduct, .searchProduct').addClass('active');			
+			}
+		});
+
 		//Single Product
 		//Review 
 		$(".comment_container .description p").click(function() {
@@ -79,6 +88,13 @@ var $=jQuery.noConflict();
 		/*Email*/
 		$("#contact-email").click(function() {
 			$(this).attr('href', 'mailto:contacto@vyarte.com');
+		});
+
+		//Scroll menú
+		$(".scrollContacto").click(function() {
+			$('html, body').animate({		
+				scrollTop: $('Footer').offset().top // - 50
+			}, 1000);
 		});
 	});
 })(jQuery);
