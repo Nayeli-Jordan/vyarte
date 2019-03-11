@@ -55,7 +55,7 @@
 		<noscript>Tu navegador no soporta JavaScript!</noscript>
 		<?php wp_head(); ?>
 	</head>
-	<body>
+	<body class="<?php if (is_page('cuenta')): echo 'vyarte_cuenta'; endif ?>">
 		<header class="js-header row">
 			<nav class="container">
 				<a href="<?php echo SITEURL; ?>"><img src="<?php echo THEMEPATH; ?>images/identidad/logo.png"></a>
@@ -74,16 +74,22 @@
 								$url 				= $menu_item->url;
 								$title 				= $menu_item->title;
 								$class 				= esc_attr( implode( ' ', apply_filters( 'nav_menu_css_class', array_filter( $menu_item->classes ), $menu_item) ) );
+								$description		= $menu_item->description;
 
-								//$menu_item_parent	= $menu_item->menu_item_parent;		id del padre
-								//$id 				= $menu_item->ID;
-								//$attr_title 		= $menu_item->attr_title;
-								//$description		= $menu_item->description;
-								//$xfn 				= $menu_item->xfn;
-								//$type 			= $menu_item->type;		taxonomy, page...
-								//$type_label		= $menu_item->type_label;		página, categoría...
+								$currentPage 		= '';
+								if ($description != '') {
+									if ($description === 'inicio' && is_front_page()) {
+										$currentPage	='active';
+									}
+									if (is_page($description)) {
+										$currentPage	='active';
+									}
+									if ($description === 'tienda' && is_shop()) {
+										$currentPage	='active';
+									}								
+								}
 
-								$menu_list .='<li itemprop="actionOption" class="' . $class .'"><a href="' . $url . '">' . $title . '</a></li>';
+								$menu_list .='<li itemprop="actionOption" class="' . $class . '"><a href="' . $url . '" class="' . $currentPage . '">' . $title . '</a></li>';
 							}
 						}
 						echo $menu_list;

@@ -9,11 +9,11 @@ var $=jQuery.noConflict();
 		\*------------------------------------*/
 
 		$(document).ready(function() {
-			//footerBottom();
+			footerBottom();
 		});
  
 		$(window).on('resize', function(){
-			//footerBottom();
+			footerBottom();
 		});
  
 		$(document).scroll(function() {
@@ -56,15 +56,25 @@ var $=jQuery.noConflict();
 			console.log(idComment);
 			$('#' + idComment + ' .description p').addClass('active');
 		});
-
 		$(".comment_container .description p.active").click(function() {
 			$('#' + idComment + ' .description p.active').removeClass('active');
 		});
 		//Gallery
 		if ($('.galleryImage').length) {
 			$('#prevGallery, #nextGallery').removeClass('hide');
-		}	
+		}
 
+		/*Faq´s*/
+		$(".content-faq:not(.active)").click(function() {
+			var idFaq = $(this).attr('id');
+			console.log(idFaq);
+			if($('#' + idFaq).hasClass('active')){
+				$(this).removeClass('active');
+			} else {
+				$('.content-faq').removeClass('active');
+				$('#' + idFaq).addClass('active');				
+			}
+		});
 
 		/*Email*/
 		$("#contact-email").click(function() {
@@ -76,7 +86,7 @@ var $=jQuery.noConflict();
 /**
  * Fija el footer abajo
  */
-/*
+
 function footerBottom(){
 	var alturaFooter = getFooterHeight();
 	$('.main-body').css('padding-bottom', alturaFooter );
@@ -87,4 +97,4 @@ function getHeaderHeight(){
 function getFooterHeight(){
 	return $('footer').outerHeight();
 }// getFooterHeight
-*/
+

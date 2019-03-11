@@ -211,3 +211,35 @@
 .cart-empty, .return-to-shop {
 	text-align: center;
 }
+
+/* CUENTA */
+.vyarte_cuenta h2 { text-align: center; }
+.woocommerce-form-login {
+	max-width: 300px;
+    margin: 20px auto 0!important;
+    button { width: 100%; }
+}
+.woocommerce-MyAccount-navigation ul {
+	text-align: center;
+	li {
+		display: inline-block;
+		a {
+			display: inline-block;
+			padding: 0 10px;
+			line-height: 30px;
+			font-weight: 700;
+			text-transform: uppercase;
+			&:hover {
+				color: $primary-color;
+			}
+		}
+		&:not(:last-child) { margin-right: 5px; }
+		&.is-active a { color: $primary-color; }
+
+		@media #{$small-and-down}{ 
+			display: block;
+			margin: 0px;
+			a { width: 100%; }
+		}
+	}	
+} 

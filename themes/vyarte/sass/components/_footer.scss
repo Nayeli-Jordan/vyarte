@@ -1,5 +1,7 @@
 footer {
-	position: relative;
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
 	padding: 30px 0;
 	background-color: #555555;
 	color: $light-color;
@@ -14,6 +16,7 @@ footer {
 			font-weight: 700;
 			text-transform: uppercase;
 		}
+		@media #{$small-and-down} { .col:not(:first-child) .title-nav-footer { margin-top: 20px; } }
 		ul {
 			margin: 0px;
 			li {
@@ -21,7 +24,8 @@ footer {
 				a {
 					color: $light-color;
 					@extend .transition;
-					&:hover { color: $primary-color-light; }
+					&:hover, &.active { color: $primary-color-light; }
+					&.active { text-decoration: underline; }
 				}
 			}
 		}

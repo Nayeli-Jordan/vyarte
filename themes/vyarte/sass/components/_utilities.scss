@@ -1,3 +1,41 @@
 // ==========================================================================
 // Utilities
 // ==========================================================================
+
+#faqs {
+	.content-faq {
+		h3 {
+			cursor: pointer;
+			em {
+				display: inline-block;
+				line-height: 25px;
+				font-size: 12px;
+			    
+			    @extend .transition;
+				&.icon-left-open { /* Cerrar */
+					-webkit-transform: rotate(90deg); 
+					-moz-transform: rotate(90deg); 
+					transform: rotate(90deg);
+					display: none;
+				}
+				&.icon-right-open { /* Abrir */
+					-webkit-transform: rotate(90deg); 
+					-moz-transform: rotate(90deg); 
+					transform: rotate(90deg);
+				}
+			}
+			&:hover { color: $primary-color; }
+		}
+		p { display: none; }
+		&.active {
+			h3 {
+				color: $primary-color-dark;
+				em {
+					&.icon-left-open { display: inline-block; }
+					&.icon-right-open { display: none; }
+				}				
+			}
+			p { display: block; }
+		}			
+	}
+}

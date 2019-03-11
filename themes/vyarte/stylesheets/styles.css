@@ -1962,7 +1962,7 @@ input[type="submit"],
 }
 
 /* line 12, ../sass/components/_effects.scss */
-.shadowDoble, .woocommerce table.cart td.actions .input-text, .woocommerce .quantity .qty, header.js-header nav ul .icons-nav a em.icon-basket span {
+.shadowDoble, .woocommerce table.cart td.actions .input-text, .woocommerce .quantity .qty, header.js-header nav ul .icons-nav a em.icon-basket span, header.js-header nav ul .icons-nav a em.icon-user span {
   box-shadow: 4px 4px 10px 0 rgba(84, 84, 84, 0.2), 0px -1px 6px 0 rgba(84, 84, 84, 0.2);
 }
 
@@ -1990,7 +1990,7 @@ input[type="submit"],
 }
 
 /* line 30, ../sass/components/_effects.scss */
-.transition, header.js-header nav ul, header.js-header nav ul li a, header.js-header nav ul .icons-nav a, footer .row ul li a, footer .row .icons-redes a, footer .row a {
+.transition, #faqs .content-faq h3 em, header.js-header nav ul, header.js-header nav ul li a, header.js-header nav ul .icons-nav a, footer .row ul li a, footer .row .icons-redes a, footer .row a {
   -webkit-transition: .3s ease-out;
   -moz-transition: .3s ease-out;
   transition: .3s ease-out;
@@ -2018,13 +2018,18 @@ textarea {
 }
 
 /* line 21, ../sass/components/_forms.scss */
+input[type="checkbox"] {
+  width: auto !important;
+}
+
+/* line 24, ../sass/components/_forms.scss */
 textarea {
   height: 100px;
   line-height: 22px;
   resize: none;
 }
 
-/* line 26, ../sass/components/_forms.scss */
+/* line 29, ../sass/components/_forms.scss */
 input[type="submit"] {
   display: block;
 }
@@ -2034,12 +2039,12 @@ input[type="submit"] {
     -webkit-appearance: none;
 } */
 /* Validación Parsley */
-/* line 37, ../sass/components/_forms.scss */
+/* line 40, ../sass/components/_forms.scss */
 .parsley-errors-list {
   padding: 0px !important;
   font-size: 12px;
 }
-/* line 40, ../sass/components/_forms.scss */
+/* line 43, ../sass/components/_forms.scss */
 .parsley-errors-list li {
   color: #c30008;
   list-style-type: none !important;
@@ -2065,34 +2070,35 @@ html body {
 /* line 16, ../sass/components/_global.scss */
 .main-body {
   position: relative;
+  min-height: calc(100vh - 84px);
 }
 
-/* line 20, ../sass/components/_global.scss */
+/* line 21, ../sass/components/_global.scss */
 section {
   margin: 0;
 }
-/* line 22, ../sass/components/_global.scss */
+/* line 23, ../sass/components/_global.scss */
 section + section {
   margin-top: 50px;
 }
 
-/* line 25, ../sass/components/_global.scss */
+/* line 26, ../sass/components/_global.scss */
 ul {
   padding: 0px;
 }
-/* line 27, ../sass/components/_global.scss */
+/* line 28, ../sass/components/_global.scss */
 ul li {
   margin: 0px;
   line-height: 20px;
   list-style-type: none;
 }
 
-/* line 34, ../sass/components/_global.scss */
+/* line 35, ../sass/components/_global.scss */
 .clearfix {
   clear: both;
 }
 
-/* line 36, ../sass/components/_global.scss */
+/* line 37, ../sass/components/_global.scss */
 .hr, hr {
   width: 100%;
   height: 1px;
@@ -2100,18 +2106,18 @@ ul li {
   background-color: #fff;
 }
 
-/* line 46, ../sass/components/_global.scss */
+/* line 47, ../sass/components/_global.scss */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
-/* line 49, ../sass/components/_global.scss */
+/* line 50, ../sass/components/_global.scss */
 ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-/* line 53, ../sass/components/_global.scss */
+/* line 54, ../sass/components/_global.scss */
 ::-webkit-scrollbar-thumb {
   border-radius: 0px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
@@ -8083,6 +8089,56 @@ small {
   background-color: #fff;
 }
 
+/* line 7, ../sass/components/_utilities.scss */
+#faqs .content-faq h3 {
+  cursor: pointer;
+}
+/* line 9, ../sass/components/_utilities.scss */
+#faqs .content-faq h3 em {
+  display: inline-block;
+  line-height: 25px;
+  font-size: 12px;
+}
+/* line 15, ../sass/components/_utilities.scss */
+#faqs .content-faq h3 em.icon-left-open {
+  /* Cerrar */
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  transform: rotate(90deg);
+  display: none;
+}
+/* line 21, ../sass/components/_utilities.scss */
+#faqs .content-faq h3 em.icon-right-open {
+  /* Abrir */
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+/* line 27, ../sass/components/_utilities.scss */
+#faqs .content-faq h3:hover {
+  color: #6ba8b2;
+}
+/* line 29, ../sass/components/_utilities.scss */
+#faqs .content-faq p {
+  display: none;
+}
+/* line 31, ../sass/components/_utilities.scss */
+#faqs .content-faq.active h3 {
+  color: #5a9ea9;
+}
+/* line 34, ../sass/components/_utilities.scss */
+#faqs .content-faq.active h3 em.icon-left-open {
+  display: inline-block;
+}
+/* line 35, ../sass/components/_utilities.scss */
+#faqs .content-faq.active h3 em.icon-right-open {
+  display: none;
+}
+/* line 38, ../sass/components/_utilities.scss */
+#faqs .content-faq.active p {
+  display: block;
+}
+
 /* Filtro productos */
 /* line 6, ../sass/components/_woocommerce.scss */
 .woocommerce-ordering {
@@ -8386,6 +8442,62 @@ small {
   text-align: center;
 }
 
+/* CUENTA */
+/* line 216, ../sass/components/_woocommerce.scss */
+.vyarte_cuenta h2 {
+  text-align: center;
+}
+
+/* line 217, ../sass/components/_woocommerce.scss */
+.woocommerce-form-login {
+  max-width: 300px;
+  margin: 20px auto 0 !important;
+}
+/* line 220, ../sass/components/_woocommerce.scss */
+.woocommerce-form-login button {
+  width: 100%;
+}
+
+/* line 222, ../sass/components/_woocommerce.scss */
+.woocommerce-MyAccount-navigation ul {
+  text-align: center;
+}
+/* line 224, ../sass/components/_woocommerce.scss */
+.woocommerce-MyAccount-navigation ul li {
+  display: inline-block;
+}
+/* line 226, ../sass/components/_woocommerce.scss */
+.woocommerce-MyAccount-navigation ul li a {
+  display: inline-block;
+  padding: 0 10px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+/* line 232, ../sass/components/_woocommerce.scss */
+.woocommerce-MyAccount-navigation ul li a:hover {
+  color: #6ba8b2;
+}
+/* line 236, ../sass/components/_woocommerce.scss */
+.woocommerce-MyAccount-navigation ul li:not(:last-child) {
+  margin-right: 5px;
+}
+/* line 237, ../sass/components/_woocommerce.scss */
+.woocommerce-MyAccount-navigation ul li.is-active a {
+  color: #6ba8b2;
+}
+@media only screen and (max-width: 430px) {
+  /* line 224, ../sass/components/_woocommerce.scss */
+  .woocommerce-MyAccount-navigation ul li {
+    display: block;
+    margin: 0px;
+  }
+  /* line 242, ../sass/components/_woocommerce.scss */
+  .woocommerce-MyAccount-navigation ul li a {
+    width: 100%;
+  }
+}
+
 /* line 1, ../sass/components/_header.scss */
 header.js-header {
   text-transform: uppercase;
@@ -8504,13 +8616,30 @@ header.js-header nav ul .icons-nav a em.icon-basket span {
   border-radius: 50%;
   z-index: -1;
 }
+/* line 81, ../sass/components/_header.scss */
+header.js-header nav ul .icons-nav a em.icon-user {
+  position: relative;
+}
+/* line 83, ../sass/components/_header.scss */
+header.js-header nav ul .icons-nav a em.icon-user span {
+  position: absolute;
+  right: -9px;
+  top: 12px;
+  width: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  background-color: #fff;
+  border-radius: 50%;
+  z-index: -1;
+}
 @media only screen and (min-width: 601px) and (max-width: 992px) {
   /* line 20, ../sass/components/_header.scss */
   header.js-header nav ul {
     margin-top: 40px;
     margin-bottom: 10px;
   }
-  /* line 87, ../sass/components/_header.scss */
+  /* line 103, ../sass/components/_header.scss */
   header.js-header nav ul .icons-nav {
     position: absolute;
     top: 5px;
@@ -8530,22 +8659,22 @@ header.js-header nav ul .icons-nav a em.icon-basket span {
     background-color: #fff;
     box-shadow: -2px 2px 6px 0 rgba(84, 84, 84, 0.2);
   }
-  /* line 103, ../sass/components/_header.scss */
+  /* line 119, ../sass/components/_header.scss */
   header.js-header nav ul li {
     display: block;
   }
-  /* line 105, ../sass/components/_header.scss */
+  /* line 121, ../sass/components/_header.scss */
   header.js-header nav ul li a {
     display: block;
     line-height: 40px;
     padding: 0 20px;
   }
-  /* line 109, ../sass/components/_header.scss */
+  /* line 125, ../sass/components/_header.scss */
   header.js-header nav ul li a:hover {
     color: #fff;
     background-color: #6ba8b2;
   }
-  /* line 115, ../sass/components/_header.scss */
+  /* line 131, ../sass/components/_header.scss */
   header.js-header nav ul .icons-nav {
     float: none;
     margin-top: 20px;
@@ -8555,79 +8684,91 @@ header.js-header nav ul .icons-nav a em.icon-basket span {
 
 /* line 1, ../sass/components/_footer.scss */
 footer {
-  position: relative;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
   padding: 30px 0;
   background-color: #555555;
   color: #fff;
   clear: both;
 }
-/* line 7, ../sass/components/_footer.scss */
+/* line 9, ../sass/components/_footer.scss */
 footer .row {
   padding-bottom: 20px;
   margin-bottom: 20px;
   border-bottom: 1px solid #fff;
 }
-/* line 11, ../sass/components/_footer.scss */
+/* line 13, ../sass/components/_footer.scss */
 footer .row .title-nav-footer {
   margin-bottom: 5px;
   color: #6ba8b2;
   font-weight: 700;
   text-transform: uppercase;
 }
-/* line 17, ../sass/components/_footer.scss */
+@media only screen and (max-width: 430px) {
+  /* line 19, ../sass/components/_footer.scss */
+  footer .row .col:not(:first-child) .title-nav-footer {
+    margin-top: 20px;
+  }
+}
+/* line 20, ../sass/components/_footer.scss */
 footer .row ul {
   margin: 0px;
 }
-/* line 19, ../sass/components/_footer.scss */
+/* line 22, ../sass/components/_footer.scss */
 footer .row ul li {
   list-style-type: none;
 }
-/* line 21, ../sass/components/_footer.scss */
+/* line 24, ../sass/components/_footer.scss */
 footer .row ul li a {
   color: #fff;
 }
-/* line 24, ../sass/components/_footer.scss */
-footer .row ul li a:hover {
+/* line 27, ../sass/components/_footer.scss */
+footer .row ul li a:hover, footer .row ul li a.active {
   color: #7cb2bb;
 }
 /* line 28, ../sass/components/_footer.scss */
+footer .row ul li a.active {
+  text-decoration: underline;
+}
+/* line 32, ../sass/components/_footer.scss */
 footer .row .icons-redes {
   margin-left: -10px;
   margin-bottom: 10px;
 }
-/* line 31, ../sass/components/_footer.scss */
+/* line 35, ../sass/components/_footer.scss */
 footer .row .icons-redes a {
   margin-right: 5px;
   color: #fff;
 }
-/* line 35, ../sass/components/_footer.scss */
+/* line 39, ../sass/components/_footer.scss */
 footer .row .icons-redes a:hover {
   color: #7cb2bb;
 }
-/* line 36, ../sass/components/_footer.scss */
+/* line 40, ../sass/components/_footer.scss */
 footer .row .icons-redes a em {
   font-size: 20px;
 }
-/* line 38, ../sass/components/_footer.scss */
+/* line 42, ../sass/components/_footer.scss */
 footer .row .icons-redes a em.icon-twitter-squared {
   font-size: 24px;
 }
-/* line 42, ../sass/components/_footer.scss */
+/* line 46, ../sass/components/_footer.scss */
 footer .row a {
   color: #fff;
 }
-/* line 44, ../sass/components/_footer.scss */
+/* line 48, ../sass/components/_footer.scss */
 footer .row a .icon-phone-circled, footer .row a .icon-mail-alt {
   display: inline-block;
   margin-right: 5px;
   font-size: 16px;
   vertical-align: middle;
 }
-/* line 51, ../sass/components/_footer.scss */
+/* line 55, ../sass/components/_footer.scss */
 footer .row a:hover {
   color: #7cb2bb;
 }
-/* line 54, ../sass/components/_footer.scss */
+/* line 58, ../sass/components/_footer.scss */
 footer .icons-pago {
   font-size: 26px;
   margin: 0 5px;

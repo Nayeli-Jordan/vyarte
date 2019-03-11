@@ -18,6 +18,9 @@ select,
 textarea {
 	padding: 0 10px;
 }
+input[type="checkbox"] {
+	width: auto!important;
+}
 textarea {
 	height: 100px;
 	line-height: 22px;

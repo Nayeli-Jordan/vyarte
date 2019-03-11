@@ -1,7 +1,7 @@
 			<footer>
 				<div class="container">
 	 				<div class="row">
-	 					<div class="col s12 sm4">
+	 					<div class="col s12 sm6 m4">
 	 						<p class="title-nav-footer">Menú</p>
 	 						<ul>
 		 					<?php
@@ -16,16 +16,22 @@
 										$url 				= $menu_item->url;
 										$title 				= $menu_item->title;
 										$class 				= esc_attr( implode( ' ', apply_filters( 'nav_menu_css_class', array_filter( $menu_item->classes ), $menu_item) ) );
+										$description		= $menu_item->description;
 
-										//$menu_item_parent	= $menu_item->menu_item_parent;		id del padre
-										//$id 				= $menu_item->ID;
-										//$attr_title 		= $menu_item->attr_title;
-										//$description		= $menu_item->description;
-										//$xfn 				= $menu_item->xfn;
-										//$type 			= $menu_item->type;		taxonomy, page...
-										//$type_label		= $menu_item->type_label;		página, categoría...
+										$currentPage 		= '';
+										if ($description != '') {
+											if ($description === 'inicio' && is_front_page()) {
+												$currentPage	='active';
+											}
+											if (is_page($description)) {
+												$currentPage	='active';
+											}
+											if ($description === 'tienda' && is_shop()) {
+												$currentPage	='active';
+											}								
+										}
 
-										$menu_list .='<li itemprop="actionOption" class="' . $class .'"><a href="' . $url . '">' . $title . '</a></li>';
+										$menu_list .='<li itemprop="actionOption" class="' . $class .'"><a href="' . $url . '" class="' . $currentPage . '">' . $title . '</a></li>';
 									}
 								}
 								echo $menu_list;
@@ -33,7 +39,7 @@
 	 						</ul>
 
 	 					</div>
-	 					<div class="col s12 sm4">
+	 					<div class="col s12 sm6 m4">
 	 						<p class="title-nav-footer">Sobre Vyarte</p>
 	 						<ul>
 		 					<?php
@@ -48,23 +54,23 @@
 										$url 				= $menu_item->url;
 										$title 				= $menu_item->title;
 										$class 				= esc_attr( implode( ' ', apply_filters( 'nav_menu_css_class', array_filter( $menu_item->classes ), $menu_item) ) );
+										$description		= $menu_item->description;
 
-										//$menu_item_parent	= $menu_item->menu_item_parent;		id del padre
-										//$id 				= $menu_item->ID;
-										//$attr_title 		= $menu_item->attr_title;
-										//$description		= $menu_item->description;
-										//$xfn 				= $menu_item->xfn;
-										//$type 			= $menu_item->type;		taxonomy, page...
-										//$type_label		= $menu_item->type_label;		página, categoría...
+										$currentPage 		= '';
+										if ($description != '') {
+											if (is_page($description)) {
+												$currentPage	='active';
+											}							
+										}
 
-										$menu_list .='<li itemprop="actionOption" class="' . $class .'"><a href="' . $url . '">' . $title . '</a></li>';
+										$menu_list .='<li itemprop="actionOption" class="' . $class .'"><a href="' . $url . '" class="' . $currentPage . '">' . $title . '</a></li>';
 									}
 								}
 								echo $menu_list;
 							?>	 							
 	 						</ul>
 	 					</div>
-	 					<div class="col s12 sm4">
+	 					<div class="col s12 sm12 m4">
 	 						<p class="title-nav-footer">Contacto</p>
 	 						<div class="icons-redes">
 								<a href=""><em class="icon-instagram-filled margin-left-10"></em></a>			
