@@ -5,13 +5,13 @@ input:not([type="submit"]),
 select,
 textarea {
 	margin-bottom: 10px;
-	width: 100%;	
+	width: 100%!important;	
 	max-width: 100%;
-	line-height: 30px;
+	line-height: 30px!important;
 	background-color: $light-color;
 	border-radius: 2px;
-	border: 0px;
-	outline: none;
+	border: 1px solid #aaa;
+	outline: none!important;
 }
 input:not([type="submit"]):not([type="number"]),
 select,

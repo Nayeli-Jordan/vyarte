@@ -1893,12 +1893,12 @@
 .btn,
 button,
 .button,
-input[type="submit"] {
+input[type="submit"],
+.added_to_cart {
   display: block;
   padding: 0 20px !important;
   color: #fff !important;
   text-align: center !important;
-  line-height: 30px !important;
   font-weight: 300 !important;
   line-height: 30px !important;
   text-decoration: none !important;
@@ -1914,8 +1914,15 @@ input[type="submit"] {
 .btn:hover,
 button:hover,
 .button:hover,
-input[type="submit"]:hover {
+input[type="submit"]:hover,
+.added_to_cart:hover {
   background-color: #5a9ea9 !important;
+}
+
+/* line 29, ../sass/components/_buttons.scss */
+.added_to_cart {
+  margin-top: 5px;
+  line-height: 25px !important;
 }
 
 /* line 4, ../sass/components/_color.scss */
@@ -1949,7 +1956,8 @@ input[type="submit"]:hover {
 .shadow, .btn,
 button,
 .button,
-input[type="submit"], header.js-header {
+input[type="submit"],
+.added_to_cart, header.js-header {
   box-shadow: 4px 4px 10px 0 rgba(84, 84, 84, 0.2);
 }
 
@@ -1993,13 +2001,13 @@ input:not([type="submit"]),
 select,
 textarea {
   margin-bottom: 10px;
-  width: 100%;
+  width: 100% !important;
   max-width: 100%;
-  line-height: 30px;
+  line-height: 30px !important;
   background-color: #fff;
   border-radius: 2px;
-  border: 0px;
-  outline: none;
+  border: 1px solid #aaa;
+  outline: none !important;
 }
 
 /* line 16, ../sass/components/_forms.scss */
@@ -8234,39 +8242,41 @@ small {
 /* line 104, ../sass/components/_woocommerce.scss */
 #single-product .summary form.cart input.qty {
   margin-bottom: -2px;
+  text-align: center;
+  font-size: 18px;
   border: 1px solid #6ba8b2;
   border-radius: 2px 0 0 2px;
 }
-/* line 109, ../sass/components/_woocommerce.scss */
+/* line 111, ../sass/components/_woocommerce.scss */
 #single-product .summary form.cart button {
   width: 100%;
 }
-/* line 111, ../sass/components/_woocommerce.scss */
+/* line 113, ../sass/components/_woocommerce.scss */
 #single-product .summary .product_meta a {
   color: #5a9ea9;
 }
-/* line 118, ../sass/components/_woocommerce.scss */
+/* line 120, ../sass/components/_woocommerce.scss */
 #single-product #reviews #comments > h2 span {
   color: #6ba8b2;
 }
-/* line 119, ../sass/components/_woocommerce.scss */
+/* line 121, ../sass/components/_woocommerce.scss */
 #single-product #reviews #comments ol {
   padding: 0px;
 }
-/* line 121, ../sass/components/_woocommerce.scss */
+/* line 123, ../sass/components/_woocommerce.scss */
 #single-product #reviews #comments ol li.review {
   margin-bottom: 20px;
   list-style-type: none;
 }
-/* line 124, ../sass/components/_woocommerce.scss */
+/* line 126, ../sass/components/_woocommerce.scss */
 #single-product #reviews #comments ol li.review img {
   display: none;
 }
-/* line 126, ../sass/components/_woocommerce.scss */
+/* line 128, ../sass/components/_woocommerce.scss */
 #single-product #reviews #comments ol li.review .comment-text .star-rating {
   font-weight: 600;
 }
-/* line 128, ../sass/components/_woocommerce.scss */
+/* line 130, ../sass/components/_woocommerce.scss */
 #single-product #reviews #comments ol li.review .comment-text .star-rating .rating {
   background-color: #6ba8b2;
   color: #fff;
@@ -8276,19 +8286,19 @@ small {
   text-align: center;
   border-radius: 3px;
 }
-/* line 139, ../sass/components/_woocommerce.scss */
+/* line 141, ../sass/components/_woocommerce.scss */
 #single-product #reviews #comments ol li.review .description p {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   cursor: pointer;
 }
-/* line 144, ../sass/components/_woocommerce.scss */
+/* line 146, ../sass/components/_woocommerce.scss */
 #single-product #reviews #comments ol li.review .description p.active {
   white-space: normal;
   cursor: inherit;
 }
-/* line 152, ../sass/components/_woocommerce.scss */
+/* line 154, ../sass/components/_woocommerce.scss */
 #single-product #reviews #review_form_wrapper #review_form {
   margin-bottom: 30px;
   padding: 30px;
@@ -8297,22 +8307,22 @@ small {
   background-color: #5a9ea9;
   border-radius: 5px;
 }
-/* line 159, ../sass/components/_woocommerce.scss */
+/* line 161, ../sass/components/_woocommerce.scss */
 #single-product #reviews #review_form_wrapper #review_form #reply-title {
   display: block;
   font-size: 22px;
   text-align: center;
 }
-/* line 164, ../sass/components/_woocommerce.scss */
+/* line 166, ../sass/components/_woocommerce.scss */
 #single-product #reviews #review_form_wrapper #review_form label {
   display: inline-block;
   margin-bottom: 10px;
 }
-/* line 168, ../sass/components/_woocommerce.scss */
+/* line 170, ../sass/components/_woocommerce.scss */
 #single-product #reviews #review_form_wrapper #review_form .comment-form-rating {
   margin-bottom: 20px;
 }
-/* line 170, ../sass/components/_woocommerce.scss */
+/* line 172, ../sass/components/_woocommerce.scss */
 #single-product #reviews #review_form_wrapper #review_form .comment-form-rating a {
   display: inline-block;
   width: 25px;
@@ -8323,55 +8333,55 @@ small {
   background-color: #7cb2bb;
   border-radius: 50%;
 }
-/* line 179, ../sass/components/_woocommerce.scss */
+/* line 181, ../sass/components/_woocommerce.scss */
 #single-product #reviews #review_form_wrapper #review_form .comment-form-rating a:hover, #single-product #reviews #review_form_wrapper #review_form .comment-form-rating a.active {
   background-color: #ffbc00;
 }
-/* line 184, ../sass/components/_woocommerce.scss */
+/* line 186, ../sass/components/_woocommerce.scss */
 #single-product #reviews #review_form_wrapper #review_form .form-submit #submit {
   width: 100%;
 }
-/* line 188, ../sass/components/_woocommerce.scss */
+/* line 190, ../sass/components/_woocommerce.scss */
 #single-product .related.products h2 {
   text-align: center;
 }
 @media only screen and (min-width: 601px) and (max-width: 992px) {
-  /* line 189, ../sass/components/_woocommerce.scss */
+  /* line 191, ../sass/components/_woocommerce.scss */
   #single-product .related.products ul li:nth-child(4n) {
     display: none;
   }
 }
 @media only screen and (min-width: 1200px) {
-  /* line 190, ../sass/components/_woocommerce.scss */
+  /* line 192, ../sass/components/_woocommerce.scss */
   #single-product .related.products ul li:first-child {
     margin-left: 10% !important;
   }
 }
 
 /* Carrito */
-/* line 196, ../sass/components/_woocommerce.scss */
+/* line 198, ../sass/components/_woocommerce.scss */
 .woocommerce table.cart img {
   width: 65px !important;
 }
-/* line 197, ../sass/components/_woocommerce.scss */
+/* line 199, ../sass/components/_woocommerce.scss */
 .woocommerce table.cart td.actions .input-text {
   width: 130px !important;
 }
-/* line 201, ../sass/components/_woocommerce.scss */
+/* line 203, ../sass/components/_woocommerce.scss */
 .woocommerce .quantity .qty {
   width: 100px !important;
 }
-/* line 205, ../sass/components/_woocommerce.scss */
+/* line 207, ../sass/components/_woocommerce.scss */
 .woocommerce a.checkout-button {
   width: 100% !important;
 }
 
-/* line 208, ../sass/components/_woocommerce.scss */
+/* line 210, ../sass/components/_woocommerce.scss */
 .cart-empty {
   margin-bottom: 20px;
 }
 
-/* line 209, ../sass/components/_woocommerce.scss */
+/* line 211, ../sass/components/_woocommerce.scss */
 .cart-empty, .return-to-shop {
   text-align: center;
 }
@@ -8484,11 +8494,11 @@ header.js-header nav ul .icons-nav a em.icon-basket {
 /* line 67, ../sass/components/_header.scss */
 header.js-header nav ul .icons-nav a em.icon-basket span {
   position: absolute;
-  right: -6px;
+  right: -9px;
   top: 12px;
-  width: 15px;
+  width: 20px;
   text-align: center;
-  line-height: 15px;
+  line-height: 20px;
   font-size: 12px;
   background-color: #fff;
   border-radius: 50%;
