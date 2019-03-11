@@ -2,7 +2,7 @@
 	get_header();
 	global $post;
 ?>
-	<section id="faqs" class="[ container ] padding-top-bottom-30">
+	<section id="faqs" class="container  padding-top-bottom-30">
 		<h2 class="title-section"><span><?php the_title(); ?></span></h2>
 		<div class="row">
 			<div class="col s12 m10 offset-m1 l8 offset-l2">

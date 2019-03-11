@@ -13,7 +13,7 @@ html{
   line-height: 1.5;
   font-family: $font-default;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   color: $text-color;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -32,7 +32,7 @@ h6 { font-size: $h6-fontsize;}
 
 p { 
   margin: 0px;
-  line-height: 20px;
+  line-height: 22px;
 }
 
 // Text Styles
@@ -86,4 +86,5 @@ small                         { font-size: 75%; }
     padding: 0 20px;
     background-color: #fff;
   }
+  @media #{$small-and-down} { font-size: 18px; }
 }

@@ -10,6 +10,7 @@ $i: 0;
 	.margin-top-bottom-#{$i} 	{ margin-top: #{$i}#{"px"}; margin-bottom: #{$i}#{"px"}; }
 	.margin-left-right-#{$i} 	{ margin-left: #{$i}#{"px"}; margin-right: #{$i}#{"px"}; }
 
+	.padding-#{$i} 				{ padding: #{$i}#{"px"}; }
 	.padding-top-#{$i} 			{ padding-top: #{$i}#{"px"}; }
 	.padding-bottom-#{$i} 		{ padding-bottom: #{$i}#{"px"}; }
 	.padding-left-#{$i} 		{ padding-left: #{$i}#{"px"}; }

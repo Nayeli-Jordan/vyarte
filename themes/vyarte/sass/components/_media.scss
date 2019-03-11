@@ -35,3 +35,29 @@ video.responsive-video {
 	top: 0; bottom: 0; 
 	left: 0; right: 0;
 }
+
+#sliderHome {
+	.cycle-slideshow {
+		img {
+			width: 100%;
+		}
+		.cycle-pager {
+			position: absolute;
+		    width: 100%;
+		    bottom: -15px;
+		    z-index: 199;
+			span {
+				font-size: 60px;
+				line-height: 40px;
+				margin: 0 5px;
+				color: $primary-color-light;
+				cursor: pointer;
+				&.cycle-pager-active {
+					color: $primary-color-dark;
+				}
+			}
+		}		
+	}
+}
+
+

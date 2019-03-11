@@ -1,2 +1,12 @@
 2019-03-11T15:46:11+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\Users\Tony\Documents\sites\vyarte\wp-admin\includes\options.php on line 15
 
+2019-03-11T19:23:43+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\Users\Tony\Documents\sites\vyarte\wp-includes\class-wp-admin-bar.php on line 15
+
+2019-03-11T19:26:29+00:00 CRITICAL Uncaught Error: Call to undefined function the_expert() in C:\Users\Tony\Documents\sites\vyarte\wp-content\themes\vyarte\index.php:24
+Stack trace:
+#0 C:\Users\Tony\Documents\sites\vyarte\wp-includes\template-loader.php(74): include()
+#1 C:\Users\Tony\Documents\sites\vyarte\wp-blog-header.php(19): require_once('C:\\Users\\Tony\\D...')
+#2 C:\Users\Tony\Documents\sites\vyarte\index.php(17): require('C:\\Users\\Tony\\D...')
+#3 {main}
+  thrown in C:\Users\Tony\Documents\sites\vyarte\wp-content\themes\vyarte\index.php on line 24
+

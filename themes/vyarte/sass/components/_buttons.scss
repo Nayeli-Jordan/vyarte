@@ -6,8 +6,8 @@ button,
 .button,
 input[type="submit"],
 .added_to_cart {
-	display: block;
-	padding: 0 20px!important;
+	display: inline-block;
+	padding: 0 45px!important;
 	color: $light-color!important;
 	text-align: center!important;
 	font-weight: 300!important;
@@ -23,6 +23,10 @@ input[type="submit"],
 	@extend .shadow;
 	&:hover {
 		background-color: $primary-color-dark!important;
+	}
+	&.btn-tall {
+		font-size: 18px;
+		line-height: 50px!important;
 	}
 }
 
