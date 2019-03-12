@@ -2,10 +2,12 @@
 // ==========================================================================
 
 .color-primary 			{ color: $primary-color; }
+.color-text 			{ color: $text-color; }
 
 .color-light 			{ color: $light-color; }
 .color-dark 			{ color: $dark-color; }
 
+.color-primary-dark_hover:hover {color: $primary-color-dark; }
 
 // Bg Color
 // ==========================================================================

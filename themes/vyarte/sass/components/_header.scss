@@ -101,15 +101,21 @@ header.js-header {
 				}	
 			} 
 			.searchProduct {
-				position: absolute;
-				right: 0px;
-				top: -100px;
-				min-width: 280px;
-				padding: 20px;
-				background-color: #fff;
-				@extend .shadow;
-				&.active {
-					top: 60px;
+				@media #{$medium-and-up}{
+					position: absolute;
+					right: 0px;
+					top: -100px;
+					min-width: 280px;
+					padding: 5px;
+					background-color: #fff;
+					border-radius: 0 0 3px 3px;
+					@include shadow;
+					&.active {
+						top: 80px;
+					}
+				}
+				@media #{$sm-and-down} {
+					padding: 40px 20px;
 				}
 			}
 			@media #{$medium-only} {
@@ -133,7 +139,7 @@ header.js-header {
 				@include shadow-left;
 				li {
 					display: block;
-					a {
+					a, .customLink {
 						display: block;
 						line-height: 40px;
 						padding: 0 20px;

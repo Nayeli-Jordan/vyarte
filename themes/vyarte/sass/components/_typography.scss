@@ -88,3 +88,7 @@ small                         { font-size: 75%; }
   }
   @media #{$small-and-down} { font-size: 18px; }
 }
+
+#singlePost p {
+  margin-bottom: 10px;
+}

@@ -2,7 +2,7 @@
 // ==========================================================================
 
 $i: 0;
-@while $i <= 50 {
+@while $i <= 100 {
 	.margin-top-#{$i} 			{ margin-top: #{$i}#{"px"}; }
 	.margin-bottom-#{$i} 		{ margin-bottom: #{$i}#{"px"}; }
 	.margin-left-#{$i} 			{ margin-left: #{$i}#{"px"}; }
@@ -43,3 +43,5 @@ $i: 1;
 	.height-#{$i}#{"p"} { height: #{$i}#{"%"}; }
 	$i: $i + 1; 
 }
+
+.max-height-500 { max-height: 500px; }

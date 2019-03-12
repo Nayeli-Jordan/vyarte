@@ -113,6 +113,15 @@ function woocommerce_support() {
 	add_theme_support( 'woocommerce' );
 }
 
+/**
+ * Change number of products that are displayed per page (shop page)
+ */
+add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );
+function new_loop_shop_per_page( $cols ) {
+  $cols = 30;
+  return $cols;
+}
+
 //Cambiar texto btn´s
 add_filter( 'woocommerce_product_single_add_to_cart_text', 'woo_custom_cart_button_text' );
 add_filter( 'woocommerce_product_add_to_cart_text', 'woo_custom_cart_button_text' );

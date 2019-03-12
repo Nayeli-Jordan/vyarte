@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 	<section id="sliderHome" class="text-center margin-bottom-50">
 		<div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-timeout="5000" data-cycle-prev="#prevSlider" data-cycle-next="#nextSlider">
-			<?php
+		<?php
 			$serv_args = array(
 				'post_type' 		=> 'slider',
 				'posts_per_page' 	=> 2,
@@ -17,7 +17,6 @@
 				<div class="cycle-pager"></div>
 			<?php endif ?>
 		</div> <!-- end cycle-slideshow -->
-		<?php  ?>
 	</section>
 	<section id="servHome" class="container text-center margin-bottom-20">
 		<h2 class="title-section"><span>Servicios</span></h2>
@@ -70,7 +69,7 @@
 				while ( $blog_query->have_posts() ) : $blog_query->the_post(); ?>
 					<div class="col s12 sm6 text-center margin-bottom-30">
 						<div class="bg-image margin-bottom-20" style="background-image: url(<?php the_post_thumbnail_url('large'); ?>)"></div>
-						<h3 class="margin-bottom-20 uppercase"><?php the_title(); ?></h3>
+						<h3 class="margin-bottom-20 uppercase"><a href="<?php the_permalink(); ?>" class="color-text color-primary-dark_hover"><?php the_title(); ?></a></h3>
 						<?php the_excerpt(); ?>
 						<a href="<?php the_permalink(); ?>" class="btn btn-tall clearfix margin-top-20">Leer más</a>
 					</div>			

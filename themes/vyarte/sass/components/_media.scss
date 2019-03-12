@@ -60,4 +60,20 @@ video.responsive-video {
 	}
 }
 
+/* POST */
+#contentBlog {
+	.bg-image {
+		height: 300px;
+	}
+	.postComplete .bg-image {
+		height: 250px;
+	}
+	.col:not(.postComplete):nth-child(2n){
+		clear: both;
+	}
+}
 
+#singlePost #contentPost img {
+	margin-top: 10px;
+  	margin-bottom: 20px;
+}

@@ -2,6 +2,17 @@
 // Utilities
 // ==========================================================================
 
+.pagination {
+	a, span {
+		display: inline-block;
+		margin: 0 10px;
+		font-size: 20px;
+		cursor: pointer;
+		&:hover, &.current { color: $primary-color; }
+		&.current { font-weight: 700; }
+	}
+}
+
 #faqs {
 	.content-faq {
 		h3 {

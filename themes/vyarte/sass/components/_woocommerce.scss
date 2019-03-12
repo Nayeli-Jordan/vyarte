@@ -2,6 +2,23 @@
 // Woccommerce
 // ==========================================================================
 
+/* Paginación */
+.woocommerce-pagination ul {
+	margin-top: 0px;
+	font-size: 20px;
+	text-align: center;
+	li {
+		display: inline-block;
+		a, span {
+			display: inline-block;
+			margin: 0 10px;
+			cursor: pointer;
+			&:hover, &.current { color: $primary-color; }
+			&.current { font-weight: 700; }
+		}
+	}
+}
+
 /* Filtro productos */
 .woocommerce-ordering {
 	float: right;
@@ -29,19 +46,18 @@
 		text-align: center;
 		clear: none!important;
 		&:nth-child(5n+1) { clear: both!important; }
-		@media #{$large-and-down} 		{ 
-			width: 25%!important;
-			&:nth-child(5n+1) { clear: none!important; }
-			&:nth-child(4n+1) { clear: both!important; }
+		h2 {
+			padding-top: 10px;
+			padding-bottom: 10px;
 		}
 		@media #{$medium-and-down} 		{ 
 			width: 33.33%!important;
-			&:nth-child(5n+1), &:nth-child(4n+1) { clear: none!important; }
+			&:nth-child(5n+1) { clear: none!important; }
 			&:nth-child(3n+1) { clear: both!important; }
 		}
 		@media #{$sm-and-down} 		{ 
 			width: 50%!important;
-			&:nth-child(5n+1), &:nth-child(4n+1), &:nth-child(3n+1) { clear: none!important; }
+			&:nth-child(5n+1), &:nth-child(3n+1) { clear: none!important; }
 			&:nth-child(2n+1) { clear: both!important; }
 		}
 		@media #{$small-and-down} 	{ 
