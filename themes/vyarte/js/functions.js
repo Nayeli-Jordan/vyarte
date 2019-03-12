@@ -93,7 +93,12 @@ var $=jQuery.noConflict();
 		//Scroll menú
 		$(".scrollContacto").click(function() {
 			$('html, body').animate({		
-				scrollTop: $('Footer').offset().top // - 50
+				scrollTop: $('Footer').offset().top - 30
+			}, 1000);
+		});
+		$(".scrollservHome").click(function() {
+			$('html, body').animate({		
+				scrollTop: $('#servHome').offset().top - 30
 			}, 1000);
 		});
 	});

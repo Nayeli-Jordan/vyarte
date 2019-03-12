@@ -100,5 +100,17 @@ add_action('init', function(){
 		);
 		wp_insert_post( $page, true );
 	}
+	
+	// Productos personalizados
+	if( ! get_page_by_path('productos-personalizados') ){
+		$page = array(
+			'post_author' => 1,
+			'post_status' => 'publish',
+			'post_title'  => 'Productos personalizados',
+			'post_name'   => 'productos-personalizados',
+			'post_type'   => 'page'
+		);
+		wp_insert_post( $page, true );
+	}
 
 });

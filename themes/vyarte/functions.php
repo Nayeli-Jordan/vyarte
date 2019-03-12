@@ -118,7 +118,7 @@ function woocommerce_support() {
  */
 add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );
 function new_loop_shop_per_page( $cols ) {
-  $cols = 30;
+  $cols = 32;
   return $cols;
 }
 

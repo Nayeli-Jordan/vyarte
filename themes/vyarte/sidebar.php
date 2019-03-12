@@ -29,7 +29,7 @@
 		$i = 1;
 		while ( $banner_query->have_posts() ) : $banner_query->the_post(); ?>
 
-			<img src="<?php the_post_thumbnail_url('medium'); ?>" class="margin-top-20">
+			<img src="<?php the_post_thumbnail_url('medium'); ?>" class="margin-top-20 margin-auto block responsive-img">
 
 	<?php $i ++; endwhile; wp_reset_postdata();
 	endif; ?>

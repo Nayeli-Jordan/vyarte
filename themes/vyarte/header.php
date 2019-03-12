@@ -92,6 +92,12 @@
 								/*Eliminar link contacto*/
 								if ($title === 'Contacto') {
 									$menu_list .='<li itemprop="actionOption" class="' . $class . '"><p class="customLink ' . $currentPage . '">' . $title . '</p></li>';	
+								} elseif ($title === 'Servicios') { /*Eliminar link servicios*/
+									if (is_front_page()) :
+										$menu_list .='<li itemprop="actionOption" class="' . $class . '"><p class="customLink ' . $currentPage . '">' . $title . '</p></li>';
+									else:
+										$menu_list .='<li itemprop="actionOption" class="' . $class . '"><a href="' . $url . '" class="' . $currentPage . '">' . $title . '</a></li>';	
+									endif;										
 								} else {
 									$menu_list .='<li itemprop="actionOption" class="' . $class . '"><a href="' . $url . '" class="' . $currentPage . '">' . $title . '</a></li>';	
 								}

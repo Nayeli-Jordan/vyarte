@@ -21,8 +21,9 @@ footer {
 			margin: 0px;
 			li {
 				list-style-type: none;
-				a {
+				a, .customLink  {
 					color: $light-color;
+					cursor: pointer;
 					@extend .transition;
 					&:hover, &.active { color: $primary-color-light; }
 					&.active { text-decoration: underline; }

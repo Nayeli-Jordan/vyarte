@@ -31,7 +31,16 @@
 											}								
 										}
 
-										$menu_list .='<li itemprop="actionOption" class="' . $class .'"><a href="' . $url . '" class="' . $currentPage . '">' . $title . '</a></li>';
+										/*Eliminar link servicios*/
+										if ($title === 'Servicios') { 
+											if (is_front_page()) :
+												$menu_list .='<li itemprop="actionOption" class="' . $class . '"><p class="customLink ' . $currentPage . '">' . $title . '</p></li>';
+											else:
+												$menu_list .='<li itemprop="actionOption" class="' . $class . '"><a href="' . $url . '" class="' . $currentPage . '">' . $title . '</a></li>';	
+											endif;										
+										} else {
+											$menu_list .='<li itemprop="actionOption" class="' . $class . '"><a href="' . $url . '" class="' . $currentPage . '">' . $title . '</a></li>';	
+										}
 									}
 								}
 								echo $menu_list;

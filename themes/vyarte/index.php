@@ -22,23 +22,22 @@
 		<h2 class="title-section"><span>Servicios</span></h2>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
 		<div class="row row-complete margin-top-20">
-		<?php
-			$serv_args = array(
-				'post_type' 		=> 'servicios',
-				'posts_per_page' 	=> 2,
-			);
-			$serv_query = new WP_Query( $serv_args );
-			if ( $serv_query->have_posts() ) : 
-				$i = 1;
-				while ( $serv_query->have_posts() ) : $serv_query->the_post(); ?>
-					<div class="col s12 sm6 text-center margin-bottom-30">
-						<div class="bg-gray padding-20 margin-bottom-20">
-							<div class="bg-image bg-contain" style="background-image: url(<?php the_post_thumbnail_url('large'); ?>)"></div>
-						</div>
-						<h3 class="margin-bottom-20 uppercase"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-					</div>			
-			<?php $i ++; endwhile; wp_reset_postdata();
-			endif; ?>				
+			<div class="col s12 sm6 text-center margin-bottom-30">
+				<a href="<?php echo SITEURL; ?>productos-personalizados">
+					<div class="bg-gray padding-20 margin-bottom-20">
+						<div class="bg-image bg-contain" style="background-image: url(https://gatchweb.com/vyarte/wp-content/uploads/2019/03/termo-lata-plata-300x300.jpg)"></div>
+					</div>
+					<h3 class="margin-bottom-20 uppercase">Productos personalizados</h3>
+				</a>
+			</div>
+			<div class="col s12 sm6 text-center margin-bottom-30">
+				<a href="<?php echo SITEURL; ?>identidad-corporativa">
+					<div class="bg-gray padding-20 margin-bottom-20">
+						<div class="bg-image bg-contain" style="background-image: url(https://gatchweb.com/vyarte/wp-content/uploads/2019/03/termo-lata-plata-300x300.jpg)"></div>
+					</div>
+					<h3 class="margin-bottom-20 uppercase">Identidad Corporativa</h3>
+				</a>
+			</div>	
 		</div>
 	</section>
 	<section id="section-productos_destacados" class="container margin-top-bottom-30">
