@@ -19,7 +19,7 @@
 							<div class="col s12 postComplete margin-bottom-30">
 								<div class="bg-image" style="background-image: url(<?php the_post_thumbnail_url('large'); ?>)"></div>
 						<?php } else { ?>
-							<div class="col s12 m6 xl4 margin-bottom-30">
+							<div class="col s12 m6 margin-bottom-30">
 								<div class="bg-image" style="background-image: url(<?php the_post_thumbnail_url('medium'); ?>)"></div>
 						<?php } ?>
 							<h3 class="margin-top-bottom-10"><a href="<?php the_permalink(); ?>" class="color-text color-primary-dark_hover"><?php the_title(); ?></a></h3>

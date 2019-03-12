@@ -101,4 +101,36 @@ add_action('init', function(){
 	);
 	register_post_type( 'preguntas-frecuentes', $args );	
 
+	// Slider
+	$labels = array(
+		'name'          => 'Banner Blog',
+		'singular_name' => 'Banner Blog',
+		'add_new'       => 'Nuevo Banner',
+		'add_new_item'  => 'Nuevo Banner',
+		'edit_item'     => 'Editar Banner',
+		'new_item'      => 'Nuevo Banner',
+		'all_items'     => 'Banner Blog',
+		'view_item'     => 'Ver Banner',
+		'search_items'  => 'Buscar Banner',
+		'not_found'     => 'No hay Banner',
+		'menu_name'     => 'Banner Blog'
+	);
+
+	$args = array(
+		'labels'             => $labels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => 'edit.php?post_type=page',
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'banner' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => 6,
+		'supports'           => array( 'title', 'thumbnail' ),
+		'menu_icon' 		 => 'dashicons-admin-users'
+	);
+	register_post_type( 'banner', $args );
+
 });

@@ -1,0 +1,6 @@
+2019-03-12T15:19:00+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\Users\Tony\Documents\sites\vyarte\wp-content\plugins\woocommerce\includes\libraries\action-scheduler\classes\ActionScheduler_FatalErrorMonitor.php on line 6
+
+2019-03-12T15:21:37+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\Users\Tony\Documents\sites\vyarte\wp-admin\includes\options.php on line 15
+
+2019-03-12T15:21:40+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\Users\Tony\Documents\sites\vyarte\wp-includes\wp-db.php on line 1924
+
