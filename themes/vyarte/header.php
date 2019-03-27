@@ -56,6 +56,10 @@
 		<?php wp_head(); ?>
 	</head>
 	<body class="<?php if (is_page('cuenta')): echo 'vyarte_cuenta'; endif ?>">
+		<?php if (is_page('contacto')) {
+			/* Modal Contacto enviado */
+			include (TEMPLATEPATH . '/template/notice/contacto-enviado.php');
+		} ?>
 		<header class="js-header row">
 			<nav class="container">
 				<a href="<?php echo SITEURL; ?>"><img src="<?php echo THEMEPATH; ?>images/identidad/logo.png"></a>
@@ -107,7 +111,7 @@
 					<div class="icons-nav">
 						<a href=""><em class="icon-instagram-filled margin-left-10"></em></a>			
 						<a href=""><em class="icon-facebook-rect"></em></a>			
-						<a href="" class="margin-right-10"><em class="icon-twitter-squared "></em></a>			
+						<a href="" class="margin-right-10"><em class="icon-youtube"></em></a>			
 						<a href="<?php echo SITEURL; ?>carrito"><em class="icon-basket"><span><?php echo WC()->cart->get_cart_contents_count(); ?></span></a></em>
 						<a href="<?php echo SITEURL; ?>cuenta"><em class="icon-user"></em></a>
 						<p id="linkSearchProduct" class="customLink"><em class="icon-search"></em></p>

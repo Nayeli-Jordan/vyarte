@@ -88,6 +88,12 @@ small                         { font-size: 75%; }
   }
   @media #{$small-and-down} { font-size: 18px; }
 }
+.title-page {
+  margin-top: 0px;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
 
 #singlePost p {
   margin-bottom: 10px;

@@ -25,6 +25,7 @@ require_once( 'inc/post-types.php' );
 add_action( 'wp_enqueue_scripts', function(){
  
 	wp_enqueue_script( 'jquery', 'https://code.jquery.com/jquery-3.2.1.min.js', array(''), '2.1.1', true );
+    wp_enqueue_script( 'vy_parsley', JSPATH.'parsley.min.js', array(), '1.0', true );
 	wp_enqueue_script( 'cycle_js', JSPATH.'jquery.cicle2.min.js', array(), '', true );
 	wp_enqueue_script( 'vy_functions', JSPATH.'functions.js', array(), '1.0', true );
  
@@ -66,6 +67,31 @@ function custom_excerpt_length( $length ) {
 	return 30;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+/*
+** Correo SMTP
+*/
+/* Send mail by SMTP */
+add_action( 'phpmailer_init', 'send_smtp_email' );
+function send_smtp_email( $phpmailer ) {
+    $phpmailer->isSMTP();
+    $phpmailer->Host       = SMTP_HOST;
+    $phpmailer->SMTPAuth   = SMTP_AUTH;
+    $phpmailer->Port       = SMTP_PORT;
+    $phpmailer->SMTPSecure = SMTP_SECURE;
+    $phpmailer->Username   = SMTP_USERNAME;
+    $phpmailer->Password   = SMTP_PASSWORD;
+    $phpmailer->From       = SMTP_FROM;
+    $phpmailer->FromName   = SMTP_FROMNAME;
+}
+
+if ( $GLOBALS['pagenow'] != 'wp-login.php' ) { /* Evitar errores con email recuperar contraseña */
+    /* $message wp_mail in html (not text/plain) */
+    function transforme_content_type(){
+        return "text/html";
+    }
+    add_filter( 'wp_mail_content_type','transforme_content_type' );    
+}
 
 
 /**
@@ -168,3 +194,11 @@ remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 /**
 * CUSTOM FUNCTIONS
 */
+
+/* Redirección formularios */
+add_action ('template_redirect', 'custom_redirect_contacto');
+function custom_redirect_contacto() {
+    if ( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['btnSubmitContact'] ) ) {
+        wp_redirect(site_url('contacto#contacto-enviado'));
+    }
+}

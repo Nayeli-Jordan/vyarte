@@ -84,11 +84,12 @@
 	 						<div class="icons-redes">
 								<a href=""><em class="icon-instagram-filled margin-left-10"></em></a>			
 								<a href=""><em class="icon-facebook-rect"></em></a>
-								<a href=""><em class="icon-twitter-squared"></em></a>
+								<a href=""><em class="icon-youtube"></em></a>
+								<a href=""><em class="icon-whatsapp"></em></a>
 							</div>
 							<p>Contáctanos</p>
 							<p><a href="tel:+5518339080"><em class="icon-phone-circled"></em>044 55 18339080</a></p>
-							<p><a href="" id="contact-email"><em class="icon-mail-alt"></em>contacto<span>@</span>vyarte.com</a></p>
+							<p><a href="" class="contact-email"><em class="icon-mail-alt"></em>contacto<span>@</span>vyarte.com</a></p>
 	 					</div>
 	 				</div>
 	 				<div class="text-center">

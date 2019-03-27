@@ -10,6 +10,15 @@ var $=jQuery.noConflict();
 
 		$(document).ready(function() {
 			footerBottom();
+			
+			// Validation form
+			$('form.validation').parsley();
+
+			/* Si se ha contactado */
+			if(window.location.href.indexOf("#contacto-enviado") > -1) {
+				console.log('Contacto enviado');
+				$('#modal-contacto_enviado').show();
+			}
 		});
  
 		$(window).on('resize', function(){
@@ -75,7 +84,7 @@ var $=jQuery.noConflict();
 		});
 
 		/*Email*/
-		$("#contact-email").click(function() {
+		$(".contact-email").click(function() {
 			$(this).attr('href', 'mailto:contacto@vyarte.com');
 		});
 

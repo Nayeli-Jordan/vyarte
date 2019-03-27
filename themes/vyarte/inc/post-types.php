@@ -133,4 +133,36 @@ add_action('init', function(){
 	);
 	register_post_type( 'banner', $args );
 
+	// Contacto
+	$labels = array(
+		'name'          => 'Contacto',
+		'singular_name' => 'Contacto',
+		'add_new'       => 'Nuevo Contacto',
+		'add_new_item'  => 'Nuevo Contacto',
+		'edit_item'     => 'Editar Contacto',
+		'new_item'      => 'Nuevo Contacto',
+		'all_items'     => 'Contacto',
+		'view_item'     => 'Ver Contacto',
+		'search_items'  => 'Buscar Contacto',
+		'not_found'     => 'No hay Contacto',
+		'menu_name'     => 'Contacto'
+	);
+
+	$args = array(
+		'labels'             => $labels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => 'edit.php?post_type=page',
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'contacto' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => 6,
+		'supports'           => array( 'title', 'editor' ),
+		'menu_icon' 		 => 'dashicons-admin-users'
+	);
+	register_post_type( 'contacto', $args );
+
 });

@@ -1,5 +1,8 @@
 // Forms
 // ==========================================================================
+input,
+select,
+textarea { font-family: $font-default; }
 
 input:not([type="submit"]),
 select,
@@ -7,10 +10,11 @@ textarea {
 	margin-bottom: 10px;
 	width: 100%!important;	
 	max-width: 100%;
+	text-align: center;
 	line-height: 30px!important;
 	background-color: $light-color;
 	border-radius: 2px;
-	border: 1px solid #aaa;
+	border: 1px solid $primary-color;
 	outline: none!important;
 }
 input:not([type="submit"]):not([type="number"]),
@@ -26,9 +30,9 @@ textarea {
 	line-height: 22px;
 	resize: none;
 }
-input[type="submit"] {
+/* input[type="submit"] {
     display: block;
-}
+} */
 
 //Hide button input date
 /* ::-webkit-inner-spin-button {
@@ -44,4 +48,9 @@ input[type="submit"] {
 		color: $danger-color; 
 		list-style-type: none!important;
 	}
+}
+
+#contact-form {
+	max-width: 400px;
+    margin: auto;
 }

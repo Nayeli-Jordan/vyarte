@@ -10,18 +10,7 @@
 	right: 0px;
 	z-index: 1200;
 	transition: .5s ease-out;
-	.exit-modal, .fondo-modal {
-		position: absolute;
-		top: 0px;
-		bottom: 0px;
-		left: 0px;
-		right: 0px;
-		background-color: rgba(70, 64, 64, 0.62);
-	}
-	.modal-header {
-		padding: 20px;
-		text-align: center;
-	}
+	background-color: rgba(174, 174, 174, 0.6);
 	.modal-content {
 		position: relative;
 		width: 80vw;
