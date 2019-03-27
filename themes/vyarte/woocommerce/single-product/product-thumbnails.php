@@ -30,7 +30,7 @@ if ( $attachment_ids && $product->get_image_id() ) {
 	foreach ( $attachment_ids as $attachment_id ) {
 		$count = 1;
 		/*echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', wc_get_gallery_image_html( $attachment_id ), $attachment_id ); */// phpcs:disable WordPress.XSS.EscapeOutput.OutputNotEscaped
-		$image_link = wp_get_attachment_url( $attachment_id );
+		$image_link = wp_get_attachment_url( $attachment_id, 'large' );
 		echo '<div class="bg-image bg-contain galleryImage" style="background-image: url(' . $image_link . ')"></div>';
 	}
 }
