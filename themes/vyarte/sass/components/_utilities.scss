@@ -2,6 +2,9 @@
 // Utilities
 // ==========================================================================
 
+header nav > a { display: none!important; }
+footer { opacity: 0.3; }
+
 .pagination {
 	a, span {
 		display: inline-block;

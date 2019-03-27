@@ -89,10 +89,8 @@
 									}							
 								}
 
-								/*Eliminar link contacto*/
-								if ($title === 'Contacto') {
-									$menu_list .='<li itemprop="actionOption" class="' . $class . '"><p class="customLink ' . $currentPage . '">' . $title . '</p></li>';	
-								} elseif ($title === 'Servicios') { /*Eliminar link servicios*/
+								/*Eliminar link servicios*/
+								if ($title === 'Servicios') { 
 									if (is_front_page()) :
 										$menu_list .='<li itemprop="actionOption" class="' . $class . '"><p class="customLink ' . $currentPage . '">' . $title . '</p></li>';
 									else:

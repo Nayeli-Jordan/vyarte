@@ -79,6 +79,13 @@ remove_action('wp_print_styles', 'print_emoji_styles');
 remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 remove_action( 'admin_print_styles', 'print_emoji_styles' );
 
+/* Remove default image sizes here.  */
+add_filter( 'intermediate_image_sizes_advanced', 'prefix_remove_default_images' );
+function prefix_remove_default_images( $sizes ) {
+	unset( $sizes['medium_large']); // 768px
+	return $sizes;
+}
+
 
 /**
 * SEO y Analitics
@@ -112,6 +119,23 @@ add_action( 'after_setup_theme', 'woocommerce_support' );
 function woocommerce_support() {
 	add_theme_support( 'woocommerce' );
 }
+
+/**
+ * Modify image width theme support.
+ */
+function iconic_modify_theme_support() {
+    $theme_support = get_theme_support( 'woocommerce' );
+    $theme_support = is_array( $theme_support ) ? $theme_support[0] : array();
+
+    $theme_support['thumbnail_image_width'] = 100; 
+    $theme_support['single_image_width'] = 500;
+    $theme_support['gallery_thumbnail_image_width'] = 500;
+ 
+    remove_theme_support( 'woocommerce' );
+    add_theme_support( 'woocommerce', $theme_support );
+} 
+add_action( 'after_setup_theme', 'iconic_modify_theme_support', 10 );
+
 
 /**
  * Change number of products that are displayed per page (shop page)

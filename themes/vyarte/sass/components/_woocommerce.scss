@@ -63,6 +63,7 @@
 		h2 {
 			min-height: 40px;
 			text-transform: lowercase;
+			padding: 0px;
 			&::first-letter { text-transform: uppercase; }
 		}
 		h2,
