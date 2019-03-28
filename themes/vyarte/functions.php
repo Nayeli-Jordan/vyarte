@@ -64,7 +64,7 @@ function add_top_menu(){
 
 //Delimitar número palabras excerpt
 function custom_excerpt_length( $length ) {
-	return 30;
+	return 20;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
@@ -183,7 +183,7 @@ function woo_custom_cart_button_text() {
 
 //Hook orden
 /* Products */
-remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
+//remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
 /*Single*/
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 add_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 5 );
@@ -194,6 +194,34 @@ remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 /**
 * CUSTOM FUNCTIONS
 */
+/*
+** Banner Blog
+*/
+add_action( 'add_meta_boxes', 'banner_custom_metabox' );
+function banner_custom_metabox(){
+    add_meta_box( 'banner_meta', 'Enlace Banner', 'display_banner_atributos', 'banner', 'advanced', 'default');
+}
+
+function display_banner_atributos( $banner ){
+    $enlace         = esc_html( get_post_meta( $banner->ID, 'banner_enlace', true ) );
+?>
+    <table class="gi-custom-fields">
+        <tr>
+            <th>
+                <input type="text" id="banner_enlace" name="banner_enlace" placeholder="URL" value="<?php echo $enlace; ?>" required>
+            </th>
+        </tr>
+    </table>
+<?php }
+
+add_action( 'save_post', 'banner_save_metas', 10, 2 );
+function banner_save_metas( $idbanner, $banner ){
+    if ( $banner->post_type == 'banner' ){
+        if ( isset( $_POST['banner_enlace'] ) ){
+            update_post_meta( $idbanner, 'banner_enlace', $_POST['banner_enlace'] );
+        }
+    }
+}
 
 /* Redirección formularios */
 add_action ('template_redirect', 'custom_redirect_contacto');

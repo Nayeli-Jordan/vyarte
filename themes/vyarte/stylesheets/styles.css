@@ -3995,7 +3995,7 @@ video.responsive-video {
   height: 250px;
 }
 /* line 71, ../sass/components/_media.scss */
-#contentBlog .col:not(.postComplete):nth-child(2n) {
+#contentBlog .col .col:not(.postComplete):nth-child(2n) {
   clear: both;
 }
 
@@ -8589,7 +8589,7 @@ header nav > a {
 }
 
 /* line 6, ../sass/components/_utilities.scss */
-header,
+.js-header,
 footer {
   opacity: 0.3;
 }
@@ -8945,26 +8945,25 @@ footer {
   margin-bottom: 30px;
   padding: 30px;
   text-align: center;
-  color: #fff;
-  background-color: #5a9ea9;
+  background-color: #f3f3f3;
   border-radius: 5px;
 }
-/* line 194, ../sass/components/_woocommerce.scss */
+/* line 193, ../sass/components/_woocommerce.scss */
 #single-product #reviews #review_form_wrapper #review_form #reply-title {
   display: block;
   font-size: 22px;
   text-align: center;
 }
-/* line 199, ../sass/components/_woocommerce.scss */
+/* line 198, ../sass/components/_woocommerce.scss */
 #single-product #reviews #review_form_wrapper #review_form label {
   display: inline-block;
   margin-bottom: 10px;
 }
-/* line 203, ../sass/components/_woocommerce.scss */
+/* line 202, ../sass/components/_woocommerce.scss */
 #single-product #reviews #review_form_wrapper #review_form .comment-form-rating {
   margin-bottom: 20px;
 }
-/* line 205, ../sass/components/_woocommerce.scss */
+/* line 204, ../sass/components/_woocommerce.scss */
 #single-product #reviews #review_form_wrapper #review_form .comment-form-rating a {
   display: inline-block;
   width: 25px;
@@ -8975,84 +8974,84 @@ footer {
   background-color: #7cb2bb;
   border-radius: 50%;
 }
-/* line 214, ../sass/components/_woocommerce.scss */
+/* line 213, ../sass/components/_woocommerce.scss */
 #single-product #reviews #review_form_wrapper #review_form .comment-form-rating a:hover, #single-product #reviews #review_form_wrapper #review_form .comment-form-rating a.active {
   background-color: #ffbc00;
 }
-/* line 219, ../sass/components/_woocommerce.scss */
+/* line 218, ../sass/components/_woocommerce.scss */
 #single-product #reviews #review_form_wrapper #review_form .form-submit #submit {
   width: 100%;
 }
-/* line 223, ../sass/components/_woocommerce.scss */
+/* line 222, ../sass/components/_woocommerce.scss */
 #single-product .related.products h2 {
   text-align: center;
 }
 @media only screen and (min-width: 601px) and (max-width: 992px) {
-  /* line 224, ../sass/components/_woocommerce.scss */
+  /* line 223, ../sass/components/_woocommerce.scss */
   #single-product .related.products ul li:nth-child(4n) {
     display: none;
   }
 }
 @media only screen and (min-width: 1200px) {
-  /* line 225, ../sass/components/_woocommerce.scss */
+  /* line 224, ../sass/components/_woocommerce.scss */
   #single-product .related.products ul li:first-child {
     margin-left: 10% !important;
   }
 }
 
 /* Carrito */
-/* line 231, ../sass/components/_woocommerce.scss */
+/* line 230, ../sass/components/_woocommerce.scss */
 .woocommerce table.cart img {
   width: 65px !important;
 }
-/* line 232, ../sass/components/_woocommerce.scss */
+/* line 231, ../sass/components/_woocommerce.scss */
 .woocommerce table.cart td.actions .input-text {
   width: 130px !important;
 }
-/* line 236, ../sass/components/_woocommerce.scss */
+/* line 235, ../sass/components/_woocommerce.scss */
 .woocommerce .quantity .qty {
   width: 100px !important;
 }
-/* line 240, ../sass/components/_woocommerce.scss */
+/* line 239, ../sass/components/_woocommerce.scss */
 .woocommerce a.checkout-button {
   width: 100% !important;
 }
 
-/* line 243, ../sass/components/_woocommerce.scss */
+/* line 242, ../sass/components/_woocommerce.scss */
 .cart-empty {
   margin-bottom: 20px;
 }
 
-/* line 244, ../sass/components/_woocommerce.scss */
+/* line 243, ../sass/components/_woocommerce.scss */
 .cart-empty, .return-to-shop {
   text-align: center;
 }
 
 /* CUENTA */
-/* line 249, ../sass/components/_woocommerce.scss */
+/* line 248, ../sass/components/_woocommerce.scss */
 .vyarte_cuenta h2 {
   text-align: center;
 }
 
-/* line 250, ../sass/components/_woocommerce.scss */
+/* line 249, ../sass/components/_woocommerce.scss */
 .woocommerce-form-login {
   max-width: 300px;
   margin: 20px auto 0 !important;
 }
-/* line 253, ../sass/components/_woocommerce.scss */
+/* line 252, ../sass/components/_woocommerce.scss */
 .woocommerce-form-login button {
   width: 100%;
 }
 
-/* line 255, ../sass/components/_woocommerce.scss */
+/* line 254, ../sass/components/_woocommerce.scss */
 .woocommerce-MyAccount-navigation ul {
   text-align: center;
 }
-/* line 257, ../sass/components/_woocommerce.scss */
+/* line 256, ../sass/components/_woocommerce.scss */
 .woocommerce-MyAccount-navigation ul li {
   display: inline-block;
 }
-/* line 259, ../sass/components/_woocommerce.scss */
+/* line 258, ../sass/components/_woocommerce.scss */
 .woocommerce-MyAccount-navigation ul li a {
   display: inline-block;
   padding: 0 10px;
@@ -9060,30 +9059,30 @@ footer {
   font-weight: 700;
   text-transform: uppercase;
 }
-/* line 265, ../sass/components/_woocommerce.scss */
+/* line 264, ../sass/components/_woocommerce.scss */
 .woocommerce-MyAccount-navigation ul li a:hover {
   color: #6ba8b2;
 }
-/* line 269, ../sass/components/_woocommerce.scss */
+/* line 268, ../sass/components/_woocommerce.scss */
 .woocommerce-MyAccount-navigation ul li:not(:last-child) {
   margin-right: 5px;
 }
-/* line 270, ../sass/components/_woocommerce.scss */
+/* line 269, ../sass/components/_woocommerce.scss */
 .woocommerce-MyAccount-navigation ul li.is-active a {
   color: #6ba8b2;
 }
 @media only screen and (max-width: 430px) {
-  /* line 257, ../sass/components/_woocommerce.scss */
+  /* line 256, ../sass/components/_woocommerce.scss */
   .woocommerce-MyAccount-navigation ul li {
     display: block;
     margin: 0px;
   }
-  /* line 275, ../sass/components/_woocommerce.scss */
+  /* line 274, ../sass/components/_woocommerce.scss */
   .woocommerce-MyAccount-navigation ul li a {
     width: 100%;
   }
 }
-/* line 278, ../sass/components/_woocommerce.scss */
+/* line 277, ../sass/components/_woocommerce.scss */
 .woocommerce-MyAccount-navigation ul li:last-child a {
   color: #c30008;
 }

@@ -68,7 +68,7 @@ video.responsive-video {
 	.postComplete .bg-image {
 		height: 250px;
 	}
-	.col:not(.postComplete):nth-child(2n){ clear: both; }
+	.col .col:not(.postComplete):nth-child(2n){ clear: both; }
 }
 
 #singlePost #contentPost img {

@@ -1,0 +1,12 @@
+table {
+	width: 100%;
+}
+label { 
+	display: block; 
+	text-align: left;
+}
+input:not([type="submit"]),
+select,
+textarea {
+	width: 100%;
+}
