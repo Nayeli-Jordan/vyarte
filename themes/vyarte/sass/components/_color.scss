@@ -9,9 +9,18 @@
 
 .color-primary-dark_hover:hover {color: $primary-color-dark; }
 
+.color-primary-link {
+	a { 
+		color: $text-color;
+		&:hover { color: $primary-color; }
+	}
+}
+
 // Bg Color
 // ==========================================================================
 
 .bg-light 				{ background-color: $light-color; }
 .bg-gray 				{ background-color: $gray-color; }
 .bg-gray-dark 			{ background-color: $gray-color-dark; }
+
+.bg-opacity-dark		{ background-color: rgba(0,0,0,0.3); }

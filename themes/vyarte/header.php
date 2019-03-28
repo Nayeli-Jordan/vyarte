@@ -110,8 +110,8 @@
 										$currentPage	 	= 'active';
 									}
 									$menu_list .='<li itemprop="actionOption" class="' . $class . '"><p class="customLink ' . $currentPage . '">' . $title . '</p>';
-									$menu_list .='<ul><li itemprop="actionOption"><a href="' . SITEURL . 'producto-categoria/sublimacion-y-serigrafia/" class="' . $isCatSublimacion . '">Sublimacion y serigrafía</a></li>';
-									$menu_list .='<li itemprop="actionOption"><a href="' . SITEURL . 'producto-categoria/diseno-grafico/" class="' . $isCatDiseno . '">Diseño gráfico</a></li>';
+									$menu_list .='<ul><li itemprop="actionOption"><a href="' . SITEURL . 'sublimacion-y-serigrafia/" class="' . $isCatSublimacion . '">Sublimacion y serigrafía</a></li>';
+									$menu_list .='<li itemprop="actionOption"><a href="' . SITEURL . 'diseno-grafico/" class="' . $isCatDiseno . '">Diseño gráfico</a></li>';
 									$menu_list .='</ul></li>';									
 								} else {
 									$menu_list .='<li itemprop="actionOption" class="' . $class . '"><a href="' . $url . '" class="' . $currentPage . '">' . $title . '</a></li>';	

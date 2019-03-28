@@ -2339,19 +2339,33 @@ input[type="submit"].btn-tall,
   color: #5a9ea9;
 }
 
+/* line 13, ../sass/components/_color.scss */
+.color-primary-link a {
+  color: #555555;
+}
 /* line 15, ../sass/components/_color.scss */
+.color-primary-link a:hover {
+  color: #6ba8b2;
+}
+
+/* line 22, ../sass/components/_color.scss */
 .bg-light {
   background-color: #fff;
 }
 
-/* line 16, ../sass/components/_color.scss */
+/* line 23, ../sass/components/_color.scss */
 .bg-gray {
   background-color: #f3f3f3;
 }
 
-/* line 17, ../sass/components/_color.scss */
+/* line 24, ../sass/components/_color.scss */
 .bg-gray-dark {
   background-color: #cdcdcd;
+}
+
+/* line 26, ../sass/components/_color.scss */
+.bg-opacity-dark {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 /* line 4, ../sass/components/_effects.scss */
@@ -3961,18 +3975,41 @@ video.responsive-video {
   right: 0;
 }
 
-/* line 41, ../sass/components/_media.scss */
+/* line 39, ../sass/components/_media.scss */
+.bg-category {
+  position: relative;
+  height: 300px;
+}
+
+/* line 43, ../sass/components/_media.scss */
+.bg-subcategory {
+  position: relative;
+  height: 200px;
+}
+/* line 46, ../sass/components/_media.scss */
+.bg-subcategory h3 {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  padding: 0 10px;
+  line-height: 35px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* line 61, ../sass/components/_media.scss */
 #sliderHome .cycle-slideshow img {
   width: 100%;
 }
-/* line 44, ../sass/components/_media.scss */
+/* line 64, ../sass/components/_media.scss */
 #sliderHome .cycle-slideshow .cycle-pager {
   position: absolute;
   width: 100%;
   bottom: -15px;
   z-index: 199;
 }
-/* line 49, ../sass/components/_media.scss */
+/* line 69, ../sass/components/_media.scss */
 #sliderHome .cycle-slideshow .cycle-pager span {
   font-size: 60px;
   line-height: 40px;
@@ -3980,26 +4017,26 @@ video.responsive-video {
   color: #7cb2bb;
   cursor: pointer;
 }
-/* line 55, ../sass/components/_media.scss */
+/* line 75, ../sass/components/_media.scss */
 #sliderHome .cycle-slideshow .cycle-pager span.cycle-pager-active {
   color: #5a9ea9;
 }
 
 /* POST */
-/* line 65, ../sass/components/_media.scss */
+/* line 85, ../sass/components/_media.scss */
 #contentBlog .bg-image {
   height: 300px;
 }
-/* line 68, ../sass/components/_media.scss */
+/* line 88, ../sass/components/_media.scss */
 #contentBlog .postComplete .bg-image {
   height: 250px;
 }
-/* line 71, ../sass/components/_media.scss */
+/* line 91, ../sass/components/_media.scss */
 #contentBlog .col .col:not(.postComplete):nth-child(2n) {
   clear: both;
 }
 
-/* line 74, ../sass/components/_media.scss */
+/* line 94, ../sass/components/_media.scss */
 #singlePost #contentPost img {
   margin-top: 10px;
   margin-bottom: 20px;
@@ -8404,27 +8441,27 @@ h1, h2, h3, h4, h5, h6 {
 
 /* line 26, ../sass/components/_typography.scss */
 h1 {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 /* line 27, ../sass/components/_typography.scss */
 h2 {
-  font-size: 22px;
+  font-size: 18px;
 }
 
 /* line 28, ../sass/components/_typography.scss */
 h3 {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 /* line 29, ../sass/components/_typography.scss */
 h4 {
-  font-size: 18px;
+  font-size: 15px;
 }
 
 /* line 30, ../sass/components/_typography.scss */
 h5 {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 /* line 31, ../sass/components/_typography.scss */
@@ -8588,7 +8625,12 @@ header nav > a {
   display: none !important;
 }
 
-/* footer { opacity: 0.3; } */
+/* line 6, ../sass/components/_utilities.scss */
+.js-header,
+footer {
+  opacity: 0.3;
+}
+
 /* line 10, ../sass/components/_utilities.scss */
 .pagination a, .pagination span {
   display: inline-block;

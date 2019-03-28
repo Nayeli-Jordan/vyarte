@@ -15,18 +15,6 @@ add_action('init', function(){
 			'post_type'   => 'page'
 		);
 		wp_insert_post( $page, true );
-	}
-
-	// Servicios
-	if( ! get_page_by_path('servicios') ){
-		$page = array(
-			'post_author' => 1,
-			'post_status' => 'publish',
-			'post_title'  => 'Servicios',
-			'post_name'   => 'servicios',
-			'post_type'   => 'page'
-		);
-		wp_insert_post( $page, true );
 	}	
 
 	// Blog
@@ -132,6 +120,29 @@ add_action('init', function(){
 			'post_status' => 'publish',
 			'post_title'  => 'Contacto',
 			'post_name'   => 'contacto',
+			'post_type'   => 'page'
+		);
+		wp_insert_post( $page, true );
+	}
+	
+	// Sublimacion y serigrafía
+	if( ! get_page_by_path('sublimacion-y-serigrafia') ){
+		$page = array(
+			'post_author' => 1,
+			'post_status' => 'publish',
+			'post_title'  => 'Sublimacion y serigrafía',
+			'post_name'   => 'sublimacion-y-serigrafia',
+			'post_type'   => 'page'
+		);
+		wp_insert_post( $page, true );
+	}	
+	// Diseño gráfico
+	if( ! get_page_by_path('diseno-grafico') ){
+		$page = array(
+			'post_author' => 1,
+			'post_status' => 'publish',
+			'post_title'  => 'Diseño gráfico',
+			'post_name'   => 'diseno-grafico',
 			'post_type'   => 'page'
 		);
 		wp_insert_post( $page, true );
