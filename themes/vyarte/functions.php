@@ -61,6 +61,15 @@ function add_top_menu(){
 	register_nav_menu('footer_menu',__('Footer menu'));
 	register_nav_menu('vyarte_menu',__('Vyarte menu'));
 }
+/*Add class active*/
+add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+function special_nav_class($classes, $item){
+     if( in_array('current-menu-item', $classes) ){
+             $classes[] = 'active ';
+     }
+     return $classes;
+}
+
 
 //Delimitar número palabras excerpt
 function custom_excerpt_length( $length ) {
@@ -205,7 +214,7 @@ function banner_custom_metabox(){
 function display_banner_atributos( $banner ){
     $enlace         = esc_html( get_post_meta( $banner->ID, 'banner_enlace', true ) );
 ?>
-    <table class="gi-custom-fields">
+    <table class="vy-custum-fields">
         <tr>
             <th>
                 <input type="text" id="banner_enlace" name="banner_enlace" placeholder="URL" value="<?php echo $enlace; ?>" required>

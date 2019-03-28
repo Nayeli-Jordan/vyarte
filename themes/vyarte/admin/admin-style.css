@@ -1,12 +1,12 @@
-table {
+table.vy-custum-fields {
 	width: 100%;
 }
-label { 
+.vy-custum-fields label { 
 	display: block; 
 	text-align: left;
 }
-input:not([type="submit"]),
-select,
-textarea {
+.vy-custum-fields input:not([type="submit"]),
+.vy-custum-fields select,
+.vy-custum-fields textarea {
 	width: 100%;
 }

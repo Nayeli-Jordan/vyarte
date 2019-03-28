@@ -93,13 +93,26 @@
 									}							
 								}
 
+								if (is_product_category('sublimacion-y-serigrafia')) {
+									$isCatSublimacion 	= 'active';
+									$isCatDiseno 	= '';
+								} else if (is_product_category('diseno-grafico')) {
+									$isCatDiseno 	= 'active';
+									$isCatSublimacion 	= '';
+								} else {
+									$isCatSublimacion 	= '';
+									$isCatDiseno 	= '';
+								}
+
 								/*Eliminar link servicios*/
 								if ($title === 'Servicios') { 
-									if (is_front_page()) :
-										$menu_list .='<li itemprop="actionOption" class="' . $class . '"><p class="customLink ' . $currentPage . '">' . $title . '</p></li>';
-									else:
-										$menu_list .='<li itemprop="actionOption" class="' . $class . '"><a href="' . $url . '" class="' . $currentPage . '">' . $title . '</a></li>';	
-									endif;										
+									if (is_product_category('sublimacion-y-serigrafia') || is_product_category('diseno-grafico')){
+										$currentPage	 	= 'active';
+									}
+									$menu_list .='<li itemprop="actionOption" class="' . $class . '"><p class="customLink ' . $currentPage . '">' . $title . '</p>';
+									$menu_list .='<ul><li itemprop="actionOption"><a href="' . SITEURL . 'producto-categoria/sublimacion-y-serigrafia/" class="' . $isCatSublimacion . '">Sublimacion y serigrafía</a></li>';
+									$menu_list .='<li itemprop="actionOption"><a href="' . SITEURL . 'producto-categoria/diseno-grafico/" class="' . $isCatDiseno . '">Diseño gráfico</a></li>';
+									$menu_list .='</ul></li>';									
 								} else {
 									$menu_list .='<li itemprop="actionOption" class="' . $class . '"><a href="' . $url . '" class="' . $currentPage . '">' . $title . '</a></li>';	
 								}

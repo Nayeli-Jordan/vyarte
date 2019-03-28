@@ -23,19 +23,19 @@
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
 		<div class="row row-complete margin-top-20">
 			<div class="col s12 sm6 text-center margin-bottom-30">
-				<a href="<?php echo SITEURL; ?>productos-personalizados">
+				<a href="<?php echo SITEURL; ?>producto-categoria/sublimacion-y-serigrafia/">
 					<div class="bg-gray padding-20 margin-bottom-20">
 						<div class="bg-image bg-contain" style="background-image: url(https://gatchweb.com/vyarte/wp-content/uploads/2019/03/termo-lata-plata-300x300.jpg)"></div>
 					</div>
-					<h3 class="margin-bottom-20 uppercase">Productos personalizados</h3>
+					<h3 class="margin-bottom-20 uppercase">Sublimación y serigrafía</h3>
 				</a>
 			</div>
 			<div class="col s12 sm6 text-center margin-bottom-30">
-				<a href="<?php echo SITEURL; ?>identidad-corporativa">
+				<a href="<?php echo SITEURL; ?>producto-categoria/diseno-grafico">
 					<div class="bg-gray padding-20 margin-bottom-20">
 						<div class="bg-image bg-contain" style="background-image: url(https://gatchweb.com/vyarte/wp-content/uploads/2019/03/termo-lata-plata-300x300.jpg)"></div>
 					</div>
-					<h3 class="margin-bottom-20 uppercase">Identidad Corporativa</h3>
+					<h3 class="margin-bottom-20 uppercase">Diseño gráfico</h3>
 				</a>
 			</div>	
 		</div>

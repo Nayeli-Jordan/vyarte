@@ -17,7 +17,7 @@ header.js-header {
 			cursor: pointer;
 			&:hover { color: $primary-color; }
 		}
-		ul {
+		& > ul {
 			float: right;
 			display: inline-block;
 			max-width: calc(100% - 100px);
@@ -47,6 +47,29 @@ header.js-header {
 					cursor: pointer;
 					@extend .transition;
 					&:hover, &.active { color: $primary-color-dark; }
+				}
+				ul {
+					margin: 0px;
+					background-color: $light-color;
+					@media #{$medium-and-up} {
+						position: absolute;
+						display: none;
+						li a { padding: 0 20px!important; }
+					}
+					li { 
+						display: block; 
+						a {
+							display: block;
+							padding: 0 20px 0 30px;
+							&:hover {
+								color: $light-color;
+								background-color: $primary-color;
+							}
+						}
+					}
+				}
+				&:hover {
+					ul { display: block; }
 				}
 			}
 			.icons-nav {

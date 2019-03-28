@@ -1,0 +1,6 @@
+2019-03-28T15:35:20+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\Users\Tony\Documents\sites\vyarte\wp-admin\includes\theme.php on line 20
+
+2019-03-28T15:44:59+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\Users\Tony\Documents\sites\vyarte\wp-includes\wp-db.php on line 1924
+
+2019-03-28T16:47:29+00:00 CRITICAL syntax error, unexpected '}' in C:\Users\Tony\Documents\sites\vyarte\wp-content\themes\vyarte\header.php on line 98
+
