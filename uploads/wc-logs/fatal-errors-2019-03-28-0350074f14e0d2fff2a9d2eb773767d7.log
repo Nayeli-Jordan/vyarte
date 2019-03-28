@@ -4,3 +4,5 @@
 
 2019-03-28T16:47:29+00:00 CRITICAL syntax error, unexpected '}' in C:\Users\Tony\Documents\sites\vyarte\wp-content\themes\vyarte\header.php on line 98
 
+2019-03-28T19:36:38+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\Users\Tony\Documents\sites\vyarte\wp-includes\Requests\Transport\cURL.php on line 163
+
