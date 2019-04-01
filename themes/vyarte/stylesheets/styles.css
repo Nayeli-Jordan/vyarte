@@ -2355,12 +2355,12 @@ input[type="submit"].btn-tall,
 
 /* line 23, ../sass/components/_color.scss */
 .bg-gray {
-  background-color: #f3f3f3;
+  background-color: #f4f2f5;
 }
 
 /* line 24, ../sass/components/_color.scss */
 .bg-gray-dark {
-  background-color: #cdcdcd;
+  background-color: #cfc7d4;
 }
 
 /* line 26, ../sass/components/_color.scss */
@@ -2560,7 +2560,7 @@ ul li {
 .container {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1200px;
+  max-width: 1100px;
   width: 85%;
 }
 
@@ -4021,21 +4021,31 @@ video.responsive-video {
   color: #5a9ea9;
 }
 
+/* line 82, ../sass/components/_media.scss */
+#servHome .bg-image {
+  padding-bottom: 100%;
+}
+
+/* line 83, ../sass/components/_media.scss */
+#blogHome .bg-image {
+  padding-bottom: 60%;
+}
+
 /* POST */
-/* line 84, ../sass/components/_media.scss */
+/* line 87, ../sass/components/_media.scss */
 #contentBlog .bg-image {
   height: 300px;
 }
-/* line 87, ../sass/components/_media.scss */
+/* line 90, ../sass/components/_media.scss */
 #contentBlog .postComplete .bg-image {
   height: 250px;
 }
-/* line 90, ../sass/components/_media.scss */
+/* line 93, ../sass/components/_media.scss */
 #contentBlog .col .col:not(.postComplete):nth-child(2n) {
   clear: both;
 }
 
-/* line 93, ../sass/components/_media.scss */
+/* line 96, ../sass/components/_media.scss */
 #singlePost #contentPost img {
   margin-top: 10px;
   margin-bottom: 20px;
@@ -8515,76 +8525,81 @@ small {
   text-transform: capitalize;
 }
 
-/* line 51, ../sass/components/_typography.scss */
+/* line 50, ../sass/components/_typography.scss */
+.none-transforme {
+  text-transform: none;
+}
+
+/* line 52, ../sass/components/_typography.scss */
 .text-underline {
   text-decoration: underline;
 }
 
-/* line 52, ../sass/components/_typography.scss */
+/* line 53, ../sass/components/_typography.scss */
 .text-underline-hover:hover {
   text-decoration: underline;
 }
 
-/* line 53, ../sass/components/_typography.scss */
+/* line 54, ../sass/components/_typography.scss */
 .text-line-through {
   text-decoration: line-through;
 }
 
-/* line 55, ../sass/components/_typography.scss */
+/* line 56, ../sass/components/_typography.scss */
 .text-center {
   text-align: center;
 }
 
-/* line 56, ../sass/components/_typography.scss */
+/* line 57, ../sass/components/_typography.scss */
 .text-left {
   text-align: left;
 }
 
-/* line 57, ../sass/components/_typography.scss */
+/* line 58, ../sass/components/_typography.scss */
 .text-right {
   text-align: right;
 }
 
-/* line 58, ../sass/components/_typography.scss */
+/* line 59, ../sass/components/_typography.scss */
 .text-justify {
   text-align: justify;
 }
 
-/* line 60, ../sass/components/_typography.scss */
+/* line 61, ../sass/components/_typography.scss */
 .text-last-center {
   text-align-last: center;
 }
 
-/* line 61, ../sass/components/_typography.scss */
+/* line 62, ../sass/components/_typography.scss */
 .text-last-left {
   text-align-last: left;
 }
 
-/* line 62, ../sass/components/_typography.scss */
+/* line 63, ../sass/components/_typography.scss */
 .text-last-right {
   text-align-last: right;
 }
 
-/* line 63, ../sass/components/_typography.scss */
+/* line 64, ../sass/components/_typography.scss */
 .text-last-justify {
   text-align-last: justify;
 }
 
-/* line 65, ../sass/components/_typography.scss */
+/* line 66, ../sass/components/_typography.scss */
 .line-text-overflow {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-/* line 71, ../sass/components/_typography.scss */
+/* line 72, ../sass/components/_typography.scss */
 .title-section {
   position: relative;
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 30px;
 }
-/* line 76, ../sass/components/_typography.scss */
+/* line 77, ../sass/components/_typography.scss */
 .title-section:before {
   content: '';
   position: absolute;
@@ -8594,20 +8609,20 @@ small {
   height: 2px;
   background-color: #555555;
 }
-/* line 85, ../sass/components/_typography.scss */
+/* line 86, ../sass/components/_typography.scss */
 .title-section span {
   position: relative;
   padding: 0 20px;
   background-color: #fff;
 }
 @media only screen and (max-width: 430px) {
-  /* line 71, ../sass/components/_typography.scss */
+  /* line 72, ../sass/components/_typography.scss */
   .title-section {
     font-size: 18px;
   }
 }
 
-/* line 92, ../sass/components/_typography.scss */
+/* line 93, ../sass/components/_typography.scss */
 .title-page {
   margin-top: 0px;
   margin-bottom: 30px;
@@ -8615,7 +8630,7 @@ small {
   text-transform: uppercase;
 }
 
-/* line 99, ../sass/components/_typography.scss */
+/* line 100, ../sass/components/_typography.scss */
 #singlePost p {
   margin-bottom: 10px;
 }
@@ -8625,12 +8640,9 @@ header nav > a {
   display: none !important;
 }
 
-/* line 6, ../sass/components/_utilities.scss */
-.js-header,
-footer {
-  opacity: 0.3;
-}
-
+/* .js-header,
+footer { opacity: 0.3; }
+ */
 /* line 10, ../sass/components/_utilities.scss */
 .pagination a, .pagination span {
   display: inline-block;
@@ -8695,16 +8707,6 @@ footer {
 /* line 53, ../sass/components/_utilities.scss */
 #faqs .content-faq.active p {
   display: block;
-}
-
-/* line 59, ../sass/components/_utilities.scss */
-#servHome .bg-image, #servPers .bg-image {
-  padding-bottom: 60%;
-}
-
-/* line 65, ../sass/components/_utilities.scss */
-#blogHome .bg-image {
-  padding-bottom: 60%;
 }
 
 /* Paginación */
@@ -8982,7 +8984,7 @@ footer {
   margin-bottom: 30px;
   padding: 30px;
   text-align: center;
-  background-color: #f3f3f3;
+  background-color: #f4f2f5;
   border-radius: 5px;
 }
 /* line 193, ../sass/components/_woocommerce.scss */

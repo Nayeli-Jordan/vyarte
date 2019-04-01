@@ -64,7 +64,7 @@ add_action('init', function(){
 		'has_archive'        => true,
 		'hierarchical'       => false,
 		'menu_position'      => 6,
-		'supports'           => array( 'title', 'editor' ),
+		'supports'           => array( 'title', 'thumbnail' ),
 		'menu_icon' 		 => 'dashicons-admin-users'
 	);
 	register_post_type( 'servicios', $args );	
@@ -164,5 +164,37 @@ add_action('init', function(){
 		'menu_icon' 		 => 'dashicons-admin-users'
 	);
 	register_post_type( 'contacto', $args );
+
+	// DG Trabajos
+	$labels = array(
+		'name'          => 'DG Trabajo',
+		'singular_name' => 'DG Trabajo',
+		'add_new'       => 'Nuevo DG Trabajo',
+		'add_new_item'  => 'Nuevo DG Trabajo',
+		'edit_item'     => 'Editar DG Trabajo',
+		'new_item'      => 'Nuevo DG Trabajo',
+		'all_items'     => 'DG Trabajo',
+		'view_item'     => 'Ver DG Trabajo',
+		'search_items'  => 'Buscar DG Trabajo',
+		'not_found'     => 'No hay DG Trabajo',
+		'menu_name'     => 'DG Trabajos'
+	);
+
+	$args = array(
+		'labels'             => $labels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => 'edit.php?post_type=page',
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'dg_trabajos' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => 6,
+		'supports'           => array( 'title', 'thumbnail' ),
+		'menu_icon' 		 => 'dashicons-admin-users'
+	);
+	register_post_type( 'dg_trabajos', $args );
 
 });

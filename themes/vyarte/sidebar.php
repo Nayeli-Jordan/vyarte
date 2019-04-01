@@ -10,7 +10,7 @@
 		$i = 1;
 		while ( $blog_query->have_posts() ) : $blog_query->the_post(); ?>
 
-			<h4 class="margin-bottom-10 font-normal"><a href="<?php the_permalink(); ?>" class="color-text color-primary-dark_hover"><?php the_title(); ?></a></h4>
+			<h4 class="margin-bottom-10 font-normal"><a href="<?php the_permalink(); ?>" class="color-text color-primary-dark_hover none-transforme"><?php the_title(); ?></a></h4>
 
 	<?php $i ++; endwhile; wp_reset_postdata();
 	endif; ?>
@@ -34,7 +34,7 @@
     		if ($enlace != '') { ?>
     			<a href="<?php echo $enlace; ?>" class="block">
     		<?php } ?>
-				<img src="<?php the_post_thumbnail_url('medium'); ?>" class="margin-top-40 margin-auto block responsive-img">
+				<img src="<?php the_post_thumbnail_url('large'); ?>" class="margin-top-40  block responsive-img">
 			<?php if ($enlace != '') { ?>
     			</a>
     		<?php } 

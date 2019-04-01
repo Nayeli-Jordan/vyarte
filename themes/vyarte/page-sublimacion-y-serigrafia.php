@@ -20,7 +20,7 @@
 					if($sub_cats) {
 						foreach($sub_cats as $sub_category) { 
 						$thumbnail_id = get_woocommerce_term_meta( $sub_category->term_id, 'thumbnail_id', true );
-						$image = wp_get_attachment_url( $thumbnail_id ); 
+						$image = wp_get_attachment_url( $thumbnail_id, 'large' ); 
 						$catLink = get_category_link( $sub_category->term_id );?>
 							<div class="col s12 sm6 m4 margin-bottom-30">
 								<a href="<?php echo $catLink; ?>" class="block">

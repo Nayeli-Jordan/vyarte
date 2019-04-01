@@ -8,7 +8,7 @@
 				</div>
 				<div class="col s12 m8">
 					<h2 class="title-page"><?php the_title(); ?></h2>
-					<div class="row text-center">
+					<div class="row row-complete text-center">
 					<?php
 						$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 						$blog_args = array(

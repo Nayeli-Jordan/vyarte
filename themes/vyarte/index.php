@@ -2,42 +2,45 @@
 	<section id="sliderHome" class="text-center margin-bottom-50">
 		<div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-timeout="5000" data-cycle-prev="#prevSlider" data-cycle-next="#nextSlider">
 		<?php
-			$serv_args = array(
+			$slider_args = array(
 				'post_type' 		=> 'slider',
 				'posts_per_page' 	=> 2,
 			);
-			$serv_query = new WP_Query( $serv_args );
-			if ( $serv_query->have_posts() ) : 
+			$slider_query = new WP_Query( $slider_args );
+			if ( $slider_query->have_posts() ) : 
 				$i = 1;
-				while ( $serv_query->have_posts() ) : $serv_query->the_post(); ?>
+				while ( $slider_query->have_posts() ) : $slider_query->the_post(); ?>
 					<img src="<?php the_post_thumbnail_url('large'); ?>">	
-			<?php $i ++; endwhile; wp_reset_postdata();
-			endif; 
-			if ($i > 0):?>
-				<div class="cycle-pager"></div>
-			<?php endif ?>
+				<?php $i ++; endwhile; wp_reset_postdata();
+				if ($i > 0):?>
+					<div class="cycle-pager"></div>
+				<?php endif;			
+			endif; ?> 
 		</div> <!-- end cycle-slideshow -->
 	</section>
 	<section id="servHome" class="container text-center margin-bottom-20">
 		<h2 class="title-section"><span>Servicios</span></h2>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
 		<div class="row row-complete margin-top-20">
-			<div class="col s12 sm6 text-center margin-bottom-30">
-				<a href="<?php echo SITEURL; ?>producto-categoria/sublimacion-y-serigrafia/">
-					<div class="bg-gray padding-20 margin-bottom-20">
-						<div class="bg-image bg-contain" style="background-image: url(https://gatchweb.com/vyarte/wp-content/uploads/2019/03/termo-lata-plata-300x300.jpg)"></div>
+		<?php
+			$serv_args = array(
+				'post_type' 		=> 'servicios',
+				'posts_per_page' 	=> 2,
+			);
+			$serv_query = new WP_Query( $serv_args );
+			if ( $serv_query->have_posts() ) : 
+				$i = 1;
+				while ( $serv_query->have_posts() ) : $serv_query->the_post(); ?>
+					<div class="col s12 sm6 text-center margin-bottom-30">
+						<a href="<?php echo SITEURL; ?>producto-categoria/sublimacion-y-serigrafia/">
+							<div class="margin-bottom-20">
+								<div class="bg-image bg-contain" style="background-image: url(<?php the_post_thumbnail_url('large'); ?>)"></div>
+							</div>
+							<h3 class="margin-bottom-20 uppercase"><?php the_title(); ?></h3>
+						</a>
 					</div>
-					<h3 class="margin-bottom-20 uppercase">Sublimación y serigrafía</h3>
-				</a>
-			</div>
-			<div class="col s12 sm6 text-center margin-bottom-30">
-				<a href="<?php echo SITEURL; ?>producto-categoria/diseno-grafico">
-					<div class="bg-gray padding-20 margin-bottom-20">
-						<div class="bg-image bg-contain" style="background-image: url(https://gatchweb.com/vyarte/wp-content/uploads/2019/03/termo-lata-plata-300x300.jpg)"></div>
-					</div>
-					<h3 class="margin-bottom-20 uppercase">Diseño gráfico</h3>
-				</a>
-			</div>	
+				<?php $i ++; endwhile; wp_reset_postdata();
+			endif; ?>
 		</div>
 	</section>
 	<section id="section-productos_destacados" class="container margin-top-bottom-30">

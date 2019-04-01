@@ -3,9 +3,9 @@
 // ==========================================================================
 
 header nav > a { display: none!important; }
-.js-header,
+/* .js-header,
 footer { opacity: 0.3; }
-
+ */
 .pagination {
 	a, span {
 		display: inline-block;
@@ -52,17 +52,5 @@ footer { opacity: 0.3; }
 			}
 			p { display: block; }
 		}			
-	}
-}
-
-#servHome, #servPers {
-	.bg-image {
-		padding-bottom: 60%;
-	}
-}
-
-#blogHome {
-	.bg-image {
-		padding-bottom: 60%;
 	}
 }

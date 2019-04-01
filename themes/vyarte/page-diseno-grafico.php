@@ -10,6 +10,26 @@
 			</div>
 			<div class="container">
 				<h3 class="margin-bottom-30">Conoce nuestro trabajo</h3>
+				<article id="sliderHome" class="text-center margin-bottom-50">
+					<div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-timeout="5000" data-cycle-prev="#prevSlider" data-cycle-next="#nextSlider">
+						<!-- to do - http://jquery.malsup.com/cycle2/demo/carousel.php -->
+						<?php
+						$dgServ_args = array(
+						'post_type' 		=> 'dg_trabajos',
+						'posts_per_page' 	=> 2,
+						);
+						$dgServ_query = new WP_Query( $dgServ_args );
+						if ( $dgServ_query->have_posts() ) : 
+						$i = 1;
+							while ( $dgServ_query->have_posts() ) : $dgServ_query->the_post(); ?>
+							<img src="<?php the_post_thumbnail_url('large'); ?>">	
+							<?php $i ++; endwhile; wp_reset_postdata();
+							if ($i > 0):?>
+								<div class="cycle-pager"></div>
+							<?php endif;						
+						endif; ?>
+					</div> <!-- end cycle-slideshow -->
+				</article>
 				<h3 class="margin-bottom-30">Servicios de Diseño Gráfico</h3>
 				<?php echo do_shortcode('[products category="diseno-grafico"]'); ?>
 			</div>

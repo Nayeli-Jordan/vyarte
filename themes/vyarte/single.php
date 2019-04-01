@@ -3,8 +3,13 @@
 	global $post;
 	$currentPost[] = $post->ID;
 	while ( have_posts() ) : the_post(); 
+
+	echo "<div class='container margin-top-30'>";
+		echo '<a href="/">Inicio</a> / Blog / ';
+		the_title();
+	echo "</div>";
 ?>
-	<section id="singlePost" class="container margin-top-bottom-60">
+	<section id="singlePost" class="container margin-top-bottom-30">
 		<div class="row row-complete">		
 			<div class="col m4 hide-on-sm-and-down">
 				<?php include (TEMPLATEPATH . '/sidebar.php'); ?>
