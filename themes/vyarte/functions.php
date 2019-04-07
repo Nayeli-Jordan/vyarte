@@ -13,7 +13,7 @@ define( 'SITEURL', get_site_url() . '/' );
 \*------------------------------------*/
 require_once( 'inc/pages.php' );
 require_once( 'inc/post-types.php' );
-/*require_once( 'inc/taxonomies.php' );*/
+require_once( 'inc/taxonomies.php' );
 
 /*------------------------------------*\
 	#GENERAL FUNCTIONS
@@ -194,8 +194,8 @@ function woo_custom_cart_button_text() {
 /* Products */
 //remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
 /*Single*/
-remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
-add_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 5 );
+//remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+//add_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 5 );
 /*Shop - Archive*/
 remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 

@@ -41,12 +41,12 @@ header.js-header {
 					display: inline-block;
 					padding: 0 5px;
 					font-size: 14px;
-					font-weight: 700; 
 					line-height: 30px;
 					color: $text-color;
 					cursor: pointer;
 					@extend .transition;
 					&:hover, &.active { color: $primary-color-dark; }
+					@media #{$medium-only}{ font-size: 12px; }
 				}
 				ul {
 					margin: 0px;
@@ -136,9 +136,10 @@ header.js-header {
 					&.active {
 						top: 80px;
 					}
+					form { height: 30px; }
 				}
 				@media #{$sm-and-down} {
-					padding: 40px 20px;
+					padding: 10px 20px;
 				}
 			}
 			@media #{$medium-only} {
@@ -176,6 +177,7 @@ header.js-header {
 					float: none;
 					margin-top: 20px;
 					padding: 0 10px;
+					#linkSearchProduct { display: none; }
 				}
 			}
 		}		

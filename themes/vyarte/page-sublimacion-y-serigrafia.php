@@ -25,7 +25,9 @@
 							<div class="col s12 sm6 m4 margin-bottom-30">
 								<a href="<?php echo $catLink; ?>" class="block">
 									<div class="bg-subcategory bg-image" style="background-image: url(<?php echo $image; ?>)">
-										<h3><?php echo $sub_category->name; ?></h3>
+										<div class="title-content">
+											<h3><?php echo $sub_category->name; ?></h3>
+										</div>
 									</div>
 								</a>
 							</div>

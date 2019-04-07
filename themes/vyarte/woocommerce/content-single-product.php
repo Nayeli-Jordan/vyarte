@@ -41,7 +41,6 @@ if ( post_password_required() ) {
 			 */
 			do_action( 'woocommerce_before_single_product_summary' );
 		?>
-
 		<div class="col s12 m6 summary entry-summary">
 			<?php
 				/**
@@ -60,7 +59,13 @@ if ( post_password_required() ) {
 			?>
 		</div>		
 	</div>
-
+	<?php if (has_term('diseno-grafico','product_cat')) { ?>
+		<div class="contact_diseno margin-bottom-30">
+			<?php include (TEMPLATEPATH . '/template/banner/enlace-contacto-diseno.php'); ?>
+		</div>
+	<?php } else { ?>	
+		<!-- linea de tiempo personalización -->
+	<?php } ?>
 
 	<?php
 		/**

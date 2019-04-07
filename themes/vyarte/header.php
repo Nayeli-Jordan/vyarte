@@ -62,6 +62,7 @@
 		} ?>
 		<header class="js-header row">
 			<nav class="container">
+				<h1 class="hide"><?php bloginfo('name'); ?></h1>
 				<a href="<?php echo SITEURL; ?>"><img src="<?php echo THEMEPATH; ?>images/identidad/logo.png"></a>
 				<em id="btn-open-nav" class="icon-menu hide-on-med-and-up"></em>
 				<ul itemscope>

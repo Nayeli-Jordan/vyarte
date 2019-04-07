@@ -7,11 +7,13 @@ button,
 input[type="submit"],
 .added_to_cart {
 	display: inline-block;
-	padding: 0 45px!important;
+	padding: 0 20px!important;
 	color: $light-color!important;
 	text-align: center!important;
 	font-weight: 300!important;
+	font-size: 12px!important;
 	line-height: 30px!important;
+  	font-family: $font-default!important;
 	text-decoration: none!important;
 	text-transform: uppercase!important;
 	background-color: $primary-color!important;
@@ -23,10 +25,6 @@ input[type="submit"],
 	@extend .shadow;
 	&:hover {
 		background-color: $primary-color-dark!important;
-	}
-	&.btn-tall {
-		font-size: 18px;
-		line-height: 50px!important;
 	}
 }
 

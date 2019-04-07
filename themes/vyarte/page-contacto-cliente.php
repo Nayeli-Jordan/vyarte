@@ -12,12 +12,11 @@
 					</div><br>
 					<p class="color-primary-link"><a href="tel:+5518339080"><em class="icon-phone-circled"></em>044 55 18339080</a></p>
 					<p class="color-primary-link"><a href="" class="contact-email"><em class="icon-mail-alt"></em>contacto<span>@</span>vyartesublimacion.com</a></p><br>
-					<p>¿Deseas conocer más detalles sobre nuestros productos?<br>¿Buscas algo en particulas?<br>¡Contáctanos!</p><br>
+					<p>¿Quieres cotizar un servicio para tu negocio?<br>¡Contáctanos!</p><br>
 					<form id="contact-form" name="contact-form" action=""  method="post" class="validation" data-parsley-contacto>
 						<input type="text" id="contactoNombre" name="contactoNombre" placeholder="Nombre" required data-parsley-length="[7, 40]" data-parsley-required-message="El campo es obligatorio." data-parsley-length-message="Se requieren de 7 a 40 caracteres.">
 						<input type="email" id="contactoEmail" name="contactoEmail" placeholder="Email" required data-parsley-type="email" data-parsley-type-message="La dirección de correo es inválida" data-parsley-required-message="El campo es obligatorio.">
-						<input type="text" id="contactoAsunto" name="contactoAsunto" placeholder="Asunto" required data-parsley-length="[7, 40]" data-parsley-required-message="El campo es obligatorio." data-parsley-length-message="Se requieren de 7 a 40 caracteres.">
-						<textarea id="contactoMensaje" name="contactoMensaje" placeholder="Mensaje" required data-parsley-length="[20, 200]" data-parsley-required-message="El campo es obligatorio." data-parsley-length-message="Se requieren de 20 a 200 caracteres."></textarea>
+						<textarea id="contactoMensaje" name="contactoMensaje" placeholder="Cuentanos lo que estás buscando" required data-parsley-length="[20, 600]" data-parsley-required-message="El campo es obligatorio." data-parsley-length-message="Se requieren de 20 a 600 caracteres."></textarea>
 						<input type="submit" name="submitContact" class="btn inline-block" value="Enviar" />
 						<input type="hidden" name="btnSubmitContact" value="post" />
 						<?php wp_nonce_field( 'contact-form' ); ?>
@@ -28,21 +27,19 @@
 
 		<?php if( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['btnSubmitContact'] )){
 
-		    $to 				= "contacto@vyartesublimacion.com";		    
+		    $to 				= "contacto@vyartesublimacion.com";
+		    
+		    $subject 			= "Cliente comercial";
 
 		    $contactoNombre 	= $_POST['contactoNombre'];
 		    $contactoEmail 		= $_POST['contactoEmail'];
-		    $contactoAsunto 	= $_POST['contactoAsunto'];
-		    $contactoMensaje 	= $_POST['contactoMensaje'];
-
-		    $subject 			= "Contacto Vyarte - " . $contactoAsunto;	
+		    $contactoMensaje 	= $_POST['contactoMensaje'];		
 
 			$message 			= '<html style="font-family: Arial, sans-serif; font-size: 14px;"><body>';
 			$message 		   .= '<div style="text-align: center; background-color: #00B4EF; margin-bottom: 20px;"><img style="display: inline-block; margin: auto;" src="http://vyarte.com/wp-content/themes/vyarte/images/email/logo.png" alt="Logo Vyarte"></div>';
 			$message 		   .= '<h1 style="display: block; margin-bottom: 20px; text-align: center;  font-size: 20px; font-weight: 700; color: #00B4EF; text-transform: uppercase;">Contacto Vyarte</h1>';
 			$message 			.= '<p><span style="text-transform: uppercase; font-weight: 600; color: #00B4EF;">De: </span>' . $contactoNombre . '</p>';
 			$message 			.= '<p style="color: #000;"><span style="text-transform: uppercase; font-weight: 600; color: #00B4EF;">Correo: </span>' . $contactoEmail . '</p></br>';
-			$message 			.= '<p><span style="text-transform: uppercase; font-weight: 600; color: #00B4EF;">Asunto: </span>' . $contactoAsunto . '</p>';
 			$message 			.= '<p><span style="text-transform: uppercase; font-weight: 600; color: #00B4EF;">Comentario: </span>' . $contactoMensaje . '</p>';
 			$message 			.= '<div style="text-align: center; margin-bottom: 10px; margin-top: 20px;"><p><small>Este email fue enviado desde el formulario de contacto de Vyarte.</small></p></div>';
 			$message 	        .= '</body></html>';
@@ -52,8 +49,8 @@
 			//}
 
 		    /* Contacto como post */
-			$title 		= 'Contacto de ' . $contactoNombre;
-			$content 	= 'De: ' . $contactoNombre . '<br>Correo: ' . $contactoEmail . '<br>Asunto: ' . $contactoAsunto . '<br>Comentario: ' . $contactoMensaje;
+			$title 		= 'Cliente comercial de ' . $contactoNombre;
+			$content 	= 'De: ' . $contactoNombre . '<br>Correo: ' . $contactoEmail . '<br>Comentario: ' . $contactoMensaje;
 
 			$post = array(
 				'post_title'	=> wp_strip_all_tags($title),

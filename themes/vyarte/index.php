@@ -73,7 +73,7 @@
 						<div class="bg-image margin-bottom-20" style="background-image: url(<?php the_post_thumbnail_url('large'); ?>)"></div>
 						<h3 class="margin-bottom-20 uppercase"><a href="<?php the_permalink(); ?>" class="color-text color-primary-dark_hover"><?php the_title(); ?></a></h3>
 						<?php the_excerpt(); ?>
-						<a href="<?php the_permalink(); ?>" class="btn btn-tall clearfix margin-top-20">Leer más</a>
+						<a href="<?php the_permalink(); ?>" class="btn clearfix margin-top-20">Leer más</a>
 					</div>			
 			<?php $i ++; endwhile; wp_reset_postdata();
 			endif; ?>							
@@ -82,7 +82,7 @@
 	<section class="bg-gray text-center padding-top-bottom-50">
 		<div class="container">
 			<h2>#VYARTE en Instagram</h2>
-			<a href="" class="btn btn-tall clearfix margin-top-20">Ver instagram</a>
+			<a href="" class="btn clearfix margin-top-20">Ver instagram</a>
 		</div>
 	</section>
 <?php get_footer(); ?>

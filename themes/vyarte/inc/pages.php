@@ -65,13 +65,13 @@ add_action('init', function(){
 		wp_insert_post( $page, true );
 	}
 	
-	// Alianzas
-	if( ! get_page_by_path('alianzas') ){
+	// Clientes comerciales
+	if( ! get_page_by_path('clientes-comerciales') ){
 		$page = array(
 			'post_author' => 1,
 			'post_status' => 'publish',
-			'post_title'  => 'Alianzas',
-			'post_name'   => 'alianzas',
+			'post_title'  => 'Clientes comerciales',
+			'post_name'   => 'clientes-comerciales',
 			'post_type'   => 'page'
 		);
 		wp_insert_post( $page, true );
@@ -84,18 +84,6 @@ add_action('init', function(){
 			'post_status' => 'publish',
 			'post_title'  => 'Envíos y pagos',
 			'post_name'   => 'envios-y-pagos',
-			'post_type'   => 'page'
-		);
-		wp_insert_post( $page, true );
-	}
-	
-	// Productos personalizados
-	if( ! get_page_by_path('productos-personalizados') ){
-		$page = array(
-			'post_author' => 1,
-			'post_status' => 'publish',
-			'post_title'  => 'Productos personalizados',
-			'post_name'   => 'productos-personalizados',
 			'post_type'   => 'page'
 		);
 		wp_insert_post( $page, true );
@@ -120,6 +108,28 @@ add_action('init', function(){
 			'post_status' => 'publish',
 			'post_title'  => 'Contacto',
 			'post_name'   => 'contactanos',
+			'post_type'   => 'page'
+		);
+		wp_insert_post( $page, true );
+	}
+	// Contacto diseño gráfico
+	if( ! get_page_by_path('contacto-diseno') ){
+		$page = array(
+			'post_author' => 1,
+			'post_status' => 'publish',
+			'post_title'  => 'Contacto diseño gráfico',
+			'post_name'   => 'contacto-diseno',
+			'post_type'   => 'page'
+		);
+		wp_insert_post( $page, true );
+	}
+	// Contacto cliente comercial
+	if( ! get_page_by_path('contacto-cliente') ){
+		$page = array(
+			'post_author' => 1,
+			'post_status' => 'publish',
+			'post_title'  => 'Contacto cliente comercial',
+			'post_name'   => 'contacto-cliente',
 			'post_type'   => 'page'
 		);
 		wp_insert_post( $page, true );

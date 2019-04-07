@@ -7,7 +7,7 @@
 					<?php include (TEMPLATEPATH . '/sidebar.php'); ?>
 				</div>
 				<div class="col s12 m8">
-					<h2 class="title-page"><?php the_title(); ?></h2>
+					<h2 class="text-left margin-bottom-30"><?php the_title(); ?></h2>
 					<div class="row row-complete text-center">
 					<?php
 						$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -18,22 +18,16 @@
 						);
 						$blog_query = new WP_Query( $blog_args );
 						if ( $blog_query->have_posts() ) : 
-							$i = 1;
-							while ( $blog_query->have_posts() ) : $blog_query->the_post(); 
+							while ( $blog_query->have_posts() ) : $blog_query->the_post(); ?>
 
-								if ($i === 1) { ?>
-									<div class="col s12 postComplete margin-bottom-30">
-										<div class="bg-image" style="background-image: url(<?php the_post_thumbnail_url('large'); ?>)"></div>
-								<?php } else { ?>
-									<div class="col s12 l6 margin-bottom-30">
-										<div class="bg-image" style="background-image: url(<?php the_post_thumbnail_url('medium'); ?>)"></div>
-								<?php } ?>
+								<div class="col s12 l6 margin-bottom-30">
+									<div class="bg-image" style="background-image: url(<?php the_post_thumbnail_url('medium'); ?>)"></div>
 									<h3 class="margin-top-bottom-10"><a href="<?php the_permalink(); ?>" class="color-text color-primary-dark_hover"><?php the_title(); ?></a></h3>
 									<?php the_excerpt(); ?>
-									<a href="<?php the_permalink(); ?>" class="btn btn-tall clearfix margin-top-10">Leer más</a>
+									<a href="<?php the_permalink(); ?>" class="btn clearfix margin-top-10">Leer más</a>
 								</div>
 
-						<?php $i ++; endwhile; ?>
+						<?php endwhile; ?>
 					    <div class="col s12 pagination margin-top-large">
 					    <?php 
 						    $total_pages = $blog_query->max_num_pages;

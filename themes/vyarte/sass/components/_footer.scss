@@ -3,9 +3,11 @@ footer {
 	bottom: 0px;
 	width: 100%;
 	padding: 30px 0;
+	font-size: 14px;
 	background-color: #555555;
 	color: $light-color;
 	clear: both;
+	@media #{$medium-and-down} { font-size: 12px; }
 	.row {
 		padding-bottom: 20px;
 		margin-bottom: 20px;
