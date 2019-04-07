@@ -276,5 +276,8 @@
 		&:last-child {
 			a { color: $danger-color; }
 		}
+		&.woocommerce-MyAccount-navigation-link--downloads {
+			display: none;
+		}
 	}	
 } 

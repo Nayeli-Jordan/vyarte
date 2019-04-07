@@ -236,6 +236,6 @@ function banner_save_metas( $idbanner, $banner ){
 add_action ('template_redirect', 'custom_redirect_contacto');
 function custom_redirect_contacto() {
     if ( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['btnSubmitContact'] ) ) {
-        wp_redirect(site_url('contacto#contacto-enviado'));
+        wp_redirect(site_url('contactanos#contacto-enviado'));
     }
 }

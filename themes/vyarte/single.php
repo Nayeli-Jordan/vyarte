@@ -5,7 +5,7 @@
 	while ( have_posts() ) : the_post(); 
 
 	echo "<div class='container margin-top-30'>";
-		echo '<a href="/">Inicio</a> / Blog / ';
+		echo '<a href="' . SITEURL . '">Inicio</a> / <a href="' . SITEURL . 'blog">Blog</a> / ';
 		the_title();
 	echo "</div>";
 ?>

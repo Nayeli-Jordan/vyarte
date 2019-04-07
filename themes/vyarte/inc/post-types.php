@@ -91,7 +91,7 @@ add_action('init', function(){
 		'show_ui'            => true,
 		'show_in_menu'       => 'edit.php?post_type=page',
 		'query_var'          => true,
-		'rewrite'            => array( 'slug' => 'preguntas-frecuentes' ),
+		'rewrite'            => array( 'slug' => 'vy_faqs' ),
 		'capability_type'    => 'post',
 		'has_archive'        => true,
 		'hierarchical'       => false,
@@ -99,7 +99,7 @@ add_action('init', function(){
 		'supports'           => array( 'title', 'editor' ),
 		'menu_icon' 		 => 'dashicons-admin-users'
 	);
-	register_post_type( 'preguntas-frecuentes', $args );	
+	register_post_type( 'vy_faqs', $args );	
 
 	// Slider
 	$labels = array(
@@ -155,7 +155,7 @@ add_action('init', function(){
 		'show_ui'            => true,
 		'show_in_menu'       => 'edit.php?post_type=page',
 		'query_var'          => true,
-		'rewrite'            => array( 'slug' => 'contacto' ),
+		'rewrite'            => array( 'slug' => 'vy_contacto' ),
 		'capability_type'    => 'post',
 		'has_archive'        => true,
 		'hierarchical'       => false,
@@ -163,7 +163,7 @@ add_action('init', function(){
 		'supports'           => array( 'title', 'editor' ),
 		'menu_icon' 		 => 'dashicons-admin-users'
 	);
-	register_post_type( 'contacto', $args );
+	register_post_type( 'vy_contacto', $args );
 
 	// DG Trabajos
 	$labels = array(

@@ -8,7 +8,7 @@
 			<div class="col s12 m10 offset-m1 l8 offset-l2">
 			<?php
 				$faqs_args = array(
-					'post_type' 		=> 'preguntas-frecuentes',
+					'post_type' 		=> 'vy_faqs',
 					'posts_per_page' 	=> -1,
 				);
 				$faqs_query = new WP_Query( $faqs_args );

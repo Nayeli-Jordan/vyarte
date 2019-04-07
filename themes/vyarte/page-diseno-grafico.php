@@ -9,7 +9,7 @@
 				</div>
 			</div>
 			<div class="container">
-				<h3 class="margin-bottom-30">Conoce nuestro trabajo</h3>
+				<h3 class="margin-bottom-30">Nuestro trabajo</h3>
 				<article id="sliderHome" class="text-center margin-bottom-50">
 					<div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-timeout="5000" data-cycle-prev="#prevSlider" data-cycle-next="#nextSlider">
 						<!-- to do - http://jquery.malsup.com/cycle2/demo/carousel.php -->

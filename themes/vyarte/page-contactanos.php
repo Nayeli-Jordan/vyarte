@@ -11,7 +11,7 @@
 						<a href=""><em class="icon-whatsapp"></em></a>
 					</div><br>
 					<p class="color-primary-link"><a href="tel:+5518339080"><em class="icon-phone-circled"></em>044 55 18339080</a></p>
-					<p class="color-primary-link"><a href="mailto:" class="contact-email"><em class="icon-mail-alt"></em>contacto<span>@</span>vyarte.com</a></p><br>
+					<p class="color-primary-link"><a href="" class="contact-email"><em class="icon-mail-alt"></em>contacto<span>@</span>vyartesublimacion.com</a></p><br>
 					<p>¿Deseas conocer más detalles sobre nuestros productos?<br>¿Buscas algo en particulas?<br>¡Contáctanos!</p><br>
 					<form id="contact-form" name="contact-form" action=""  method="post" class="validation" data-parsley-contacto>
 						<input type="text" id="contactoNombre" name="contactoNombre" placeholder="Nombre" required data-parsley-length="[7, 40]" data-parsley-required-message="El campo es obligatorio." data-parsley-length-message="Se requieren de 7 a 40 caracteres.">
@@ -59,7 +59,7 @@
 				'post_title'	=> wp_strip_all_tags($title),
 				'post_content'	=> $content,
 				'post_status'	=> 'publish',
-				'post_type' 	=> 'contacto'
+				'post_type' 	=> 'vy_contacto'
 			);
 
 			$my_post_id = wp_insert_post($post); //send our post, save the resulting ID

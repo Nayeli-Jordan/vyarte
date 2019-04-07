@@ -56,7 +56,7 @@
 		<?php wp_head(); ?>
 	</head>
 	<body class="<?php if (is_page('cuenta')): echo 'vyarte_cuenta'; endif ?>">
-		<?php if (is_page('contacto')) {
+		<?php if (is_page('contactanos')) {
 			/* Modal Contacto enviado */
 			include (TEMPLATEPATH . '/template/notice/contacto-enviado.php');
 		} ?>
