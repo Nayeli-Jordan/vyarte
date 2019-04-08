@@ -82,18 +82,18 @@
 	 					<div class="col s12 sm12 m4">
 	 						<p class="title-nav-footer">Contacto</p>
 	 						<div class="icons-redes">
-								<a href=""><em class="icon-instagram-filled margin-left-10"></em></a>			
-								<a href=""><em class="icon-facebook-rect"></em></a>
-								<a href=""><em class="icon-youtube"></em></a>
-								<a href=""><em class="icon-whatsapp"></em></a>
+								<a href="https://www.instagram.com/vyarte_publicidad/?hl=es-la"><em class="icon-instagram-filled margin-left-10"></em></a>			
+								<a href="https://www.facebook.com/vyartepublicidad/"><em class="icon-facebook-rect"></em></a>
+								<a href="https://www.youtube.com/channel/UCz9YPAPLrs51s74ZkaS48Nw"><em class="icon-youtube"></em></a>
+								<a href="https://wa.me/5518339080"><em class="icon-whatsapp"></em></a>
 							</div>
-							<p>Contáctanos</p>
+							<p><a href="<?php echo SITEURL; ?>contactanos">Contáctanos</a></p>
 							<p><a href="tel:+5518339080"><em class="icon-phone-circled"></em>044 55 18339080</a></p>
-							<p><a href="" class="contact-email"><em class="icon-mail-alt"></em>contacto<span>@</span>vyarte.com</a></p>
+							<p><a href="" class="contact-email"><em class="icon-mail-alt"></em>contacto<span>@</span>vyartesublimacion.com</a></p>
 	 					</div>
 	 				</div>
 	 				<div class="text-center">
-		 				<p class="margin-bottom-10">© 2019 VyArte | Desarrollado por LJDevelopment</p>
+		 				<p class="margin-bottom-10">© 2019 VyArte | Desarrollado por <a href="https://www.behance.net/lizbethjorc2ea" target="_blank" class="color-primary">GatchWeb</a></p>
 		 				<div class="icons-pago">
 		 					<em class="icon-cc-visa"></em>
 		 					<em class="icon-cc-mastercard"></em>

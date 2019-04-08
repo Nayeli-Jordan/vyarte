@@ -38,19 +38,24 @@ video.responsive-video {
 
 .bg-category {
 	position: relative;
-	height: 300px;
+	height: 220px;
+	text-shadow: 2px 2px 2px #33333345;
+	border-radius: 3px;
 }
 .bg-subcategory {
 	position: relative;
 	height: 200px;
-	h3 {
+	.title-content {
 		position: absolute;
 		bottom: 0px;
 		width: 100%;
 		padding: 0 10px;
-		line-height: 35px;
 		text-align: center;
+		line-height: 35px;
 		background-color: rgba(255,255,255,0.6);
+		border-top-left-radius: 3px;
+		border-top-right-radius: 3px;
+		h3 { display: inline-block; }			
 	}
 }
 
@@ -85,12 +90,9 @@ video.responsive-video {
 /* POST */
 #contentBlog {
 	.bg-image {
-		height: 300px;
+		height: 220px;
 	}
-	.postComplete .bg-image {
-		height: 250px;
-	}
-	.col .col:not(.postComplete):nth-child(2n){ clear: both; }
+	.col .col:nth-child(2n+1){ clear: both; }
 }
 
 #singlePost #contentPost img {

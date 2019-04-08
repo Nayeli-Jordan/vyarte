@@ -85,7 +85,7 @@ var $=jQuery.noConflict();
 
 		/*Email*/
 		$(".contact-email").click(function() {
-			$(this).attr('href', 'mailto:contacto@vyarte.com');
+			$(this).attr('href', 'mailto:contacto@vyartesublimacion.com');
 		});
 
 		//Scroll menú
