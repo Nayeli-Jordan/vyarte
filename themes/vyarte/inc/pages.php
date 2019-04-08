@@ -156,6 +156,18 @@ add_action('init', function(){
 			'post_type'   => 'page'
 		);
 		wp_insert_post( $page, true );
-	}		
+	}
+
+	// Personalizar producto
+	if( ! get_page_by_path('personalizar-producto') ){
+		$page = array(
+			'post_author' => 1,
+			'post_status' => 'publish',
+			'post_title'  => 'Personalizar producto',
+			'post_name'   => 'personalizar-producto',
+			'post_type'   => 'page'
+		);
+		wp_insert_post( $page, true );
+	}
 
 });

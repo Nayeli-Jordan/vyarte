@@ -82,10 +82,10 @@
 	 					<div class="col s12 sm12 m4">
 	 						<p class="title-nav-footer">Contacto</p>
 	 						<div class="icons-redes">
-								<a href="https://www.instagram.com/vyarte_publicidad/?hl=es-la"><em class="icon-instagram-filled margin-left-10"></em></a>			
-								<a href="https://www.facebook.com/vyartepublicidad/"><em class="icon-facebook-rect"></em></a>
-								<a href="https://www.youtube.com/channel/UCz9YPAPLrs51s74ZkaS48Nw"><em class="icon-youtube"></em></a>
-								<a href="https://wa.me/5518339080"><em class="icon-whatsapp"></em></a>
+								<a href="https://www.instagram.com/vyarte_publicidad/?hl=es-la" target="_blank"><em class="icon-instagram-filled margin-left-10"></em></a>			
+								<a href="https://www.facebook.com/vyartepublicidad/" target="_blank"><em class="icon-facebook-rect"></em></a>
+								<a href="https://www.youtube.com/channel/UCz9YPAPLrs51s74ZkaS48Nw" target="_blank"><em class="icon-youtube"></em></a>
+								<a href="https://wa.me/5518339080" target="_blank"><em class="icon-whatsapp"></em></a>
 							</div>
 							<p><a href="<?php echo SITEURL; ?>contactanos">Contáctanos</a></p>
 							<p><a href="tel:+5518339080"><em class="icon-phone-circled"></em>044 55 18339080</a></p>

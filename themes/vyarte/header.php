@@ -120,10 +120,10 @@
 						echo $menu_list;
 					?>
 					<div class="icons-nav">
-						<a href="https://www.instagram.com/vyarte_publicidad/?hl=es-la"><em class="icon-instagram-filled margin-left-10"></em></a>			
-						<a href="https://www.facebook.com/vyartepublicidad/"><em class="icon-facebook-rect"></em></a>			
-						<a href="https://www.youtube.com/channel/UCz9YPAPLrs51s74ZkaS48Nw"><em class="icon-youtube"></em></a>			
-						<a href="https://wa.me/5518339080" class="margin-right-10"><em class="icon-whatsapp"></em></a>			
+						<a href="https://www.instagram.com/vyarte_publicidad/?hl=es-la" target="_blank"><em class="icon-instagram-filled margin-left-10"></em></a>			
+						<a href="https://www.facebook.com/vyartepublicidad/" target="_blank"><em class="icon-facebook-rect"></em></a>			
+						<a href="https://www.youtube.com/channel/UCz9YPAPLrs51s74ZkaS48Nw" target="_blank"><em class="icon-youtube"></em></a>			
+						<a href="https://wa.me/5518339080" target="_blank" class="margin-right-10"><em class="icon-whatsapp"></em></a>			
 						<a href="<?php echo SITEURL; ?>carrito"><em class="icon-basket"><span><?php echo WC()->cart->get_cart_contents_count(); ?></span></a></em>
 						<a href="<?php echo SITEURL; ?>cuenta"><em class="icon-user"></em></a>
 						<p id="linkSearchProduct" class="customLink"><em class="icon-search"></em></p>

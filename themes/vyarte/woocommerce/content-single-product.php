@@ -63,8 +63,14 @@ if ( post_password_required() ) {
 		<div class="contact_diseno margin-bottom-30">
 			<?php include (TEMPLATEPATH . '/template/banner/enlace-contacto-diseno.php'); ?>
 		</div>
-	<?php } else { ?>	
-		<!-- linea de tiempo personalización -->
+	<?php } else { ?>
+		<div class="content_personaliza text-center bg-gray-light padding-top-bottom-40 margin-bottom-30">
+			<h3>¡Personaliza tu producto gratis!</h3>
+			<p class="margin-bottom-20">Conoce los detalles para hacerlo</p>
+			<!-- linea del tiempo -->
+			<a href="<?php echo SITEURL; ?>personalizar-producto" target="_blank" class="btn margin-bottom-10">Ver más</a><br>
+			<a href="<?php echo SITEURL; ?>terminos-y-condiciones" target="_blank" class="btn">Términos y condiciones</a>
+		</div>
 	<?php } ?>
 
 	<?php
