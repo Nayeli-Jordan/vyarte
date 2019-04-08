@@ -4,12 +4,7 @@
 			<div class="container">
 				<h2 class="title-page"><?php the_title(); ?></h2>
 				<div class="row text-center">
-					<div class="icons-redes color-primary-link">
-						<a href=""><em class="icon-instagram-filled margin-left-10"></em></a>
-						<a href=""><em class="icon-facebook-rect"></em></a>
-						<a href=""><em class="icon-youtube"></em></a>
-						<a href=""><em class="icon-whatsapp"></em></a>
-					</div><br>
+					<?php include (TEMPLATEPATH . '/template/redes-contacto.php'); ?>
 					<p class="color-primary-link"><a href="tel:+5518339080"><em class="icon-phone-circled"></em>044 55 18339080</a></p>
 					<p class="color-primary-link"><a href="" class="contact-email"><em class="icon-mail-alt"></em>contacto<span>@</span>vyartesublimacion.com</a></p><br>
 					<p>¿Quieres cotizar un servicio para tu negocio?<br>¡Contáctanos!</p><br>
@@ -36,8 +31,7 @@
 		    $contactoMensaje 	= $_POST['contactoMensaje'];		
 
 			$message 			= '<html style="font-family: Arial, sans-serif; font-size: 14px;"><body>';
-			$message 		   .= '<div style="text-align: center; background-color: #00B4EF; margin-bottom: 20px;"><img style="display: inline-block; margin: auto;" src="http://vyarte.com/wp-content/themes/vyarte/images/email/logo.png" alt="Logo Vyarte"></div>';
-			$message 		   .= '<h1 style="display: block; margin-bottom: 20px; text-align: center;  font-size: 20px; font-weight: 700; color: #00B4EF; text-transform: uppercase;">Contacto Vyarte</h1>';
+			$message 		   .= '<h1 style="display: block; margin-bottom: 20px; text-align: center;  font-size: 20px; font-weight: 700; color: #00B4EF; text-transform: uppercase;">Contacto Cliente Comercial</h1>';
 			$message 			.= '<p><span style="text-transform: uppercase; font-weight: 600; color: #00B4EF;">De: </span>' . $contactoNombre . '</p>';
 			$message 			.= '<p style="color: #000;"><span style="text-transform: uppercase; font-weight: 600; color: #00B4EF;">Correo: </span>' . $contactoEmail . '</p></br>';
 			$message 			.= '<p><span style="text-transform: uppercase; font-weight: 600; color: #00B4EF;">Comentario: </span>' . $contactoMensaje . '</p>';

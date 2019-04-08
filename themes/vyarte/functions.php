@@ -26,7 +26,8 @@ add_action( 'wp_enqueue_scripts', function(){
  
 	wp_enqueue_script( 'jquery', 'https://code.jquery.com/jquery-3.2.1.min.js', array(''), '2.1.1', true );
     wp_enqueue_script( 'vy_parsley', JSPATH.'parsley.min.js', array(), '1.0', true );
-	wp_enqueue_script( 'cycle_js', JSPATH.'jquery.cicle2.min.js', array(), '', true );
+	wp_enqueue_script( 'cycle_js', JSPATH.'jquery.cycle2.min.js', array(), '', true );
+    //wp_enqueue_script( 'carousel_js', JSPATH.'jquery.cycle2.carousel.min.js', array(), '', true );
 	wp_enqueue_script( 'vy_functions', JSPATH.'functions.js', array(), '1.0', true );
  
 	wp_localize_script( 'vy_functions', 'siteUrl', SITEURL );
@@ -190,6 +191,15 @@ function woo_custom_cart_button_text() {
 	return __( 'Comprar', 'woocommerce' );
 }
 
+
+add_filter('gettext',  'translate_text');
+add_filter('ngettext',  'translate_text');
+ 
+function translate_text($translated) {
+     $translated = str_ireplace('Escritorio',  'Cuenta',  $translated);
+     return $translated;
+}
+
 //Hook orden
 /* Products */
 //remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
@@ -198,6 +208,8 @@ function woo_custom_cart_button_text() {
 //add_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 5 );
 /*Shop - Archive*/
 remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
+
+
 
 
 /**

@@ -8,15 +8,12 @@
 		<!-- SEO -->
 		<meta name="keywords" content="">
 		<meta name="description" content="<?php bloginfo('description'); ?>">
-
 		<!-- Meta robots -->
 		<meta name="robots" content="index, follow" />
 		<meta name="googlebot" content="index, follow" />
-
 		<!-- Favicon -->
 		<link rel="icon" type="image/png" href="<?php echo THEMEPATH; ?>favicon/favicon-32x32.png" sizes="32x32" />
 		<link rel="icon" type="image/png" href="<?php echo THEMEPATH; ?>favicon/favicon-16x16.png" sizes="16x16" />
-
 		<!-- Facebook, Twitter metas -->
 		<meta property="og:title" content="<?php bloginfo('name'); ?>" />
 		<meta property="og:type" content="website" />
@@ -123,9 +120,10 @@
 						echo $menu_list;
 					?>
 					<div class="icons-nav">
-						<a href=""><em class="icon-instagram-filled margin-left-10"></em></a>			
-						<a href=""><em class="icon-facebook-rect"></em></a>			
-						<a href="" class="margin-right-10"><em class="icon-youtube"></em></a>			
+						<a href="https://www.instagram.com/vyarte_publicidad/?hl=es-la"><em class="icon-instagram-filled margin-left-10"></em></a>			
+						<a href="https://www.facebook.com/vyartepublicidad/"><em class="icon-facebook-rect"></em></a>			
+						<a href="https://www.youtube.com/channel/UCz9YPAPLrs51s74ZkaS48Nw"><em class="icon-youtube"></em></a>			
+						<a href="https://wa.me/5518339080" class="margin-right-10"><em class="icon-whatsapp"></em></a>			
 						<a href="<?php echo SITEURL; ?>carrito"><em class="icon-basket"><span><?php echo WC()->cart->get_cart_contents_count(); ?></span></a></em>
 						<a href="<?php echo SITEURL; ?>cuenta"><em class="icon-user"></em></a>
 						<p id="linkSearchProduct" class="customLink"><em class="icon-search"></em></p>

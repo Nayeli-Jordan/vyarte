@@ -67,3 +67,18 @@ textarea {
 	position: relative;
 	z-index: 0;
 }
+
+/* Mailchimp */
+#mc_embed_signup {
+	background: transparent!important;
+	margin: auto!important;
+	max-width: 100%;
+	form {
+		padding: 0px!important;
+		input[type="email"]{
+			border: 0px!important;
+			@extend .shadow; 
+		}
+		input[type="submit"]{ width: 100%!important; }
+	}
+}

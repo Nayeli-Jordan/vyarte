@@ -9,14 +9,14 @@ function custom_taxonomies_callback(){
 	if( ! taxonomy_exists('cat_faq')){
 
 		$labels = array(
-			'name'              => 'Categoría faq',
-			'singular_name'     => 'Categoría faq',
+			'name'              => 'Categoría Pregunta',
+			'singular_name'     => 'Categoría Pregunta',
 			'search_items'      => 'Buscar',
 			'all_items'         => 'Todos',
 			'edit_item'         => 'Editar Categoría',
 			'update_item'       => 'Actualizar Categoría',
 			'add_new_item'      => 'Nueva Categoría',
-			'menu_name'         => 'Categoría faq'
+			'menu_name'         => 'Categoría Pregunta'
 		);
 		$args = array(
 			'hierarchical'      => true,

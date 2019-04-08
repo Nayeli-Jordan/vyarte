@@ -165,19 +165,19 @@ add_action('init', function(){
 	);
 	register_post_type( 'vy_contacto', $args );
 
-	// DG Trabajos
+	// Trabajo Diseños
 	$labels = array(
-		'name'          => 'DG Trabajo',
-		'singular_name' => 'DG Trabajo',
-		'add_new'       => 'Nuevo DG Trabajo',
-		'add_new_item'  => 'Nuevo DG Trabajo',
-		'edit_item'     => 'Editar DG Trabajo',
-		'new_item'      => 'Nuevo DG Trabajo',
-		'all_items'     => 'DG Trabajo',
-		'view_item'     => 'Ver DG Trabajo',
-		'search_items'  => 'Buscar DG Trabajo',
-		'not_found'     => 'No hay DG Trabajo',
-		'menu_name'     => 'DG Trabajos'
+		'name'          => 'Trabajo Diseño',
+		'singular_name' => 'Trabajo Diseño',
+		'add_new'       => 'Nuevo Trabajo Diseño',
+		'add_new_item'  => 'Nuevo Trabajo Diseño',
+		'edit_item'     => 'Editar Trabajo Diseño',
+		'new_item'      => 'Nuevo Trabajo Diseño',
+		'all_items'     => 'Trabajo Diseño',
+		'view_item'     => 'Ver Trabajo Diseño',
+		'search_items'  => 'Buscar Trabajo Diseño',
+		'not_found'     => 'No hay Trabajo Diseño',
+		'menu_name'     => 'Trabajo Diseños'
 	);
 
 	$args = array(

@@ -52,7 +52,8 @@
 			<div class="row">
 				<div class="col s12 m10 offset-m1 l8 offset-l2">
 					<h2>Suscríbete a nuestro newsletter</h2>
-					<p>Suscribete y recibe las mejores promociones directamente en tu correo electrónico</p>					
+					<p class="margin-bottom-20">Suscribete y recibe las mejores promociones directamente en tu correo electrónico</p>
+					<?php include (TEMPLATEPATH . '/template/mailchimp-code.php'); ?>				
 				</div>
 			</div>
 		</div>
