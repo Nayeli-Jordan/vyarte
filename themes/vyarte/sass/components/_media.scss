@@ -60,27 +60,42 @@ video.responsive-video {
 }
 
 
-#sliderHome {
-	.cycle-slideshow {
-		img {
-			width: 100%;
+#sliderHome .cycle-slideshow img { width: 100%; }
+#sliderDg .cycle-slideshow {
+	.cycle-slide {
+		width: 100%;
+		min-height: 150px;
+		.content-logo {
+			width: 25%;
+			height: 150px;
+			float: left;
 		}
-		.cycle-pager {
-			position: absolute;
-		    width: 100%;
-		    bottom: -15px;
-		    z-index: 199;
-			span {
-				font-size: 60px;
-				line-height: 40px;
-				margin: 0 5px;
-				color: $primary-color-light;
-				cursor: pointer;
-				&.cycle-pager-active {
-					color: $primary-color-dark;
-				}
+		@media #{$sm-and-down}{
+			min-height: 100px;
+			.content-logo { 
+				height: 100px;
+				background-size: 90%;
 			}
 		}		
+	}
+}
+#sliderHome .cycle-pager {
+	position: absolute;
+    width: 100%;
+    bottom: -15px;
+    z-index: 199;
+}
+#sliderHome,
+#sliderDg {
+	.cycle-pager span {
+		font-size: 60px;
+		line-height: 40px;
+		margin: 0 5px;
+		color: $primary-color-light;
+		cursor: pointer;
+		&.cycle-pager-active {
+			color: $primary-color-dark;
+		}
 	}
 }
 
@@ -98,4 +113,12 @@ video.responsive-video {
 #singlePost #contentPost img {
 	margin-top: 10px;
   	margin-bottom: 20px;
+}
+
+/* Instagram */
+#sb_instagram {
+	@media #{$extra-large-and-up} { min-height: 480px; }
+	@media #{$large-and-up} { min-height: 400px; }
+	@media #{$medium-only} { min-height: 350px; }
+	@media #{$small-and-down} { min-height: 400px; }
 }

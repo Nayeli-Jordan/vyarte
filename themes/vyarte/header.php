@@ -52,7 +52,7 @@
 		<noscript>Tu navegador no soporta JavaScript!</noscript>
 		<?php wp_head(); ?>
 	</head>
-	<body class="<?php if (is_page('cuenta')): echo 'vyarte_cuenta'; endif ?>">
+	<body class="<?php if (is_page('cuenta')): echo 'vyarte_cuenta'; elseif (is_shop()): echo 'vyarte_tienda'; endif ?>">
 		<?php if (is_page('contactanos')) {
 			/* Modal Contacto enviado */
 			include (TEMPLATEPATH . '/template/notice/contacto-enviado.php');

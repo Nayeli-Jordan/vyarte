@@ -28,7 +28,6 @@ footer {
 					cursor: pointer;
 					@extend .transition;
 					&:hover, &.active { color: $primary-color-light; }
-					&.active { text-decoration: underline; }
 				}
 			}
 		}

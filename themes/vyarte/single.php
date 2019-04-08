@@ -9,7 +9,7 @@
 		the_title();
 	echo "</div>";
 ?>
-	<section id="singlePost" class="container margin-top-bottom-30">
+	<section id="singlePost" class="container margin-top-50 margin-bottom-30">
 		<div class="row row-complete">		
 			<div class="col m4 hide-on-sm-and-down">
 				<?php include (TEMPLATEPATH . '/sidebar.php'); ?>

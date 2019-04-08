@@ -1,12 +1,13 @@
-table.vy-custum-fields {
+table.vy-custum-fields,
+.vy-custum-fields input:not([type="submit"]),
+.vy-custum-fields select,
+.vy-custum-fields textarea {
 	width: 100%;
 }
 .vy-custum-fields label { 
 	display: block; 
 	text-align: left;
 }
-.vy-custum-fields input:not([type="submit"]),
-.vy-custum-fields select,
-.vy-custum-fields textarea {
-	width: 100%;
-}
+
+body.post-type-product #postdivrich,
+body.post-type-product #tagsdiv-product_tag { display: none; }

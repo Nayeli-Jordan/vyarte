@@ -83,7 +83,7 @@
 	<section class="bg-gray text-center padding-top-bottom-50">
 		<div class="container">
 			<h2>#VYARTE en Instagram</h2>
-			<a href="" class="btn clearfix margin-top-20">Ver instagram</a>
+			<?php echo do_shortcode('[instagram-feed]') ?>
 		</div>
 	</section>
 <?php get_footer(); ?>

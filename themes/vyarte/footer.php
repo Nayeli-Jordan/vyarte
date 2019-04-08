@@ -95,13 +95,13 @@
 	 				<div class="text-center">
 		 				<p class="margin-bottom-10">© 2019 VyArte | Desarrollado por <a href="https://www.behance.net/lizbethjorc2ea" target="_blank" class="color-primary">GatchWeb</a></p>
 		 				<div class="icons-pago">
-		 					<em class="icon-cc-visa"></em>
-		 					<em class="icon-cc-mastercard"></em>
-		 					<em class="icon-cc-paypal"></em>
+		 					<em class="icon-wallet" title="Efectivo"></em>
+		 					<em class="icon-bank" title="Depósito Bancario"></em>
+		 					<em class="icon-cc-paypal" title="PayPal"></em>
+		 					<img src="<?php echo THEMEPATH; ?>images/mercado-pago.png" title="Mercado Pago" class="margin-left-10">
 		 				</div> 					
 	 				</div>					
 				</div>
-
 			</footer>
 		</div> <!-- end main-body -->
 		<?php wp_footer(); ?>

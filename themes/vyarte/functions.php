@@ -201,11 +201,10 @@ function translate_text($translated) {
 }
 
 //Hook orden
-/* Products */
-//remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
 /*Single*/
-//remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
-//add_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 5 );
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 6 );
+//add_action( 'woocommerce_before_single_product_summary', 'woocommerce_output_related_products', 5 );
 /*Shop - Archive*/
 remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 

@@ -33,18 +33,16 @@ $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_cl
 	'images',
 ) );
 ?>
-<div class="col s12 m6 relative <?php echo esc_attr( implode( ' ', array_map( 'sanitize_html_class', $wrapper_classes ) ) ); ?>" data-columns="<?php echo esc_attr( $columns ); ?>" style="opacity: 0; transition: opacity .25s ease-in-out;">
 
-	<div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-timeout="0" data-cycle-slides="> div" data-cycle-prev="#prevGallery" data-cycle-next="#nextGallery">
+<div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-timeout="0" data-cycle-slides="> div" data-cycle-prev="#prevGallery" data-cycle-next="#nextGallery">
 
-		<?php
-		$image_attributes = wp_get_attachment_image_src( $post_thumbnail_id, 'large' );
-		if ( $image_attributes ) : ?>
-			<div class="bg-image bg-contain" style="background-image: url(<?php echo $image_attributes[0]; ?>)"></div>
-		<?php endif;
-		do_action( 'woocommerce_product_thumbnails' ); ?>
+	<?php
+	$image_attributes = wp_get_attachment_image_src( $post_thumbnail_id, 'large' );
+	if ( $image_attributes ) : ?>
+		<div class="bg-image bg-contain" style="background-image: url(<?php echo $image_attributes[0]; ?>)"></div>
+	<?php endif;
+	do_action( 'woocommerce_product_thumbnails' ); ?>
 
-	</div> <!-- end cycle-slideshow -->
-	<a href=# id="prevGallery" class="hide"><em class="icon-left-open"></em></a> 
-	<a href=# id="nextGallery" class="hide"><em class="icon-right-open"></em></a>		
-</div>
+</div> <!-- end cycle-slideshow -->
+<a href=# id="prevGallery" class="hide"><em class="icon-left-open"></em></a> 
+<a href=# id="nextGallery" class="hide"><em class="icon-right-open"></em></a>

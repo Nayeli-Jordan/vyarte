@@ -19,6 +19,11 @@
 	}
 }
 
+/* Breadcrumbs */
+.woocommerce-breadcrumb {
+	margin-bottom: 50px;
+}
+
 /* Filtro productos */
 .woocommerce-ordering {
 	float: right;
@@ -63,6 +68,8 @@
 		}
 		img { 
 			width: 200px;
+			margin-left: auto;
+			margin-right: auto;
 			@extend .responsive-img; 
 		}
 		h2 {
@@ -106,41 +113,76 @@
 }
 
 #single-product {
-	/* Gallery */
-	.cycle-slideshow .bg-image {
-	    width: 100%;
-	    height: 400px;
-	}
-	#prevGallery, #nextGallery {
-		position: absolute;
-		top: 40%;
-		color: $primary-color-light;
-		cursor: pointer;
-		z-index: 100;
-		em { font-size: 30px; }
-		&:hover {
-			color: $primary-color-dark;
+	.product-image {
+		.onsale {
+			position: absolute;
+			top: 4px;
+			right: 20px;
+			padding: 0 8px;
+			color: $primary-color;
+			text-transform: uppercase;
+			line-height: 26px;
+			font-weight: 600;
+			border-radius: 5px;
+			border: 2px solid $primary-color;
+			z-index: 101;
 		}
+		/* Gallery */
+		.cycle-slideshow .bg-image {
+		    width: 100%;
+		    height: 400px;
+		    //box-shadow: 1px 1px 20px 0 rgba(84, 84, 84, 0.15), -1px -1px 20px 0 rgba(84, 84, 84, 0.02);
+		}
+		#prevGallery, #nextGallery {
+			position: absolute;
+			top: 40%;
+			color: $primary-color-light;
+			cursor: pointer;
+			z-index: 100;
+			em { font-size: 30px; }
+			&:hover {
+				color: $primary-color-dark;
+			}
+		}
+		#nextGallery { right: 10px; }		
 	}
-	#nextGallery { right: 10px; }
+
 	/* Info product */
 	.summary {
-		h1 {
-			color: $primary-color-dark;
-			margin-bottom: 10px;		
+		.product_meta { 
+			font-size: 14px; 
+			margin-bottom: 10px;
 		}
-		.woocommerce-product-rating { margin-bottom: 20px; }
+		.woocommerce-product-rating { 
+			.content_stars {
+				em { 
+					color: #eee;
+					margin-right: -8px;
+					&.star1.active { color: #f6bd15; }
+					&.star2.active,
+					&.star2.active + &.star3{ color: #f6bd15; }
+					&.star3.active,
+					&.star3.active ~ &.star1,
+					&.star3.active + &.star2 { color: #f6bd15; }
+				}
+			}
+		}
 		.price {
 			margin-bottom: 20px;
-			color: $primary-color-dark;
-			font-size: 22px;
+			font-size: 18px;
 			font-weight: 700;
+			del { 
+				color: #7d7d7d;
+				margin-right: 10px;
+			}
+			ins { text-decoration: none; }
 		}
 		.stock { 
 			display: inline-block;
 			margin-bottom: 10px; 
 		}
 		form.cart {
+			width: 170px;
 			margin-bottom: 20px;
 			input.qty {
 				margin-bottom: -2px;
@@ -164,25 +206,15 @@
 	/* Reviews */
 	.tabs.wc-tabs { display: none; }
 	#reviews {
+		margin-bottom: 30px;
 		@extend .row-complete;
 		#comments {
-			max-height: 440px;
+			height: 450px;
 			overflow: auto;
 			padding-top: 10px;
 			@extend .shadow-left;
-			&::-webkit-scrollbar {
-			    width: 5px;
-			} 
-			&::-webkit-scrollbar-track {
-			    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2); 
-			    background-color: rgba(0,0,0,0.3);
-			} 
-			&::-webkit-scrollbar-thumb {
-			    border-radius: 0px;
-			    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2); 
-			    background-color: rgba(0,0,0,0.8);
-			}
 			@media #{$sm-and-down} {
+				height: inherit;
 				max-height: 300px;
 				margin-bottom: 30px;
 			}
@@ -255,10 +287,14 @@
 		}		
 	}
 	.related.products {
+		margin-bottom: 45px;
 		h2 { text-align: center; }
 		@media #{$medium-only}{ ul li:nth-child(4n){ display: none; } }
 	}	
 }
+
+/* Tienda */
+.vyarte_tienda #primary { margin-bottom: 70px; }
 
 /* Carrito */
 .woocommerce {
