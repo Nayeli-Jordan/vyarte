@@ -32,16 +32,14 @@ $average      = $product->get_average_rating();
 $averageRound = round($average, 0, PHP_ROUND_HALF_UP);
 
 if ( $rating_count > 0 ) : ?>
-	<?php echo $averageRound ?>
-	<div class="woocommerce-product-rating">
-		<div class="content_stars">
-			<em class="icon-star star1 <?php if($averageRound == 1): echo 'active'; endif; ?>"></em>
-			<em class="icon-star star2 <?php if($averageRound == 2): echo 'active'; endif; ?>"></em>
-			<em class="icon-star star3 <?php if($averageRound == 3): echo 'active'; endif; ?>"></em>
-			<em class="icon-star star4 <?php if($averageRound == 4): echo 'active'; endif; ?>"></em>
-			<em class="icon-star star5 <?php if($averageRound == 5): echo 'active'; endif; ?>"></em>
+	<div class="woocommerce-product-rating margin-bottom-10">
+		<div class="content_stars activeToStar<?php echo $averageRound; ?>">
+			<em class="icon-star star1"></em>
+			<em class="icon-star star2"></em>
+			<em class="icon-star star3"></em>
+			<em class="icon-star star4"></em>
+			<em class="icon-star star5"></em>
+			<em class="margin-left-10"><?php echo $review_count; ?> opiniones</em>
 		</div>
-		<?php echo wc_get_rating_html( $average, $rating_count ); ?>
-		<?php if ( comments_open() ) : ?><a href="#reviews" class="woocommerce-review-link" rel="nofollow">(<?php printf( _n( '%s customer review', '%s customer reviews', $review_count, 'woocommerce' ), '<span class="count">' . esc_html( $review_count ) . '</span>' ); ?>)</a><?php endif ?>
 	</div>
 <?php endif; ?>

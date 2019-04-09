@@ -201,10 +201,12 @@ function translate_text($translated) {
 }
 
 //Hook orden
+/* Loop product */
+remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_rating', 5 );
+add_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_single_rating', 5 ); // El mismo de single
 /*Single*/
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
 add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 6 );
-//add_action( 'woocommerce_before_single_product_summary', 'woocommerce_output_related_products', 5 );
 /*Shop - Archive*/
 remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 
@@ -248,5 +250,20 @@ add_action ('template_redirect', 'custom_redirect_contacto');
 function custom_redirect_contacto() {
     if ( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['btnSubmitContact'] ) ) {
         wp_redirect(site_url('contactanos#contacto-enviado'));
+    }
+}
+
+add_action ('template_redirect', 'custom_redirect_pers');
+function custom_redirect_pers() {
+    if ( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['btnSubmitPers'] ) ) {
+        $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+        wp_redirect($actual_link . '#personalizacion-enviada');
+    }
+}
+add_action ('template_redirect', 'custom_redirect_pers_canc');
+function custom_redirect_pers_canc() {
+    if ( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['btnSubmitNoPers'] ) ) {
+        $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+        wp_redirect($actual_link . '#personalizacion-cancelada');
     }
 }

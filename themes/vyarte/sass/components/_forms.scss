@@ -44,6 +44,7 @@ textarea {
 /* Validación Parsley */
 .parsley-errors-list {
 	padding: 0px!important;
+	margin-top: 0px;
 	font-size: 12px;
 	li { 
 		color: $danger-color; 

@@ -2470,21 +2470,22 @@ textarea {
 /* line 45, ../sass/components/_forms.scss */
 .parsley-errors-list {
   padding: 0px !important;
+  margin-top: 0px;
   font-size: 12px;
 }
-/* line 48, ../sass/components/_forms.scss */
+/* line 49, ../sass/components/_forms.scss */
 .parsley-errors-list li {
   color: #c30008;
   list-style-type: none !important;
 }
 
-/* line 54, ../sass/components/_forms.scss */
+/* line 55, ../sass/components/_forms.scss */
 #contact-form {
   max-width: 400px;
   margin: auto;
 }
 
-/* line 60, ../sass/components/_forms.scss */
+/* line 61, ../sass/components/_forms.scss */
 .aws-search-field {
   border: 0px !important;
   border-bottom: 1px solid #000 !important;
@@ -2496,21 +2497,21 @@ textarea {
 	z-index: 0;
 } */
 /* Mailchimp */
-/* line 72, ../sass/components/_forms.scss */
+/* line 73, ../sass/components/_forms.scss */
 #mc_embed_signup {
   background: transparent !important;
   margin: auto !important;
   max-width: 100%;
 }
-/* line 76, ../sass/components/_forms.scss */
+/* line 77, ../sass/components/_forms.scss */
 #mc_embed_signup form {
   padding: 0px !important;
 }
-/* line 78, ../sass/components/_forms.scss */
+/* line 79, ../sass/components/_forms.scss */
 #mc_embed_signup form input[type="email"] {
   border: 0px !important;
 }
-/* line 82, ../sass/components/_forms.scss */
+/* line 83, ../sass/components/_forms.scss */
 #mc_embed_signup form input[type="submit"] {
   width: 100% !important;
 }
@@ -2539,22 +2540,27 @@ html body {
 }
 
 /* line 21, ../sass/components/_global.scss */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* line 23, ../sass/components/_global.scss */
 ul {
   padding: 0px;
 }
-/* line 23, ../sass/components/_global.scss */
+/* line 25, ../sass/components/_global.scss */
 ul li {
   margin: 0px;
   line-height: 20px;
   list-style-type: none;
 }
 
-/* line 30, ../sass/components/_global.scss */
+/* line 32, ../sass/components/_global.scss */
 .clearfix {
   clear: both;
 }
 
-/* line 32, ../sass/components/_global.scss */
+/* line 34, ../sass/components/_global.scss */
 .hr, hr {
   width: 100%;
   height: 1px;
@@ -2562,25 +2568,25 @@ ul li {
   background-color: #fff;
 }
 
-/* line 42, ../sass/components/_global.scss */
+/* line 44, ../sass/components/_global.scss */
 ::-webkit-scrollbar {
   width: 9px;
 }
 
-/* line 45, ../sass/components/_global.scss */
+/* line 47, ../sass/components/_global.scss */
 ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #fff;
 }
 
-/* line 49, ../sass/components/_global.scss */
+/* line 51, ../sass/components/_global.scss */
 ::-webkit-scrollbar-thumb {
   border-radius: 0px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
   background-color: #6ba8b2;
 }
 
-/* line 55, ../sass/components/_global.scss */
+/* line 57, ../sass/components/_global.scss */
 #reviews #comments::-webkit-scrollbar,
 #sb_instagram::-webkit-scrollbar {
   width: 6px;
@@ -3976,9 +3982,9 @@ ul li {
 }
 
 /* line 4, ../sass/components/_media.scss */
-.responsive-img, .main-body ul.products[class*=columns-] li.product img,
+.responsive-img, .main-body ul.products[class*=columns-] li.product .woocommerce-loop-product__link img,
 img.responsive-img,
-.main-body ul.products[class*=columns-] li.product img,
+.main-body ul.products[class*=columns-] li.product .woocommerce-loop-product__link img,
 video.responsive-video {
   max-width: 100%;
   height: auto;
@@ -4226,4285 +4232,4290 @@ video.responsive-video {
   left: 0;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 12, ../sass/components/_position.scss */
+.float-right {
+  float: right;
+}
+
+/* line 17, ../sass/components/_position.scss */
 .top--100p {
   top: -100%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--100p {
   bottom: -100%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--100p {
   left: -100%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--100p {
   right: -100%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--99p {
   top: -99%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--99p {
   bottom: -99%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--99p {
   left: -99%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--99p {
   right: -99%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--98p {
   top: -98%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--98p {
   bottom: -98%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--98p {
   left: -98%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--98p {
   right: -98%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--97p {
   top: -97%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--97p {
   bottom: -97%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--97p {
   left: -97%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--97p {
   right: -97%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--96p {
   top: -96%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--96p {
   bottom: -96%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--96p {
   left: -96%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--96p {
   right: -96%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--95p {
   top: -95%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--95p {
   bottom: -95%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--95p {
   left: -95%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--95p {
   right: -95%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--94p {
   top: -94%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--94p {
   bottom: -94%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--94p {
   left: -94%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--94p {
   right: -94%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--93p {
   top: -93%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--93p {
   bottom: -93%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--93p {
   left: -93%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--93p {
   right: -93%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--92p {
   top: -92%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--92p {
   bottom: -92%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--92p {
   left: -92%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--92p {
   right: -92%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--91p {
   top: -91%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--91p {
   bottom: -91%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--91p {
   left: -91%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--91p {
   right: -91%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--90p {
   top: -90%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--90p {
   bottom: -90%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--90p {
   left: -90%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--90p {
   right: -90%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--89p {
   top: -89%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--89p {
   bottom: -89%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--89p {
   left: -89%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--89p {
   right: -89%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--88p {
   top: -88%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--88p {
   bottom: -88%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--88p {
   left: -88%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--88p {
   right: -88%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--87p {
   top: -87%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--87p {
   bottom: -87%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--87p {
   left: -87%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--87p {
   right: -87%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--86p {
   top: -86%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--86p {
   bottom: -86%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--86p {
   left: -86%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--86p {
   right: -86%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--85p {
   top: -85%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--85p {
   bottom: -85%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--85p {
   left: -85%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--85p {
   right: -85%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--84p {
   top: -84%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--84p {
   bottom: -84%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--84p {
   left: -84%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--84p {
   right: -84%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--83p {
   top: -83%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--83p {
   bottom: -83%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--83p {
   left: -83%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--83p {
   right: -83%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--82p {
   top: -82%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--82p {
   bottom: -82%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--82p {
   left: -82%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--82p {
   right: -82%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--81p {
   top: -81%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--81p {
   bottom: -81%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--81p {
   left: -81%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--81p {
   right: -81%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--80p {
   top: -80%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--80p {
   bottom: -80%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--80p {
   left: -80%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--80p {
   right: -80%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--79p {
   top: -79%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--79p {
   bottom: -79%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--79p {
   left: -79%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--79p {
   right: -79%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--78p {
   top: -78%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--78p {
   bottom: -78%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--78p {
   left: -78%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--78p {
   right: -78%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--77p {
   top: -77%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--77p {
   bottom: -77%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--77p {
   left: -77%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--77p {
   right: -77%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--76p {
   top: -76%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--76p {
   bottom: -76%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--76p {
   left: -76%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--76p {
   right: -76%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--75p {
   top: -75%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--75p {
   bottom: -75%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--75p {
   left: -75%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--75p {
   right: -75%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--74p {
   top: -74%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--74p {
   bottom: -74%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--74p {
   left: -74%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--74p {
   right: -74%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--73p {
   top: -73%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--73p {
   bottom: -73%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--73p {
   left: -73%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--73p {
   right: -73%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--72p {
   top: -72%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--72p {
   bottom: -72%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--72p {
   left: -72%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--72p {
   right: -72%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--71p {
   top: -71%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--71p {
   bottom: -71%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--71p {
   left: -71%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--71p {
   right: -71%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--70p {
   top: -70%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--70p {
   bottom: -70%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--70p {
   left: -70%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--70p {
   right: -70%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--69p {
   top: -69%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--69p {
   bottom: -69%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--69p {
   left: -69%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--69p {
   right: -69%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--68p {
   top: -68%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--68p {
   bottom: -68%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--68p {
   left: -68%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--68p {
   right: -68%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--67p {
   top: -67%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--67p {
   bottom: -67%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--67p {
   left: -67%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--67p {
   right: -67%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--66p {
   top: -66%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--66p {
   bottom: -66%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--66p {
   left: -66%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--66p {
   right: -66%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--65p {
   top: -65%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--65p {
   bottom: -65%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--65p {
   left: -65%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--65p {
   right: -65%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--64p {
   top: -64%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--64p {
   bottom: -64%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--64p {
   left: -64%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--64p {
   right: -64%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--63p {
   top: -63%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--63p {
   bottom: -63%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--63p {
   left: -63%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--63p {
   right: -63%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--62p {
   top: -62%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--62p {
   bottom: -62%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--62p {
   left: -62%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--62p {
   right: -62%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--61p {
   top: -61%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--61p {
   bottom: -61%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--61p {
   left: -61%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--61p {
   right: -61%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--60p {
   top: -60%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--60p {
   bottom: -60%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--60p {
   left: -60%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--60p {
   right: -60%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--59p {
   top: -59%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--59p {
   bottom: -59%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--59p {
   left: -59%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--59p {
   right: -59%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--58p {
   top: -58%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--58p {
   bottom: -58%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--58p {
   left: -58%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--58p {
   right: -58%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--57p {
   top: -57%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--57p {
   bottom: -57%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--57p {
   left: -57%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--57p {
   right: -57%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--56p {
   top: -56%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--56p {
   bottom: -56%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--56p {
   left: -56%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--56p {
   right: -56%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--55p {
   top: -55%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--55p {
   bottom: -55%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--55p {
   left: -55%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--55p {
   right: -55%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--54p {
   top: -54%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--54p {
   bottom: -54%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--54p {
   left: -54%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--54p {
   right: -54%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--53p {
   top: -53%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--53p {
   bottom: -53%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--53p {
   left: -53%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--53p {
   right: -53%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--52p {
   top: -52%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--52p {
   bottom: -52%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--52p {
   left: -52%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--52p {
   right: -52%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--51p {
   top: -51%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--51p {
   bottom: -51%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--51p {
   left: -51%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--51p {
   right: -51%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--50p {
   top: -50%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--50p {
   bottom: -50%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--50p {
   left: -50%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--50p {
   right: -50%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--49p {
   top: -49%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--49p {
   bottom: -49%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--49p {
   left: -49%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--49p {
   right: -49%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--48p {
   top: -48%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--48p {
   bottom: -48%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--48p {
   left: -48%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--48p {
   right: -48%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--47p {
   top: -47%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--47p {
   bottom: -47%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--47p {
   left: -47%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--47p {
   right: -47%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--46p {
   top: -46%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--46p {
   bottom: -46%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--46p {
   left: -46%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--46p {
   right: -46%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--45p {
   top: -45%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--45p {
   bottom: -45%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--45p {
   left: -45%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--45p {
   right: -45%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--44p {
   top: -44%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--44p {
   bottom: -44%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--44p {
   left: -44%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--44p {
   right: -44%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--43p {
   top: -43%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--43p {
   bottom: -43%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--43p {
   left: -43%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--43p {
   right: -43%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--42p {
   top: -42%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--42p {
   bottom: -42%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--42p {
   left: -42%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--42p {
   right: -42%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--41p {
   top: -41%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--41p {
   bottom: -41%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--41p {
   left: -41%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--41p {
   right: -41%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--40p {
   top: -40%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--40p {
   bottom: -40%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--40p {
   left: -40%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--40p {
   right: -40%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--39p {
   top: -39%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--39p {
   bottom: -39%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--39p {
   left: -39%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--39p {
   right: -39%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--38p {
   top: -38%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--38p {
   bottom: -38%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--38p {
   left: -38%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--38p {
   right: -38%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--37p {
   top: -37%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--37p {
   bottom: -37%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--37p {
   left: -37%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--37p {
   right: -37%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--36p {
   top: -36%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--36p {
   bottom: -36%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--36p {
   left: -36%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--36p {
   right: -36%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--35p {
   top: -35%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--35p {
   bottom: -35%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--35p {
   left: -35%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--35p {
   right: -35%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--34p {
   top: -34%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--34p {
   bottom: -34%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--34p {
   left: -34%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--34p {
   right: -34%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--33p {
   top: -33%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--33p {
   bottom: -33%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--33p {
   left: -33%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--33p {
   right: -33%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--32p {
   top: -32%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--32p {
   bottom: -32%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--32p {
   left: -32%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--32p {
   right: -32%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--31p {
   top: -31%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--31p {
   bottom: -31%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--31p {
   left: -31%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--31p {
   right: -31%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--30p {
   top: -30%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--30p {
   bottom: -30%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--30p {
   left: -30%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--30p {
   right: -30%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--29p {
   top: -29%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--29p {
   bottom: -29%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--29p {
   left: -29%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--29p {
   right: -29%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--28p {
   top: -28%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--28p {
   bottom: -28%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--28p {
   left: -28%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--28p {
   right: -28%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--27p {
   top: -27%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--27p {
   bottom: -27%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--27p {
   left: -27%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--27p {
   right: -27%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--26p {
   top: -26%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--26p {
   bottom: -26%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--26p {
   left: -26%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--26p {
   right: -26%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--25p {
   top: -25%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--25p {
   bottom: -25%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--25p {
   left: -25%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--25p {
   right: -25%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--24p {
   top: -24%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--24p {
   bottom: -24%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--24p {
   left: -24%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--24p {
   right: -24%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--23p {
   top: -23%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--23p {
   bottom: -23%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--23p {
   left: -23%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--23p {
   right: -23%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--22p {
   top: -22%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--22p {
   bottom: -22%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--22p {
   left: -22%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--22p {
   right: -22%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--21p {
   top: -21%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--21p {
   bottom: -21%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--21p {
   left: -21%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--21p {
   right: -21%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--20p {
   top: -20%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--20p {
   bottom: -20%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--20p {
   left: -20%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--20p {
   right: -20%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--19p {
   top: -19%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--19p {
   bottom: -19%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--19p {
   left: -19%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--19p {
   right: -19%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--18p {
   top: -18%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--18p {
   bottom: -18%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--18p {
   left: -18%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--18p {
   right: -18%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--17p {
   top: -17%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--17p {
   bottom: -17%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--17p {
   left: -17%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--17p {
   right: -17%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--16p {
   top: -16%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--16p {
   bottom: -16%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--16p {
   left: -16%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--16p {
   right: -16%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--15p {
   top: -15%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--15p {
   bottom: -15%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--15p {
   left: -15%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--15p {
   right: -15%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--14p {
   top: -14%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--14p {
   bottom: -14%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--14p {
   left: -14%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--14p {
   right: -14%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--13p {
   top: -13%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--13p {
   bottom: -13%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--13p {
   left: -13%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--13p {
   right: -13%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--12p {
   top: -12%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--12p {
   bottom: -12%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--12p {
   left: -12%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--12p {
   right: -12%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--11p {
   top: -11%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--11p {
   bottom: -11%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--11p {
   left: -11%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--11p {
   right: -11%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--10p {
   top: -10%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--10p {
   bottom: -10%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--10p {
   left: -10%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--10p {
   right: -10%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--9p {
   top: -9%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--9p {
   bottom: -9%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--9p {
   left: -9%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--9p {
   right: -9%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--8p {
   top: -8%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--8p {
   bottom: -8%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--8p {
   left: -8%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--8p {
   right: -8%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--7p {
   top: -7%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--7p {
   bottom: -7%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--7p {
   left: -7%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--7p {
   right: -7%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--6p {
   top: -6%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--6p {
   bottom: -6%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--6p {
   left: -6%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--6p {
   right: -6%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--5p {
   top: -5%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--5p {
   bottom: -5%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--5p {
   left: -5%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--5p {
   right: -5%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--4p {
   top: -4%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--4p {
   bottom: -4%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--4p {
   left: -4%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--4p {
   right: -4%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--3p {
   top: -3%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--3p {
   bottom: -3%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--3p {
   left: -3%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--3p {
   right: -3%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--2p {
   top: -2%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--2p {
   bottom: -2%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--2p {
   left: -2%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--2p {
   right: -2%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top--1p {
   top: -1%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom--1p {
   bottom: -1%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left--1p {
   left: -1%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right--1p {
   right: -1%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-0p {
   top: 0%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-0p {
   bottom: 0%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-0p {
   left: 0%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-0p {
   right: 0%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-1p {
   top: 1%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-1p {
   bottom: 1%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-1p {
   left: 1%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-1p {
   right: 1%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-2p {
   top: 2%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-2p {
   bottom: 2%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-2p {
   left: 2%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-2p {
   right: 2%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-3p {
   top: 3%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-3p {
   bottom: 3%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-3p {
   left: 3%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-3p {
   right: 3%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-4p {
   top: 4%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-4p {
   bottom: 4%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-4p {
   left: 4%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-4p {
   right: 4%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-5p {
   top: 5%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-5p {
   bottom: 5%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-5p {
   left: 5%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-5p {
   right: 5%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-6p {
   top: 6%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-6p {
   bottom: 6%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-6p {
   left: 6%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-6p {
   right: 6%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-7p {
   top: 7%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-7p {
   bottom: 7%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-7p {
   left: 7%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-7p {
   right: 7%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-8p {
   top: 8%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-8p {
   bottom: 8%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-8p {
   left: 8%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-8p {
   right: 8%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-9p {
   top: 9%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-9p {
   bottom: 9%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-9p {
   left: 9%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-9p {
   right: 9%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-10p {
   top: 10%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-10p {
   bottom: 10%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-10p {
   left: 10%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-10p {
   right: 10%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-11p {
   top: 11%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-11p {
   bottom: 11%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-11p {
   left: 11%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-11p {
   right: 11%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-12p {
   top: 12%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-12p {
   bottom: 12%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-12p {
   left: 12%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-12p {
   right: 12%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-13p {
   top: 13%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-13p {
   bottom: 13%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-13p {
   left: 13%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-13p {
   right: 13%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-14p {
   top: 14%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-14p {
   bottom: 14%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-14p {
   left: 14%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-14p {
   right: 14%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-15p {
   top: 15%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-15p {
   bottom: 15%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-15p {
   left: 15%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-15p {
   right: 15%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-16p {
   top: 16%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-16p {
   bottom: 16%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-16p {
   left: 16%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-16p {
   right: 16%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-17p {
   top: 17%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-17p {
   bottom: 17%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-17p {
   left: 17%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-17p {
   right: 17%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-18p {
   top: 18%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-18p {
   bottom: 18%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-18p {
   left: 18%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-18p {
   right: 18%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-19p {
   top: 19%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-19p {
   bottom: 19%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-19p {
   left: 19%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-19p {
   right: 19%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-20p {
   top: 20%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-20p {
   bottom: 20%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-20p {
   left: 20%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-20p {
   right: 20%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-21p {
   top: 21%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-21p {
   bottom: 21%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-21p {
   left: 21%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-21p {
   right: 21%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-22p {
   top: 22%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-22p {
   bottom: 22%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-22p {
   left: 22%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-22p {
   right: 22%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-23p {
   top: 23%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-23p {
   bottom: 23%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-23p {
   left: 23%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-23p {
   right: 23%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-24p {
   top: 24%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-24p {
   bottom: 24%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-24p {
   left: 24%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-24p {
   right: 24%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-25p {
   top: 25%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-25p {
   bottom: 25%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-25p {
   left: 25%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-25p {
   right: 25%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-26p {
   top: 26%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-26p {
   bottom: 26%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-26p {
   left: 26%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-26p {
   right: 26%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-27p {
   top: 27%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-27p {
   bottom: 27%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-27p {
   left: 27%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-27p {
   right: 27%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-28p {
   top: 28%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-28p {
   bottom: 28%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-28p {
   left: 28%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-28p {
   right: 28%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-29p {
   top: 29%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-29p {
   bottom: 29%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-29p {
   left: 29%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-29p {
   right: 29%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-30p {
   top: 30%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-30p {
   bottom: 30%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-30p {
   left: 30%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-30p {
   right: 30%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-31p {
   top: 31%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-31p {
   bottom: 31%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-31p {
   left: 31%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-31p {
   right: 31%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-32p {
   top: 32%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-32p {
   bottom: 32%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-32p {
   left: 32%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-32p {
   right: 32%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-33p {
   top: 33%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-33p {
   bottom: 33%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-33p {
   left: 33%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-33p {
   right: 33%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-34p {
   top: 34%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-34p {
   bottom: 34%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-34p {
   left: 34%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-34p {
   right: 34%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-35p {
   top: 35%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-35p {
   bottom: 35%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-35p {
   left: 35%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-35p {
   right: 35%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-36p {
   top: 36%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-36p {
   bottom: 36%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-36p {
   left: 36%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-36p {
   right: 36%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-37p {
   top: 37%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-37p {
   bottom: 37%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-37p {
   left: 37%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-37p {
   right: 37%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-38p {
   top: 38%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-38p {
   bottom: 38%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-38p {
   left: 38%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-38p {
   right: 38%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-39p {
   top: 39%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-39p {
   bottom: 39%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-39p {
   left: 39%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-39p {
   right: 39%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-40p {
   top: 40%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-40p {
   bottom: 40%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-40p {
   left: 40%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-40p {
   right: 40%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-41p {
   top: 41%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-41p {
   bottom: 41%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-41p {
   left: 41%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-41p {
   right: 41%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-42p {
   top: 42%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-42p {
   bottom: 42%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-42p {
   left: 42%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-42p {
   right: 42%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-43p {
   top: 43%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-43p {
   bottom: 43%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-43p {
   left: 43%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-43p {
   right: 43%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-44p {
   top: 44%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-44p {
   bottom: 44%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-44p {
   left: 44%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-44p {
   right: 44%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-45p {
   top: 45%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-45p {
   bottom: 45%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-45p {
   left: 45%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-45p {
   right: 45%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-46p {
   top: 46%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-46p {
   bottom: 46%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-46p {
   left: 46%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-46p {
   right: 46%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-47p {
   top: 47%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-47p {
   bottom: 47%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-47p {
   left: 47%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-47p {
   right: 47%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-48p {
   top: 48%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-48p {
   bottom: 48%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-48p {
   left: 48%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-48p {
   right: 48%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-49p {
   top: 49%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-49p {
   bottom: 49%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-49p {
   left: 49%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-49p {
   right: 49%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-50p {
   top: 50%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-50p {
   bottom: 50%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-50p {
   left: 50%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-50p {
   right: 50%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-51p {
   top: 51%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-51p {
   bottom: 51%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-51p {
   left: 51%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-51p {
   right: 51%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-52p {
   top: 52%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-52p {
   bottom: 52%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-52p {
   left: 52%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-52p {
   right: 52%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-53p {
   top: 53%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-53p {
   bottom: 53%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-53p {
   left: 53%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-53p {
   right: 53%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-54p {
   top: 54%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-54p {
   bottom: 54%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-54p {
   left: 54%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-54p {
   right: 54%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-55p {
   top: 55%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-55p {
   bottom: 55%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-55p {
   left: 55%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-55p {
   right: 55%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-56p {
   top: 56%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-56p {
   bottom: 56%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-56p {
   left: 56%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-56p {
   right: 56%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-57p {
   top: 57%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-57p {
   bottom: 57%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-57p {
   left: 57%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-57p {
   right: 57%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-58p {
   top: 58%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-58p {
   bottom: 58%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-58p {
   left: 58%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-58p {
   right: 58%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-59p {
   top: 59%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-59p {
   bottom: 59%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-59p {
   left: 59%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-59p {
   right: 59%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-60p {
   top: 60%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-60p {
   bottom: 60%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-60p {
   left: 60%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-60p {
   right: 60%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-61p {
   top: 61%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-61p {
   bottom: 61%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-61p {
   left: 61%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-61p {
   right: 61%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-62p {
   top: 62%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-62p {
   bottom: 62%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-62p {
   left: 62%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-62p {
   right: 62%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-63p {
   top: 63%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-63p {
   bottom: 63%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-63p {
   left: 63%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-63p {
   right: 63%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-64p {
   top: 64%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-64p {
   bottom: 64%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-64p {
   left: 64%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-64p {
   right: 64%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-65p {
   top: 65%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-65p {
   bottom: 65%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-65p {
   left: 65%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-65p {
   right: 65%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-66p {
   top: 66%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-66p {
   bottom: 66%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-66p {
   left: 66%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-66p {
   right: 66%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-67p {
   top: 67%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-67p {
   bottom: 67%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-67p {
   left: 67%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-67p {
   right: 67%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-68p {
   top: 68%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-68p {
   bottom: 68%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-68p {
   left: 68%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-68p {
   right: 68%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-69p {
   top: 69%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-69p {
   bottom: 69%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-69p {
   left: 69%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-69p {
   right: 69%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-70p {
   top: 70%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-70p {
   bottom: 70%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-70p {
   left: 70%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-70p {
   right: 70%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-71p {
   top: 71%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-71p {
   bottom: 71%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-71p {
   left: 71%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-71p {
   right: 71%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-72p {
   top: 72%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-72p {
   bottom: 72%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-72p {
   left: 72%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-72p {
   right: 72%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-73p {
   top: 73%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-73p {
   bottom: 73%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-73p {
   left: 73%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-73p {
   right: 73%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-74p {
   top: 74%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-74p {
   bottom: 74%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-74p {
   left: 74%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-74p {
   right: 74%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-75p {
   top: 75%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-75p {
   bottom: 75%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-75p {
   left: 75%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-75p {
   right: 75%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-76p {
   top: 76%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-76p {
   bottom: 76%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-76p {
   left: 76%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-76p {
   right: 76%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-77p {
   top: 77%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-77p {
   bottom: 77%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-77p {
   left: 77%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-77p {
   right: 77%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-78p {
   top: 78%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-78p {
   bottom: 78%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-78p {
   left: 78%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-78p {
   right: 78%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-79p {
   top: 79%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-79p {
   bottom: 79%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-79p {
   left: 79%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-79p {
   right: 79%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-80p {
   top: 80%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-80p {
   bottom: 80%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-80p {
   left: 80%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-80p {
   right: 80%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-81p {
   top: 81%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-81p {
   bottom: 81%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-81p {
   left: 81%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-81p {
   right: 81%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-82p {
   top: 82%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-82p {
   bottom: 82%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-82p {
   left: 82%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-82p {
   right: 82%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-83p {
   top: 83%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-83p {
   bottom: 83%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-83p {
   left: 83%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-83p {
   right: 83%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-84p {
   top: 84%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-84p {
   bottom: 84%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-84p {
   left: 84%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-84p {
   right: 84%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-85p {
   top: 85%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-85p {
   bottom: 85%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-85p {
   left: 85%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-85p {
   right: 85%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-86p {
   top: 86%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-86p {
   bottom: 86%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-86p {
   left: 86%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-86p {
   right: 86%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-87p {
   top: 87%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-87p {
   bottom: 87%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-87p {
   left: 87%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-87p {
   right: 87%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-88p {
   top: 88%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-88p {
   bottom: 88%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-88p {
   left: 88%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-88p {
   right: 88%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-89p {
   top: 89%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-89p {
   bottom: 89%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-89p {
   left: 89%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-89p {
   right: 89%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-90p {
   top: 90%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-90p {
   bottom: 90%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-90p {
   left: 90%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-90p {
   right: 90%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-91p {
   top: 91%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-91p {
   bottom: 91%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-91p {
   left: 91%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-91p {
   right: 91%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-92p {
   top: 92%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-92p {
   bottom: 92%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-92p {
   left: 92%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-92p {
   right: 92%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-93p {
   top: 93%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-93p {
   bottom: 93%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-93p {
   left: 93%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-93p {
   right: 93%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-94p {
   top: 94%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-94p {
   bottom: 94%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-94p {
   left: 94%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-94p {
   right: 94%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-95p {
   top: 95%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-95p {
   bottom: 95%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-95p {
   left: 95%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-95p {
   right: 95%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-96p {
   top: 96%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-96p {
   bottom: 96%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-96p {
   left: 96%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-96p {
   right: 96%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-97p {
   top: 97%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-97p {
   bottom: 97%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-97p {
   left: 97%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-97p {
   right: 97%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-98p {
   top: 98%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-98p {
   bottom: 98%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-98p {
   left: 98%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-98p {
   right: 98%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-99p {
   top: 99%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-99p {
   bottom: 99%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-99p {
   left: 99%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-99p {
   right: 99%;
 }
 
-/* line 15, ../sass/components/_position.scss */
+/* line 17, ../sass/components/_position.scss */
 .top-100p {
   top: 100%;
 }
 
-/* line 16, ../sass/components/_position.scss */
+/* line 18, ../sass/components/_position.scss */
 .bottom-100p {
   bottom: 100%;
 }
 
-/* line 17, ../sass/components/_position.scss */
+/* line 19, ../sass/components/_position.scss */
 .left-100p {
   left: 100%;
 }
 
-/* line 18, ../sass/components/_position.scss */
+/* line 20, ../sass/components/_position.scss */
 .right-100p {
   right: 100%;
 }
 
-/* line 24, ../sass/components/_position.scss */
+/* line 26, ../sass/components/_position.scss */
 .alight-middle {
   vertical-align: middle;
 }
 
-/* line 30, ../sass/components/_position.scss */
+/* line 32, ../sass/components/_position.scss */
 .hide {
   display: none;
 }
 
-/* line 31, ../sass/components/_position.scss */
+/* line 33, ../sass/components/_position.scss */
 .block {
   display: block;
 }
 
-/* line 32, ../sass/components/_position.scss */
+/* line 34, ../sass/components/_position.scss */
 .inline-block {
   display: inline-block;
 }
 
-/* line 33, ../sass/components/_position.scss */
+/* line 35, ../sass/components/_position.scss */
 .flex {
   display: flex;
 }
 
 @media only screen and (max-width: 430px) {
-  /* line 35, ../sass/components/_position.scss */
+  /* line 37, ../sass/components/_position.scss */
   .hide-on-small {
     display: none;
   }
 }
 @media only screen and (max-width: 600px) {
-  /* line 36, ../sass/components/_position.scss */
+  /* line 38, ../sass/components/_position.scss */
   .hide-on-sm-and-down {
     display: none;
   }
 }
 @media only screen and (min-width: 431px) and (max-width: 600px) {
-  /* line 37, ../sass/components/_position.scss */
+  /* line 39, ../sass/components/_position.scss */
   .hide-on-sm {
     display: none;
   }
 }
 @media only screen and (min-width: 431px) {
-  /* line 38, ../sass/components/_position.scss */
+  /* line 40, ../sass/components/_position.scss */
   .hide-on-sm-and-up {
     display: none;
   }
 }
 @media only screen and (max-width: 992px) {
-  /* line 39, ../sass/components/_position.scss */
+  /* line 41, ../sass/components/_position.scss */
   .hide-on-med-and-down {
     display: none;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 992px) {
-  /* line 40, ../sass/components/_position.scss */
+  /* line 42, ../sass/components/_position.scss */
   .hide-on-med {
     display: none;
   }
 }
 @media only screen and (min-width: 601px) {
-  /* line 41, ../sass/components/_position.scss */
+  /* line 43, ../sass/components/_position.scss */
   .hide-on-med-and-up {
     display: none;
   }
 }
 @media only screen and (max-width: 1200px) {
-  /* line 42, ../sass/components/_position.scss */
+  /* line 44, ../sass/components/_position.scss */
   .hide-on-large-and-down {
     display: none;
   }
 }
 @media only screen and (min-width: 993px) and (max-width: 1200px) {
-  /* line 43, ../sass/components/_position.scss */
+  /* line 45, ../sass/components/_position.scss */
   .hide-on-large {
     display: none;
   }
 }
 @media only screen and (min-width: 993px) {
-  /* line 44, ../sass/components/_position.scss */
+  /* line 46, ../sass/components/_position.scss */
   .hide-on-large-and-up {
     display: none;
   }
 }
 @media only screen and (min-width: 1200px) {
-  /* line 45, ../sass/components/_position.scss */
+  /* line 47, ../sass/components/_position.scss */
   .hide-on-extra-large {
     display: none;
   }
 }
 @media only screen and (max-width: 430px) {
-  /* line 47, ../sass/components/_position.scss */
+  /* line 49, ../sass/components/_position.scss */
   .show-on-small {
     display: block;
   }
 }
 @media only screen and (max-width: 600px) {
-  /* line 48, ../sass/components/_position.scss */
+  /* line 50, ../sass/components/_position.scss */
   .show-on-sm-and-down {
     display: block;
   }
 }
 @media only screen and (min-width: 431px) and (max-width: 600px) {
-  /* line 49, ../sass/components/_position.scss */
+  /* line 51, ../sass/components/_position.scss */
   .show-on-sm {
     display: block;
   }
 }
 @media only screen and (min-width: 431px) {
-  /* line 50, ../sass/components/_position.scss */
+  /* line 52, ../sass/components/_position.scss */
   .show-on-sm-and-up {
     display: block;
   }
 }
 @media only screen and (max-width: 992px) {
-  /* line 51, ../sass/components/_position.scss */
+  /* line 53, ../sass/components/_position.scss */
   .show-on-med-and-down {
     display: block;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 992px) {
-  /* line 52, ../sass/components/_position.scss */
+  /* line 54, ../sass/components/_position.scss */
   .show-on-med {
     display: block;
   }
 }
 @media only screen and (min-width: 601px) {
-  /* line 53, ../sass/components/_position.scss */
+  /* line 55, ../sass/components/_position.scss */
   .show-on-med-and-up {
     display: block;
   }
 }
 @media only screen and (max-width: 1200px) {
-  /* line 54, ../sass/components/_position.scss */
+  /* line 56, ../sass/components/_position.scss */
   .show-on-large-and-down {
     display: block;
   }
 }
 @media only screen and (min-width: 993px) and (max-width: 1200px) {
-  /* line 55, ../sass/components/_position.scss */
+  /* line 57, ../sass/components/_position.scss */
   .show-on-large {
     display: block;
   }
 }
 @media only screen and (min-width: 993px) {
-  /* line 56, ../sass/components/_position.scss */
+  /* line 58, ../sass/components/_position.scss */
   .show-on-large-and-up {
     display: block;
   }
 }
 @media only screen and (min-width: 1200px) {
-  /* line 57, ../sass/components/_position.scss */
+  /* line 59, ../sass/components/_position.scss */
   .show-on-extra-large {
     display: block;
   }
 }
-/* line 62, ../sass/components/_position.scss */
+/* line 64, ../sass/components/_position.scss */
 .clear {
   clear: both;
 }
 
 @media only screen and (max-width: 430px) {
-  /* line 64, ../sass/components/_position.scss */
+  /* line 66, ../sass/components/_position.scss */
   .clear-on-small {
     clear: both;
   }
 }
 @media only screen and (max-width: 600px) {
-  /* line 65, ../sass/components/_position.scss */
+  /* line 67, ../sass/components/_position.scss */
   .clear-on-sm-and-down {
     clear: both;
   }
 }
 @media only screen and (min-width: 431px) and (max-width: 600px) {
-  /* line 66, ../sass/components/_position.scss */
+  /* line 68, ../sass/components/_position.scss */
   .clear-on-sm {
     clear: both;
   }
 }
 @media only screen and (min-width: 431px) {
-  /* line 67, ../sass/components/_position.scss */
+  /* line 69, ../sass/components/_position.scss */
   .clear-on-sm-and-up {
     clear: both;
   }
 }
 @media only screen and (max-width: 992px) {
-  /* line 68, ../sass/components/_position.scss */
+  /* line 70, ../sass/components/_position.scss */
   .clear-on-med-and-down {
     clear: both;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 992px) {
-  /* line 69, ../sass/components/_position.scss */
+  /* line 71, ../sass/components/_position.scss */
   .clear-on-med {
     clear: both;
   }
 }
 @media only screen and (min-width: 601px) {
-  /* line 70, ../sass/components/_position.scss */
+  /* line 72, ../sass/components/_position.scss */
   .clear-on-med-and-up {
     clear: both;
   }
 }
 @media only screen and (max-width: 1200px) {
-  /* line 71, ../sass/components/_position.scss */
+  /* line 73, ../sass/components/_position.scss */
   .clear-on-large-and-down {
     clear: both;
   }
 }
 @media only screen and (min-width: 993px) and (max-width: 1200px) {
-  /* line 72, ../sass/components/_position.scss */
+  /* line 74, ../sass/components/_position.scss */
   .clear-on-large {
     clear: both;
   }
 }
 @media only screen and (min-width: 993px) {
-  /* line 73, ../sass/components/_position.scss */
+  /* line 75, ../sass/components/_position.scss */
   .clear-on-large-and-up {
     clear: both;
   }
 }
 @media only screen and (min-width: 1200px) {
-  /* line 74, ../sass/components/_position.scss */
+  /* line 76, ../sass/components/_position.scss */
   .clear-on-extra-large {
     clear: both;
   }
 }
-/* line 80, ../sass/components/_position.scss */
+/* line 82, ../sass/components/_position.scss */
 .overflow-hide {
   overflow: hidden;
 }
 
-/* line 81, ../sass/components/_position.scss */
+/* line 83, ../sass/components/_position.scss */
 .overflow-x-hide {
   overflow-x: hidden;
 }
 
-/* line 82, ../sass/components/_position.scss */
+/* line 84, ../sass/components/_position.scss */
 .overflow-y-hide {
   overflow-y: hidden;
 }
 
-/* line 84, ../sass/components/_position.scss */
+/* line 86, ../sass/components/_position.scss */
 .z-index-1 {
   z-index: 1;
 }
 
-/* line 85, ../sass/components/_position.scss */
+/* line 87, ../sass/components/_position.scss */
 .z-index--1 {
   z-index: -1;
 }
 
-/* line 91, ../sass/components/_position.scss */
+/* line 93, ../sass/components/_position.scss */
 .transform-x-50 {
   transform: translateX(50%);
 }
 
-/* line 103, ../sass/components/_position.scss */
+/* line 105, ../sass/components/_position.scss */
 .content-center {
   width: 100%;
   position: absolute;
@@ -8858,150 +8869,11 @@ small {
   margin: 0px;
 }
 
-/* Productos */
+/* GLOBAL */
+/* Sale */
 /* line 40, ../sass/components/_woocommerce.scss */
-.main-body ul.products[class*=columns-] {
-  /* Corregir limites container */
-  display: inline-block;
-  width: calc(100% + 20px);
-  margin-left: -10px;
-  margin-bottom: 0px;
-}
-/* line 46, ../sass/components/_woocommerce.scss */
-.main-body ul.products[class*=columns-] li.product {
-  float: left !important;
-  width: 25% !important;
-  margin: 0px !important;
-  padding: 0 10px 25px !important;
-  text-align: center;
-  clear: none !important;
-}
-@media only screen and (min-width: 993px) {
-  /* line 54, ../sass/components/_woocommerce.scss */
-  .main-body ul.products[class*=columns-] li.product:nth-child(4n+1) {
-    clear: both !important;
-  }
-}
-@media only screen and (max-width: 992px) {
-  /* line 46, ../sass/components/_woocommerce.scss */
-  .main-body ul.products[class*=columns-] li.product {
-    width: 33.33% !important;
-  }
-  /* line 58, ../sass/components/_woocommerce.scss */
-  .main-body ul.products[class*=columns-] li.product:nth-child(5n+1) {
-    clear: none !important;
-  }
-  /* line 59, ../sass/components/_woocommerce.scss */
-  .main-body ul.products[class*=columns-] li.product:nth-child(3n+1) {
-    clear: both !important;
-  }
-}
-@media only screen and (max-width: 600px) {
-  /* line 46, ../sass/components/_woocommerce.scss */
-  .main-body ul.products[class*=columns-] li.product {
-    width: 50% !important;
-  }
-  /* line 63, ../sass/components/_woocommerce.scss */
-  .main-body ul.products[class*=columns-] li.product:nth-child(5n+1), .main-body ul.products[class*=columns-] li.product:nth-child(3n+1) {
-    clear: none !important;
-  }
-  /* line 64, ../sass/components/_woocommerce.scss */
-  .main-body ul.products[class*=columns-] li.product:nth-child(2n+1) {
-    clear: both !important;
-  }
-}
-@media only screen and (max-width: 430px) {
-  /* line 46, ../sass/components/_woocommerce.scss */
-  .main-body ul.products[class*=columns-] li.product {
-    width: 100% !important;
-  }
-}
-/* line 69, ../sass/components/_woocommerce.scss */
-.main-body ul.products[class*=columns-] li.product img {
-  width: 200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-/* line 75, ../sass/components/_woocommerce.scss */
-.main-body ul.products[class*=columns-] li.product h2 {
-  text-transform: lowercase;
-  font-size: 14px !important;
-  font-weight: 300 !important;
-  padding: 0px;
-}
-/* line 81, ../sass/components/_woocommerce.scss */
-.main-body ul.products[class*=columns-] li.product h2::first-letter {
-  text-transform: uppercase;
-}
-/* line 83, ../sass/components/_woocommerce.scss */
-.main-body ul.products[class*=columns-] li.product h2,
-.main-body ul.products[class*=columns-] li.product .price {
-  display: block;
-  color: #000 !important;
-  font-size: 16px;
-  font-weight: 600;
-}
-/* line 90, ../sass/components/_woocommerce.scss */
-.main-body ul.products[class*=columns-] li.product .price {
-  margin: 5px 0;
-}
-/* line 91, ../sass/components/_woocommerce.scss */
-.main-body ul.products[class*=columns-] li.product .star-rating {
-  margin: 0 auto 10px;
-  color: #ffbc00;
-  font-size: 16px !important;
-}
-/* line 96, ../sass/components/_woocommerce.scss */
-.main-body ul.products[class*=columns-] li.product .button {
-  margin: 0px !important;
-}
-
-/* Productos destacados */
-@media only screen and (min-width: 431px) and (max-width: 600px) {
-  /* line 104, ../sass/components/_woocommerce.scss */
-  .main-body #section-productos_destacados ul.products[class*=columns-] li.product:nth-child(5) {
-    margin-left: 25% !important;
-  }
-}
-@media only screen and (min-width: 601px) and (max-width: 992px) {
-  /* line 106, ../sass/components/_woocommerce.scss */
-  .main-body #section-productos_destacados ul.products[class*=columns-] li.product:nth-child(4n+1) {
-    clear: none !important;
-  }
-  /* line 107, ../sass/components/_woocommerce.scss */
-  .main-body #section-productos_destacados ul.products[class*=columns-] li.product:nth-child(4) {
-    margin-left: 16.6% !important;
-  }
-}
-@media only screen and (min-width: 993px) {
-  /* line 103, ../sass/components/_woocommerce.scss */
-  .main-body #section-productos_destacados ul.products[class*=columns-] li.product {
-    width: 20% !important;
-  }
-  /* line 111, ../sass/components/_woocommerce.scss */
-  .main-body #section-productos_destacados ul.products[class*=columns-] li.product:nth-child(4n+1) {
-    clear: none !important;
-  }
-}
-
-/* line 115, ../sass/components/_woocommerce.scss */
-#single-product {
-  /* Info product */
-  	/* .contact_diseno,
-  	.content_personaliza {
-  		position: relative;
-  		width: calc(100vw - 10px);
-  		left: -8.8%;
-  	}
-   */
-  /* Reviews */
-}
-/* line 116, ../sass/components/_woocommerce.scss */
-#single-product .product-image {
-  /* Gallery */
-}
-/* line 117, ../sass/components/_woocommerce.scss */
-#single-product .product-image .onsale {
+li.product .onsale,
+.product-image .onsale {
   position: absolute;
   top: 4px;
   right: 20px;
@@ -9014,12 +8886,206 @@ small {
   border: 2px solid #6ba8b2;
   z-index: 101;
 }
-/* line 131, ../sass/components/_woocommerce.scss */
+
+/* Rating */
+/* line 56, ../sass/components/_woocommerce.scss */
+.woocommerce-product-rating .content_stars {
+  margin-left: -4px;
+}
+/* line 58, ../sass/components/_woocommerce.scss */
+.woocommerce-product-rating .content_stars em {
+  color: #c6c6c6;
+  margin-right: -8px;
+}
+/* line 63, ../sass/components/_woocommerce.scss */
+.woocommerce-product-rating .content_stars.activeToStar1 .star1 {
+  color: #f6bd15;
+}
+/* line 66, ../sass/components/_woocommerce.scss */
+.woocommerce-product-rating .content_stars.activeToStar2 .star1, .woocommerce-product-rating .content_stars.activeToStar2 .star2 {
+  color: #f6bd15;
+}
+/* line 69, ../sass/components/_woocommerce.scss */
+.woocommerce-product-rating .content_stars.activeToStar3 .star1, .woocommerce-product-rating .content_stars.activeToStar3 .star2, .woocommerce-product-rating .content_stars.activeToStar3 .star3 {
+  color: #f6bd15;
+}
+/* line 72, ../sass/components/_woocommerce.scss */
+.woocommerce-product-rating .content_stars.activeToStar4 .star1, .woocommerce-product-rating .content_stars.activeToStar4 .star2, .woocommerce-product-rating .content_stars.activeToStar4 .star3, .woocommerce-product-rating .content_stars.activeToStar4 .star4 {
+  color: #f6bd15;
+}
+/* line 75, ../sass/components/_woocommerce.scss */
+.woocommerce-product-rating .content_stars.activeToStar5 .star1, .woocommerce-product-rating .content_stars.activeToStar5 .star2, .woocommerce-product-rating .content_stars.activeToStar5 .star3, .woocommerce-product-rating .content_stars.activeToStar5 .star4, .woocommerce-product-rating .content_stars.activeToStar5 .star5 {
+  color: #f6bd15;
+}
+
+/* line 79, ../sass/components/_woocommerce.scss */
+.price ins {
+  text-decoration: none;
+}
+
+/* Productos */
+/* line 82, ../sass/components/_woocommerce.scss */
+.main-body ul.products[class*=columns-] {
+  /* Corregir limites container */
+  display: inline-block;
+  width: calc(100% + 20px);
+  margin-left: -10px;
+  margin-bottom: 0px;
+}
+/* line 88, ../sass/components/_woocommerce.scss */
+.main-body ul.products[class*=columns-] li.product {
+  float: left !important;
+  width: 25% !important;
+  margin: 0px !important;
+  padding: 0 10px 25px !important;
+  text-align: center;
+  clear: none !important;
+}
+@media only screen and (min-width: 993px) {
+  /* line 96, ../sass/components/_woocommerce.scss */
+  .main-body ul.products[class*=columns-] li.product:nth-child(4n+1) {
+    clear: both !important;
+  }
+}
+@media only screen and (max-width: 992px) {
+  /* line 88, ../sass/components/_woocommerce.scss */
+  .main-body ul.products[class*=columns-] li.product {
+    width: 33.33% !important;
+  }
+  /* line 100, ../sass/components/_woocommerce.scss */
+  .main-body ul.products[class*=columns-] li.product:nth-child(5n+1) {
+    clear: none !important;
+  }
+  /* line 101, ../sass/components/_woocommerce.scss */
+  .main-body ul.products[class*=columns-] li.product:nth-child(3n+1) {
+    clear: both !important;
+  }
+}
+@media only screen and (max-width: 600px) {
+  /* line 88, ../sass/components/_woocommerce.scss */
+  .main-body ul.products[class*=columns-] li.product {
+    width: 50% !important;
+  }
+  /* line 105, ../sass/components/_woocommerce.scss */
+  .main-body ul.products[class*=columns-] li.product:nth-child(5n+1), .main-body ul.products[class*=columns-] li.product:nth-child(3n+1) {
+    clear: none !important;
+  }
+  /* line 106, ../sass/components/_woocommerce.scss */
+  .main-body ul.products[class*=columns-] li.product:nth-child(2n+1) {
+    clear: both !important;
+  }
+}
+@media only screen and (max-width: 430px) {
+  /* line 88, ../sass/components/_woocommerce.scss */
+  .main-body ul.products[class*=columns-] li.product {
+    width: 100% !important;
+  }
+}
+/* line 111, ../sass/components/_woocommerce.scss */
+.main-body ul.products[class*=columns-] li.product .woocommerce-loop-product__link {
+  position: relative;
+  display: block;
+}
+/* line 114, ../sass/components/_woocommerce.scss */
+.main-body ul.products[class*=columns-] li.product .woocommerce-loop-product__link img {
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 120, ../sass/components/_woocommerce.scss */
+.main-body ul.products[class*=columns-] li.product .woocommerce-loop-product__link h2 {
+  text-transform: lowercase;
+  font-size: 14px !important;
+  font-weight: 300 !important;
+  padding: 0px;
+  margin-bottom: 3px;
+}
+/* line 127, ../sass/components/_woocommerce.scss */
+.main-body ul.products[class*=columns-] li.product .woocommerce-loop-product__link h2::first-letter {
+  text-transform: uppercase;
+}
+/* line 129, ../sass/components/_woocommerce.scss */
+.main-body ul.products[class*=columns-] li.product .woocommerce-loop-product__link h2,
+.main-body ul.products[class*=columns-] li.product .woocommerce-loop-product__link .price {
+  display: block;
+  color: #000 !important;
+  font-size: 16px;
+  font-weight: 600;
+}
+/* line 136, ../sass/components/_woocommerce.scss */
+.main-body ul.products[class*=columns-] li.product .woocommerce-loop-product__link .woocommerce-product-rating {
+  margin-top: -2px;
+  margin-bottom: 0px;
+}
+/* line 139, ../sass/components/_woocommerce.scss */
+.main-body ul.products[class*=columns-] li.product .woocommerce-loop-product__link .woocommerce-product-rating em:last-child {
+  display: none;
+}
+/* line 141, ../sass/components/_woocommerce.scss */
+.main-body ul.products[class*=columns-] li.product .woocommerce-loop-product__link .price {
+  margin-bottom: 5px;
+}
+/* line 143, ../sass/components/_woocommerce.scss */
+.main-body ul.products[class*=columns-] li.product .button {
+  margin: 0px !important;
+}
+/* line 146, ../sass/components/_woocommerce.scss */
+.main-body ul.products[class*=columns-] li.product .added_to_cart {
+  display: block;
+  max-width: 140px;
+  margin: 5px auto 0;
+}
+
+/* Productos destacados */
+@media only screen and (min-width: 431px) and (max-width: 600px) {
+  /* line 156, ../sass/components/_woocommerce.scss */
+  .main-body #section-productos_destacados ul.products[class*=columns-] li.product:nth-child(5) {
+    margin-left: 25% !important;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+  /* line 158, ../sass/components/_woocommerce.scss */
+  .main-body #section-productos_destacados ul.products[class*=columns-] li.product:nth-child(4n+1) {
+    clear: none !important;
+  }
+  /* line 159, ../sass/components/_woocommerce.scss */
+  .main-body #section-productos_destacados ul.products[class*=columns-] li.product:nth-child(4) {
+    margin-left: 16.6% !important;
+  }
+}
+@media only screen and (min-width: 993px) {
+  /* line 155, ../sass/components/_woocommerce.scss */
+  .main-body #section-productos_destacados ul.products[class*=columns-] li.product {
+    width: 20% !important;
+  }
+  /* line 163, ../sass/components/_woocommerce.scss */
+  .main-body #section-productos_destacados ul.products[class*=columns-] li.product:nth-child(4n+1) {
+    clear: none !important;
+  }
+}
+
+/* line 167, ../sass/components/_woocommerce.scss */
+#single-product {
+  /* Info product */
+  	/* .contact_diseno,
+  	.content_personaliza {
+  		position: relative;
+  		width: calc(100vw - 10px);
+  		left: -8.8%;
+  	}
+   */
+  /* Reviews */
+}
+/* line 168, ../sass/components/_woocommerce.scss */
+#single-product .product-image {
+  /* Gallery */
+}
+/* line 170, ../sass/components/_woocommerce.scss */
 #single-product .product-image .cycle-slideshow .bg-image {
   width: 100%;
   height: 400px;
 }
-/* line 136, ../sass/components/_woocommerce.scss */
+/* line 175, ../sass/components/_woocommerce.scss */
 #single-product .product-image #prevGallery, #single-product .product-image #nextGallery {
   position: absolute;
   top: 40%;
@@ -9027,66 +9093,39 @@ small {
   cursor: pointer;
   z-index: 100;
 }
-/* line 142, ../sass/components/_woocommerce.scss */
+/* line 181, ../sass/components/_woocommerce.scss */
 #single-product .product-image #prevGallery em, #single-product .product-image #nextGallery em {
   font-size: 30px;
 }
-/* line 143, ../sass/components/_woocommerce.scss */
+/* line 182, ../sass/components/_woocommerce.scss */
 #single-product .product-image #prevGallery:hover, #single-product .product-image #nextGallery:hover {
   color: #5a9ea9;
 }
-/* line 147, ../sass/components/_woocommerce.scss */
+/* line 186, ../sass/components/_woocommerce.scss */
 #single-product .product-image #nextGallery {
   right: 10px;
 }
-/* line 152, ../sass/components/_woocommerce.scss */
-#single-product .summary .product_meta {
+/* line 191, ../sass/components/_woocommerce.scss */
+#single-product .summary .product_meta, #single-product .summary .stock {
   font-size: 14px;
-  margin-bottom: 10px;
 }
-/* line 158, ../sass/components/_woocommerce.scss */
-#single-product .summary .woocommerce-product-rating .content_stars em {
-  color: #eee;
-  margin-right: -8px;
-}
-/* line 161, ../sass/components/_woocommerce.scss */
-#single-product .summary .woocommerce-product-rating .content_stars em.star1.active {
-  color: #f6bd15;
-}
-/* line 162, ../sass/components/_woocommerce.scss */
-#single-product .summary .woocommerce-product-rating .content_stars em.star2.active, #single-product .summary .woocommerce-product-rating .content_stars em.star2.active + #single-product .summary .woocommerce-product-rating .content_stars em.star3 {
-  color: #f6bd15;
-}
-/* line 164, ../sass/components/_woocommerce.scss */
-#single-product .summary .woocommerce-product-rating .content_stars em.star3.active, #single-product .summary .woocommerce-product-rating .content_stars em.star3.active ~ #single-product .summary .woocommerce-product-rating .content_stars em.star1, #single-product .summary .woocommerce-product-rating .content_stars em.star3.active + #single-product .summary .woocommerce-product-rating .content_stars em.star2 {
-  color: #f6bd15;
-}
-/* line 170, ../sass/components/_woocommerce.scss */
+/* line 192, ../sass/components/_woocommerce.scss */
 #single-product .summary .price {
   margin-bottom: 20px;
   font-size: 18px;
   font-weight: 700;
 }
-/* line 174, ../sass/components/_woocommerce.scss */
+/* line 196, ../sass/components/_woocommerce.scss */
 #single-product .summary .price del {
   color: #7d7d7d;
   margin-right: 10px;
 }
-/* line 178, ../sass/components/_woocommerce.scss */
-#single-product .summary .price ins {
-  text-decoration: none;
-}
-/* line 180, ../sass/components/_woocommerce.scss */
-#single-product .summary .stock {
-  display: inline-block;
-  margin-bottom: 10px;
-}
-/* line 184, ../sass/components/_woocommerce.scss */
+/* line 201, ../sass/components/_woocommerce.scss */
 #single-product .summary form.cart {
   width: 170px;
   margin-bottom: 20px;
 }
-/* line 187, ../sass/components/_woocommerce.scss */
+/* line 204, ../sass/components/_woocommerce.scss */
 #single-product .summary form.cart input.qty {
   margin-bottom: -2px;
   text-align: center;
@@ -9094,58 +9133,58 @@ small {
   border: 1px solid #6ba8b2;
   border-radius: 2px 0 0 2px;
 }
-/* line 194, ../sass/components/_woocommerce.scss */
+/* line 211, ../sass/components/_woocommerce.scss */
 #single-product .summary form.cart button {
   width: 100%;
 }
-/* line 196, ../sass/components/_woocommerce.scss */
+/* line 213, ../sass/components/_woocommerce.scss */
 #single-product .summary .product_meta a {
   color: #5a9ea9;
 }
-/* line 207, ../sass/components/_woocommerce.scss */
+/* line 224, ../sass/components/_woocommerce.scss */
 #single-product .tabs.wc-tabs {
   display: none;
 }
-/* line 208, ../sass/components/_woocommerce.scss */
+/* line 225, ../sass/components/_woocommerce.scss */
 #single-product #reviews {
   margin-bottom: 30px;
 }
-/* line 211, ../sass/components/_woocommerce.scss */
+/* line 228, ../sass/components/_woocommerce.scss */
 #single-product #reviews #comments {
   height: 450px;
   overflow: auto;
   padding-top: 10px;
 }
 @media only screen and (max-width: 600px) {
-  /* line 211, ../sass/components/_woocommerce.scss */
+  /* line 228, ../sass/components/_woocommerce.scss */
   #single-product #reviews #comments {
     height: inherit;
     max-height: 300px;
     margin-bottom: 30px;
   }
 }
-/* line 221, ../sass/components/_woocommerce.scss */
+/* line 238, ../sass/components/_woocommerce.scss */
 #single-product #reviews #comments > h2 span {
   color: #6ba8b2;
 }
-/* line 222, ../sass/components/_woocommerce.scss */
+/* line 239, ../sass/components/_woocommerce.scss */
 #single-product #reviews #comments ol {
   padding: 0px;
 }
-/* line 224, ../sass/components/_woocommerce.scss */
+/* line 241, ../sass/components/_woocommerce.scss */
 #single-product #reviews #comments ol li.review {
   margin-bottom: 20px;
   list-style-type: none;
 }
-/* line 227, ../sass/components/_woocommerce.scss */
+/* line 244, ../sass/components/_woocommerce.scss */
 #single-product #reviews #comments ol li.review img {
   display: none;
 }
-/* line 229, ../sass/components/_woocommerce.scss */
+/* line 246, ../sass/components/_woocommerce.scss */
 #single-product #reviews #comments ol li.review .comment-text .star-rating {
   font-weight: 600;
 }
-/* line 231, ../sass/components/_woocommerce.scss */
+/* line 248, ../sass/components/_woocommerce.scss */
 #single-product #reviews #comments ol li.review .comment-text .star-rating .rating {
   background-color: #6ba8b2;
   color: #fff;
@@ -9155,19 +9194,19 @@ small {
   text-align: center;
   border-radius: 3px;
 }
-/* line 242, ../sass/components/_woocommerce.scss */
+/* line 259, ../sass/components/_woocommerce.scss */
 #single-product #reviews #comments ol li.review .description p {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   cursor: pointer;
 }
-/* line 247, ../sass/components/_woocommerce.scss */
+/* line 264, ../sass/components/_woocommerce.scss */
 #single-product #reviews #comments ol li.review .description p.active {
   white-space: normal;
   cursor: inherit;
 }
-/* line 255, ../sass/components/_woocommerce.scss */
+/* line 272, ../sass/components/_woocommerce.scss */
 #single-product #reviews #review_form_wrapper #review_form {
   margin-bottom: 30px;
   padding: 30px;
@@ -9175,22 +9214,22 @@ small {
   background-color: #f4f2f5;
   border-radius: 5px;
 }
-/* line 261, ../sass/components/_woocommerce.scss */
+/* line 278, ../sass/components/_woocommerce.scss */
 #single-product #reviews #review_form_wrapper #review_form #reply-title {
   display: block;
   font-size: 22px;
   text-align: center;
 }
-/* line 266, ../sass/components/_woocommerce.scss */
+/* line 283, ../sass/components/_woocommerce.scss */
 #single-product #reviews #review_form_wrapper #review_form label {
   display: inline-block;
   margin-bottom: 10px;
 }
-/* line 270, ../sass/components/_woocommerce.scss */
+/* line 287, ../sass/components/_woocommerce.scss */
 #single-product #reviews #review_form_wrapper #review_form .comment-form-rating {
   margin-bottom: 20px;
 }
-/* line 272, ../sass/components/_woocommerce.scss */
+/* line 289, ../sass/components/_woocommerce.scss */
 #single-product #reviews #review_form_wrapper #review_form .comment-form-rating a {
   display: inline-block;
   width: 25px;
@@ -9201,145 +9240,145 @@ small {
   background-color: #7cb2bb;
   border-radius: 50%;
 }
-/* line 281, ../sass/components/_woocommerce.scss */
+/* line 298, ../sass/components/_woocommerce.scss */
 #single-product #reviews #review_form_wrapper #review_form .comment-form-rating a:hover, #single-product #reviews #review_form_wrapper #review_form .comment-form-rating a.active {
   background-color: #ffbc00;
 }
-/* line 286, ../sass/components/_woocommerce.scss */
+/* line 303, ../sass/components/_woocommerce.scss */
 #single-product #reviews #review_form_wrapper #review_form .form-submit #submit {
   width: 100%;
 }
-/* line 289, ../sass/components/_woocommerce.scss */
+/* line 306, ../sass/components/_woocommerce.scss */
 #single-product .related.products {
   margin-bottom: 45px;
 }
-/* line 291, ../sass/components/_woocommerce.scss */
+/* line 308, ../sass/components/_woocommerce.scss */
 #single-product .related.products h2 {
   text-align: center;
 }
 @media only screen and (min-width: 601px) and (max-width: 992px) {
-  /* line 292, ../sass/components/_woocommerce.scss */
+  /* line 309, ../sass/components/_woocommerce.scss */
   #single-product .related.products ul li:nth-child(4n) {
     display: none;
   }
 }
 
 /* Tienda */
-/* line 297, ../sass/components/_woocommerce.scss */
+/* line 314, ../sass/components/_woocommerce.scss */
 .vyarte_tienda #primary {
   margin-bottom: 70px;
 }
 
 /* Carrito */
-/* line 301, ../sass/components/_woocommerce.scss */
+/* line 318, ../sass/components/_woocommerce.scss */
 .woocommerce table.cart img {
   width: 65px !important;
 }
-/* line 302, ../sass/components/_woocommerce.scss */
+/* line 319, ../sass/components/_woocommerce.scss */
 .woocommerce table.cart td.actions .input-text {
   width: 130px !important;
 }
-/* line 306, ../sass/components/_woocommerce.scss */
+/* line 323, ../sass/components/_woocommerce.scss */
 .woocommerce .quantity .qty {
   width: 100px !important;
 }
-/* line 310, ../sass/components/_woocommerce.scss */
+/* line 327, ../sass/components/_woocommerce.scss */
 .woocommerce a.checkout-button {
   width: 100% !important;
 }
 
-/* line 313, ../sass/components/_woocommerce.scss */
+/* line 330, ../sass/components/_woocommerce.scss */
 .cart-empty {
   margin-bottom: 20px;
 }
 
-/* line 314, ../sass/components/_woocommerce.scss */
+/* line 331, ../sass/components/_woocommerce.scss */
 .cart-empty, .return-to-shop {
   text-align: center;
 }
 
 /* CUENTA */
-/* line 319, ../sass/components/_woocommerce.scss */
+/* line 336, ../sass/components/_woocommerce.scss */
 .vyarte_cuenta h2 {
   text-align: center;
 }
 
-/* line 320, ../sass/components/_woocommerce.scss */
+/* line 337, ../sass/components/_woocommerce.scss */
 .woocommerce-form-login {
   max-width: 300px;
   margin: 20px auto 0 !important;
 }
-/* line 323, ../sass/components/_woocommerce.scss */
+/* line 340, ../sass/components/_woocommerce.scss */
 .woocommerce-form-login button {
   width: 100%;
 }
 
-/* line 325, ../sass/components/_woocommerce.scss */
+/* line 342, ../sass/components/_woocommerce.scss */
 .woocommerce-MyAccount-navigation ul {
   text-align: center;
   border-radius: 3px;
 }
-/* line 329, ../sass/components/_woocommerce.scss */
+/* line 346, ../sass/components/_woocommerce.scss */
 .woocommerce-MyAccount-navigation ul li {
   display: inline-block;
 }
-/* line 331, ../sass/components/_woocommerce.scss */
+/* line 348, ../sass/components/_woocommerce.scss */
 .woocommerce-MyAccount-navigation ul li a {
   display: inline-block;
   padding: 0 10px;
   line-height: 30px;
 }
-/* line 335, ../sass/components/_woocommerce.scss */
+/* line 352, ../sass/components/_woocommerce.scss */
 .woocommerce-MyAccount-navigation ul li a:hover {
   color: #6ba8b2;
 }
-/* line 339, ../sass/components/_woocommerce.scss */
+/* line 356, ../sass/components/_woocommerce.scss */
 .woocommerce-MyAccount-navigation ul li:not(:last-child) {
   margin-right: 5px;
 }
-/* line 340, ../sass/components/_woocommerce.scss */
+/* line 357, ../sass/components/_woocommerce.scss */
 .woocommerce-MyAccount-navigation ul li.is-active a {
   color: #6ba8b2;
 }
 @media only screen and (max-width: 430px) {
-  /* line 329, ../sass/components/_woocommerce.scss */
+  /* line 346, ../sass/components/_woocommerce.scss */
   .woocommerce-MyAccount-navigation ul li {
     display: block;
     margin: 0px;
   }
-  /* line 345, ../sass/components/_woocommerce.scss */
+  /* line 362, ../sass/components/_woocommerce.scss */
   .woocommerce-MyAccount-navigation ul li a {
     width: 100%;
   }
 }
-/* line 348, ../sass/components/_woocommerce.scss */
+/* line 365, ../sass/components/_woocommerce.scss */
 .woocommerce-MyAccount-navigation ul li:last-child a {
   color: #c30008;
 }
-/* line 350, ../sass/components/_woocommerce.scss */
+/* line 367, ../sass/components/_woocommerce.scss */
 .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--downloads {
   display: none;
 }
 
-/* line 355, ../sass/components/_woocommerce.scss */
+/* line 372, ../sass/components/_woocommerce.scss */
 .woocommerce-EditAccountForm {
   max-width: 500px;
   margin: auto;
 }
 
-/* line 360, ../sass/components/_woocommerce.scss */
+/* line 377, ../sass/components/_woocommerce.scss */
 .woocommerce-Addresses {
   margin-top: 20px;
 }
-/* line 362, ../sass/components/_woocommerce.scss */
+/* line 379, ../sass/components/_woocommerce.scss */
 .woocommerce-Addresses header {
   text-align: center;
 }
-/* line 364, ../sass/components/_woocommerce.scss */
+/* line 381, ../sass/components/_woocommerce.scss */
 .woocommerce-Addresses header h3 {
   margin-bottom: 10px;
 }
-/* line 365, ../sass/components/_woocommerce.scss */
+/* line 382, ../sass/components/_woocommerce.scss */
 .woocommerce-Addresses header a.edit {
   margin-bottom: 20px;
 }

@@ -19,6 +19,16 @@ var $=jQuery.noConflict();
 				console.log('Contacto enviado');
 				$('#modal-contacto_enviado').show();
 			}
+			/* Si se ha enviado una personalizacion */
+			if(window.location.href.indexOf("#personalizacion-enviada") > -1) {
+				console.log('Personalización enviada');
+				$('#modal-personalizacion-enviada').show();
+			}
+			/* Si se ha enviado una NO personalizacion */
+			if(window.location.href.indexOf("#personalizacion-cancelada") > -1) {
+				console.log('Personalización cancelada');
+				$('#modal-personalizacion-cancelada').show();
+			}
 		});
  
 		$(window).on('resize', function(){
@@ -98,6 +108,17 @@ var $=jQuery.noConflict();
 			$('html, body').animate({		
 				scrollTop: $('#servHome').offset().top - 30
 			}, 1000);
+		});
+
+		// Modal
+		$(".open-modal").click(function() {
+			var idModal = $(this).attr('id');
+			$('#modal-' + idModal).show();
+			$('body').addClass('overflow-hide');
+		});
+		$(".close-modal, .exit-modal").click(function() {
+			$('.modal').hide();
+			$('body').removeClass('overflow-hide');
 		});
 	});
 })(jQuery);

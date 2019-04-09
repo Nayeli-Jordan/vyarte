@@ -197,4 +197,36 @@ add_action('init', function(){
 	);
 	register_post_type( 'dg_trabajos', $args );
 
+	// Productos personalizados
+	$labels = array(
+		'name'          => 'Producto',
+		'singular_name' => 'Producto',
+		'add_new'       => 'Nuevo Producto',
+		'add_new_item'  => 'Nuevo Producto',
+		'edit_item'     => 'Editar Producto',
+		'new_item'      => 'Nuevo Producto',
+		'all_items'     => 'Producto',
+		'view_item'     => 'Ver Producto',
+		'search_items'  => 'Buscar Producto',
+		'not_found'     => 'No hay Producto',
+		'menu_name'     => 'Productos personalizados'
+	);
+
+	$args = array(
+		'labels'             => $labels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'vy_personalizado' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => 6,
+		'supports'           => array( 'title', 'editor', 'thumbnail' ),
+		'menu_icon' 		 => 'dashicons-admin-users'
+	);
+	register_post_type( 'vy_personalizado', $args );
+
 });
