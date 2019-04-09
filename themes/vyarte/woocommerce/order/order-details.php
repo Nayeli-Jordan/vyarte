@@ -34,10 +34,11 @@ if ( $show_downloads ) {
 }
 ?>
 <section class="woocommerce-order-details">
-	<?php do_action( 'woocommerce_order_details_before_order_table', $order ); ?>
+	<?php do_action( 'woocommerce_order_details_before_order_table', $order ); 
 
-	<?php include (TEMPLATEPATH . '/template/personalizacion-enviada.php'); ?>
-	<?php include (TEMPLATEPATH . '/template/personalizacion-cancelada.php'); ?>
+	include (TEMPLATEPATH . '/template/personalizado/notice/personalizacion-enviada.php'); 
+	include (TEMPLATEPATH . '/template/personalizado/notice/personalizacion-cancelada.php');
+	include (TEMPLATEPATH . '/template/personalizado/notice/personalizacion-distinta.php'); ?>
 
 	<h2 class="woocommerce-order-details__title"><?php _e( 'Order details', 'woocommerce' ); ?></h2>
 

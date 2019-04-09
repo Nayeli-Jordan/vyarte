@@ -197,6 +197,38 @@ add_action('init', function(){
 	);
 	register_post_type( 'dg_trabajos', $args );
 
+	// Clientes comerciales
+	$labels = array(
+		'name'          => 'Cliente Comercial',
+		'singular_name' => 'Cliente Comercial',
+		'add_new'       => 'Nuevo Cliente Comercial',
+		'add_new_item'  => 'Nuevo Cliente Comercial',
+		'edit_item'     => 'Editar Cliente Comercial',
+		'new_item'      => 'Nuevo Cliente Comercial',
+		'all_items'     => 'Cliente Comercial',
+		'view_item'     => 'Ver Cliente Comercial',
+		'search_items'  => 'Buscar Cliente Comercial',
+		'not_found'     => 'No hay Cliente Comercial',
+		'menu_name'     => 'Clientes comerciales'
+	);
+
+	$args = array(
+		'labels'             => $labels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => 'edit.php?post_type=page',
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'cliente' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => 6,
+		'supports'           => array( 'title', 'thumbnail' ),
+		'menu_icon' 		 => 'dashicons-admin-users'
+	);
+	register_post_type( 'cliente', $args );
+
 	// Productos personalizados
 	$labels = array(
 		'name'          => 'Producto',

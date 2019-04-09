@@ -29,6 +29,11 @@ var $=jQuery.noConflict();
 				console.log('Personalización cancelada');
 				$('#modal-personalizacion-cancelada').show();
 			}
+			/* Si se ha enviado una Personalización Distinta */
+			if(window.location.href.indexOf("#personalizacion-distinta") > -1) {
+				console.log('Personalización distinta');
+				$('#modal-personalizacion-distinta').show();
+			}
 		});
  
 		$(window).on('resize', function(){

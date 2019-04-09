@@ -267,3 +267,10 @@ function custom_redirect_pers_canc() {
         wp_redirect($actual_link . '#personalizacion-cancelada');
     }
 }
+add_action ('template_redirect', 'custom_redirect_pers_dist');
+function custom_redirect_pers_dist() {
+    if ( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['btnSubmitPersDist'] ) ) {
+        $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+        wp_redirect($actual_link . '#personalizacion-distinta');
+    }
+}

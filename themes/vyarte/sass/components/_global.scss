@@ -20,14 +20,23 @@ html {
 
 .cursor-pointer { cursor: pointer; }
 
-ul {
-    padding: 0px;
-    li {        
-        margin: 0px; 
-        line-height: 20px;
-        list-style-type: none;
-    }
+header, footer {
+  ul {
+      padding: 0px;
+      li {        
+          margin: 0px; 
+          line-height: 20px;
+          list-style-type: none;
+      }
+  }  
 }
+.main-body {
+  ul {
+    padding: 20px;
+    li { margin-bottom: 5px; }
+  }
+}
+
 
 .clearfix { clear: both; }
 

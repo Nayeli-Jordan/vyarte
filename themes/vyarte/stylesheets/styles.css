@@ -2544,23 +2544,32 @@ html body {
   cursor: pointer;
 }
 
-/* line 23, ../sass/components/_global.scss */
-ul {
+/* line 24, ../sass/components/_global.scss */
+header ul, footer ul {
   padding: 0px;
 }
-/* line 25, ../sass/components/_global.scss */
-ul li {
+/* line 26, ../sass/components/_global.scss */
+header ul li, footer ul li {
   margin: 0px;
   line-height: 20px;
   list-style-type: none;
 }
 
-/* line 32, ../sass/components/_global.scss */
+/* line 34, ../sass/components/_global.scss */
+.main-body ul {
+  padding: 20px;
+}
+/* line 36, ../sass/components/_global.scss */
+.main-body ul li {
+  margin-bottom: 5px;
+}
+
+/* line 41, ../sass/components/_global.scss */
 .clearfix {
   clear: both;
 }
 
-/* line 34, ../sass/components/_global.scss */
+/* line 43, ../sass/components/_global.scss */
 .hr, hr {
   width: 100%;
   height: 1px;
@@ -2568,25 +2577,25 @@ ul li {
   background-color: #fff;
 }
 
-/* line 44, ../sass/components/_global.scss */
+/* line 53, ../sass/components/_global.scss */
 ::-webkit-scrollbar {
   width: 9px;
 }
 
-/* line 47, ../sass/components/_global.scss */
+/* line 56, ../sass/components/_global.scss */
 ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #fff;
 }
 
-/* line 51, ../sass/components/_global.scss */
+/* line 60, ../sass/components/_global.scss */
 ::-webkit-scrollbar-thumb {
   border-radius: 0px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
   background-color: #6ba8b2;
 }
 
-/* line 57, ../sass/components/_global.scss */
+/* line 66, ../sass/components/_global.scss */
 #reviews #comments::-webkit-scrollbar,
 #sb_instagram::-webkit-scrollbar {
   width: 6px;
