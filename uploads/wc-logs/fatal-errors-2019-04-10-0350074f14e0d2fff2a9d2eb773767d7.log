@@ -1,0 +1,40 @@
+2019-04-10T16:56:23+00:00 CRITICAL syntax error, unexpected ',' in C:\Users\Tony\Documents\sites\vyarte\wp-content\themes\vyarte\woocommerce\order\order-details-item.php on line 68
+
+2019-04-10T17:31:27+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on null in C:\Users\Tony\Documents\sites\vyarte\wp-content\themes\vyarte\woocommerce\order\order-details-item.php:72
+Stack trace:
+#0 C:\Users\Tony\Documents\sites\vyarte\wp-content\plugins\woocommerce\includes\wc-core-functions.php(211): include()
+#1 C:\Users\Tony\Documents\sites\vyarte\wp-content\themes\vyarte\woocommerce\order\order-details.php(71): wc_get_template('order/order-det...', Array)
+#2 C:\Users\Tony\Documents\sites\vyarte\wp-content\plugins\woocommerce\includes\wc-core-functions.php(211): include('C:\\Users\\Tony\\D...')
+#3 C:\Users\Tony\Documents\sites\vyarte\wp-content\plugins\woocommerce\includes\wc-template-functions.php(2405): wc_get_template('order/order-det...', Array)
+#4 C:\Users\Tony\Documents\sites\vyarte\wp-includes\class-wp-hook.php(286): woocommerce_order_details_table(253)
+#5 C:\Users\Tony\Documents\sites\vyarte\wp-includes\class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#6 C:\Users\Tony\Documents\sites\vyarte\wp-inclu in C:\Users\Tony\Documents\sites\vyarte\wp-content\themes\vyarte\woocommerce\order\order-details-item.php on line 72
+
+2019-04-10T17:31:40+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on array in C:\Users\Tony\Documents\sites\vyarte\wp-content\themes\vyarte\woocommerce\order\order-details-item.php:72
+Stack trace:
+#0 C:\Users\Tony\Documents\sites\vyarte\wp-content\plugins\woocommerce\includes\wc-core-functions.php(211): include()
+#1 C:\Users\Tony\Documents\sites\vyarte\wp-content\themes\vyarte\woocommerce\order\order-details.php(71): wc_get_template('order/order-det...', Array)
+#2 C:\Users\Tony\Documents\sites\vyarte\wp-content\plugins\woocommerce\includes\wc-core-functions.php(211): include('C:\\Users\\Tony\\D...')
+#3 C:\Users\Tony\Documents\sites\vyarte\wp-content\plugins\woocommerce\includes\wc-template-functions.php(2405): wc_get_template('order/order-det...', Array)
+#4 C:\Users\Tony\Documents\sites\vyarte\wp-includes\class-wp-hook.php(286): woocommerce_order_details_table(253)
+#5 C:\Users\Tony\Documents\sites\vyarte\wp-includes\class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#6 C:\Users\Tony\Documents\sites\vyarte\wp-incl in C:\Users\Tony\Documents\sites\vyarte\wp-content\themes\vyarte\woocommerce\order\order-details-item.php on line 72
+
+2019-04-10T17:59:09+00:00 CRITICAL Uncaught Error: Call to a member function get_order_number() on string in C:\Users\Tony\Documents\sites\vyarte\wp-content\themes\vyarte\template\personalizado\personalizacion-enviada.php:9
+Stack trace:
+#0 C:\Users\Tony\Documents\sites\vyarte\wp-content\themes\vyarte\page-preguntas-frecuentes.php(4): include()
+#1 C:\Users\Tony\Documents\sites\vyarte\wp-includes\template-loader.php(74): include('C:\\Users\\Tony\\D...')
+#2 C:\Users\Tony\Documents\sites\vyarte\wp-blog-header.php(19): require_once('C:\\Users\\Tony\\D...')
+#3 C:\Users\Tony\Documents\sites\vyarte\index.php(17): require('C:\\Users\\Tony\\D...')
+#4 {main}
+  thrown in C:\Users\Tony\Documents\sites\vyarte\wp-content\themes\vyarte\template\personalizado\personalizacion-enviada.php on line 9
+
+2019-04-10T18:07:23+00:00 CRITICAL Uncaught Error: Call to a member function get_order_number() on string in C:\Users\Tony\Documents\sites\vyarte\wp-content\themes\vyarte\template\personalizado\personalizacion-enviada.php:9
+Stack trace:
+#0 C:\Users\Tony\Documents\sites\vyarte\wp-content\themes\vyarte\page-preguntas-frecuentes.php(4): include()
+#1 C:\Users\Tony\Documents\sites\vyarte\wp-includes\template-loader.php(74): include('C:\\Users\\Tony\\D...')
+#2 C:\Users\Tony\Documents\sites\vyarte\wp-blog-header.php(19): require_once('C:\\Users\\Tony\\D...')
+#3 C:\Users\Tony\Documents\sites\vyarte\index.php(17): require('C:\\Users\\Tony\\D...')
+#4 {main}
+  thrown in C:\Users\Tony\Documents\sites\vyarte\wp-content\themes\vyarte\template\personalizado\personalizacion-enviada.php on line 9
+

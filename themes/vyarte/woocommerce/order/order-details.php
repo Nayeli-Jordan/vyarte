@@ -48,6 +48,7 @@ if ( $show_downloads ) {
 			<tr>
 				<th class="woocommerce-table__product-name product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>
 				<th class="woocommerce-table__product-table product-total"><?php _e( 'Total', 'woocommerce' ); ?></th>
+				<th>Personaliza</th>
 			</tr>
 		</thead>
 
@@ -56,7 +57,7 @@ if ( $show_downloads ) {
 			do_action( 'woocommerce_order_details_before_order_table_items', $order );
 
 			/* Declaras option Products (select form personaliza*/
-			$opnionsProducts = '';
+			$opnionsProducts = '<option value=""></option>';
 
 			foreach ( $order_items as $item_id => $item ) {
 				$product = $item->get_product();
@@ -70,14 +71,37 @@ if ( $show_downloads ) {
 					'product'	         => $product,
 				) );
 
-				/* Agregar nombre producto (foreach) */
-				$opnionsProducts .= '<option>' . $item->get_name() . '</option>';
+				/* Sumar option si aún no hay post*/
+				$noOrder 		= $order->get_order_number(); 
+				$nameProduct 	= $item->get_name();
+				$args = array(
+				    'post_type'  => 'vy_personalizado',
+					'meta_query'	=> array(
+						'relation'		=> 'AND',
+						array(
+							'key'		=> 'vy_personalizado_orden',
+							'value'		=> $noOrder,
+							'compare'	=> '='
+						),
+						array(
+							'key'		=> 'vy_personalizado_producto',
+							'value'		=> $nameProduct,
+							'compare'	=> '='
+						)
+					)
+				);
+				$wp_posts = get_posts($args);
+				if (!count($wp_posts)) : 
+					/* Agregar nombre producto (foreach) */
+					$opnionsProducts .= '<option value="' . $item->get_name() . '">' . $item->get_name() . '</option>';
+				endif;
+
 			}
 
 			/* Modal personalización */
 			include (TEMPLATEPATH . '/template/personalizado/personalizacion-enviada.php');
-			include (TEMPLATEPATH . '/template/personalizado/personalizacion-diferente.php');
-			include (TEMPLATEPATH . '/template/personalizado/personalizacion-cancelada.php');
+			//include (TEMPLATEPATH . '/template/personalizado/personalizacion-diferente.php');
+			//include (TEMPLATEPATH . '/template/personalizado/personalizacion-cancelada.php');
 
 			do_action( 'woocommerce_order_details_after_order_table_items', $order );
 			?>

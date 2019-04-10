@@ -250,20 +250,27 @@ function banner_save_metas( $idbanner, $banner ){
 */
 add_action( 'add_meta_boxes', 'vy_personalizado_custom_metabox' );
 function vy_personalizado_custom_metabox(){
-    add_meta_box( 'vy_personalizado_meta', 'Enlace vy_personalizado', 'display_vy_personalizado_atributos', 'vy_personalizado', 'advanced', 'default');
+    add_meta_box( 'vy_personalizado_meta', 'Pedido', 'display_vy_personalizado_atributos', 'vy_personalizado', 'advanced', 'default');
 }
 
 function display_vy_personalizado_atributos( $vy_personalizado ){
-    $orden    = esc_html( get_post_meta( $vy_personalizado->ID, 'vy_personalizado_enlace', true ) );
-    $producto = esc_html( get_post_meta( $vy_personalizado->ID, 'vy_personalizado_enlace', true ) );
+    $orden    = esc_html( get_post_meta( $vy_personalizado->ID, 'vy_personalizado_orden', true ) );
+    $producto = esc_html( get_post_meta( $vy_personalizado->ID, 'vy_personalizado_producto', true ) );
+    $estatus = esc_html( get_post_meta( $vy_personalizado->ID, 'vy_personalizado_estatus', true ) );
 ?>
     <table class="vy-custum-fields">
         <tr>
             <th>
-                <input type="text" id="vy_personalizado_orden" name="vy_personalizado_orden" placeholder="URL" value="<?php echo $orden; ?>" required>
+                <label for="vy_personalizado_orden">No. orden</label>
+                <input type="text" id="vy_personalizado_orden" name="vy_personalizado_orden" value="<?php echo $orden; ?>" required>
             </th>
             <th>
-                <input type="text" id="vy_personalizado_producto" name="vy_personalizado_producto" placeholder="URL" value="<?php echo $producto; ?>" required>
+                <label for="vy_personalizado_producto">Producto</label>
+                <input type="text" id="vy_personalizado_producto" name="vy_personalizado_producto" value="<?php echo $producto; ?>" required>
+            </th>
+            <th>
+                <label for="vy_personalizado_estatus">Estatus</label>
+                <input type="text" id="vy_personalizado_estatus" name="vy_personalizado_estatus" value="<?php echo $estatus; ?>" required>
             </th>
         </tr>
     </table>
@@ -277,6 +284,9 @@ function vy_personalizado_save_metas( $idvy_personalizado, $vy_personalizado ){
         }
         if ( isset( $_POST['vy_personalizado_producto'] ) ){
             update_post_meta( $idvy_personalizado, 'vy_personalizado_producto', $_POST['vy_personalizado_producto'] );
+        }
+        if ( isset( $_POST['vy_personalizado_estatus'] ) ){
+            update_post_meta( $idvy_personalizado, 'vy_personalizado_estatus', $_POST['vy_personalizado_estatus'] );
         }
     }
 }

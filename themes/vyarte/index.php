@@ -10,7 +10,7 @@
 			if ( $slider_query->have_posts() ) : 
 				$i = 1;
 				while ( $slider_query->have_posts() ) : $slider_query->the_post(); ?>
-					<img src="<?php the_post_thumbnail_url('large'); ?>">	
+					<img src="<?php the_post_thumbnail_url('full'); ?>">	
 				<?php $i ++; endwhile; wp_reset_postdata();
 				if ($i > 0):?>
 					<div class="cycle-pager"></div>
@@ -71,7 +71,7 @@
 				$i = 1;
 				while ( $blog_query->have_posts() ) : $blog_query->the_post(); ?>
 					<div class="col s12 sm6 text-center margin-bottom-30">
-						<div class="bg-image margin-bottom-20" style="background-image: url(<?php the_post_thumbnail_url('large'); ?>)"></div>
+						<a href="<?php the_permalink(); ?>" class="block"><div class="bg-image margin-bottom-20" style="background-image: url(<?php the_post_thumbnail_url('large'); ?>)"></div></a>
 						<h3 class="margin-bottom-20 uppercase"><a href="<?php the_permalink(); ?>" class="color-text color-primary-dark_hover"><?php the_title(); ?></a></h3>
 						<?php the_excerpt(); ?>
 						<a href="<?php the_permalink(); ?>" class="btn clearfix margin-top-20">Leer más</a>

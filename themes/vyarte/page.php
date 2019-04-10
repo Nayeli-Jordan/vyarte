@@ -7,7 +7,7 @@
 					<h2 class="margin-bottom-10"><?php the_title(); ?></h2>
 				</div>
 			</div>
-			<div class="container">
+			<div class="container content-editor">
 				<div class="row row-complete margin-bottom-30">
 					<div class="col s12 m10 offset-m1 l8 offset-l2">
 						<?php the_content(); ?>	

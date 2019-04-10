@@ -26,6 +26,12 @@ input[type="submit"],
 	&:hover {
 		background-color: $primary-color-dark!important;
 	}
+	&.btn-danger {
+		background-color: #9c0000!important;
+		&:hover {
+			background-color: #ab0000!important;
+		}
+	}
 }
 
 .added_to_cart {

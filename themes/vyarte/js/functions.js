@@ -13,6 +13,22 @@ var $=jQuery.noConflict();
 			
 			// Validation form
 			$('form.validation').parsley();
+			/* Max size CV y Foto perfil*/
+			window.Parsley.addValidator('maxFileSize', {
+			  validateString: function(_value, maxSize, parsleyInstance) {
+			    if (!window.FormData) {
+			      alert('Es necesario que actualices tu navegador');
+			      return true;
+			    }
+			    var files = parsleyInstance.$element[0].files;
+			    return files.length != 1  || files[0].size <= maxSize * 1024;
+			  },
+			  requirementType: 'integer',
+			  messages: {
+			  	es: 'Este archivo es mayor a los %s Kb permitidos',
+			  	en: 'Este archivo es mayor a los %s Kb permitidos'
+			  }
+			});	
 
 			/* Si se ha contactado */
 			if(window.location.href.indexOf("#contacto-enviado") > -1) {

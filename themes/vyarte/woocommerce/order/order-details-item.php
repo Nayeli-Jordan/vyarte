@@ -47,12 +47,55 @@ if ( ! apply_filters( 'woocommerce_order_item_visible', true, $item ) ) {
 		<?php echo $order->get_formatted_line_subtotal( $item ); ?>
 	</td>
 	<td style="width: 220px;">
-		<?php $itemOrderID = 'O' . $order->get_order_number() . '_P' . $item->get_product_id(); ?>
-		<p id="openPersonalizar" class="btn open-modal">Personalizar Producto</p>
-		<?php if ($item->get_quantity() > 1) { ?>
-			<p id="openPersonalizarDiff" class="btn open-modal margin-top-10">Personalizar Diferente</p>
-		<?php } ?>
-		<p id="openPersonalizarCancel" class="open-modal margin-top-10 color-primary cursor-pointer">No deseo personalizar</p>
+	<?php
+		$noOrder 		= $order->get_order_number(); 
+		$nameProduct 	= $item->get_name(); 
+
+		$args = array(
+		    'post_type'  => 'vy_personalizado',
+			'meta_query'	=> array(
+				'relation'		=> 'AND',
+				array(
+					'key'		=> 'vy_personalizado_orden',
+					'value'		=> $noOrder,
+					'compare'	=> '='
+				),
+				array(
+					'key'		=> 'vy_personalizado_producto',
+					'value'		=> $nameProduct,
+					'compare'	=> '='
+				)
+			)
+		);
+		$wp_posts 	= get_posts($args);
+		$loop 		= new WP_Query( $args );
+		if (count($wp_posts)) : /* Si ya hay post */ 
+
+			while ( $loop->have_posts() ) : $loop->the_post(); 
+				global $post;
+				$custom_fields  = get_post_custom();
+				$post_id        = get_the_ID();
+				$estatus      	= get_post_meta( $post_id, 'vy_personalizado_estatus', true ); 
+				if ($estatus === 'personalizado') {
+					$labelEstatus = 'Producto personalizado';
+				} else if ($estatus === 'diferente') {
+					$labelEstatus = 'Personalización diferente';
+				} else {
+					$labelEstatus = 'No deseo personalizar';
+				} ?>
+				<p><strong class="color-primary">Elegiste: </strong><?php echo $labelEstatus; ?></p>
+			<?php endwhile; wp_reset_postdata();
+
+		else: ?>
+
+			<p id="openPersonalizar" class="btn open-modal">Personalizar Producto</p>
+			<?php if ($item->get_quantity() > 1) { ?>
+				<p id="openPersonalizarDiff" class="btn open-modal margin-top-10">Personalizar Diferente</p>
+			<?php } ?>
+			<p id="openPersonalizarCancel" class="btn btn-danger open-modal margin-top-10 color-primary cursor-pointer">No deseo personalizar</p>	
+
+		<?php endif; ?>
+
 	</td>
 
 </tr>
