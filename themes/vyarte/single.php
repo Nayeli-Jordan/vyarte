@@ -21,7 +21,7 @@
 					<?php the_content(); ?>
 				</div>
 				<div class="margin-top-20 text-center">
-					<a href="<?php echo SITEURL; ?>blog" class="btn">Volver</a>	
+					<a href="<?php echo SITEURL; ?>blog" class="btn">Volver al blog</a>	
 				</div>
 			</div>		
 			<div class="col s12 hide-on-med-and-up margin-top-40">

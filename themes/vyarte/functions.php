@@ -257,6 +257,8 @@ function display_vy_personalizado_atributos( $vy_personalizado ){
     $orden    = esc_html( get_post_meta( $vy_personalizado->ID, 'vy_personalizado_orden', true ) );
     $producto = esc_html( get_post_meta( $vy_personalizado->ID, 'vy_personalizado_producto', true ) );
     $estatus = esc_html( get_post_meta( $vy_personalizado->ID, 'vy_personalizado_estatus', true ) );
+    $imagea = esc_html( get_post_meta( $vy_personalizado->ID, 'vy_personalizado_imagea', true ) );
+    $imageb = esc_html( get_post_meta( $vy_personalizado->ID, 'vy_personalizado_imageb', true ) );
 ?>
     <table class="vy-custum-fields">
         <tr>
@@ -273,6 +275,18 @@ function display_vy_personalizado_atributos( $vy_personalizado ){
                 <input type="text" id="vy_personalizado_estatus" name="vy_personalizado_estatus" value="<?php echo $estatus; ?>" required>
             </th>
         </tr>
+        <tr>
+            <th colspan="3">
+                <label for="vy_personalizado_imagea">Imagen A</label>
+                <input type="text" id="vy_personalizado_imagea" name="vy_personalizado_imagea" value="<?php echo $imagea; ?>" required>
+            </th>
+        </tr>
+        <tr>
+            <th colspan="3">
+                <label for="vy_personalizado_imageb">Imagen B</label>
+                <input type="text" id="vy_personalizado_imageb" name="vy_personalizado_imageb" value="<?php echo $imageb; ?>" required>
+            </th>
+        </tr>
     </table>
 <?php }
 
@@ -287,6 +301,12 @@ function vy_personalizado_save_metas( $idvy_personalizado, $vy_personalizado ){
         }
         if ( isset( $_POST['vy_personalizado_estatus'] ) ){
             update_post_meta( $idvy_personalizado, 'vy_personalizado_estatus', $_POST['vy_personalizado_estatus'] );
+        }
+        if ( isset( $_POST['vy_personalizado_imagea'] ) ){
+            update_post_meta( $idvy_personalizado, 'vy_personalizado_imagea', $_POST['vy_personalizado_imagea'] );
+        }
+        if ( isset( $_POST['vy_personalizado_imageb'] ) ){
+            update_post_meta( $idvy_personalizado, 'vy_personalizado_imageb', $_POST['vy_personalizado_imageb'] );
         }
     }
 }

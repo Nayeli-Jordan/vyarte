@@ -98,11 +98,6 @@ if ( $show_downloads ) {
 
 			}
 
-			/* Modal personalización */
-			include (TEMPLATEPATH . '/template/personalizado/personalizacion-enviada.php');
-			//include (TEMPLATEPATH . '/template/personalizado/personalizacion-diferente.php');
-			//include (TEMPLATEPATH . '/template/personalizado/personalizacion-cancelada.php');
-
 			do_action( 'woocommerce_order_details_after_order_table_items', $order );
 			?>
 		</tbody>
@@ -129,7 +124,12 @@ if ( $show_downloads ) {
 
 	<?php do_action( 'woocommerce_order_details_after_order_table', $order ); ?>
 </section>
-
+<?php 
+	/* Modal personalización */
+	include (TEMPLATEPATH . '/template/personalizado/personalizacion-enviada.php');
+	include (TEMPLATEPATH . '/template/personalizado/personalizacion-diferente.php');
+	include (TEMPLATEPATH . '/template/personalizado/personalizacion-cancelada.php');
+ ?>
 <?php
 if ( $show_customer_details ) {
 	wc_get_template( 'order/order-details-customer.php', array( 'order' => $order ) );

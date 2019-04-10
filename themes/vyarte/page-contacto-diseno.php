@@ -18,6 +18,7 @@
 							<option value="Tarjetas de presentación">Tarjetas de presentación</option>
 							<option value="Volantes">Volantes</option>
 							<option value="Firma electrónica">Firma electrónica</option>
+							<option value="Otro">Otro</option>
 						</select>
 						<textarea id="contactoMensaje" name="contactoMensaje" placeholder="Danos detalles de lo que estás buscando" required data-parsley-length="[20, 600]" data-parsley-required-message="El campo es obligatorio." data-parsley-length-message="Se requieren de 20 a 600 caracteres."></textarea>
 						<input type="submit" name="submitContact" class="btn inline-block" value="Enviar" />

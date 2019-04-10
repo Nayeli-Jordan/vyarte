@@ -20,7 +20,7 @@
 	</section>
 	<section id="servHome" class="container text-center margin-bottom-20">
 		<h2 class="title-section"><span>Servicios</span></h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+		<p>Nos especializamos en sublimación, serigrafía y diseño gráfico. Nuestro compromiso es ofrecerte la mejor calidad de productos con una gran variedad de diseños personalizados para satisfacer tus necesidades.</p>
 		<div class="row row-complete margin-top-20">
 		<?php
 			$serv_args = array(
@@ -30,11 +30,12 @@
 			$serv_query = new WP_Query( $serv_args );
 			if ( $serv_query->have_posts() ) : 
 				$i = 1;
-				while ( $serv_query->have_posts() ) : $serv_query->the_post(); ?>
+				while ( $serv_query->have_posts() ) : $serv_query->the_post(); 
+					$post_slug = $post->post_name; ?>
 					<div class="col s12 sm6 text-center margin-bottom-30">
-						<a href="<?php echo SITEURL; ?>producto-categoria/sublimacion-y-serigrafia/">
+						<a href="<?php echo SITEURL . $post_slug; ?>">
 							<div class="margin-bottom-20">
-								<div class="bg-image bg-contain" style="background-image: url(<?php the_post_thumbnail_url('large'); ?>)"></div>
+								<div class="bg-image bg-contain" style="background-image: url(<?php the_post_thumbnail_url('full'); ?>)"></div>
 							</div>
 							<h3 class="margin-bottom-20 uppercase"><?php the_title(); ?></h3>
 						</a>
@@ -52,8 +53,8 @@
 			<div class="row">
 				<div class="col s12 m10 offset-m1 l8 offset-l2">
 					<h2>Suscríbete a nuestro newsletter</h2>
-					<p class="margin-bottom-20">Suscribete y recibe las mejores promociones directamente en tu correo electrónico</p>
-					<?php include (TEMPLATEPATH . '/template/mailchimp-code.php'); ?>				
+					<p class="margin-bottom-20">Suscríbete y recibe las mejores promociones directamente en tu correo electrónico</p>
+					<?php include (TEMPLATEPATH . '/template/mailchimp-code.php'); ?>
 				</div>
 			</div>
 		</div>

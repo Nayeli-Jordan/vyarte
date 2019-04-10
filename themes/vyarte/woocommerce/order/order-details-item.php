@@ -86,15 +86,31 @@ if ( ! apply_filters( 'woocommerce_order_item_visible', true, $item ) ) {
 				<p><strong class="color-primary">Elegiste: </strong><?php echo $labelEstatus; ?></p>
 			<?php endwhile; wp_reset_postdata();
 
-		else: ?>
+		else: 
 
-			<p id="openPersonalizar" class="btn open-modal">Personalizar Producto</p>
-			<?php if ($item->get_quantity() > 1) { ?>
-				<p id="openPersonalizarDiff" class="btn open-modal margin-top-10">Personalizar Diferente</p>
-			<?php } ?>
-			<p id="openPersonalizarCancel" class="btn btn-danger open-modal margin-top-10 color-primary cursor-pointer">No deseo personalizar</p>	
+			$orderStatus = $order->get_status();
+			if ($orderStatus === 'pending' || $orderStatus === 'processing' || $orderStatus === 'on-hold') { 
 
-		<?php endif; ?>
+				/* Checar si es de diseño gráfico*/ 
+				$productId = $item->get_product_id();
+				$terms = wp_get_post_terms( $productId, 'product_cat' );
+				foreach ( $terms as $term ) $categories[] = $term->slug;
+				if ( in_array( 'diseno-grafico', $categories ) ) {
+					echo '<small>No hay personalización para este producto.</small>';
+				} else { ?>
+
+					<p id="openPersonalizar" class="btn open-modal">Personalizar Producto</p>
+					<?php if ($item->get_quantity() > 1) { ?>
+						<p id="openPersonalizarDiff" class="btn open-modal margin-top-10">Personalizar Diferente</p>
+					<?php } ?>
+					<p id="openPersonalizarCancel" class="btn btn-danger open-modal margin-top-10 color-primary cursor-pointer">No deseo personalizar</p>
+				
+				<?php } /* end if is diseno-grafico */				 	
+			 } else {
+				echo "---";
+			}
+
+		endif; ?>
 
 	</td>
 
