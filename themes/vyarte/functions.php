@@ -245,6 +245,42 @@ function banner_save_metas( $idbanner, $banner ){
     }
 }
 
+/*
+** Personalización
+*/
+add_action( 'add_meta_boxes', 'vy_personalizado_custom_metabox' );
+function vy_personalizado_custom_metabox(){
+    add_meta_box( 'vy_personalizado_meta', 'Enlace vy_personalizado', 'display_vy_personalizado_atributos', 'vy_personalizado', 'advanced', 'default');
+}
+
+function display_vy_personalizado_atributos( $vy_personalizado ){
+    $orden    = esc_html( get_post_meta( $vy_personalizado->ID, 'vy_personalizado_enlace', true ) );
+    $producto = esc_html( get_post_meta( $vy_personalizado->ID, 'vy_personalizado_enlace', true ) );
+?>
+    <table class="vy-custum-fields">
+        <tr>
+            <th>
+                <input type="text" id="vy_personalizado_orden" name="vy_personalizado_orden" placeholder="URL" value="<?php echo $orden; ?>" required>
+            </th>
+            <th>
+                <input type="text" id="vy_personalizado_producto" name="vy_personalizado_producto" placeholder="URL" value="<?php echo $producto; ?>" required>
+            </th>
+        </tr>
+    </table>
+<?php }
+
+add_action( 'save_post', 'vy_personalizado_save_metas', 10, 2 );
+function vy_personalizado_save_metas( $idvy_personalizado, $vy_personalizado ){
+    if ( $vy_personalizado->post_type == 'vy_personalizado' ){
+        if ( isset( $_POST['vy_personalizado_orden'] ) ){
+            update_post_meta( $idvy_personalizado, 'vy_personalizado_orden', $_POST['vy_personalizado_orden'] );
+        }
+        if ( isset( $_POST['vy_personalizado_producto'] ) ){
+            update_post_meta( $idvy_personalizado, 'vy_personalizado_producto', $_POST['vy_personalizado_producto'] );
+        }
+    }
+}
+
 /* Redirección formularios */
 add_action ('template_redirect', 'custom_redirect_contacto');
 function custom_redirect_contacto() {

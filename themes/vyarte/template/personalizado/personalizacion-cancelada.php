@@ -1,11 +1,15 @@
-<div id="modal-Cancel_<?php echo $itemOrderID ?>" class="modal">
+<div id="modal-openPersonalizarCancel" class="modal">
 	<div class="modal-content">
 		<div class="modal-body">
 			<em class="icon-close close-modal"></em>
-			<p class="text-center margin-bottom-10"><strong class="uppercase"><?php echo $item->get_name(); ?></strong> * <?php echo $item->get_quantity(); ?></p>
-			<p>Al dar clic en aceptar confirmas que no deseas personalizar tu producto y se preparará para su entrega lo antes posible.</p>
+			<p class="text-center margin-bottom-10"><strong class="uppercase">No Personalizar</strong></p>
+			<p>Al dar clic en aceptar confirmas que no deseas personalizar tu producto y se preparará para su entrega tal como está.</p>
 			<form id="NoPers-form" name="NoPers-form" action=""  method="post" class="validation margin-top-10" enctype="multipart/form-data" data-parsley-noPersonalizacion>
 				<div class="text-right">
+					<input type="text" id="persOrder" name="persOrder" required data-parsley-required-message="El campo es obligatorio." value="<?php echo $order->get_order_number(); ?>">
+					<select id="persProducto" name="persProducto" required data-parsley-required-message="El campo es obligatorio." >
+						<?php echo $opnionsProducts; ?>
+					</select>
 					<p class="margin-bottom-10"><small>Ya has aceptado los <a href="<?php echo SITEURL; ?>terminos-y-condiciones" class="color-primary">Términos y condiciones</a> al realizar tu compra.</small></p>	
 					<input type="submit" name="submitNoPers" class="btn inline-block" value="Enviar" />
 					<input type="hidden" name="btnSubmitNoPers" value="post" />
@@ -17,12 +21,13 @@
 </div>
 <? if( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['btnSubmitNoPers'] )) : 
 
-	// Verify Title 
-	$title 				=  '0rden: ' . $order->get_order_number() . ' | ' . $item->get_name() . ' (ID: ' . $item->get_product_id() . ') | NO Personalizado';
-	$content 			=  'No. de Pedido: ' . $order->get_order_number() . '<br>';
+	$orden 				=  $_POST['persOrder'];
+	$producto 			=  $_POST['persProducto'];
+	$title 				=  '0rden: #' . $orden . ' | ' . $producto . ' | Sin Personalizar';
+	$content 			=  'No. de Pedido: #' . $orden . '<br>';
 	$content 			.=  'Fecha: ' . wc_format_datetime( $order->get_date_created() ) . '<br><br>';
-	$content 			.=  'Producto: ' . $item->get_name() . ' (ID: ' . $item->get_product_id() . ')<br>';
-	$content 			.=  'Cantidad: ' . $item->get_quantity() . '<br><br>';
+	$content 			.=  'Producto: ' . $producto . '<br>';
+	//$content 			.=  'Cantidad: ' . $item->get_quantity() . '<br><br>';
 	$content 			.=  'Se confirmó que el producto adquirido NO SERÁ PERSONALIZADO';
 
 	$post = array(

@@ -4188,7 +4188,7 @@ video.responsive-video {
   position: relative;
   width: 80vw;
   max-width: 600px;
-  margin: 15vh auto 0;
+  margin: 10vh auto 0;
   border-radius: 10px;
   background-color: #fff;
   overflow: hidden;
@@ -4207,8 +4207,20 @@ video.responsive-video {
 .modal .modal-content .modal-body {
   padding: 30px;
   border-radius: 20px;
+  max-height: 80vh;
   overflow-y: auto;
   overflow-x: hidden;
+}
+@media only screen and (max-width: 600px) {
+  /* line 14, ../sass/components/_modal.scss */
+  .modal .modal-content {
+    margin: 0px;
+    width: 100vw;
+  }
+  /* line 41, ../sass/components/_modal.scss */
+  .modal .modal-content .modal-body {
+    min-height: 100vh;
+  }
 }
 
 /* line 4, ../sass/components/_position.scss */

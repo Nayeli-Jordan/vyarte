@@ -15,7 +15,7 @@
 		position: relative;
 		width: 80vw;
 		max-width: 600px;
-		margin: 15vh auto 0;
+		margin: 10vh auto 0;
 		border-radius: 10px;
 		background-color: $light-color;
 		overflow: hidden;	
@@ -31,8 +31,14 @@
 		.modal-body {
 			padding: 30px;
     		border-radius: 20px;
+			max-height: 80vh;
 			overflow-y: auto;
 		    overflow-x: hidden;
+		}
+		@media #{$sm-and-down} {
+			margin: 0px;
+			width: 100vw;
+			.modal-body { min-height: 100vh; }
 		}
 	}
 }

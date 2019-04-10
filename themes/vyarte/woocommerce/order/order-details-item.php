@@ -39,6 +39,7 @@ if ( ! apply_filters( 'woocommerce_order_item_visible', true, $item ) ) {
 			wc_display_item_meta( $item );
 
 			do_action( 'woocommerce_order_item_meta_end', $item_id, $item, $order, false );
+
 		?>
 	</td>
 
@@ -47,12 +48,11 @@ if ( ! apply_filters( 'woocommerce_order_item_visible', true, $item ) ) {
 	</td>
 	<td style="width: 220px;">
 		<?php $itemOrderID = 'O' . $order->get_order_number() . '_P' . $item->get_product_id(); ?>
-		<p id="<?php echo $itemOrderID ?>" class="btn open-modal">Personalizar Producto</p>
-		<p id="Cancel_<?php echo $itemOrderID ?>" class="open-modal margin-top-10 color-primary cursor-pointer">No deseo personalizar</p>
-		<?php 
-		include (TEMPLATEPATH . '/template/personalizado/personalizacion-enviada.php');
-		include (TEMPLATEPATH . '/template/personalizado/personalizacion-cancelada.php');
-		?>
+		<p id="openPersonalizar" class="btn open-modal">Personalizar Producto</p>
+		<?php if ($item->get_quantity() > 1) { ?>
+			<p id="openPersonalizarDiff" class="btn open-modal margin-top-10">Personalizar Diferente</p>
+		<?php } ?>
+		<p id="openPersonalizarCancel" class="open-modal margin-top-10 color-primary cursor-pointer">No deseo personalizar</p>
 	</td>
 
 </tr>

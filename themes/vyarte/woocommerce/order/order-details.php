@@ -55,6 +55,9 @@ if ( $show_downloads ) {
 			<?php
 			do_action( 'woocommerce_order_details_before_order_table_items', $order );
 
+			/* Declaras option Products (select form personaliza*/
+			$opnionsProducts = '';
+
 			foreach ( $order_items as $item_id => $item ) {
 				$product = $item->get_product();
 
@@ -66,7 +69,15 @@ if ( $show_downloads ) {
 					'purchase_note'	     => $product ? $product->get_purchase_note() : '',
 					'product'	         => $product,
 				) );
+
+				/* Agregar nombre producto (foreach) */
+				$opnionsProducts .= '<option>' . $item->get_name() . '</option>';
 			}
+
+			/* Modal personalización */
+			include (TEMPLATEPATH . '/template/personalizado/personalizacion-enviada.php');
+			include (TEMPLATEPATH . '/template/personalizado/personalizacion-diferente.php');
+			include (TEMPLATEPATH . '/template/personalizado/personalizacion-cancelada.php');
 
 			do_action( 'woocommerce_order_details_after_order_table_items', $order );
 			?>
