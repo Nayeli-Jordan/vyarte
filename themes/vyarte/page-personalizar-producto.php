@@ -9,10 +9,12 @@
 			</div>
 			<div class="container content-editor page_personaliza">
 				<div class="row row-complete margin-top-30 margin-bottom-30">
-					<div class="col s12 m10 offset-m1">
-						<?php the_content(); ?>	
-					</div>
-					<?php
+					<?php if( '' !== get_post()->post_content ) { ?>
+						<div class="col s12 m10 offset-m1 margin-bottom-30">
+							<?php the_content(); ?>	
+						</div>
+					<?php }
+					
 					$inst_args = array(
 						'post_type' 		=> 'vy_persinstruccion',
 						'posts_per_page' 	=> -1,
@@ -31,7 +33,7 @@
 						$i = 1;
 						while ( $inst_query->have_posts() ) : $inst_query->the_post(); ?>
 							<div class="col s12 sm6 m4 margin-bottom-20">
-								<img src="<?php the_post_thumbnail_url('large'); ?>" alt="" class="responsive-img margin-bottom-10">
+								<img src="<?php the_post_thumbnail_url('full'); ?>" alt="" class="responsive-img margin-bottom-10">
 								<p class="text-center margin-bottom-10"><strong><?php the_title(); ?></strong></p>
 								<?php the_content(); ?>	
 							</div>			

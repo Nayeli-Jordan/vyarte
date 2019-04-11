@@ -88,7 +88,7 @@ if ( post_password_required() ) {
 				$i = 1;
 				while ( $inst_query->have_posts() ) : $inst_query->the_post(); ?>
 					<div class="col s12 sm6 m3 margin-bottom-20">
-						<img src="<?php the_post_thumbnail_url('large'); ?>" alt="" class="responsive-img margin-bottom-10">
+						<img src="<?php the_post_thumbnail_url('full'); ?>" alt="" class="responsive-img margin-bottom-10">
 						<p class="text-center"><strong><?php the_title(); ?></strong></p>
 					</div>			
 			<?php $i ++; endwhile; wp_reset_postdata();
