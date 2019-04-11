@@ -24,8 +24,6 @@ global $comment;
 $rating = intval( get_comment_meta( $comment->comment_ID, 'rating', true ) );
 
 if ( $rating && 'yes' === get_option( 'woocommerce_enable_review_rating' ) ) {
-	//echo wc_get_rating_html( $rating );
-	//echo $rating;
 	echo "<div class='content_stars activeToStar" . $rating . "'>
 		<em class='icon-star star1'></em>
 		<em class='icon-star star2'></em>

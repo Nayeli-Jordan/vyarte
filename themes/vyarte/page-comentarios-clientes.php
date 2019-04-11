@@ -12,22 +12,31 @@
 		<div id="clients_comments" class="container">
 			<div class="row row-complete margin-bottom-30">
 				<div class="col s12 m10 offset-m1 l8 offset-l2">
-					<ol>
+					<div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-slides="> div" data-cycle-timeout="5000" >
 					<?php
-						$comment_args = array(
-							'post_type' 		=> 'product',
-							'posts_per_page' 	=> -1,
-						);
-						$comment_query = new WP_Query( $comment_args );
-						if ( $comment_query->have_posts() ) : 
-							$i = 1;
-							while ( $comment_query->have_posts() ) : $comment_query->the_post();
-								$post_id        = get_the_ID();
-								$comments = get_comments( $post_id );
-								wp_list_comments( array( 'callback' => 'woocommerce_comments' ), $comments);
-							$i ++; endwhile; wp_reset_postdata();
-						endif; ?>						
-					</ul>											
+						$comments = get_comments(  );
+						$i = 1;
+						foreach ( $comments as $comment ) : 
+							global $comment;
+							$rating = intval( get_comment_meta( $comment->comment_ID, 'rating', true ) );
+							if ( $rating && 'yes' === get_option( 'woocommerce_enable_review_rating' ) ) { ?>
+								<div>
+									<p><?php echo $comment->comment_content; ?></p>
+									<div class='content_stars activeToStar<?php echo $rating; ?>'>
+										<em class='icon-star star1'></em>
+										<em class='icon-star star2'></em>
+										<em class='icon-star star3'></em>
+										<em class='icon-star star4'></em>
+										<em class='icon-star star5'></em>
+									</div>
+									<p><?php echo $comment->comment_author; ?></p>
+								</div>
+							<?php } ?>
+						<?php endforeach;
+						if ($i > 0):?>
+							<span class="cycle-pager"></span>
+						<?php endif; ?>						
+					</div> <!-- end cycle-slideshow -->											
 				</div>
 			</div>
 		</div>
