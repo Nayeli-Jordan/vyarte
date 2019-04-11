@@ -88,15 +88,6 @@ var $=jQuery.noConflict();
 		});
 
 		//Single Product
-		//Review 
-		$(".comment_container .description p").click(function() {
-			var idComment = $(this).parent().parent().parent().attr('id');
-			console.log(idComment);
-			$('#' + idComment + ' .description p').addClass('active');
-		});
-		$(".comment_container .description p.active").click(function() {
-			$('#' + idComment + ' .description p.active').removeClass('active');
-		});
 		//Gallery
 		if ($('.galleryImage').length) {
 			$('#prevGallery, #nextGallery').removeClass('hide');
@@ -119,15 +110,10 @@ var $=jQuery.noConflict();
 			$(this).attr('href', 'mailto:contacto@vyartesublimacion.com');
 		});
 
-		//Scroll menú
-		$(".scrollContacto").click(function() {
+		//Scroll click
+		$(".info_personaliza").click(function() {
 			$('html, body').animate({		
-				scrollTop: $('Footer').offset().top - 30
-			}, 1000);
-		});
-		$(".scrollservHome").click(function() {
-			$('html, body').animate({		
-				scrollTop: $('#servHome').offset().top - 30
+				scrollTop: $('.content_personaliza').offset().top - 60
 			}, 1000);
 		});
 

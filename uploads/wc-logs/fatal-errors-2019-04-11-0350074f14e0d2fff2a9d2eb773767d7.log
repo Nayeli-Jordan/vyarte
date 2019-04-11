@@ -8,3 +8,5 @@
 
 2019-04-11T16:43:33+00:00 CRITICAL syntax error, unexpected ''operator'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in C:\Users\Tony\Documents\sites\vyarte\wp-content\themes\vyarte\page-personalizar-producto.php on line 25
 
+2019-04-11T18:33:53+00:00 CRITICAL syntax error, unexpected '}', expecting ',' or ';' in C:\Users\Tony\Documents\sites\vyarte\wp-content\themes\vyarte\woocommerce\single-product\review-rating.php on line 29
+

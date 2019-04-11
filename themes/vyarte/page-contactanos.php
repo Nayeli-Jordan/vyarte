@@ -7,7 +7,7 @@
 					<?php include (TEMPLATEPATH . '/template/redes-contacto.php'); ?>
 					<p class="color-primary-link"><a href="tel:+5518339080"><em class="icon-phone-circled"></em>044 55 18339080</a></p>
 					<p class="color-primary-link"><a href="" class="contact-email"><em class="icon-mail-alt"></em>contacto<span>@</span>vyartesublimacion.com</a></p><br>
-					<p>¿Deseas conocer más detalles sobre nuestros productos?<br>¿Buscas algo en particulas?<br>¡Contáctanos!</p><br>
+					<p>¿Deseas conocer más detalles sobre nuestros productos?<br>¿Buscas algo en particular?<br>¡Contáctanos!</p><br>
 					<form id="contact-form" name="contact-form" action=""  method="post" class="validation" data-parsley-contacto>
 						<input type="text" id="contactoNombre" name="contactoNombre" placeholder="Nombre" required data-parsley-length="[7, 40]" data-parsley-required-message="El campo es obligatorio." data-parsley-length-message="Se requieren de 7 a 40 caracteres.">
 						<input type="email" id="contactoEmail" name="contactoEmail" placeholder="Email" required data-parsley-type="email" data-parsley-type-message="La dirección de correo es inválida" data-parsley-required-message="El campo es obligatorio.">

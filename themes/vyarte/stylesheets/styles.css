@@ -8948,43 +8948,67 @@ li.product .onsale,
 }
 
 /* Rating */
-/* line 59, ../sass/components/_woocommerce.scss */
-.woocommerce-product-rating .content_stars {
+/* line 58, ../sass/components/_woocommerce.scss */
+.content_stars {
+  display: inline-block;
   margin-left: -4px;
 }
 /* line 61, ../sass/components/_woocommerce.scss */
-.woocommerce-product-rating .content_stars em {
+.content_stars em {
   color: #c6c6c6;
   margin-right: -8px;
 }
 /* line 66, ../sass/components/_woocommerce.scss */
-.woocommerce-product-rating .content_stars.activeToStar1 .star1 {
+.content_stars.activeToStar1 .star1 {
   color: #f6bd15;
 }
 /* line 69, ../sass/components/_woocommerce.scss */
-.woocommerce-product-rating .content_stars.activeToStar2 .star1, .woocommerce-product-rating .content_stars.activeToStar2 .star2 {
+.content_stars.activeToStar2 .star1, .content_stars.activeToStar2 .star2 {
   color: #f6bd15;
 }
 /* line 72, ../sass/components/_woocommerce.scss */
-.woocommerce-product-rating .content_stars.activeToStar3 .star1, .woocommerce-product-rating .content_stars.activeToStar3 .star2, .woocommerce-product-rating .content_stars.activeToStar3 .star3 {
+.content_stars.activeToStar3 .star1, .content_stars.activeToStar3 .star2, .content_stars.activeToStar3 .star3 {
   color: #f6bd15;
 }
 /* line 75, ../sass/components/_woocommerce.scss */
-.woocommerce-product-rating .content_stars.activeToStar4 .star1, .woocommerce-product-rating .content_stars.activeToStar4 .star2, .woocommerce-product-rating .content_stars.activeToStar4 .star3, .woocommerce-product-rating .content_stars.activeToStar4 .star4 {
+.content_stars.activeToStar4 .star1, .content_stars.activeToStar4 .star2, .content_stars.activeToStar4 .star3, .content_stars.activeToStar4 .star4 {
   color: #f6bd15;
 }
 /* line 78, ../sass/components/_woocommerce.scss */
-.woocommerce-product-rating .content_stars.activeToStar5 .star1, .woocommerce-product-rating .content_stars.activeToStar5 .star2, .woocommerce-product-rating .content_stars.activeToStar5 .star3, .woocommerce-product-rating .content_stars.activeToStar5 .star4, .woocommerce-product-rating .content_stars.activeToStar5 .star5 {
+.content_stars.activeToStar5 .star1, .content_stars.activeToStar5 .star2, .content_stars.activeToStar5 .star3, .content_stars.activeToStar5 .star4, .content_stars.activeToStar5 .star5 {
   color: #f6bd15;
 }
 
-/* line 82, ../sass/components/_woocommerce.scss */
+/* line 81, ../sass/components/_woocommerce.scss */
 .price ins {
   text-decoration: none;
 }
 
-/* Productos */
+/* Comments */
+/* line 83, ../sass/components/_woocommerce.scss */
+ol {
+  padding: 0px;
+}
 /* line 85, ../sass/components/_woocommerce.scss */
+ol li.review {
+  margin-bottom: 10px;
+  list-style-type: none;
+}
+/* line 89, ../sass/components/_woocommerce.scss */
+ol li.review .comment-text .content_stars {
+  margin-right: 10px;
+  margin-bottom: -5px;
+  vertical-align: middle;
+}
+/* line 94, ../sass/components/_woocommerce.scss */
+ol li.review .comment-text .meta {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 12px;
+}
+
+/* Productos */
+/* line 104, ../sass/components/_woocommerce.scss */
 .main-body ul.products[class*=columns-] {
   /* Corregir limites container */
   display: inline-block;
@@ -8992,7 +9016,7 @@ li.product .onsale,
   margin-left: -10px;
   margin-bottom: 0px;
 }
-/* line 91, ../sass/components/_woocommerce.scss */
+/* line 110, ../sass/components/_woocommerce.scss */
 .main-body ul.products[class*=columns-] li.product {
   float: left !important;
   width: 25% !important;
@@ -9002,57 +9026,57 @@ li.product .onsale,
   clear: none !important;
 }
 @media only screen and (min-width: 993px) {
-  /* line 99, ../sass/components/_woocommerce.scss */
+  /* line 118, ../sass/components/_woocommerce.scss */
   .main-body ul.products[class*=columns-] li.product:nth-child(4n+1) {
     clear: both !important;
   }
 }
 @media only screen and (max-width: 992px) {
-  /* line 91, ../sass/components/_woocommerce.scss */
+  /* line 110, ../sass/components/_woocommerce.scss */
   .main-body ul.products[class*=columns-] li.product {
     width: 33.33% !important;
   }
-  /* line 103, ../sass/components/_woocommerce.scss */
+  /* line 122, ../sass/components/_woocommerce.scss */
   .main-body ul.products[class*=columns-] li.product:nth-child(5n+1) {
     clear: none !important;
   }
-  /* line 104, ../sass/components/_woocommerce.scss */
+  /* line 123, ../sass/components/_woocommerce.scss */
   .main-body ul.products[class*=columns-] li.product:nth-child(3n+1) {
     clear: both !important;
   }
 }
 @media only screen and (max-width: 600px) {
-  /* line 91, ../sass/components/_woocommerce.scss */
+  /* line 110, ../sass/components/_woocommerce.scss */
   .main-body ul.products[class*=columns-] li.product {
     width: 50% !important;
   }
-  /* line 108, ../sass/components/_woocommerce.scss */
+  /* line 127, ../sass/components/_woocommerce.scss */
   .main-body ul.products[class*=columns-] li.product:nth-child(5n+1), .main-body ul.products[class*=columns-] li.product:nth-child(3n+1) {
     clear: none !important;
   }
-  /* line 109, ../sass/components/_woocommerce.scss */
+  /* line 128, ../sass/components/_woocommerce.scss */
   .main-body ul.products[class*=columns-] li.product:nth-child(2n+1) {
     clear: both !important;
   }
 }
 @media only screen and (max-width: 430px) {
-  /* line 91, ../sass/components/_woocommerce.scss */
+  /* line 110, ../sass/components/_woocommerce.scss */
   .main-body ul.products[class*=columns-] li.product {
     width: 100% !important;
   }
 }
-/* line 114, ../sass/components/_woocommerce.scss */
+/* line 133, ../sass/components/_woocommerce.scss */
 .main-body ul.products[class*=columns-] li.product .woocommerce-loop-product__link {
   position: relative;
   display: block;
 }
-/* line 117, ../sass/components/_woocommerce.scss */
+/* line 136, ../sass/components/_woocommerce.scss */
 .main-body ul.products[class*=columns-] li.product .woocommerce-loop-product__link img {
   width: 200px;
   margin-left: auto;
   margin-right: auto;
 }
-/* line 123, ../sass/components/_woocommerce.scss */
+/* line 142, ../sass/components/_woocommerce.scss */
 .main-body ul.products[class*=columns-] li.product .woocommerce-loop-product__link h2 {
   text-transform: lowercase;
   font-size: 14px !important;
@@ -9060,11 +9084,11 @@ li.product .onsale,
   padding: 0px;
   margin-bottom: 3px;
 }
-/* line 130, ../sass/components/_woocommerce.scss */
+/* line 149, ../sass/components/_woocommerce.scss */
 .main-body ul.products[class*=columns-] li.product .woocommerce-loop-product__link h2::first-letter {
   text-transform: uppercase;
 }
-/* line 132, ../sass/components/_woocommerce.scss */
+/* line 151, ../sass/components/_woocommerce.scss */
 .main-body ul.products[class*=columns-] li.product .woocommerce-loop-product__link h2,
 .main-body ul.products[class*=columns-] li.product .woocommerce-loop-product__link .price {
   display: block;
@@ -9072,24 +9096,24 @@ li.product .onsale,
   font-size: 16px;
   font-weight: 600;
 }
-/* line 139, ../sass/components/_woocommerce.scss */
+/* line 158, ../sass/components/_woocommerce.scss */
 .main-body ul.products[class*=columns-] li.product .woocommerce-loop-product__link .woocommerce-product-rating {
   margin-top: -2px;
   margin-bottom: 0px;
 }
-/* line 142, ../sass/components/_woocommerce.scss */
+/* line 161, ../sass/components/_woocommerce.scss */
 .main-body ul.products[class*=columns-] li.product .woocommerce-loop-product__link .woocommerce-product-rating em:last-child {
   display: none;
 }
-/* line 144, ../sass/components/_woocommerce.scss */
+/* line 163, ../sass/components/_woocommerce.scss */
 .main-body ul.products[class*=columns-] li.product .woocommerce-loop-product__link .price {
   margin-bottom: 5px;
 }
-/* line 146, ../sass/components/_woocommerce.scss */
+/* line 165, ../sass/components/_woocommerce.scss */
 .main-body ul.products[class*=columns-] li.product .button {
   margin: 0px !important;
 }
-/* line 149, ../sass/components/_woocommerce.scss */
+/* line 168, ../sass/components/_woocommerce.scss */
 .main-body ul.products[class*=columns-] li.product .added_to_cart {
   display: block;
   max-width: 140px;
@@ -9098,56 +9122,56 @@ li.product .onsale,
 
 /* Productos destacados */
 @media only screen and (min-width: 431px) and (max-width: 600px) {
-  /* line 159, ../sass/components/_woocommerce.scss */
+  /* line 178, ../sass/components/_woocommerce.scss */
   .main-body #section-productos_destacados ul.products[class*=columns-] li.product:nth-child(5) {
     margin-left: 25% !important;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 992px) {
-  /* line 161, ../sass/components/_woocommerce.scss */
+  /* line 180, ../sass/components/_woocommerce.scss */
   .main-body #section-productos_destacados ul.products[class*=columns-] li.product:nth-child(4n+1) {
     clear: none !important;
   }
-  /* line 162, ../sass/components/_woocommerce.scss */
+  /* line 181, ../sass/components/_woocommerce.scss */
   .main-body #section-productos_destacados ul.products[class*=columns-] li.product:nth-child(4) {
     margin-left: 16.6% !important;
   }
 }
 @media only screen and (min-width: 993px) {
-  /* line 158, ../sass/components/_woocommerce.scss */
+  /* line 177, ../sass/components/_woocommerce.scss */
   .main-body #section-productos_destacados ul.products[class*=columns-] li.product {
     width: 20% !important;
   }
-  /* line 166, ../sass/components/_woocommerce.scss */
+  /* line 185, ../sass/components/_woocommerce.scss */
   .main-body #section-productos_destacados ul.products[class*=columns-] li.product:nth-child(4n+1) {
     clear: none !important;
   }
 }
 
-/* line 170, ../sass/components/_woocommerce.scss */
+/* line 189, ../sass/components/_woocommerce.scss */
 #single-product {
   /* Info product */
   /* Reviews */
 }
-/* line 171, ../sass/components/_woocommerce.scss */
+/* line 190, ../sass/components/_woocommerce.scss */
 #single-product .product-image {
   margin-bottom: 30px;
   /* Gallery */
 }
-/* line 174, ../sass/components/_woocommerce.scss */
+/* line 193, ../sass/components/_woocommerce.scss */
 #single-product .product-image .cycle-slideshow .bg-image,
 #single-product .product-image .cycle-slideshow .bg-product {
   width: 100%;
   height: 400px;
 }
-/* line 178, ../sass/components/_woocommerce.scss */
+/* line 197, ../sass/components/_woocommerce.scss */
 #single-product .product-image .cycle-slideshow .bg-image img,
 #single-product .product-image .cycle-slideshow .bg-product img {
   display: block;
   margin: auto;
   max-height: 400px;
 }
-/* line 184, ../sass/components/_woocommerce.scss */
+/* line 203, ../sass/components/_woocommerce.scss */
 #single-product .product-image #prevGallery, #single-product .product-image #nextGallery {
   position: absolute;
   top: 40%;
@@ -9155,47 +9179,47 @@ li.product .onsale,
   cursor: pointer;
   z-index: 100;
 }
-/* line 190, ../sass/components/_woocommerce.scss */
+/* line 209, ../sass/components/_woocommerce.scss */
 #single-product .product-image #prevGallery em, #single-product .product-image #nextGallery em {
   font-size: 30px;
 }
-/* line 191, ../sass/components/_woocommerce.scss */
+/* line 210, ../sass/components/_woocommerce.scss */
 #single-product .product-image #prevGallery:hover, #single-product .product-image #nextGallery:hover {
   color: #5a9ea9;
 }
-/* line 195, ../sass/components/_woocommerce.scss */
+/* line 214, ../sass/components/_woocommerce.scss */
 #single-product .product-image #nextGallery {
   right: 10px;
 }
-/* line 199, ../sass/components/_woocommerce.scss */
+/* line 218, ../sass/components/_woocommerce.scss */
 #single-product .summary {
   margin-bottom: 30px;
 }
-/* line 201, ../sass/components/_woocommerce.scss */
+/* line 220, ../sass/components/_woocommerce.scss */
 #single-product .summary .product_meta, #single-product .summary .stock {
   font-size: 14px;
 }
-/* line 202, ../sass/components/_woocommerce.scss */
+/* line 221, ../sass/components/_woocommerce.scss */
 #single-product .summary .price {
   margin-bottom: 20px;
   font-size: 18px;
   font-weight: 700;
 }
-/* line 206, ../sass/components/_woocommerce.scss */
+/* line 225, ../sass/components/_woocommerce.scss */
 #single-product .summary .price del {
   color: #7d7d7d;
   margin-right: 10px;
 }
-/* line 211, ../sass/components/_woocommerce.scss */
+/* line 230, ../sass/components/_woocommerce.scss */
 #single-product .summary .woocommerce-product-details__short-description {
   margin-bottom: 20px;
 }
-/* line 212, ../sass/components/_woocommerce.scss */
+/* line 231, ../sass/components/_woocommerce.scss */
 #single-product .summary form.cart {
   width: 170px;
   margin-bottom: 20px;
 }
-/* line 215, ../sass/components/_woocommerce.scss */
+/* line 234, ../sass/components/_woocommerce.scss */
 #single-product .summary form.cart input.qty {
   margin-bottom: -2px;
   text-align: center;
@@ -9203,98 +9227,66 @@ li.product .onsale,
   border: 1px solid #6ba8b2;
   border-radius: 2px 0 0 2px;
 }
-/* line 222, ../sass/components/_woocommerce.scss */
+/* line 241, ../sass/components/_woocommerce.scss */
 #single-product .summary form.cart button {
   width: 100%;
 }
-/* line 224, ../sass/components/_woocommerce.scss */
+/* line 243, ../sass/components/_woocommerce.scss */
 #single-product .summary .product_meta a {
   color: #5a9ea9;
 }
+/* line 246, ../sass/components/_woocommerce.scss */
+#single-product .info_personaliza {
+  background-color: #f4f4f4;
+  padding: 10px 15px;
+  border-radius: 3px;
+  cursor: pointer;
+}
 @media only screen and (min-width: 431px) and (max-width: 600px) {
-  /* line 228, ../sass/components/_woocommerce.scss */
+  /* line 253, ../sass/components/_woocommerce.scss */
   #single-product .content_personaliza .col:nth-child(2n+1) {
     clear: both;
   }
 }
 @media only screen and (min-width: 431px) and (max-width: 600px) {
-  /* line 231, ../sass/components/_woocommerce.scss */
+  /* line 256, ../sass/components/_woocommerce.scss */
   #single-product .page_personaliza .col:nth-child(2n+1) {
     clear: both;
   }
 }
 @media only screen and (min-width: 601px) {
-  /* line 232, ../sass/components/_woocommerce.scss */
+  /* line 257, ../sass/components/_woocommerce.scss */
   #single-product .page_personaliza .col:nth-child(3n+1) {
     clear: both;
   }
 }
-/* line 236, ../sass/components/_woocommerce.scss */
+/* line 261, ../sass/components/_woocommerce.scss */
 #single-product .tabs.wc-tabs {
   display: none;
 }
-/* line 237, ../sass/components/_woocommerce.scss */
+/* line 262, ../sass/components/_woocommerce.scss */
 #single-product #reviews {
   margin-bottom: 30px;
 }
-/* line 240, ../sass/components/_woocommerce.scss */
+/* line 265, ../sass/components/_woocommerce.scss */
 #single-product #reviews #comments {
   height: 450px;
   overflow: auto;
   padding-top: 10px;
 }
 @media only screen and (max-width: 600px) {
-  /* line 240, ../sass/components/_woocommerce.scss */
+  /* line 265, ../sass/components/_woocommerce.scss */
   #single-product #reviews #comments {
     height: inherit;
     max-height: 300px;
     margin-bottom: 30px;
   }
 }
-/* line 250, ../sass/components/_woocommerce.scss */
+/* line 275, ../sass/components/_woocommerce.scss */
 #single-product #reviews #comments > h2 span {
   color: #6ba8b2;
 }
-/* line 251, ../sass/components/_woocommerce.scss */
-#single-product #reviews #comments ol {
-  padding: 0px;
-}
-/* line 253, ../sass/components/_woocommerce.scss */
-#single-product #reviews #comments ol li.review {
-  margin-bottom: 20px;
-  list-style-type: none;
-}
-/* line 256, ../sass/components/_woocommerce.scss */
-#single-product #reviews #comments ol li.review img {
-  display: none;
-}
-/* line 258, ../sass/components/_woocommerce.scss */
-#single-product #reviews #comments ol li.review .comment-text .star-rating {
-  font-weight: 600;
-}
-/* line 260, ../sass/components/_woocommerce.scss */
-#single-product #reviews #comments ol li.review .comment-text .star-rating .rating {
-  background-color: #6ba8b2;
-  color: #fff;
-  width: 20px;
-  line-height: 20px;
-  display: inline-block;
-  text-align: center;
-  border-radius: 3px;
-}
-/* line 271, ../sass/components/_woocommerce.scss */
-#single-product #reviews #comments ol li.review .description p {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  cursor: pointer;
-}
-/* line 276, ../sass/components/_woocommerce.scss */
-#single-product #reviews #comments ol li.review .description p.active {
-  white-space: normal;
-  cursor: inherit;
-}
-/* line 284, ../sass/components/_woocommerce.scss */
+/* line 277, ../sass/components/_woocommerce.scss */
 #single-product #reviews #review_form_wrapper #review_form {
   margin-bottom: 30px;
   padding: 30px;
@@ -9302,22 +9294,22 @@ li.product .onsale,
   background-color: #f4f2f5;
   border-radius: 5px;
 }
-/* line 290, ../sass/components/_woocommerce.scss */
+/* line 283, ../sass/components/_woocommerce.scss */
 #single-product #reviews #review_form_wrapper #review_form #reply-title {
   display: block;
   font-size: 22px;
   text-align: center;
 }
-/* line 295, ../sass/components/_woocommerce.scss */
+/* line 288, ../sass/components/_woocommerce.scss */
 #single-product #reviews #review_form_wrapper #review_form label {
   display: inline-block;
   margin-bottom: 10px;
 }
-/* line 299, ../sass/components/_woocommerce.scss */
+/* line 292, ../sass/components/_woocommerce.scss */
 #single-product #reviews #review_form_wrapper #review_form .comment-form-rating {
   margin-bottom: 20px;
 }
-/* line 301, ../sass/components/_woocommerce.scss */
+/* line 294, ../sass/components/_woocommerce.scss */
 #single-product #reviews #review_form_wrapper #review_form .comment-form-rating a {
   display: inline-block;
   width: 25px;
@@ -9328,161 +9320,161 @@ li.product .onsale,
   background-color: #7cb2bb;
   border-radius: 50%;
 }
-/* line 310, ../sass/components/_woocommerce.scss */
+/* line 303, ../sass/components/_woocommerce.scss */
 #single-product #reviews #review_form_wrapper #review_form .comment-form-rating a:hover, #single-product #reviews #review_form_wrapper #review_form .comment-form-rating a.active {
   background-color: #ffbc00;
 }
-/* line 315, ../sass/components/_woocommerce.scss */
+/* line 308, ../sass/components/_woocommerce.scss */
 #single-product #reviews #review_form_wrapper #review_form .form-submit #submit {
   width: 100%;
 }
-/* line 318, ../sass/components/_woocommerce.scss */
+/* line 311, ../sass/components/_woocommerce.scss */
 #single-product .related.products {
   margin-bottom: 45px;
 }
-/* line 320, ../sass/components/_woocommerce.scss */
+/* line 313, ../sass/components/_woocommerce.scss */
 #single-product .related.products h2 {
   text-align: center;
 }
 @media only screen and (min-width: 601px) and (max-width: 992px) {
-  /* line 321, ../sass/components/_woocommerce.scss */
+  /* line 314, ../sass/components/_woocommerce.scss */
   #single-product .related.products ul li:nth-child(4n) {
     display: none;
   }
 }
 
 /* Tienda */
-/* line 326, ../sass/components/_woocommerce.scss */
+/* line 319, ../sass/components/_woocommerce.scss */
 .vyarte_tienda #primary {
   margin-bottom: 70px;
 }
 
-/* line 327, ../sass/components/_woocommerce.scss */
+/* line 320, ../sass/components/_woocommerce.scss */
 .woocommerce-result-count {
   margin-bottom: 10px;
 }
 
-/* line 328, ../sass/components/_woocommerce.scss */
+/* line 321, ../sass/components/_woocommerce.scss */
 .woocommerce-loop-product__title {
   min-height: 38px;
 }
 
 /* Carrito */
-/* line 332, ../sass/components/_woocommerce.scss */
+/* line 325, ../sass/components/_woocommerce.scss */
 .woocommerce table.cart img {
   width: 65px !important;
 }
-/* line 333, ../sass/components/_woocommerce.scss */
+/* line 326, ../sass/components/_woocommerce.scss */
 .woocommerce table.cart td.actions .input-text {
   width: 130px !important;
 }
-/* line 337, ../sass/components/_woocommerce.scss */
+/* line 330, ../sass/components/_woocommerce.scss */
 .woocommerce .quantity .qty {
   width: 100px !important;
 }
-/* line 341, ../sass/components/_woocommerce.scss */
+/* line 334, ../sass/components/_woocommerce.scss */
 .woocommerce a.checkout-button {
   width: 100% !important;
 }
 
-/* line 344, ../sass/components/_woocommerce.scss */
+/* line 337, ../sass/components/_woocommerce.scss */
 .cart-empty {
   margin-bottom: 20px;
 }
 
-/* line 345, ../sass/components/_woocommerce.scss */
+/* line 338, ../sass/components/_woocommerce.scss */
 .cart-empty, .return-to-shop {
   text-align: center;
 }
 
 /* CUENTA */
-/* line 350, ../sass/components/_woocommerce.scss */
+/* line 343, ../sass/components/_woocommerce.scss */
 .vyarte_cuenta h2 {
   text-align: center;
 }
 
-/* line 351, ../sass/components/_woocommerce.scss */
+/* line 344, ../sass/components/_woocommerce.scss */
 .woocommerce-form-login {
   max-width: 300px;
   margin: 20px auto 0 !important;
 }
-/* line 354, ../sass/components/_woocommerce.scss */
+/* line 347, ../sass/components/_woocommerce.scss */
 .woocommerce-form-login button {
   width: 100%;
 }
 
-/* line 356, ../sass/components/_woocommerce.scss */
+/* line 349, ../sass/components/_woocommerce.scss */
 .woocommerce-MyAccount-navigation ul {
   text-align: center;
   border-radius: 3px;
 }
-/* line 360, ../sass/components/_woocommerce.scss */
+/* line 353, ../sass/components/_woocommerce.scss */
 .woocommerce-MyAccount-navigation ul li {
   display: inline-block;
 }
-/* line 362, ../sass/components/_woocommerce.scss */
+/* line 355, ../sass/components/_woocommerce.scss */
 .woocommerce-MyAccount-navigation ul li a {
   display: inline-block;
   padding: 0 10px;
   line-height: 30px;
 }
-/* line 366, ../sass/components/_woocommerce.scss */
+/* line 359, ../sass/components/_woocommerce.scss */
 .woocommerce-MyAccount-navigation ul li a:hover {
   color: #6ba8b2;
 }
-/* line 370, ../sass/components/_woocommerce.scss */
+/* line 363, ../sass/components/_woocommerce.scss */
 .woocommerce-MyAccount-navigation ul li:not(:last-child) {
   margin-right: 5px;
 }
-/* line 371, ../sass/components/_woocommerce.scss */
+/* line 364, ../sass/components/_woocommerce.scss */
 .woocommerce-MyAccount-navigation ul li.is-active a {
   color: #6ba8b2;
 }
 @media only screen and (max-width: 430px) {
-  /* line 360, ../sass/components/_woocommerce.scss */
+  /* line 353, ../sass/components/_woocommerce.scss */
   .woocommerce-MyAccount-navigation ul li {
     display: block;
     margin: 0px;
   }
-  /* line 376, ../sass/components/_woocommerce.scss */
+  /* line 369, ../sass/components/_woocommerce.scss */
   .woocommerce-MyAccount-navigation ul li a {
     width: 100%;
   }
 }
-/* line 379, ../sass/components/_woocommerce.scss */
+/* line 372, ../sass/components/_woocommerce.scss */
 .woocommerce-MyAccount-navigation ul li:last-child a {
   color: #c30008;
 }
-/* line 381, ../sass/components/_woocommerce.scss */
+/* line 374, ../sass/components/_woocommerce.scss */
 .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--downloads {
   display: none;
 }
 
-/* line 386, ../sass/components/_woocommerce.scss */
+/* line 379, ../sass/components/_woocommerce.scss */
 .woocommerce-EditAccountForm {
   max-width: 500px;
   margin: auto;
 }
 
-/* line 391, ../sass/components/_woocommerce.scss */
+/* line 384, ../sass/components/_woocommerce.scss */
 .woocommerce-Addresses {
   margin-top: 20px;
 }
-/* line 393, ../sass/components/_woocommerce.scss */
+/* line 386, ../sass/components/_woocommerce.scss */
 .woocommerce-Addresses header {
   text-align: center;
 }
-/* line 395, ../sass/components/_woocommerce.scss */
+/* line 388, ../sass/components/_woocommerce.scss */
 .woocommerce-Addresses header h3 {
   margin-bottom: 10px;
 }
-/* line 396, ../sass/components/_woocommerce.scss */
+/* line 389, ../sass/components/_woocommerce.scss */
 .woocommerce-Addresses header a.edit {
   margin-bottom: 20px;
 }
 
 /* Personalización */
-/* line 404, ../sass/components/_woocommerce.scss */
+/* line 397, ../sass/components/_woocommerce.scss */
 .block_persOrder {
   position: absolute;
   top: 0px;
@@ -9503,17 +9495,21 @@ header.js-header nav {
   height: 80px;
   z-index: 999;
 }
+/* line 8, ../sass/components/_header.scss */
+header.js-header nav > a > img {
+  width: 77px;
+}
 @media only screen and (max-width: 600px) {
   /* line 4, ../sass/components/_header.scss */
   header.js-header nav {
     height: 50px;
   }
-  /* line 10, ../sass/components/_header.scss */
+  /* line 11, ../sass/components/_header.scss */
   header.js-header nav img {
     width: 50px;
   }
 }
-/* line 12, ../sass/components/_header.scss */
+/* line 13, ../sass/components/_header.scss */
 header.js-header nav #btn-open-nav {
   position: absolute;
   right: 0px;
@@ -9521,11 +9517,11 @@ header.js-header nav #btn-open-nav {
   font-size: 26px;
   cursor: pointer;
 }
-/* line 18, ../sass/components/_header.scss */
+/* line 19, ../sass/components/_header.scss */
 header.js-header nav #btn-open-nav:hover {
   color: #6ba8b2;
 }
-/* line 20, ../sass/components/_header.scss */
+/* line 21, ../sass/components/_header.scss */
 header.js-header nav > ul {
   float: right;
   display: inline-block;
@@ -9533,11 +9529,11 @@ header.js-header nav > ul {
   margin-top: 25px;
   margin-bottom: 25px;
 }
-/* line 27, ../sass/components/_header.scss */
+/* line 28, ../sass/components/_header.scss */
 header.js-header nav > ul.open {
   right: 0px;
 }
-/* line 28, ../sass/components/_header.scss */
+/* line 29, ../sass/components/_header.scss */
 header.js-header nav > ul #btn-close-nav {
   position: absolute;
   top: 3px;
@@ -9545,25 +9541,25 @@ header.js-header nav > ul #btn-close-nav {
   font-size: 22px;
   cursor: pointer;
 }
-/* line 34, ../sass/components/_header.scss */
+/* line 35, ../sass/components/_header.scss */
 header.js-header nav > ul #btn-close-nav:hover {
   color: #6ba8b2;
 }
 @media only screen and (min-width: 601px) {
-  /* line 37, ../sass/components/_header.scss */
+  /* line 38, ../sass/components/_header.scss */
   header.js-header nav > ul > li:nth-child(2) a {
     padding-left: 0px !important;
   }
-  /* line 38, ../sass/components/_header.scss */
+  /* line 39, ../sass/components/_header.scss */
   header.js-header nav > ul > li:nth-child(7) a {
     padding-right: 0px !important;
   }
 }
-/* line 40, ../sass/components/_header.scss */
+/* line 41, ../sass/components/_header.scss */
 header.js-header nav > ul li {
   display: inline-block;
 }
-/* line 42, ../sass/components/_header.scss */
+/* line 43, ../sass/components/_header.scss */
 header.js-header nav > ul li a, header.js-header nav > ul li .customLink {
   display: inline-block;
   padding: 0 9px;
@@ -9572,56 +9568,56 @@ header.js-header nav > ul li a, header.js-header nav > ul li .customLink {
   color: #555555;
   cursor: pointer;
 }
-/* line 50, ../sass/components/_header.scss */
+/* line 51, ../sass/components/_header.scss */
 header.js-header nav > ul li a:hover, header.js-header nav > ul li a.active, header.js-header nav > ul li .customLink:hover, header.js-header nav > ul li .customLink.active {
   color: #5a9ea9;
 }
 @media only screen and (min-width: 601px) and (max-width: 992px) {
-  /* line 42, ../sass/components/_header.scss */
+  /* line 43, ../sass/components/_header.scss */
   header.js-header nav > ul li a, header.js-header nav > ul li .customLink {
     font-size: 12px;
   }
 }
-/* line 53, ../sass/components/_header.scss */
+/* line 54, ../sass/components/_header.scss */
 header.js-header nav > ul li ul {
   margin: 0px;
   background-color: #fff;
 }
 @media only screen and (min-width: 601px) {
-  /* line 53, ../sass/components/_header.scss */
+  /* line 54, ../sass/components/_header.scss */
   header.js-header nav > ul li ul {
     position: absolute;
     display: none;
   }
-  /* line 59, ../sass/components/_header.scss */
+  /* line 60, ../sass/components/_header.scss */
   header.js-header nav > ul li ul li a {
     padding: 0 20px !important;
   }
 }
-/* line 61, ../sass/components/_header.scss */
+/* line 62, ../sass/components/_header.scss */
 header.js-header nav > ul li ul li {
   display: block;
 }
-/* line 63, ../sass/components/_header.scss */
+/* line 64, ../sass/components/_header.scss */
 header.js-header nav > ul li ul li a {
   display: block;
   padding: 0 20px 0 30px;
 }
-/* line 66, ../sass/components/_header.scss */
+/* line 67, ../sass/components/_header.scss */
 header.js-header nav > ul li ul li a:hover {
   color: #fff;
   background-color: #6ba8b2;
 }
-/* line 76, ../sass/components/_header.scss */
+/* line 77, ../sass/components/_header.scss */
 header.js-header nav > ul li:hover ul {
   display: block;
 }
-/* line 80, ../sass/components/_header.scss */
+/* line 81, ../sass/components/_header.scss */
 header.js-header nav > ul .icons-nav {
   display: inline-block;
   float: right;
 }
-/* line 83, ../sass/components/_header.scss */
+/* line 84, ../sass/components/_header.scss */
 header.js-header nav > ul .icons-nav a, header.js-header nav > ul .icons-nav .customLink {
   display: inline-block;
   margin-right: 5px;
@@ -9629,27 +9625,27 @@ header.js-header nav > ul .icons-nav a, header.js-header nav > ul .icons-nav .cu
   line-height: 30px;
   cursor: pointer;
 }
-/* line 90, ../sass/components/_header.scss */
+/* line 91, ../sass/components/_header.scss */
 header.js-header nav > ul .icons-nav a:hover, header.js-header nav > ul .icons-nav .customLink:hover {
   color: #5a9ea9;
 }
-/* line 91, ../sass/components/_header.scss */
+/* line 92, ../sass/components/_header.scss */
 header.js-header nav > ul .icons-nav a em, header.js-header nav > ul .icons-nav .customLink em {
   font-size: 20px;
 }
-/* line 93, ../sass/components/_header.scss */
+/* line 94, ../sass/components/_header.scss */
 header.js-header nav > ul .icons-nav a em.icon-basket, header.js-header nav > ul .icons-nav a em.icon-user, header.js-header nav > ul .icons-nav .customLink em.icon-basket, header.js-header nav > ul .icons-nav .customLink em.icon-user {
   font-size: 22px;
 }
-/* line 94, ../sass/components/_header.scss */
+/* line 95, ../sass/components/_header.scss */
 header.js-header nav > ul .icons-nav a em.icon-youtube, header.js-header nav > ul .icons-nav .customLink em.icon-youtube {
   font-size: 23px;
 }
-/* line 95, ../sass/components/_header.scss */
+/* line 96, ../sass/components/_header.scss */
 header.js-header nav > ul .icons-nav a em.icon-basket, header.js-header nav > ul .icons-nav .customLink em.icon-basket {
   position: relative;
 }
-/* line 97, ../sass/components/_header.scss */
+/* line 98, ../sass/components/_header.scss */
 header.js-header nav > ul .icons-nav a em.icon-basket span, header.js-header nav > ul .icons-nav .customLink em.icon-basket span {
   position: absolute;
   right: -9px;
@@ -9662,11 +9658,11 @@ header.js-header nav > ul .icons-nav a em.icon-basket span, header.js-header nav
   border-radius: 50%;
   z-index: -1;
 }
-/* line 111, ../sass/components/_header.scss */
+/* line 112, ../sass/components/_header.scss */
 header.js-header nav > ul .icons-nav a em.icon-user, header.js-header nav > ul .icons-nav .customLink em.icon-user {
   position: relative;
 }
-/* line 113, ../sass/components/_header.scss */
+/* line 114, ../sass/components/_header.scss */
 header.js-header nav > ul .icons-nav a em.icon-user span, header.js-header nav > ul .icons-nav .customLink em.icon-user span {
   position: absolute;
   right: -9px;
@@ -9679,12 +9675,12 @@ header.js-header nav > ul .icons-nav a em.icon-user span, header.js-header nav >
   border-radius: 50%;
   z-index: -1;
 }
-/* line 128, ../sass/components/_header.scss */
+/* line 129, ../sass/components/_header.scss */
 header.js-header nav > ul .icons-nav a#linkSearchProduct.active, header.js-header nav > ul .icons-nav .customLink#linkSearchProduct.active {
   color: #6ba8b2;
 }
 @media only screen and (min-width: 601px) {
-  /* line 131, ../sass/components/_header.scss */
+  /* line 132, ../sass/components/_header.scss */
   header.js-header nav > ul .searchProduct {
     position: absolute;
     right: 0px;
@@ -9695,28 +9691,28 @@ header.js-header nav > ul .icons-nav a#linkSearchProduct.active, header.js-heade
     border-radius: 0 0 3px 3px;
     box-shadow: 4px 4px 10px 0 rgba(84, 84, 84, 0.2);
   }
-  /* line 141, ../sass/components/_header.scss */
+  /* line 142, ../sass/components/_header.scss */
   header.js-header nav > ul .searchProduct.active {
     top: 80px;
   }
-  /* line 144, ../sass/components/_header.scss */
+  /* line 145, ../sass/components/_header.scss */
   header.js-header nav > ul .searchProduct form {
     height: 30px;
   }
 }
 @media only screen and (max-width: 600px) {
-  /* line 131, ../sass/components/_header.scss */
+  /* line 132, ../sass/components/_header.scss */
   header.js-header nav > ul .searchProduct {
     padding: 10px 20px;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 992px) {
-  /* line 20, ../sass/components/_header.scss */
+  /* line 21, ../sass/components/_header.scss */
   header.js-header nav > ul {
     margin-top: 40px;
     margin-bottom: 10px;
   }
-  /* line 153, ../sass/components/_header.scss */
+  /* line 154, ../sass/components/_header.scss */
   header.js-header nav > ul .icons-nav {
     position: absolute;
     top: 5px;
@@ -9724,7 +9720,7 @@ header.js-header nav > ul .icons-nav a#linkSearchProduct.active, header.js-heade
   }
 }
 @media only screen and (max-width: 600px) {
-  /* line 20, ../sass/components/_header.scss */
+  /* line 21, ../sass/components/_header.scss */
   header.js-header nav > ul {
     position: fixed;
     right: -300px;
@@ -9736,28 +9732,28 @@ header.js-header nav > ul .icons-nav a#linkSearchProduct.active, header.js-heade
     background-color: #fff;
     box-shadow: -2px 2px 6px 0 rgba(84, 84, 84, 0.2);
   }
-  /* line 169, ../sass/components/_header.scss */
+  /* line 170, ../sass/components/_header.scss */
   header.js-header nav > ul li {
     display: block;
   }
-  /* line 171, ../sass/components/_header.scss */
+  /* line 172, ../sass/components/_header.scss */
   header.js-header nav > ul li a, header.js-header nav > ul li .customLink {
     display: block;
     line-height: 40px;
     padding: 0 20px;
   }
-  /* line 175, ../sass/components/_header.scss */
+  /* line 176, ../sass/components/_header.scss */
   header.js-header nav > ul li a:hover, header.js-header nav > ul li .customLink:hover {
     color: #fff;
     background-color: #6ba8b2;
   }
-  /* line 181, ../sass/components/_header.scss */
+  /* line 182, ../sass/components/_header.scss */
   header.js-header nav > ul .icons-nav {
     float: none;
     margin-top: 20px;
     padding: 0 10px;
   }
-  /* line 185, ../sass/components/_header.scss */
+  /* line 186, ../sass/components/_header.scss */
   header.js-header nav > ul .icons-nav #linkSearchProduct {
     display: none;
   }

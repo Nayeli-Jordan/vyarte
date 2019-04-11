@@ -54,32 +54,51 @@ li.product .onsale,
 	border: 2px solid $primary-color;
 	z-index: 101;
 }
-/* Rating */
-.woocommerce-product-rating { 
-	.content_stars {
-		margin-left: -4px;
-		em { 
-			color: #c6c6c6;
-			margin-right: -8px;
-		}
-		&.activeToStar1 {
-			.star1 { color: #f6bd15; }
-		}
-		&.activeToStar2 {
-			.star1, .star2 { color: #f6bd15; }
-		}
-		&.activeToStar3 {
-			.star1, .star2, .star3 { color: #f6bd15; }
-		}
-		&.activeToStar4 {
-			.star1, .star2, .star3, .star4 { color: #f6bd15; }
-		}
-		&.activeToStar5 {
-			.star1, .star2, .star3, .star4, .star5 { color: #f6bd15; }
-		}
+/* Rating */ 
+.content_stars {
+	display: inline-block;
+	margin-left: -4px;
+	em { 
+		color: #c6c6c6;
+		margin-right: -8px;
+	}
+	&.activeToStar1 {
+		.star1 { color: #f6bd15; }
+	}
+	&.activeToStar2 {
+		.star1, .star2 { color: #f6bd15; }
+	}
+	&.activeToStar3 {
+		.star1, .star2, .star3 { color: #f6bd15; }
+	}
+	&.activeToStar4 {
+		.star1, .star2, .star3, .star4 { color: #f6bd15; }
+	}
+	&.activeToStar5 {
+		.star1, .star2, .star3, .star4, .star5 { color: #f6bd15; }
 	}
 }
 .price ins { text-decoration: none; }
+/* Comments */
+ol {
+	padding: 0px;
+	li.review {
+		margin-bottom: 10px;
+		list-style-type: none;
+		.comment-text {
+			.content_stars { 
+				margin-right: 10px; 
+				margin-bottom: -5px;
+				vertical-align: middle;
+			}
+			.meta { 
+				display: inline-block; 
+				vertical-align: middle;
+				font-size: 12px;
+			}
+		}
+	}				
+}
 
 /* Productos */
 .main-body ul.products[class*=columns-] {
@@ -224,6 +243,12 @@ li.product .onsale,
 		.product_meta a { color: $primary-color-dark; }
 	}
 
+	.info_personaliza {
+		background-color: #f4f4f4;
+		padding: 10px 15px;
+		border-radius: 3px;
+		cursor: pointer;
+	}
 	.content_personaliza {
 		@media #{$sm-only} { .col:nth-child(2n+1) { clear: both; } }
 	}
@@ -248,38 +273,6 @@ li.product .onsale,
 				margin-bottom: 30px;
 			}
 			& > h2 span { color: $primary-color; }
-			ol {
-				padding: 0px;
-				li.review {
-					margin-bottom: 20px;
-					list-style-type: none;
-					img { display: none; }
-					.comment-text {
-						.star-rating { 
-							font-weight: 600; 
-							.rating {
-								background-color: $primary-color;
-								color: #fff;
-								width: 20px;
-								line-height: 20px;
-								display: inline-block;
-								text-align: center;
-								border-radius: 3px;
-							}
-						}
-					}
-					.description p {
-						white-space: nowrap; 
-						overflow: hidden;
-						text-overflow: ellipsis;
-						cursor: pointer;
-						&.active { 
-							white-space: normal; 
-							cursor: inherit;
-						}
-					}
-				}				
-			}
 		}
 		#review_form_wrapper #review_form {
 			margin-bottom: 30px;

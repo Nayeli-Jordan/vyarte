@@ -206,7 +206,9 @@ remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_l
 add_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_single_rating', 5 ); // El mismo de single
 /*Single*/
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+
 add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 6 );
+remove_action( 'woocommerce_review_before', 'woocommerce_review_display_gravatar', 10 );
 /*Shop - Archive*/
 remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 

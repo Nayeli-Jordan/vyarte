@@ -58,6 +58,12 @@ if ( post_password_required() ) {
 				 * @hooked WC_Structured_Data::generate_product_data() - 60
 				 */
 				do_action( 'woocommerce_single_product_summary' ); ?>
+
+			<?php if (has_term('sublimacion-y-serigrafia','product_cat')) { ?>
+				<div class="info_personaliza">
+					<p>Todos nuestros productos de serigrafía y sublimación se pueden personalizar. Agrégale una imagen y el texto que desees. <strong>¡Agrega a tu carrito, paga y personaliza tus productos!</strong></p>
+				</div>
+			<?php } ?>
 		</div>		
 	</div>
 	<?php if (has_term('diseno-grafico','product_cat')) { ?>

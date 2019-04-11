@@ -170,4 +170,16 @@ add_action('init', function(){
 		wp_insert_post( $page, true );
 	}
 
+	// Comentarios Clientes
+	if( ! get_page_by_path('comentarios-clientes') ){
+		$page = array(
+			'post_author' => 1,
+			'post_status' => 'publish',
+			'post_title'  => 'Comentarios Clientes',
+			'post_name'   => 'comentarios-clientes',
+			'post_type'   => 'page'
+		);
+		wp_insert_post( $page, true );
+	}	
+
 });
