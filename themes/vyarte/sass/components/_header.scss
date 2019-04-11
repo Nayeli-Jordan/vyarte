@@ -33,12 +33,15 @@ header.js-header {
 				cursor: pointer;
 				&:hover { color: $primary-color; }
 			}
+			@media #{$medium-and-up} {
+				& > li:nth-child(2) a { padding-left: 0px!important; }
+				& > li:nth-child(7) a { padding-right: 0px!important; }				
+			}
 			li {
 				display: inline-block;
 				a, .customLink {
 					display: inline-block;
-					padding: 0 5px;
-					//padding: 0 9px;
+					padding: 0 9px;
 					font-size: 14px;
 					line-height: 30px;
 					color: $text-color;

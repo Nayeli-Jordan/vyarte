@@ -224,13 +224,14 @@ li.product .onsale,
 		.product_meta a { color: $primary-color-dark; }
 	}
 
-	/* .contact_diseno,
 	.content_personaliza {
-		position: relative;
-		width: calc(100vw - 10px);
-		left: -8.8%;
+		@media #{$sm-only} { .col:nth-child(2n+1) { clear: both; } }
 	}
- */
+	.page_personaliza {
+		@media #{$sm-only} { .col:nth-child(2n+1) { clear: both; } }
+		@media #{$medium-and-up} { .col:nth-child(3n+1) { clear: both; } }
+	}
+
 	/* Reviews */
 	.tabs.wc-tabs { display: none; }
 	#reviews {

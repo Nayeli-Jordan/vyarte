@@ -283,7 +283,7 @@ add_action('init', function(){
 		'show_ui'            => true,
 		'show_in_menu'       => 'edit.php?post_type=page',
 		'query_var'          => true,
-		'rewrite'            => array( 'slug' => 'vy_persInstruccion' ),
+		'rewrite'            => array( 'slug' => 'vy_persinstruccion' ),
 		'capability_type'    => 'post',
 		'has_archive'        => true,
 		'hierarchical'       => false,
@@ -291,6 +291,6 @@ add_action('init', function(){
 		'supports'           => array( 'title', 'editor', 'thumbnail' ),
 		'menu_icon' 		 => 'dashicons-admin-users'
 	);
-	register_post_type( 'vy_persInstruccion', $args );	
+	register_post_type( 'vy_persinstruccion', $args );	
 
 });

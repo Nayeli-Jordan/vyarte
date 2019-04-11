@@ -1,19 +1,27 @@
 <?php get_header(); ?>
 	<section id="sliderHome" class="text-center margin-bottom-50">
-		<div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-timeout="5000" data-cycle-prev="#prevSlider" data-cycle-next="#nextSlider">
+		<div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-slides="> div" data-cycle-timeout="5000" >
 		<?php
 			$slider_args = array(
 				'post_type' 		=> 'slider',
-				'posts_per_page' 	=> 2,
+				'posts_per_page' 	=> 3,
 			);
 			$slider_query = new WP_Query( $slider_args );
 			if ( $slider_query->have_posts() ) : 
 				$i = 1;
-				while ( $slider_query->have_posts() ) : $slider_query->the_post(); ?>
-					<img src="<?php the_post_thumbnail_url('full'); ?>">	
+				while ( $slider_query->have_posts() ) : $slider_query->the_post(); 
+					$custom_fields  = get_post_custom();
+					$post_id        = get_the_ID();
+					$slideLink      = get_post_meta( $post_id, 'slider_slideLink', true ); ?>
+					<div>
+						<?php if( $slideLink != "" ) : ?>
+							<a href="<?php echo $slideLink; ?>" class="linkSlide"></a>
+						<?php endif; ?>
+						<img src="<?php the_post_thumbnail_url('full'); ?>">
+					</div>
 				<?php $i ++; endwhile; wp_reset_postdata();
 				if ($i > 0):?>
-					<div class="cycle-pager"></div>
+					<span class="cycle-pager"></span>
 				<?php endif;			
 			endif; ?> 
 		</div> <!-- end cycle-slideshow -->

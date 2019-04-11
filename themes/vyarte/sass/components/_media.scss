@@ -60,7 +60,26 @@ video.responsive-video {
 }
 
 
-#sliderHome .cycle-slideshow img { width: 100%; }
+#sliderHome {
+	.cycle-slideshow {
+		div.cycle-slide {
+			width: 100%;
+			a {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+			}
+			img { width: 100%; }
+		}
+		.cycle-pager {
+			position: absolute;
+		    width: 100%;
+		    bottom: -5px;
+		    left: 0px;
+		    z-index: 199;
+		}	
+	} 
+} 
 #sliderDg .cycle-slideshow {
 	.cycle-slide {
 		width: 100%;
@@ -79,12 +98,7 @@ video.responsive-video {
 		}		
 	}
 }
-#sliderHome .cycle-pager {
-	position: absolute;
-    width: 100%;
-    bottom: -15px;
-    z-index: 199;
-}
+
 #sliderHome,
 #sliderDg {
 	.cycle-pager span {

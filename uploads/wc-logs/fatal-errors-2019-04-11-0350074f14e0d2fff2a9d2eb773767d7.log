@@ -1,0 +1,10 @@
+2019-04-11T15:05:26+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\Users\Tony\Documents\sites\vyarte\wp-content\plugins\woocommerce\includes\admin\helper\class-wc-helper-api.php on line 2
+
+2019-04-11T16:33:08+00:00 CRITICAL syntax error, unexpected ''operator'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in C:\Users\Tony\Documents\sites\vyarte\wp-content\themes\vyarte\woocommerce\content-single-product.php on line 80
+
+2019-04-11T16:34:10+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\Users\Tony\Documents\sites\vyarte\wp-includes\wp-db.php on line 1924
+
+2019-04-11T16:42:37+00:00 CRITICAL syntax error, unexpected ''tax_query'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in C:\Users\Tony\Documents\sites\vyarte\wp-content\themes\vyarte\woocommerce\content-single-product.php on line 77
+
+2019-04-11T16:43:33+00:00 CRITICAL syntax error, unexpected ''operator'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in C:\Users\Tony\Documents\sites\vyarte\wp-content\themes\vyarte\page-personalizar-producto.php on line 25
+

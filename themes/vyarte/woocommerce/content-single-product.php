@@ -68,7 +68,32 @@ if ( post_password_required() ) {
 		<div class="content_personaliza text-center bg-gray-light padding-top-bottom-40 margin-bottom-30">
 			<h3>¡Personaliza tu producto gratis!</h3>
 			<p class="margin-bottom-20">Conoce los detalles para hacerlo</p>
-			<!-- linea del tiempo -->
+			<div class="row row-complete">
+			<?php
+			$inst_args = array(
+				'post_type' 		=> 'vy_persinstruccion',
+				'posts_per_page' 	=> -1,
+				'order'				=> 'ASC',
+				'tax_query' 		=> array(
+					array(
+						'taxonomy' 	=> 'cat_instruccion',
+						'field'	   	=> 'slug',
+						'terms'	 	=> 'instruccion-base',
+						'operator'	=> 'IN',
+					)
+				)
+			);
+			$inst_query = new WP_Query( $inst_args );
+			if ( $inst_query->have_posts() ) : 
+				$i = 1;
+				while ( $inst_query->have_posts() ) : $inst_query->the_post(); ?>
+					<div class="col s12 sm6 m3 margin-bottom-20">
+						<img src="<?php the_post_thumbnail_url('large'); ?>" alt="" class="responsive-img margin-bottom-10">
+						<p class="text-center"><strong><?php the_title(); ?></strong></p>
+					</div>			
+			<?php $i ++; endwhile; wp_reset_postdata();
+			endif; ?>				
+			</div>
 			<a href="<?php echo SITEURL; ?>personalizar-producto" target="_blank" class="btn margin-bottom-10">Ver más</a><br>
 			<a href="<?php echo SITEURL; ?>terminos-y-condiciones" target="_blank" class="btn">Términos y condiciones</a>
 		</div>

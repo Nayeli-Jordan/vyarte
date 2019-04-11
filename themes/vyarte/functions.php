@@ -211,8 +211,6 @@ add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_m
 remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 
 
-
-
 /**
 * CUSTOM FUNCTIONS
 */
@@ -307,6 +305,36 @@ function vy_personalizado_save_metas( $idvy_personalizado, $vy_personalizado ){
         }
         if ( isset( $_POST['vy_personalizado_imageb'] ) ){
             update_post_meta( $idvy_personalizado, 'vy_personalizado_imageb', $_POST['vy_personalizado_imageb'] );
+        }
+    }
+}
+
+/*
+** URL Slider
+*/
+add_action( 'add_meta_boxes', 'slider_custom_metabox' );
+function slider_custom_metabox(){
+    add_meta_box( 'slider_meta', 'Detalles Slide', 'display_slider_atributos', 'slider', 'advanced', 'default');
+}
+
+function display_slider_atributos( $slider ){
+    $slideLink       = esc_html( get_post_meta( $slider->ID, 'slider_slideLink', true ) );
+?>
+    <table class="vy-custum-fields">
+        <tr>
+            <th>
+                <label for="slider_slideLink">Enlace:</label>
+                <input type="text" id="slider_slideLink" name="slider_slideLink" value="<?php echo $slideLink; ?>" placeholder="URL" required>
+            </th>
+        </tr>
+    </table>
+<?php }
+
+add_action( 'save_post', 'slider_save_metas', 10, 2 );
+function slider_save_metas( $idslider, $slider ){
+    if ( $slider->post_type == 'slider' ){
+        if ( isset( $_POST['slider_slideLink'] ) ){
+            update_post_meta( $idslider, 'slider_slideLink', $_POST['slider_slideLink'] );
         }
     }
 }

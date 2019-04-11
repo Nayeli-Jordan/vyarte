@@ -7,15 +7,24 @@
 					<h2 class="margin-bottom-10"><?php the_title(); ?></h2>
 				</div>
 			</div>
-			<div class="container content-editor">
+			<div class="container content-editor page_personaliza">
 				<div class="row row-complete margin-top-30 margin-bottom-30">
 					<div class="col s12 m10 offset-m1">
 						<?php the_content(); ?>	
 					</div>
 					<?php
 					$inst_args = array(
-						'post_type' 		=> 'vy_persInstruccion',
+						'post_type' 		=> 'vy_persinstruccion',
 						'posts_per_page' 	=> -1,
+						'order'				=> 'ASC',
+						'tax_query' 		=> array(
+							array(
+								'taxonomy' 	=> 'cat_instruccion',
+								'field'	   	=> 'slug',
+								'terms'	 	=> 'instruccion-base',
+								'operator'	=> 'NOT IN',
+							)
+						)
 					);
 					$inst_query = new WP_Query( $inst_args );
 					if ( $inst_query->have_posts() ) : 
