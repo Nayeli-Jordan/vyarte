@@ -261,4 +261,36 @@ add_action('init', function(){
 	);
 	register_post_type( 'vy_personalizado', $args );
 
+	// Instrucción personalización
+	$labels = array(
+		'name'          => 'Instrucción',
+		'singular_name' => 'Instrucción',
+		'add_new'       => 'Nueva Instrucción',
+		'add_new_item'  => 'Nueva Instrucción',
+		'edit_item'     => 'Editar Instrucción',
+		'new_item'      => 'Nuevo Instrucción',
+		'all_items'     => 'Instrucción personalización',
+		'view_item'     => 'Ver Instrucción',
+		'search_items'  => 'Buscar Instrucción',
+		'not_found'     => 'No hay Instrucción',
+		'menu_name'     => 'Instrucción personalización'
+	);
+
+	$args = array(
+		'labels'             => $labels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => 'edit.php?post_type=page',
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'vy_persInstruccion' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => 6,
+		'supports'           => array( 'title', 'editor', 'thumbnail' ),
+		'menu_icon' 		 => 'dashicons-admin-users'
+	);
+	register_post_type( 'vy_persInstruccion', $args );	
+
 });

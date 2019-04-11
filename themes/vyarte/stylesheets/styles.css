@@ -2584,13 +2584,18 @@ ul li {
 .woocommerce-product-details__short-description ol li {
   margin-bottom: 5px;
 }
+/* line 38, ../sass/components/_global.scss */
+.content-editor ul li,
+.woocommerce-product-details__short-description ul li {
+  list-style: disc;
+}
 
-/* line 41, ../sass/components/_global.scss */
+/* line 42, ../sass/components/_global.scss */
 .clearfix {
   clear: both;
 }
 
-/* line 43, ../sass/components/_global.scss */
+/* line 44, ../sass/components/_global.scss */
 .hr, hr {
   width: 100%;
   height: 1px;
@@ -2598,25 +2603,25 @@ ul li {
   background-color: #fff;
 }
 
-/* line 53, ../sass/components/_global.scss */
+/* line 54, ../sass/components/_global.scss */
 ::-webkit-scrollbar {
   width: 9px;
 }
 
-/* line 56, ../sass/components/_global.scss */
+/* line 57, ../sass/components/_global.scss */
 ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #fff;
 }
 
-/* line 60, ../sass/components/_global.scss */
+/* line 61, ../sass/components/_global.scss */
 ::-webkit-scrollbar-thumb {
   border-radius: 0px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
   background-color: #6ba8b2;
 }
 
-/* line 66, ../sass/components/_global.scss */
+/* line 67, ../sass/components/_global.scss */
 #reviews #comments::-webkit-scrollbar,
 #sb_instagram::-webkit-scrollbar {
   width: 6px;
@@ -9331,122 +9336,132 @@ li.product .onsale,
   margin-bottom: 70px;
 }
 
+/* line 326, ../sass/components/_woocommerce.scss */
+.woocommerce-result-count {
+  margin-bottom: 10px;
+}
+
+/* line 327, ../sass/components/_woocommerce.scss */
+.woocommerce-loop-product__title {
+  min-height: 38px;
+}
+
 /* Carrito */
-/* line 329, ../sass/components/_woocommerce.scss */
+/* line 331, ../sass/components/_woocommerce.scss */
 .woocommerce table.cart img {
   width: 65px !important;
 }
-/* line 330, ../sass/components/_woocommerce.scss */
+/* line 332, ../sass/components/_woocommerce.scss */
 .woocommerce table.cart td.actions .input-text {
   width: 130px !important;
 }
-/* line 334, ../sass/components/_woocommerce.scss */
+/* line 336, ../sass/components/_woocommerce.scss */
 .woocommerce .quantity .qty {
   width: 100px !important;
 }
-/* line 338, ../sass/components/_woocommerce.scss */
+/* line 340, ../sass/components/_woocommerce.scss */
 .woocommerce a.checkout-button {
   width: 100% !important;
 }
 
-/* line 341, ../sass/components/_woocommerce.scss */
+/* line 343, ../sass/components/_woocommerce.scss */
 .cart-empty {
   margin-bottom: 20px;
 }
 
-/* line 342, ../sass/components/_woocommerce.scss */
+/* line 344, ../sass/components/_woocommerce.scss */
 .cart-empty, .return-to-shop {
   text-align: center;
 }
 
 /* CUENTA */
-/* line 347, ../sass/components/_woocommerce.scss */
+/* line 349, ../sass/components/_woocommerce.scss */
 .vyarte_cuenta h2 {
   text-align: center;
 }
 
-/* line 348, ../sass/components/_woocommerce.scss */
+/* line 350, ../sass/components/_woocommerce.scss */
 .woocommerce-form-login {
   max-width: 300px;
   margin: 20px auto 0 !important;
 }
-/* line 351, ../sass/components/_woocommerce.scss */
+/* line 353, ../sass/components/_woocommerce.scss */
 .woocommerce-form-login button {
   width: 100%;
 }
 
-/* line 353, ../sass/components/_woocommerce.scss */
+/* line 355, ../sass/components/_woocommerce.scss */
 .woocommerce-MyAccount-navigation ul {
   text-align: center;
   border-radius: 3px;
 }
-/* line 357, ../sass/components/_woocommerce.scss */
+/* line 359, ../sass/components/_woocommerce.scss */
 .woocommerce-MyAccount-navigation ul li {
   display: inline-block;
 }
-/* line 359, ../sass/components/_woocommerce.scss */
+/* line 361, ../sass/components/_woocommerce.scss */
 .woocommerce-MyAccount-navigation ul li a {
   display: inline-block;
   padding: 0 10px;
   line-height: 30px;
 }
-/* line 363, ../sass/components/_woocommerce.scss */
+/* line 365, ../sass/components/_woocommerce.scss */
 .woocommerce-MyAccount-navigation ul li a:hover {
   color: #6ba8b2;
 }
-/* line 367, ../sass/components/_woocommerce.scss */
+/* line 369, ../sass/components/_woocommerce.scss */
 .woocommerce-MyAccount-navigation ul li:not(:last-child) {
   margin-right: 5px;
 }
-/* line 368, ../sass/components/_woocommerce.scss */
+/* line 370, ../sass/components/_woocommerce.scss */
 .woocommerce-MyAccount-navigation ul li.is-active a {
   color: #6ba8b2;
 }
 @media only screen and (max-width: 430px) {
-  /* line 357, ../sass/components/_woocommerce.scss */
+  /* line 359, ../sass/components/_woocommerce.scss */
   .woocommerce-MyAccount-navigation ul li {
     display: block;
     margin: 0px;
   }
-  /* line 373, ../sass/components/_woocommerce.scss */
+  /* line 375, ../sass/components/_woocommerce.scss */
   .woocommerce-MyAccount-navigation ul li a {
     width: 100%;
   }
 }
-/* line 376, ../sass/components/_woocommerce.scss */
+/* line 378, ../sass/components/_woocommerce.scss */
 .woocommerce-MyAccount-navigation ul li:last-child a {
   color: #c30008;
 }
-/* line 378, ../sass/components/_woocommerce.scss */
+/* line 380, ../sass/components/_woocommerce.scss */
 .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--downloads {
   display: none;
 }
 
-/* line 383, ../sass/components/_woocommerce.scss */
+/* line 385, ../sass/components/_woocommerce.scss */
 .woocommerce-EditAccountForm {
   max-width: 500px;
   margin: auto;
 }
 
-/* line 388, ../sass/components/_woocommerce.scss */
+/* line 390, ../sass/components/_woocommerce.scss */
 .woocommerce-Addresses {
   margin-top: 20px;
 }
-/* line 390, ../sass/components/_woocommerce.scss */
+/* line 392, ../sass/components/_woocommerce.scss */
 .woocommerce-Addresses header {
   text-align: center;
 }
-/* line 392, ../sass/components/_woocommerce.scss */
+/* line 394, ../sass/components/_woocommerce.scss */
 .woocommerce-Addresses header h3 {
   margin-bottom: 10px;
 }
-/* line 393, ../sass/components/_woocommerce.scss */
+/* line 395, ../sass/components/_woocommerce.scss */
 .woocommerce-Addresses header a.edit {
   margin-bottom: 20px;
 }
 
-/* Personalización */
-/* line 401, ../sass/components/_woocommerce.scss */
+/* Personalizaci├│n */
+/* line 403, ../sass/components/_woocommerce.scss */
 .block_persOrder {
   position: absolute;
   top: 0px;
@@ -9501,7 +9516,7 @@ header.js-header nav > ul {
 header.js-header nav > ul.open {
   right: 0px;
 }
-/* line 30, ../sass/components/_header.scss */
+/* line 28, ../sass/components/_header.scss */
 header.js-header nav > ul #btn-close-nav {
   position: absolute;
   top: 3px;
@@ -9509,15 +9524,15 @@ header.js-header nav > ul #btn-close-nav {
   font-size: 22px;
   cursor: pointer;
 }
-/* line 36, ../sass/components/_header.scss */
+/* line 34, ../sass/components/_header.scss */
 header.js-header nav > ul #btn-close-nav:hover {
   color: #6ba8b2;
 }
-/* line 38, ../sass/components/_header.scss */
+/* line 36, ../sass/components/_header.scss */
 header.js-header nav > ul li {
   display: inline-block;
 }
-/* line 40, ../sass/components/_header.scss */
+/* line 38, ../sass/components/_header.scss */
 header.js-header nav > ul li a, header.js-header nav > ul li .customLink {
   display: inline-block;
   padding: 0 5px;
@@ -9526,56 +9541,56 @@ header.js-header nav > ul li a, header.js-header nav > ul li .customLink {
   color: #555555;
   cursor: pointer;
 }
-/* line 48, ../sass/components/_header.scss */
+/* line 47, ../sass/components/_header.scss */
 header.js-header nav > ul li a:hover, header.js-header nav > ul li a.active, header.js-header nav > ul li .customLink:hover, header.js-header nav > ul li .customLink.active {
   color: #5a9ea9;
 }
 @media only screen and (min-width: 601px) and (max-width: 992px) {
-  /* line 40, ../sass/components/_header.scss */
+  /* line 38, ../sass/components/_header.scss */
   header.js-header nav > ul li a, header.js-header nav > ul li .customLink {
     font-size: 12px;
   }
 }
-/* line 51, ../sass/components/_header.scss */
+/* line 50, ../sass/components/_header.scss */
 header.js-header nav > ul li ul {
   margin: 0px;
   background-color: #fff;
 }
 @media only screen and (min-width: 601px) {
-  /* line 51, ../sass/components/_header.scss */
+  /* line 50, ../sass/components/_header.scss */
   header.js-header nav > ul li ul {
     position: absolute;
     display: none;
   }
-  /* line 57, ../sass/components/_header.scss */
+  /* line 56, ../sass/components/_header.scss */
   header.js-header nav > ul li ul li a {
     padding: 0 20px !important;
   }
 }
-/* line 59, ../sass/components/_header.scss */
+/* line 58, ../sass/components/_header.scss */
 header.js-header nav > ul li ul li {
   display: block;
 }
-/* line 61, ../sass/components/_header.scss */
+/* line 60, ../sass/components/_header.scss */
 header.js-header nav > ul li ul li a {
   display: block;
   padding: 0 20px 0 30px;
 }
-/* line 64, ../sass/components/_header.scss */
+/* line 63, ../sass/components/_header.scss */
 header.js-header nav > ul li ul li a:hover {
   color: #fff;
   background-color: #6ba8b2;
 }
-/* line 72, ../sass/components/_header.scss */
+/* line 73, ../sass/components/_header.scss */
 header.js-header nav > ul li:hover ul {
   display: block;
 }
-/* line 75, ../sass/components/_header.scss */
+/* line 77, ../sass/components/_header.scss */
 header.js-header nav > ul .icons-nav {
   display: inline-block;
   float: right;
 }
-/* line 78, ../sass/components/_header.scss */
+/* line 80, ../sass/components/_header.scss */
 header.js-header nav > ul .icons-nav a, header.js-header nav > ul .icons-nav .customLink {
   display: inline-block;
   margin-right: 5px;
@@ -9583,27 +9598,27 @@ header.js-header nav > ul .icons-nav a, header.js-header nav > ul .icons-nav .cu
   line-height: 30px;
   cursor: pointer;
 }
-/* line 85, ../sass/components/_header.scss */
+/* line 87, ../sass/components/_header.scss */
 header.js-header nav > ul .icons-nav a:hover, header.js-header nav > ul .icons-nav .customLink:hover {
   color: #5a9ea9;
 }
-/* line 86, ../sass/components/_header.scss */
+/* line 88, ../sass/components/_header.scss */
 header.js-header nav > ul .icons-nav a em, header.js-header nav > ul .icons-nav .customLink em {
   font-size: 20px;
 }
-/* line 88, ../sass/components/_header.scss */
+/* line 90, ../sass/components/_header.scss */
 header.js-header nav > ul .icons-nav a em.icon-basket, header.js-header nav > ul .icons-nav a em.icon-user, header.js-header nav > ul .icons-nav .customLink em.icon-basket, header.js-header nav > ul .icons-nav .customLink em.icon-user {
   font-size: 22px;
 }
-/* line 89, ../sass/components/_header.scss */
+/* line 91, ../sass/components/_header.scss */
 header.js-header nav > ul .icons-nav a em.icon-youtube, header.js-header nav > ul .icons-nav .customLink em.icon-youtube {
   font-size: 23px;
 }
-/* line 90, ../sass/components/_header.scss */
+/* line 92, ../sass/components/_header.scss */
 header.js-header nav > ul .icons-nav a em.icon-basket, header.js-header nav > ul .icons-nav .customLink em.icon-basket {
   position: relative;
 }
-/* line 92, ../sass/components/_header.scss */
+/* line 94, ../sass/components/_header.scss */
 header.js-header nav > ul .icons-nav a em.icon-basket span, header.js-header nav > ul .icons-nav .customLink em.icon-basket span {
   position: absolute;
   right: -9px;
@@ -9616,11 +9631,11 @@ header.js-header nav > ul .icons-nav a em.icon-basket span, header.js-header nav
   border-radius: 50%;
   z-index: -1;
 }
-/* line 106, ../sass/components/_header.scss */
+/* line 108, ../sass/components/_header.scss */
 header.js-header nav > ul .icons-nav a em.icon-user, header.js-header nav > ul .icons-nav .customLink em.icon-user {
   position: relative;
 }
-/* line 108, ../sass/components/_header.scss */
+/* line 110, ../sass/components/_header.scss */
 header.js-header nav > ul .icons-nav a em.icon-user span, header.js-header nav > ul .icons-nav .customLink em.icon-user span {
   position: absolute;
   right: -9px;
@@ -9633,12 +9648,12 @@ header.js-header nav > ul .icons-nav a em.icon-user span, header.js-header nav >
   border-radius: 50%;
   z-index: -1;
 }
-/* line 123, ../sass/components/_header.scss */
+/* line 125, ../sass/components/_header.scss */
 header.js-header nav > ul .icons-nav a#linkSearchProduct.active, header.js-header nav > ul .icons-nav .customLink#linkSearchProduct.active {
   color: #6ba8b2;
 }
 @media only screen and (min-width: 601px) {
-  /* line 126, ../sass/components/_header.scss */
+  /* line 128, ../sass/components/_header.scss */
   header.js-header nav > ul .searchProduct {
     position: absolute;
     right: 0px;
@@ -9649,17 +9664,17 @@ header.js-header nav > ul .icons-nav a#linkSearchProduct.active, header.js-heade
     border-radius: 0 0 3px 3px;
     box-shadow: 4px 4px 10px 0 rgba(84, 84, 84, 0.2);
   }
-  /* line 136, ../sass/components/_header.scss */
+  /* line 138, ../sass/components/_header.scss */
   header.js-header nav > ul .searchProduct.active {
     top: 80px;
   }
-  /* line 139, ../sass/components/_header.scss */
+  /* line 141, ../sass/components/_header.scss */
   header.js-header nav > ul .searchProduct form {
     height: 30px;
   }
 }
 @media only screen and (max-width: 600px) {
-  /* line 126, ../sass/components/_header.scss */
+  /* line 128, ../sass/components/_header.scss */
   header.js-header nav > ul .searchProduct {
     padding: 10px 20px;
   }
@@ -9670,7 +9685,7 @@ header.js-header nav > ul .icons-nav a#linkSearchProduct.active, header.js-heade
     margin-top: 40px;
     margin-bottom: 10px;
   }
-  /* line 148, ../sass/components/_header.scss */
+  /* line 150, ../sass/components/_header.scss */
   header.js-header nav > ul .icons-nav {
     position: absolute;
     top: 5px;
@@ -9690,28 +9705,28 @@ header.js-header nav > ul .icons-nav a#linkSearchProduct.active, header.js-heade
     background-color: #fff;
     box-shadow: -2px 2px 6px 0 rgba(84, 84, 84, 0.2);
   }
-  /* line 164, ../sass/components/_header.scss */
+  /* line 166, ../sass/components/_header.scss */
   header.js-header nav > ul li {
     display: block;
   }
-  /* line 166, ../sass/components/_header.scss */
+  /* line 168, ../sass/components/_header.scss */
   header.js-header nav > ul li a, header.js-header nav > ul li .customLink {
     display: block;
     line-height: 40px;
     padding: 0 20px;
   }
-  /* line 170, ../sass/components/_header.scss */
+  /* line 172, ../sass/components/_header.scss */
   header.js-header nav > ul li a:hover, header.js-header nav > ul li .customLink:hover {
     color: #fff;
     background-color: #6ba8b2;
   }
-  /* line 176, ../sass/components/_header.scss */
+  /* line 178, ../sass/components/_header.scss */
   header.js-header nav > ul .icons-nav {
     float: none;
     margin-top: 20px;
     padding: 0 10px;
   }
-  /* line 180, ../sass/components/_header.scss */
+  /* line 182, ../sass/components/_header.scss */
   header.js-header nav > ul .icons-nav #linkSearchProduct {
     display: none;
   }

@@ -12,8 +12,8 @@
 				<select id="persProducto" name="persProducto" required data-parsley-required-message="El campo es obligatorio." >
 					<?php echo $opnionsProducts; ?>
 				</select>
-				<label for="persDetalles">Personalización*: <small>Hasta 1000 carácteres</small></label>
-				<textarea id="persDetalles" name="persDetalles" placeholder="Descríbenos la personalización de tu producto: tamaño, posición, tonalidad, etc." required data-parsley-length="[20, 1000]" data-parsley-required-message="El campo es obligatorio." data-parsley-length-message="Se requieren de 20 a 200 caracteres."></textarea>
+				<label for="persDetalles">Personalización*: <small>Descríbenos la personalización de tu producto: tamaño, posición, tonalidad, etc.</small></label>
+				<textarea id="persDetalles" name="persDetalles" placeholder="Descríbenos la personalización de tu producto: tamaño, posición, tonalidad, etc." required data-parsley-length="[10, 1000]" data-parsley-required-message="El campo es obligatorio." data-parsley-length-message="Se requieren de 10 a 200 caracteres."></textarea>
 				<label for="persImage">Imágenes: <small>Max. 1 MB por imagen</small></label>
 				<input type="file" accept="image/png, image/jpeg" name="persImage" id="persImage" data-parsley-max-file-size="1100">
 				<input type="file" accept="image/png, image/jpeg" name="persImagea" id="persImagea" data-parsley-max-file-size="1100">

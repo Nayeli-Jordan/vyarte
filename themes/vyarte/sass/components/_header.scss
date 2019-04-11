@@ -24,9 +24,7 @@ header.js-header {
 			margin-top: 25px;
 			margin-bottom: 25px;
 			@extend .transition;
-			&.open {
-				right: 0px;
-			}
+			&.open { right: 0px; }
 			#btn-close-nav {
 				position: absolute;
 				top: 3px;
@@ -40,6 +38,7 @@ header.js-header {
 				a, .customLink {
 					display: inline-block;
 					padding: 0 5px;
+					//padding: 0 9px;
 					font-size: 14px;
 					line-height: 30px;
 					color: $text-color;
@@ -66,11 +65,14 @@ header.js-header {
 								background-color: $primary-color;
 							}
 						}
+						//li:nth-child(1) a { padding-left: 0px; }
+						//li::last-child a { padding-right: 0px; }						
 					}
 				}
 				&:hover {
 					ul { display: block; }
 				}
+
 			}
 			.icons-nav {
 				display: inline-block;
