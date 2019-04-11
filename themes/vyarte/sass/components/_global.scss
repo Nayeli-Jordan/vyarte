@@ -20,19 +20,19 @@ html {
 
 .cursor-pointer { cursor: pointer; }
 
-header, footer {
-  ul {
-      padding: 0px;
-      li {        
-          margin: 0px; 
-          line-height: 20px;
-          list-style-type: none;
-      }
-  }  
+ul {
+    padding: 0px;
+    li {        
+        margin: 0px; 
+        line-height: 20px;
+        list-style-type: none;
+    }
 }
-.main-body {
-  ul {
-    padding: 20px;
+.content-editor,
+.woocommerce-product-details__short-description {
+  ul, ol {
+    padding-left: 20px;
+    margin: 0px;
     li { margin-bottom: 5px; }
   }
 }

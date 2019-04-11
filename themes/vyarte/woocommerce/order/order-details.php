@@ -48,12 +48,16 @@ if ( $show_downloads ) {
 			<tr>
 				<th class="woocommerce-table__product-name product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>
 				<th class="woocommerce-table__product-table product-total"><?php _e( 'Total', 'woocommerce' ); ?></th>
+				<th>Personaliza</th>
 			</tr>
 		</thead>
 
 		<tbody>
 			<?php
 			do_action( 'woocommerce_order_details_before_order_table_items', $order );
+
+			/* Declaras option Products (select form personaliza*/
+			$opnionsProducts = '<option value=""></option>';
 
 			foreach ( $order_items as $item_id => $item ) {
 				$product = $item->get_product();
@@ -66,6 +70,32 @@ if ( $show_downloads ) {
 					'purchase_note'	     => $product ? $product->get_purchase_note() : '',
 					'product'	         => $product,
 				) );
+
+				/* Sumar option si aún no hay post*/
+				$noOrder 		= $order->get_order_number(); 
+				$nameProduct 	= $item->get_name();
+				$args = array(
+				    'post_type'  => 'vy_personalizado',
+					'meta_query'	=> array(
+						'relation'		=> 'AND',
+						array(
+							'key'		=> 'vy_personalizado_orden',
+							'value'		=> $noOrder,
+							'compare'	=> '='
+						),
+						array(
+							'key'		=> 'vy_personalizado_producto',
+							'value'		=> $nameProduct,
+							'compare'	=> '='
+						)
+					)
+				);
+				$wp_posts = get_posts($args);
+				if (!count($wp_posts)) : 
+					/* Agregar nombre producto (foreach) */
+					$opnionsProducts .= '<option value="' . $item->get_name() . '">' . $item->get_name() . '</option>';
+				endif;
+
 			}
 
 			do_action( 'woocommerce_order_details_after_order_table_items', $order );
@@ -94,7 +124,12 @@ if ( $show_downloads ) {
 
 	<?php do_action( 'woocommerce_order_details_after_order_table', $order ); ?>
 </section>
-
+<?php 
+	/* Modal personalización */
+	include (TEMPLATEPATH . '/template/personalizado/personalizacion-enviada.php');
+	include (TEMPLATEPATH . '/template/personalizado/personalizacion-diferente.php');
+	include (TEMPLATEPATH . '/template/personalizado/personalizacion-cancelada.php');
+ ?>
 <?php
 if ( $show_customer_details ) {
 	wc_get_template( 'order/order-details-customer.php', array( 'order' => $order ) );

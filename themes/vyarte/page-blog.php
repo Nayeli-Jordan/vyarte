@@ -21,7 +21,7 @@
 							while ( $blog_query->have_posts() ) : $blog_query->the_post(); ?>
 
 								<div class="col s12 l6 margin-bottom-30">
-									<div class="bg-image" style="background-image: url(<?php the_post_thumbnail_url('medium'); ?>)"></div>
+									<a href="<?php the_permalink(); ?>" class="block"><div class="bg-image" style="background-image: url(<?php the_post_thumbnail_url('medium'); ?>)"></div></a>
 									<h3 class="margin-top-bottom-10"><a href="<?php the_permalink(); ?>" class="color-text color-primary-dark_hover"><?php the_title(); ?></a></h3>
 									<?php the_excerpt(); ?>
 									<a href="<?php the_permalink(); ?>" class="btn clearfix margin-top-10">Leer más</a>

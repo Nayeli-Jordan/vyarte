@@ -10,7 +10,7 @@
 			if ( $slider_query->have_posts() ) : 
 				$i = 1;
 				while ( $slider_query->have_posts() ) : $slider_query->the_post(); ?>
-					<img src="<?php the_post_thumbnail_url('large'); ?>">	
+					<img src="<?php the_post_thumbnail_url('full'); ?>">	
 				<?php $i ++; endwhile; wp_reset_postdata();
 				if ($i > 0):?>
 					<div class="cycle-pager"></div>
@@ -20,7 +20,7 @@
 	</section>
 	<section id="servHome" class="container text-center margin-bottom-20">
 		<h2 class="title-section"><span>Servicios</span></h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+		<p>Nos especializamos en sublimación, serigrafía y diseño gráfico. Nuestro compromiso es ofrecerte la mejor calidad de productos con una gran variedad de diseños personalizados para satisfacer tus necesidades.</p>
 		<div class="row row-complete margin-top-20">
 		<?php
 			$serv_args = array(
@@ -30,11 +30,12 @@
 			$serv_query = new WP_Query( $serv_args );
 			if ( $serv_query->have_posts() ) : 
 				$i = 1;
-				while ( $serv_query->have_posts() ) : $serv_query->the_post(); ?>
+				while ( $serv_query->have_posts() ) : $serv_query->the_post(); 
+					$post_slug = $post->post_name; ?>
 					<div class="col s12 sm6 text-center margin-bottom-30">
-						<a href="<?php echo SITEURL; ?>producto-categoria/sublimacion-y-serigrafia/">
+						<a href="<?php echo SITEURL . $post_slug; ?>">
 							<div class="margin-bottom-20">
-								<div class="bg-image bg-contain" style="background-image: url(<?php the_post_thumbnail_url('large'); ?>)"></div>
+								<div class="bg-image bg-contain" style="background-image: url(<?php the_post_thumbnail_url('full'); ?>)"></div>
 							</div>
 							<h3 class="margin-bottom-20 uppercase"><?php the_title(); ?></h3>
 						</a>
@@ -52,8 +53,8 @@
 			<div class="row">
 				<div class="col s12 m10 offset-m1 l8 offset-l2">
 					<h2>Suscríbete a nuestro newsletter</h2>
-					<p class="margin-bottom-20">Suscribete y recibe las mejores promociones directamente en tu correo electrónico</p>
-					<?php include (TEMPLATEPATH . '/template/mailchimp-code.php'); ?>				
+					<p class="margin-bottom-20">Suscríbete y recibe las mejores promociones directamente en tu correo electrónico</p>
+					<?php include (TEMPLATEPATH . '/template/mailchimp-code.php'); ?>
 				</div>
 			</div>
 		</div>
@@ -71,7 +72,7 @@
 				$i = 1;
 				while ( $blog_query->have_posts() ) : $blog_query->the_post(); ?>
 					<div class="col s12 sm6 text-center margin-bottom-30">
-						<div class="bg-image margin-bottom-20" style="background-image: url(<?php the_post_thumbnail_url('large'); ?>)"></div>
+						<a href="<?php the_permalink(); ?>" class="block"><div class="bg-image margin-bottom-20" style="background-image: url(<?php the_post_thumbnail_url('large'); ?>)"></div></a>
 						<h3 class="margin-bottom-20 uppercase"><a href="<?php the_permalink(); ?>" class="color-text color-primary-dark_hover"><?php the_title(); ?></a></h3>
 						<?php the_excerpt(); ?>
 						<a href="<?php the_permalink(); ?>" class="btn clearfix margin-top-20">Leer más</a>

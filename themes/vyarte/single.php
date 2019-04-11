@@ -14,14 +14,14 @@
 			<div class="col m4 hide-on-sm-and-down">
 				<?php include (TEMPLATEPATH . '/sidebar.php'); ?>
 			</div>
-			<div class="col s12 m8">
+			<div class="col s12 m8 content-editor">
 				<h2 class="title-section"><span><?php the_title(); ?></span></h2>
 				<img src="<?php the_post_thumbnail_url('large'); ?>" class="responsive-img margin-auto margin-bottom-20 block max-height-500">
 				<div class="contentPost">
 					<?php the_content(); ?>
 				</div>
 				<div class="margin-top-20 text-center">
-					<a href="<?php echo SITEURL; ?>blog" class="btn">Volver</a>	
+					<a href="<?php echo SITEURL; ?>blog" class="btn">Volver al blog</a>	
 				</div>
 			</div>		
 			<div class="col s12 hide-on-med-and-up margin-top-40">

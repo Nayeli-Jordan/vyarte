@@ -15,7 +15,7 @@
 	<?php $i ++; endwhile; wp_reset_postdata();
 	endif; ?>
 
-	<h3 class="uppercase margin-top-40 margin-bottom-10">Suscribete al newsletter</h3>
+	<h3 class="uppercase margin-top-40 margin-bottom-10">Suscríbete al newsletter</h3>
 	<?php include (TEMPLATEPATH . '/template/mailchimp-code.php'); ?>
 
 	<?php /* Banner */

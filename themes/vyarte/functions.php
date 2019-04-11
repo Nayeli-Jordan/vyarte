@@ -245,6 +245,72 @@ function banner_save_metas( $idbanner, $banner ){
     }
 }
 
+/*
+** Personalización
+*/
+add_action( 'add_meta_boxes', 'vy_personalizado_custom_metabox' );
+function vy_personalizado_custom_metabox(){
+    add_meta_box( 'vy_personalizado_meta', 'Pedido', 'display_vy_personalizado_atributos', 'vy_personalizado', 'advanced', 'default');
+}
+
+function display_vy_personalizado_atributos( $vy_personalizado ){
+    $orden    = esc_html( get_post_meta( $vy_personalizado->ID, 'vy_personalizado_orden', true ) );
+    $producto = esc_html( get_post_meta( $vy_personalizado->ID, 'vy_personalizado_producto', true ) );
+    $estatus = esc_html( get_post_meta( $vy_personalizado->ID, 'vy_personalizado_estatus', true ) );
+    $imagea = esc_html( get_post_meta( $vy_personalizado->ID, 'vy_personalizado_imagea', true ) );
+    $imageb = esc_html( get_post_meta( $vy_personalizado->ID, 'vy_personalizado_imageb', true ) );
+?>
+    <table class="vy-custum-fields">
+        <tr>
+            <th>
+                <label for="vy_personalizado_orden">No. orden</label>
+                <input type="text" id="vy_personalizado_orden" name="vy_personalizado_orden" value="<?php echo $orden; ?>" required>
+            </th>
+            <th>
+                <label for="vy_personalizado_producto">Producto</label>
+                <input type="text" id="vy_personalizado_producto" name="vy_personalizado_producto" value="<?php echo $producto; ?>" required>
+            </th>
+            <th>
+                <label for="vy_personalizado_estatus">Estatus</label>
+                <input type="text" id="vy_personalizado_estatus" name="vy_personalizado_estatus" value="<?php echo $estatus; ?>" required>
+            </th>
+        </tr>
+        <tr>
+            <th colspan="3">
+                <label for="vy_personalizado_imagea">Imagen A</label>
+                <input type="text" id="vy_personalizado_imagea" name="vy_personalizado_imagea" value="<?php echo $imagea; ?>" required>
+            </th>
+        </tr>
+        <tr>
+            <th colspan="3">
+                <label for="vy_personalizado_imageb">Imagen B</label>
+                <input type="text" id="vy_personalizado_imageb" name="vy_personalizado_imageb" value="<?php echo $imageb; ?>" required>
+            </th>
+        </tr>
+    </table>
+<?php }
+
+add_action( 'save_post', 'vy_personalizado_save_metas', 10, 2 );
+function vy_personalizado_save_metas( $idvy_personalizado, $vy_personalizado ){
+    if ( $vy_personalizado->post_type == 'vy_personalizado' ){
+        if ( isset( $_POST['vy_personalizado_orden'] ) ){
+            update_post_meta( $idvy_personalizado, 'vy_personalizado_orden', $_POST['vy_personalizado_orden'] );
+        }
+        if ( isset( $_POST['vy_personalizado_producto'] ) ){
+            update_post_meta( $idvy_personalizado, 'vy_personalizado_producto', $_POST['vy_personalizado_producto'] );
+        }
+        if ( isset( $_POST['vy_personalizado_estatus'] ) ){
+            update_post_meta( $idvy_personalizado, 'vy_personalizado_estatus', $_POST['vy_personalizado_estatus'] );
+        }
+        if ( isset( $_POST['vy_personalizado_imagea'] ) ){
+            update_post_meta( $idvy_personalizado, 'vy_personalizado_imagea', $_POST['vy_personalizado_imagea'] );
+        }
+        if ( isset( $_POST['vy_personalizado_imageb'] ) ){
+            update_post_meta( $idvy_personalizado, 'vy_personalizado_imageb', $_POST['vy_personalizado_imageb'] );
+        }
+    }
+}
+
 /* Redirección formularios */
 add_action ('template_redirect', 'custom_redirect_contacto');
 function custom_redirect_contacto() {

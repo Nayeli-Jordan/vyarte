@@ -231,16 +231,16 @@ add_action('init', function(){
 
 	// Productos personalizados
 	$labels = array(
-		'name'          => 'Producto',
-		'singular_name' => 'Producto',
-		'add_new'       => 'Nuevo Producto',
-		'add_new_item'  => 'Nuevo Producto',
-		'edit_item'     => 'Editar Producto',
-		'new_item'      => 'Nuevo Producto',
-		'all_items'     => 'Producto',
-		'view_item'     => 'Ver Producto',
-		'search_items'  => 'Buscar Producto',
-		'not_found'     => 'No hay Producto',
+		'name'          => 'Personalización',
+		'singular_name' => 'Personalización',
+		'add_new'       => 'Nueva Personalización',
+		'add_new_item'  => 'Nueva Personalización',
+		'edit_item'     => 'Editar Personalización',
+		'new_item'      => 'Nuevo Personalización',
+		'all_items'     => 'Personalización',
+		'view_item'     => 'Ver Personalización',
+		'search_items'  => 'Buscar Personalización',
+		'not_found'     => 'No hay Personalización',
 		'menu_name'     => 'Productos personalizados'
 	);
 
