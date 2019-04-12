@@ -7,14 +7,15 @@
 					<h2 class="margin-bottom-10"><?php the_title(); ?></h2>
 				</div>
 			</div>
-			<div class="container content-editor page_personaliza">
+			<div class="container content-editor ">
 				<div class="row row-complete margin-top-30 margin-bottom-30">
 					<?php if( '' !== get_post()->post_content ) { ?>
 						<div class="col s12 m10 offset-m1 margin-bottom-30">
 							<?php the_content(); ?>	
 						</div>
-					<?php }
-					
+					<?php } ?>	
+					<div class="page_personaliza">
+					<?php
 					$inst_args = array(
 						'post_type' 		=> 'vy_persinstruccion',
 						'posts_per_page' 	=> -1,
@@ -38,7 +39,8 @@
 								<?php the_content(); ?>	
 							</div>			
 					<?php $i ++; endwhile; wp_reset_postdata();
-					endif; ?>
+					endif; ?>						
+					</div>
 				</div>
 			</div>
 		</section>

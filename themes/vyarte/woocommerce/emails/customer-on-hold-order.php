@@ -1,8 +1,8 @@
 <?php
 /**
- * Customer processing order email
+ * Customer on-hold order email
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/emails/customer-processing-order.php.
+ * This template can be overridden by copying it to yourtheme/woocommerce/emails/customer-on-hold-order.php.
  *
  * HOWEVER, on occasion WooCommerce will need to update template files and you
  * (the theme developer) will need to copy the new files to your theme to
@@ -12,7 +12,7 @@
  *
  * @see https://docs.woocommerce.com/document/template-structure/
  * @package WooCommerce/Templates/Emails
- * @version 3.5.4
+ * @version 3.5.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -25,9 +25,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 do_action( 'woocommerce_email_header', $email_heading, $email ); ?>
 
 <?php /* translators: %s: Customer first name */ ?>
-<p><?php printf( esc_html__( 'Hi %s,', 'woocommerce' ), esc_html( $order->get_billing_first_name() ) ); ?></p>
-<?php /* translators: %s: Order number */ ?>
-<p><?php printf( esc_html__( 'Just to let you know &mdash; we\'ve received your order #%s, and it is now being processed:', 'woocommerce' ), esc_html( $order->get_order_number() ) ); ?></p>
+<p><?php printf( __( 'Hi %s,', 'woocommerce' ), $order->get_billing_first_name() ); ?></p><?php // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped ?>
+<p><?php _e( 'Thanks for your order. It’s on-hold until we confirm that payment has been received. In the meantime, here’s a reminder of what you ordered:', 'woocommerce' ); ?></p><?php // phpcs:ignore WordPress.XSS.EscapeOutput ?>
 
 <?php
 
@@ -54,7 +53,7 @@ do_action( 'woocommerce_email_customer_details', $order, $sent_to_admin, $plain_
 include (TEMPLATEPATH . '/template/wc-personaliza.php'); ?>
 
 <p>
-<?php esc_html_e( 'Thanks!', 'woocommerce' ); ?>
+<?php _e( 'We look forward to fulfilling your order soon.', 'woocommerce' ); // phpcs:ignore WordPress.XSS.EscapeOutput ?>
 </p>
 <?php
 

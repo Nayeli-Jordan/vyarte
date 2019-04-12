@@ -252,10 +252,6 @@ ol {
 	.content_personaliza {
 		@media #{$sm-only} { .col:nth-child(2n+1) { clear: both; } }
 	}
-	.page_personaliza {
-		@media #{$sm-only} { .col:nth-child(2n+1) { clear: both; } }
-		@media #{$medium-and-up} { .col:nth-child(3n+1) { clear: both; } }
-	}
 
 	/* Reviews */
 	.tabs.wc-tabs { display: none; }
@@ -394,6 +390,11 @@ ol {
 }
 
 /* Personalización */
+
+.page_personaliza {
+	@media #{$sm-only} { .col:nth-child(2n+1) { clear: both; } }
+	@media #{$medium-and-up} { .col:nth-child(3n+1) { clear: both; } }
+}
 .block_persOrder {
     position: absolute;
     top: 0px;

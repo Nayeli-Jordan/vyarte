@@ -93,7 +93,7 @@
 	 					</div>
 	 				</div>
 	 				<div class="text-center">
-		 				<p class="margin-bottom-10">© 2019 VyArte | Desarrollado por <a href="https://www.behance.net/lizbethjorc2ea" target="_blank" class="color-primary">GatchWeb</a></p>
+		 				<p class="margin-bottom-10">© <?php echo date("Y"); ?> VyArte | Desarrollado por <a href="https://www.behance.net/lizbethjorc2ea" target="_blank" class="color-primary">GatchWeb</a></p>
 		 				<div class="icons-pago">
 		 					<em class="icon-wallet" title="Efectivo"></em>
 		 					<em class="icon-bank" title="Depósito Bancario"></em>
