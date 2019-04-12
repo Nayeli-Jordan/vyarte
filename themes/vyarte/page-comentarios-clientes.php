@@ -11,8 +11,8 @@
 		</div>
 		<div id="clients_comments" class="container">
 			<div class="row row-complete margin-bottom-30">
-				<div class="col s12 m10 offset-m1 l8 offset-l2">
-					<div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-slides="> div" data-cycle-timeout="5000" >
+				<div class="col s12 m10 offset-m1 l8 offset-l2 relative">
+					<div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-slides="> div" data-cycle-timeout="5000"  data-cycle-prev="#prevComment" data-cycle-next="#nextComment">
 					<?php
 						$comments = get_comments(  );
 						$i = 1;
@@ -21,7 +21,7 @@
 							$rating = intval( get_comment_meta( $comment->comment_ID, 'rating', true ) );
 							if ( $rating && 'yes' === get_option( 'woocommerce_enable_review_rating' ) ) { ?>
 								<div>
-									<p><?php echo $comment->comment_content; ?></p>
+									<p class="client_comment"><?php echo $comment->comment_content; ?><span></span></p>
 									<div class='content_stars activeToStar<?php echo $rating; ?>'>
 										<em class='icon-star star1'></em>
 										<em class='icon-star star2'></em>
@@ -29,14 +29,13 @@
 										<em class='icon-star star4'></em>
 										<em class='icon-star star5'></em>
 									</div>
-									<p><?php echo $comment->comment_author; ?></p>
+									<p class="client_name"><?php echo $comment->comment_author; ?></p>
 								</div>
 							<?php } ?>
-						<?php endforeach;
-						if ($i > 0):?>
-							<span class="cycle-pager"></span>
-						<?php endif; ?>						
-					</div> <!-- end cycle-slideshow -->											
+						<?php endforeach; ?>						
+					</div> <!-- end cycle-slideshow -->									
+					<a href=# id="prevComment"><em class="icon-left-open"></em></a> 
+					<a href=# id="nextComment"><em class="icon-right-open"></em></a>	
 				</div>
 			</div>
 		</div>
