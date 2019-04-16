@@ -5,10 +5,10 @@ header.js-header {
 		position: relative;
 		height: 80px;
 		z-index: 999;
-		& > a > img { width: 77px; }
-		@media #{$sm-and-down} {
-			height: 50px;
-			img { width: 50px; }
+		@media #{$sm-and-down} { height: 50px; }
+		& > a > img { 
+			width: 77px; 
+			@media #{$sm-and-down}{ width: 50px; }
 		}
 		#btn-open-nav {
 			position: absolute;

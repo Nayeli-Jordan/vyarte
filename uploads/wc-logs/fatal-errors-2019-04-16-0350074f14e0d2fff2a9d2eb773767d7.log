@@ -1,0 +1,15 @@
+2019-04-16T15:30:59+00:00 CRITICAL Uncaught Error: Class 'WC_Widget_Product_Tag_Cloud' not found in C:\Users\Tony\Documents\sites\vyarte\wp-includes\class-wp-widget-factory.php:100
+Stack trace:
+#0 C:\Users\Tony\Documents\sites\vyarte\wp-includes\widgets.php(115): WP_Widget_Factory->register('WC_Widget_Produ...')
+#1 C:\Users\Tony\Documents\sites\vyarte\wp-content\plugins\woocommerce\includes\wc-widget-functions.php(42): register_widget('WC_Widget_Produ...')
+#2 C:\Users\Tony\Documents\sites\vyarte\wp-includes\class-wp-hook.php(286): wc_register_widgets('')
+#3 C:\Users\Tony\Documents\sites\vyarte\wp-includes\class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#4 C:\Users\Tony\Documents\sites\vyarte\wp-includes\plugin.php(453): WP_Hook->do_action(Array)
+#5 C:\Users\Tony\Documents\sites\vyarte\wp-includes\widgets.php(1661): do_action('widgets_init')
+#6 C:\Users\Tony\Documents\sites\vyarte\wp-includes\class-wp-hook.php(286): wp_widgets_init('')
+#7 C:\Users\Tony\Documents\sites\vyarte\wp-includes\class-wp-hook.php(310): WP_Hook->apply_filters(N in C:\Users\Tony\Documents\sites\vyarte\wp-includes\class-wp-widget-factory.php on line 100
+
+2019-04-16T15:49:45+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\Users\Tony\Documents\sites\vyarte\wp-admin\includes\class-wp-filesystem-direct.php on line 62
+
+2019-04-16T16:17:33+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\Users\Tony\Documents\sites\vyarte\wp-includes\wp-db.php on line 1924
+

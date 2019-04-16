@@ -229,6 +229,10 @@ ol {
 			}
 		}
 		.woocommerce-product-details__short-description { margin-bottom: 20px; }
+		.woo_discount_rules_table { 
+			margin: 15px 0 20px -3px; 
+			font-size: 14px;
+		}
 		form {
 			table.variations {
 				margin-bottom: 20px;
@@ -414,6 +418,8 @@ ol {
 .woocommerce-orders-table__cell-order-actions {
 	a { margin: 5px 5px 5px!important; }
 }
+
+.woocommerce iframe { width: 100%; }
 
 /* Personalización */
 
