@@ -37,6 +37,7 @@
 	$title 				= '0rden: #' . $orden . ' | ' . $producto . ' | Personalizado';
 	$content 			= 'No. de Pedido: #' . $orden . '<br>';
 	$content 			.= 'Fecha: ' . wc_format_datetime( $order->get_date_created() ) . '<br><br>';
+	$content 			.= 'Email: <a href="mailto:' . $order->get_billing_email() . '">' . $order->get_billing_email() . '</a><br><br>';
 	$content 			.= 'Producto: ' . $producto . '<br><br>';
 	$content 			.= 'Detalles: ' .  $detalles;
 

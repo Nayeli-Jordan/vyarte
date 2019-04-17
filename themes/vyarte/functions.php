@@ -184,12 +184,18 @@ function new_loop_shop_per_page( $cols ) {
 }
 
 //Cambiar texto btn´s
-add_filter( 'woocommerce_product_single_add_to_cart_text', 'woo_custom_cart_button_text' );
-add_filter( 'woocommerce_product_add_to_cart_text', 'woo_custom_cart_button_text' );
- 
-function woo_custom_cart_button_text() {
-	return __( 'Comprar', 'woocommerce' );
+add_filter( 'woocommerce_product_single_add_to_cart_text', 'custom_cart_button_text' );
+add_filter( 'woocommerce_product_add_to_cart_text', 'custom_cart_button_text' );
+function custom_cart_button_text() {
+    global $product;
+    $post_id = get_the_ID();
+    if ( has_term( 'diseno-grafico', 'product_cat', $post_id ) ) {           
+        return 'Contratar';
+    } else {
+        return 'Comprar';
+    }
 }
+
 
 
 add_filter('gettext',  'translate_text');
