@@ -42,6 +42,13 @@ if(!class_exists('FlycartWoocommerceVersion')){
 
 if(!class_exists('FlycartWoocommerceProduct')){
     class FlycartWoocommerceProduct{
+
+        protected static $products = array();
+        protected static $products_categories = array();
+        protected static $products_variants = array();
+        protected static $product_children = array();
+        protected static $taxonomy_term_name = array();
+
         /**
          * Get WooCommerce product
          *
@@ -51,7 +58,11 @@ if(!class_exists('FlycartWoocommerceProduct')){
          */
         public static function wc_get_product($product_id)
         {
-            return FlycartWoocommerceVersion::wcVersion('2.2') ? wc_get_product($product_id) : get_product($product_id);
+            if(isset(self::$products[$product_id])){} else {
+                self::$products[$product_id] = FlycartWoocommerceVersion::wcVersion('2.2') ? wc_get_product($product_id) : get_product($product_id);
+            }
+
+            return self::$products[$product_id];
         }
 
         /**
@@ -142,14 +153,19 @@ if(!class_exists('FlycartWoocommerceProduct')){
          * @return array
          */
         public static function get_children($product){
-            if(FlycartWoocommerceVersion::wcVersion('3.0') || method_exists($product, 'get_children')){
-                return $product->get_children();
-            } else {
-                if(isset($product->children)){
-                    return $product->children;
+            $product_id = self::get_id($product);
+            if(isset(self::$product_children[$product_id])){} else {
+                if(FlycartWoocommerceVersion::wcVersion('3.0') || method_exists($product, 'get_children')){
+                    self::$product_children[$product_id] = $product->get_children();
+                } else {
+                    if(isset($product->children)){
+                        self::$product_children[$product_id] = $product->children;
+                    }
+                    self::$product_children[$product_id] = '';
                 }
-                return '';
             }
+
+            return self::$product_children[$product_id];
         }
 
         /**
@@ -315,14 +331,34 @@ if(!class_exists('FlycartWoocommerceProduct')){
          */
         public static function get_variant_ids($product_id)
         {
-            $ids = array();
-            $productV = new WC_Product_Variable( $product_id );
-            $variations = $productV->get_available_variations();
-            if(!empty($variations))
-                foreach ($variations as $variation) {
-                    $ids[] = $variation['variation_id'];
-                }
-            return $ids;
+            if(isset(self::$products_variants[$product_id])){} else {
+                $ids = array();
+                $productV = new WC_Product_Variable( $product_id );
+                $variations = $productV->get_available_variations();
+                if(!empty($variations))
+                    foreach ($variations as $variation) {
+                        $ids[] = $variation['variation_id'];
+                    }
+                self::$products_variants[$product_id] = $ids;
+            }
+
+            return self::$products_variants[$product_id];
+        }
+
+        /**
+         * Check variation is visible in frontend
+         *
+         * @access public
+         * @param object $product
+         * @return boolean
+         */
+        public static function variation_is_visible_in_frontend($product)
+        {
+            if(method_exists($product, 'variation_is_visible')){
+                return $product->variation_is_visible();
+            }
+
+            return true;
         }
 
         /**
@@ -338,18 +374,23 @@ if(!class_exists('FlycartWoocommerceProduct')){
                 $parent = self::get_parent_id($product);
                 if($parent) $product = self::wc_get_product($parent);
             }
-            $cat_id = array();
-            if(FlycartWoocommerceVersion::wcVersion('3.0') || method_exists($product, 'get_category_ids')){
-                $cat_id = $product->get_category_ids();
-                $cat_id = apply_filters('woo_discount_rules_load_additional_taxonomy', $cat_id, self::get_id($product));
-            } else {
-                $terms = get_the_terms ( self::get_id($product), 'product_cat' );
-                if(!empty($terms))
-                    foreach ( $terms as $term ) {
-                        $cat_id[] = $term->term_id;
-                    }
+            $product_id = self::get_id($product);
+            if(isset(self::$products_categories[$product_id])){} else {
+                $cat_id = array();
+                if(FlycartWoocommerceVersion::wcVersion('3.0') || method_exists($product, 'get_category_ids')){
+                    $cat_id = $product->get_category_ids();
+                    $cat_id = apply_filters('woo_discount_rules_load_additional_taxonomy', $cat_id, $product_id);
+                } else {
+                    $terms = get_the_terms ( self::get_id($product), 'product_cat' );
+                    if(!empty($terms))
+                        foreach ( $terms as $term ) {
+                            $cat_id[] = $term->term_id;
+                        }
+                }
+                self::$products_categories[$product_id] = $cat_id;
             }
-            return $cat_id;
+
+            return self::$products_categories[$product_id];
         }
 
         /**
@@ -360,17 +401,20 @@ if(!class_exists('FlycartWoocommerceProduct')){
          * @return string
          */
         public static function get_product_category_by_id( $category_id ) {
-            $term_name = '';
-            $taxonomies = apply_filters('woo_discount_rules_accepted_taxonomy_for_category', array('product_cat'));
-            foreach ($taxonomies as $taxonomy){
-                $term = get_term_by( 'id', $category_id, $taxonomy, 'ARRAY_A' );
-                if(!empty($term['name'])){
-                    $term_name = $term['name'];
-                    break;
+            if(isset(self::$taxonomy_term_name[$category_id])){} else {
+                $term_name = '';
+                $taxonomies = apply_filters('woo_discount_rules_accepted_taxonomy_for_category', array('product_cat'));
+                foreach ($taxonomies as $taxonomy){
+                    $term = get_term_by( 'id', $category_id, $taxonomy, 'ARRAY_A' );
+                    if(!empty($term['name'])){
+                        $term_name = $term['name'];
+                        break;
+                    }
                 }
+                self::$taxonomy_term_name[$category_id] = $term_name;
             }
 
-            return $term_name;
+            return self::$taxonomy_term_name[$category_id];
         }
 
         /*
@@ -474,9 +518,20 @@ if(!class_exists('FlycartWoocommerceCartProduct')){
          */
         public static function get_cart()
         {
-            if(!empty(WC()->cart)){
-                return WC()->cart->get_cart();
+            $load_cart_from_wc_object = apply_filters('woo_discount_rules_load_cart_from_woocommerce_object', true);
+            if($load_cart_from_wc_object){
+                if(!empty(WC()->cart)){
+                    return WC()->cart->get_cart();
+                }
+            } else {
+                global $woocommerce;
+                if(!empty($woocommerce->cart) && !empty($woocommerce->cart)){
+                    if(!empty($woocommerce->cart->cart_contents)){
+                        return $woocommerce->cart->cart_contents;
+                    }
+                }
             }
+
             return array();
         }
 

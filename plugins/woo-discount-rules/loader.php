@@ -34,6 +34,8 @@ if(!class_exists('FlycartWooDiscountRules')){
         public $pricingRules;
         public $config;
 
+        public static $product_variations = array();
+
         /**
          * To run the plugin
          * */
@@ -390,8 +392,8 @@ if(!class_exists('FlycartWooDiscountRules')){
             add_action('woocommerce_before_cart', array($this, 'displayAppliedDiscountMessagesForPriceRules'));
             add_action('woocommerce_before_cart', array($this, 'displayAppliedDiscountMessagesForCartRules'));
 
-            add_filter('woo_discount_rule_products_to_exclude', array($this, 'woo_discount_get_variations'));
-            add_filter('woo_discount_rule_products_to_include', array($this, 'woo_discount_get_variations'));
+            add_filter('woo_discount_rule_products_to_exclude', array($this, 'woo_discount_get_variations'), 3, 10);
+            add_filter('woo_discount_rule_products_to_include', array($this, 'woo_discount_get_variations'), 3, 10);
         }
 
         /**
@@ -400,9 +402,16 @@ if(!class_exists('FlycartWooDiscountRules')){
          * @param array $excluded_products
          * @return array
          * */
-        public function woo_discount_get_variations($excluded_products = array()) {
+        public function woo_discount_get_variations($excluded_products = array(), $rule, $variants = null) {
             $include_variants_on_select_parent_product = $this->discountBase->getConfigData('include_variants_on_select_parent_product', 0);
             if($include_variants_on_select_parent_product){
+                // Load from Rules if we already saved with rules
+                if($variants !== null && is_array($variants)){
+                    if(!empty($variants)){
+                        $excluded_products = array_merge($excluded_products, $variants);
+                    }
+                    return $excluded_products;
+                }
                 static $sets;
                 if (!is_array($sets)) {
                     $sets = array();
@@ -414,10 +423,15 @@ if(!class_exists('FlycartWooDiscountRules')){
                 if (!isset($sets[$string])) {
                     $all_excluded_products = $excluded_products;
                     foreach ($excluded_products as $exclude_id) {
-                        $product = wc_get_product($exclude_id);
-                        if (is_object($product) && method_exists($product, 'get_type') && $product->get_type() == 'variable') {
-                            $children_ids = $product->get_children();
-                            $all_excluded_products = array_merge($all_excluded_products, $children_ids);
+                        if(isset(self::$product_variations[$exclude_id])){} else {
+                            $product = FlycartWoocommerceProduct::wc_get_product($exclude_id);
+                            if (is_object($product) && method_exists($product, 'get_type') && $product->get_type() == 'variable') {
+                                self::$product_variations[$exclude_id] = $children_ids = FlycartWoocommerceProduct::get_children($product);//$product->get_children();
+                                //$all_excluded_products = array_merge($all_excluded_products, $children_ids);
+                            }
+                        }
+                        if(is_array(self::$product_variations[$exclude_id]) && !empty(self::$product_variations[$exclude_id])){
+                            $all_excluded_products = array_merge($all_excluded_products, self::$product_variations[$exclude_id]);
                         }
                     }
                     $sets[$string] = $all_excluded_products;

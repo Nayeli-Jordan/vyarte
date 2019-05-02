@@ -69,6 +69,11 @@ if (!class_exists('FlycartWooDiscountRulesPricingRules')) {
 
         public $bogo_matches;
 
+        public static $rules_filtered = 0;
+        public static $filtered_rules = array();
+        public static $rule_sets_generated = 0;
+        public static $generated_rule_sets = array();
+
         public static $rules_loaded = 0;
         public static $rules_applied_already = 0;
         public static $pricingRules;
@@ -172,6 +177,9 @@ if (!class_exists('FlycartWooDiscountRulesPricingRules')) {
                 'subtotal_to_apply',
                 'exclude_sale_items',
                 'wpml_language',
+                'product_to_exclude_variants',
+                'product_to_apply_variants',
+                'purchase_history_products_variants',
             );
 
             //----------------------------------------------------------------------------------------------------------
@@ -263,16 +271,17 @@ if (!class_exists('FlycartWooDiscountRulesPricingRules')) {
 
                 foreach ($request['discount_range'] as $index => $value) {
                     $request['discount_range'][$index] = FlycartWooDiscountRulesGeneralHelper::makeString($value);
+                    $request['discount_range'][$index] = $this->addVariantProducts($request['discount_range'][$index]);
                     $request['discount_range'][$index]['title'] = isset($request['rule_name']) ? $request['rule_name'] : '';
 
                 }
-
                 $request['discount_range'] = json_encode($request['discount_range']);
             } else {
                 // Reset the Discount Range, if its empty.
                 $request['discount_range'] = '';
             }
             if(isset($request['rule_method']) && $request['rule_method'] == 'product_based'){
+                $request['product_based_condition'] = $this->addVariantProducts($request['product_based_condition']);
                 $request['product_based_condition'] = json_encode($request['product_based_condition']);
                 $request['product_based_discount'] = json_encode($request['product_based_discount']);
             } else {
@@ -291,7 +300,7 @@ if (!class_exists('FlycartWooDiscountRulesPricingRules')) {
 
             $request['status'] = 'publish';
             $request['wpml_language'] = FlycartWooDiscountRulesGeneralHelper::getWPMLLanguage();
-
+            $request = $this->addVariantProducts($request);
             if (is_null($id) || !isset($id)) return false;
             FlycartWooDiscountRulesGeneralHelper::resetUsedCoupons($id, $coupons_used);
             foreach ($request as $index => $value) {
@@ -306,6 +315,50 @@ if (!class_exists('FlycartWooDiscountRulesPricingRules')) {
 
             //For update the last update time of rule
             $this->updateLastUpdateTimeOfRule();
+        }
+
+        /**
+         * Add variants of the products for storing with rule
+         * */
+        protected function addVariantProducts($request){
+            $get_variants_for = array('product_to_apply', 'product_to_exclude', 'product_to_buy', 'discount_product', 'purchase_history_products');
+            foreach ($get_variants_for as $type){
+                $variant_key = $type.'_variants';
+                if(isset($request[$type])){
+                    $products = $request[$type];
+                    if(is_string($products)){
+                        $products = json_decode($products, true);
+                    }
+                    $request[$variant_key] = array();
+                    if(!empty($products)){
+                        $request[$variant_key] = $this->getVariantsOfProducts($products);
+                    }
+                }
+            }
+
+            return $request;
+        }
+
+        /**
+         * Get variants of the products selected
+         * */
+        protected function getVariantsOfProducts($products){
+            $variants = array();
+            if(!empty($products)){
+                foreach ($products as $product_id){
+                    $product = FlycartWoocommerceProduct::wc_get_product($product_id);
+                    if(method_exists($product, 'is_type')){
+                        if($product->is_type(array('variable', 'variable-subscription'))){
+                            $additional_variants = FlycartWoocommerceProduct::get_children($product);
+                            if(!empty($additional_variants) && is_array($additional_variants)){
+                                $variants = array_merge($variants, $additional_variants);
+                            }
+                        }
+                    }
+                }
+            }
+
+            return $variants;
         }
 
 
@@ -474,6 +527,9 @@ if (!class_exists('FlycartWooDiscountRulesPricingRules')) {
          */
         public function filterRules()
         {
+            if(self::$rules_filtered){
+                return $this->rules = self::$filtered_rules;
+            }
             $rules = $this->rules;
 
             if (is_null($rules) || !isset($rules)) return false;
@@ -491,12 +547,14 @@ if (!class_exists('FlycartWooDiscountRulesPricingRules')) {
                         $validateDate = FlycartWooDiscountRulesGeneralHelper::validateDateAndTime($date_from, $date_to);
                         // Validating Rule with Date of Expiry.
                         if ($validateDate) {
-
                             // Validating the Rule with its Order ID.
                             if (isset($rule->rule_order)) {
-                                // If Order ID is '-', then this rule not going to implement.
-                                if ($rule->rule_order !== '-') {
-                                    $rule_set[] = $rule;
+                                $load_rule = apply_filters('woo_discount_rules_run_price_rule', true, $rule);
+                                if($load_rule){
+                                    // If Order ID is '-', then this rule not going to implement.
+                                    if ($rule->rule_order !== '-') {
+                                        $rule_set[] = $rule;
+                                    }
                                 }
                             }
                         }
@@ -508,6 +566,8 @@ if (!class_exists('FlycartWooDiscountRulesPricingRules')) {
 
             // To Order the Rules, based on its order ID.
             $this->orderRules();
+            self::$rules_filtered = 1;
+            self::$filtered_rules = $this->rules;
         }
 
         /**
@@ -776,6 +836,9 @@ if (!class_exists('FlycartWooDiscountRulesPricingRules')) {
          */
         public function generateRuleSets($woocommerce)
         {
+            if(self::$rule_sets_generated){
+                return $this->rule_sets = self::$generated_rule_sets;
+            }
             $rule_sets = array();
 
             if (!isset($this->rules)) return false;
@@ -805,7 +868,9 @@ if (!class_exists('FlycartWooDiscountRulesPricingRules')) {
                         if ($rule->apply_to == 'specific_products') {
                             if (isset($rule->product_to_apply)) {
                                 $rule_sets[$index]['type']['specific_products'] = $this->checkWithProducts($rule, $woocommerce);
-                                $rule_sets[$index]['type']['specific_products'] = apply_filters('woo_discount_rule_products_to_include', $rule_sets[$index]['type']['specific_products'], $rule);
+                                $variants = null;
+                                if(isset($rule->product_to_apply_variants)) $variants = $rule->product_to_apply_variants;
+                                $rule_sets[$index]['type']['specific_products'] = apply_filters('woo_discount_rule_products_to_include', $rule_sets[$index]['type']['specific_products'], $rule, $variants);
                             }
                             if (isset($rule->is_cumulative_for_products) && $rule->is_cumulative_for_products) {
                                 $rule_sets[$index]['is_cumulative_for_products'] = 1;
@@ -916,7 +981,9 @@ if (!class_exists('FlycartWooDiscountRulesPricingRules')) {
                     $rule_sets[$index]['product_based_discount'] = json_decode((isset($rule->product_based_discount) ? $rule->product_based_discount : '{}'), true);
                 }
             }
-            $this->rule_sets = $rule_sets;
+            self::$generated_rule_sets = $this->rule_sets = $rule_sets;
+
+            self::$rule_sets_generated = 1;
         }
 
         /**
@@ -1378,10 +1445,14 @@ if (!class_exists('FlycartWooDiscountRulesPricingRules')) {
                 $quantity_to = isset($product_based_conditions['product_quantity_to']) ? $product_based_conditions['product_quantity_to'] : '';
                 $product_to_buy = isset($product_based_conditions['product_to_buy']) ? $product_based_conditions['product_to_buy'] : array();
                 $product_to_buy = FlycartWoocommerceVersion::backwardCompatibilityStringToArray($product_to_buy);
-                $product_to_buy = apply_filters('woo_discount_rule_products_to_include', $product_to_buy, $rule);
+                $variants = null;
+                if(isset($product_based_conditions['product_to_buy_variants'])) $variants = $product_based_conditions['product_to_buy_variants'];
+                $product_to_buy = apply_filters('woo_discount_rule_products_to_include', $product_to_buy, $rule, $variants);
                 $product_to_apply = isset($product_based_conditions['product_to_apply']) ? $product_based_conditions['product_to_apply'] : array();
                 $product_to_apply = FlycartWoocommerceVersion::backwardCompatibilityStringToArray($product_to_apply);
-                $product_to_apply = apply_filters('woo_discount_rule_products_to_include', $product_to_apply, $rule);
+                $variants = null;
+                if(isset($product_based_conditions['product_to_apply_variants'])) $variants = $product_based_conditions['product_to_apply_variants'];
+                $product_to_apply = apply_filters('woo_discount_rule_products_to_include', $product_to_apply, $rule, $variants);
                 $category_to_apply = isset($product_based_conditions['category_to_apply']) ? $product_based_conditions['category_to_apply'] : array();
                 $get_discount_type = isset($product_based_conditions['get_discount_type']) ? $product_based_conditions['get_discount_type'] : 'product';
 
@@ -1666,7 +1737,9 @@ if (!class_exists('FlycartWooDiscountRulesPricingRules')) {
                             $productIds = isset($range->discount_product) ? $range->discount_product : array();
                             $productIds = FlycartWoocommerceVersion::backwardCompatibilityStringToArray($productIds);
                             if($discount_product_option == 'more_than_one_cheapest' || $discount_product_option == 'any_cheapest'){
-                                $productIds = apply_filters('woo_discount_rule_products_to_include', $productIds, $discount_ranges);
+                                $variants = null;
+                                if(isset($range->discount_product_variants)) $variants = $range->discount_product_variants;
+                                $productIds = apply_filters('woo_discount_rule_products_to_include', $productIds, $discount_ranges, $variants);
                             }
                             if($discount_product_option == 'same_product'){
                                 $productId = FlycartWoocommerceProduct::get_id($item['data']);
@@ -2408,10 +2481,12 @@ if (!class_exists('FlycartWooDiscountRulesPricingRules')) {
                                     if (in_array($id, $products_to_apply)) {
                                         $status = true;
                                     }
-                                    $variations = FlycartWoocommerceProduct::get_variant_ids($product_id);
-                                    if(!empty($variations)){
-                                        if (count(array_intersect($variations, $products_to_apply)) > 0) {
-                                            $status = true;
+                                    if($product->is_type(array('variable', 'variable-subscription'))){
+                                        $variations = FlycartWoocommerceProduct::get_variant_ids($product_id);
+                                        if(!empty($variations)){
+                                            if (count(array_intersect($variations, $products_to_apply)) > 0) {
+                                                $status = true;
+                                            }
                                         }
                                     }
                                 }
@@ -2550,7 +2625,8 @@ if (!class_exists('FlycartWooDiscountRulesPricingRules')) {
                         $children         = array_filter( array_map( 'wc_get_product', FlycartWoocommerceProduct::get_children($product) ), 'wc_products_array_filter_visible_grouped' );
                         if(is_array($children) && count($children)){
                             foreach ( $children as $child ) {
-                                if ( '' !== FlycartWoocommerceProduct::get_price($child) ) {
+                                $is_visible = FlycartWoocommerceProduct::variation_is_visible_in_frontend($child);
+                                if ( '' !== FlycartWoocommerceProduct::get_price($child) && $is_visible) {
                                     $childProducts[] = FlycartWoocommerceProduct::get_id($child);
                                 }
                             }
@@ -2624,8 +2700,10 @@ if (!class_exists('FlycartWooDiscountRulesPricingRules')) {
             if(!is_array($productToExclude)){
                 $productToExclude = array();
             }
+            $variants = null;
+            if(isset($rule->product_to_exclude_variants)) $variants = $rule->product_to_exclude_variants;
 
-            $productToExclude = apply_filters('woo_discount_rule_products_to_exclude', $productToExclude, $rule);
+            $productToExclude = apply_filters('woo_discount_rule_products_to_exclude', $productToExclude, $rule, $variants);
 
             return $productToExclude;
         }
@@ -3167,8 +3245,9 @@ if (!class_exists('FlycartWooDiscountRulesPricingRules')) {
                     $currencies = $WOOCS->get_currencies();
                     $is_geoip_manipulation = $WOOCS->is_geoip_manipulation;
                     $woocs_is_fixed_enabled = $WOOCS->is_fixed_enabled;
+                    $woocs_convert_value_based_on_currency = apply_filters('woo_discount_rules_woocs_convert_price_based_on_currency', false, $product);
                     //woocs_is_geoip_manipulation //woocs_is_fixed_enabled
-                    if($is_geoip_manipulation || $woocs_is_fixed_enabled){
+                    if($is_geoip_manipulation || $woocs_is_fixed_enabled || $woocs_convert_value_based_on_currency){
                         $amount = $amount / $currencies[$WOOCS->current_currency]['rate'];
                     }
                 }
@@ -3404,7 +3483,9 @@ if (!class_exists('FlycartWooDiscountRulesPricingRules')) {
                             $item_price = preg_replace('/<del>.*<\/del>/', '', $item_price);
                         }
                         $item_price = apply_filters('woo_discount_rules_price_strikeout_before_discount_price', $item_price, $product);
-                        $item_price = '<span class="cart_price wdr_product_strikeout"><del>' . $item_price . '</del> <ins>' . ($price_to_display).$product->get_price_suffix($discountPrice) . '</ins></span>';
+                        if($item_price != (($price_to_display).$product->get_price_suffix($discountPrice))){
+                            $item_price = '<span class="cart_price wdr_product_strikeout"><del>' . $item_price . '</del> <ins>' . ($price_to_display).$product->get_price_suffix($discountPrice) . '</ins></span>';
+                        }
                         $item_price = apply_filters('woo_discount_rules_price_strikeout_after_discount_price', $item_price, $product);
                     }
                 }
@@ -3418,8 +3499,10 @@ if (!class_exists('FlycartWooDiscountRulesPricingRules')) {
             $show_sale_tag_on_product_page = (isset($this->baseConfig['show_sale_tag_on_product_page']))? $this->baseConfig['show_sale_tag_on_product_page']: 'show';
             $show_price_discount_on_product_page = (isset($this->baseConfig['show_price_discount_on_product_page']))? $this->baseConfig['show_price_discount_on_product_page']: 'show';
             if($show_sale_tag_on_product_page == 'show_on_any_rules_matches' || ($show_sale_tag_on_product_page == 'show' && $show_price_discount_on_product_page == 'dont')) {
-                if (!$product->is_type(array('variable', 'subscription_variation', 'variable-subscription', 'grouped'))) {
-                    $product_id = FlycartWoocommerceProduct::get_id($product);
+                $excluded_product_type = apply_filters('woo_discount_rules_exclude_product_type_for_sale_price_strikeout_adjustment', array('variable', 'subscription_variation', 'variable-subscription', 'grouped', 'composite'), $product);
+                if(is_array($excluded_product_type) && !empty($excluded_product_type)){
+                    if (!$product->is_type($excluded_product_type)) {
+                        $product_id = FlycartWoocommerceProduct::get_id($product);
 //                    if(!empty(self::$product_on_sale_details[$product_id])){
                         $sale_price = FlycartWoocommerceProduct::get_price($product);
                         $regular_price = FlycartWoocommerceProduct::get_regular_price($product);
@@ -3430,6 +3513,7 @@ if (!class_exists('FlycartWooDiscountRulesPricingRules')) {
                             return $item_price;
                         }
 //                    }
+                    }
                 }
             }
 
@@ -3487,7 +3571,9 @@ if (!class_exists('FlycartWooDiscountRulesPricingRules')) {
                             $item_price = preg_replace('/<del>.*<\/del>/', '', $item_price);
                         }
                         $item_price = apply_filters('woo_discount_rules_price_strikeout_before_discount_price', $item_price, $product);
-                        $item_price = '<span class="cart_price wdr_product_strikeout"><del>' . $item_price . '</del> <ins>' . (self::$product_has_strike_out[$product_id]['new_strikeout_html']) . '</ins></span>';
+                        if($item_price != (self::$product_has_strike_out[$product_id]['new_strikeout_html'])){
+                            $item_price = '<span class="cart_price wdr_product_strikeout"><del>' . $item_price . '</del> <ins>' . (self::$product_has_strike_out[$product_id]['new_strikeout_html']) . '</ins></span>';
+                        }
                         $item_price = apply_filters('woo_discount_rules_price_strikeout_after_discount_price', $item_price, $product);
                     }
                 } else {
@@ -3576,7 +3662,8 @@ if (!class_exists('FlycartWooDiscountRulesPricingRules')) {
                 $children         = array_filter( array_map( 'wc_get_product', FlycartWoocommerceProduct::get_children($product) ), 'wc_products_array_filter_visible_grouped' );
                 if(is_array($children) && count($children)){
                     foreach ( $children as $child ) {
-                        if ( '' !== FlycartWoocommerceProduct::get_price($child) ) {
+                        $is_visible = FlycartWoocommerceProduct::variation_is_visible_in_frontend($child);
+                        if ( '' !== FlycartWoocommerceProduct::get_price($child)  && $is_visible) {
                             $child_prices[FlycartWoocommerceProduct::get_id($child)] = 'incl' === $tax_display_mode ? FlycartWoocommerceProduct::get_price_including_tax($child) : FlycartWoocommerceProduct::get_price_excluding_tax( $child );
                         }
                     }
@@ -3646,7 +3733,8 @@ if (!class_exists('FlycartWooDiscountRulesPricingRules')) {
                 $children         = array_filter( array_map( 'wc_get_product', FlycartWoocommerceProduct::get_children($product) ), 'wc_products_array_filter_visible_grouped' );
                 if(is_array($children) && count($children)){
                     foreach ( $children as $child ) {
-                        if ( '' !== FlycartWoocommerceProduct::get_price($child) ) {
+                        $is_visible = FlycartWoocommerceProduct::variation_is_visible_in_frontend($child);
+                        if ( '' !== FlycartWoocommerceProduct::get_price($child) && $is_visible) {
                             $child_prices[FlycartWoocommerceProduct::get_id($child)] = 'incl' === $tax_display_mode ? FlycartWoocommerceProduct::get_price_including_tax($child) : FlycartWoocommerceProduct::get_price_excluding_tax( $child );
                         }
                     }
@@ -3749,7 +3837,8 @@ if (!class_exists('FlycartWooDiscountRulesPricingRules')) {
                             $children         = array_filter( array_map( 'wc_get_product', FlycartWoocommerceProduct::get_children($product) ), 'wc_products_array_filter_visible_grouped' );
                             if(is_array($children) && count($children)){
                                 foreach ( $children as $child ) {
-                                    if ( '' !== FlycartWoocommerceProduct::get_price($child) ) {
+                                    $is_visible = FlycartWoocommerceProduct::variation_is_visible_in_frontend($child);
+                                    if ( '' !== FlycartWoocommerceProduct::get_price($child) && $is_visible) {
                                         $discountPrice = $this->getDiscountPriceForTheProduct($child);
                                         if($discountPrice > 0){
                                             $on_sale = true;

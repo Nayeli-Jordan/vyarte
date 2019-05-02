@@ -89,18 +89,6 @@ add_action('init', function(){
 		wp_insert_post( $page, true );
 	}
 
-	// Identidad corporativa
-	if( ! get_page_by_path('identidad-corporativa') ){
-		$page = array(
-			'post_author' => 1,
-			'post_status' => 'publish',
-			'post_title'  => 'Identidad corporativa',
-			'post_name'   => 'identidad-corporativa',
-			'post_type'   => 'page'
-		);
-		wp_insert_post( $page, true );
-	}	
-
 	// Contacto
 	if( ! get_page_by_path('contactanos') ){
 		$page = array(

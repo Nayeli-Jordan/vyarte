@@ -1,3 +1,24 @@
-2019-04-11T02:23:47+00:00 ERROR order_submit.tracing_error :: Error Code 500 :: CURL error :: SSL certificate problem: unable to get local issuer certificate on 1546 in C:\Users\nely_\Desktop\sites\vyarte\wp-content\plugins\mailchimp-for-woocommerce\includes\api\class-mailchimp-api.php
-2019-04-11T02:23:47+00:00 NOTICE rest-queue :: http_worker_lock did not delete properly - will respawn in 60 seconds.
-2019-04-11T02:25:49+00:00 ERROR order_submit.tracing_error :: Error Code 500 :: CURL error :: SSL certificate problem: unable to get local issuer certificate on 1546 in C:\Users\nely_\Desktop\sites\vyarte\wp-content\plugins\mailchimp-for-woocommerce\includes\api\class-mailchimp-api.php
+2019-04-11T01:17:49+00:00 NOTICE order_submit.success :: addStoreOrder :: #601 :: email: lizbeth.jordan.v@gmail.com :: landing site http://vyartesublimacion.com/
+2019-04-11T20:39:20+00:00 NOTICE order_submit.success :: addStoreOrder :: #633 :: email: lizbeth.jordan.v@gmail.com :: landing site http://vyartesublimacion.com/?wc-ajax=get_refreshed_fragments
+2019-04-11T20:40:00+00:00 NOTICE member.sync :: Updated Member lizbeth.jordan.v@gmail.com ( merge tags only ) :: Array
+(
+    [merge_vars] => Array
+        (
+            [FNAME] => Lizbeth
+            [LNAME] => Jordan
+        )
+
+)
+
+2019-04-11T21:31:18+00:00 NOTICE order_submit.success :: addStoreOrder :: #634 :: email: lizbeth.jordan.v@gmail.com :: landing site http://vyartesublimacion.com/?wc-ajax=get_refreshed_fragments
+2019-04-11T22:17:46+00:00 NOTICE member.sync :: Updated Member lizbeth.jordan.v@gmail.com ( merge tags only ) :: Array
+(
+    [merge_vars] => Array
+        (
+            [FNAME] => Lizbeth
+            [LNAME] => Jordan
+        )
+
+)
+
+2019-04-11T23:08:45+00:00 NOTICE order_submit.success :: addStoreOrder :: #645 :: email: lizbeth.jordan.v@gmail.com :: landing site http://vyartesublimacion.com/?wc-ajax=get_refreshed_fragments

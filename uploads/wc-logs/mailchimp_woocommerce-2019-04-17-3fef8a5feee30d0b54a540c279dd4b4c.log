@@ -1,0 +1,25 @@
+2019-04-17T01:35:21+00:00 NOTICE member.sync :: Updated Member nayeli.jordan16@gmail.com ( merge tags only ) :: Array
+(
+    [merge_vars] => Array
+        (
+            [FNAME] => Nayeli
+            [LNAME] => Jordan
+        )
+
+)
+
+2019-04-17T01:35:46+00:00 NOTICE member.sync :: Updated Member nayeli.jordan16@gmail.com ( merge tags only ) :: Array
+(
+    [merge_vars] => Array
+        (
+            [FNAME] => Nayeli
+            [LNAME] => Jordan
+        )
+
+)
+
+2019-04-17T01:45:08+00:00 NOTICE product_submit.success :: updateStoreProduct :: #354
+2019-04-17T01:45:10+00:00 NOTICE order_submit.success :: addStoreOrder :: #707 :: email: nayeli.jordan16@gmail.com :: landing site http://vyartesublimacion.com/wp-admin/admin-ajax.php
+2019-04-17T01:46:19+00:00 NOTICE order_submit.success :: updateStoreOrder :: #707 :: email: nayeli.jordan16@gmail.com
+2019-04-17T01:46:21+00:00 NOTICE order_submit.success :: updateStoreOrder :: #707 :: email: nayeli.jordan16@gmail.com
+2019-04-17T01:46:34+00:00 NOTICE order_submit.success :: updateStoreOrder :: #707 :: email: nayeli.jordan16@gmail.com

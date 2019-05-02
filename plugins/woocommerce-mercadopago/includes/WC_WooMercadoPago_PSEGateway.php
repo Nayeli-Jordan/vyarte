@@ -21,7 +21,7 @@ class WC_WooMercadoPago_PSEGateway extends WC_Payment_Gateway {
 	public function __construct( $is_instance = false ) {
 
 		// Mercao Pago instance.
-		$this->site_data = WC_Woo_Mercado_Pago_Module::get_site_data( true );
+		$this->site_data = WC_Woo_Mercado_Pago_Module::get_site_data();
 		$this->mp = new MP(
 			WC_Woo_Mercado_Pago_Module::get_module_version(),
 			get_option( '_mp_access_token' )
@@ -134,11 +134,11 @@ class WC_WooMercadoPago_PSEGateway extends WC_Payment_Gateway {
 
 		// Show message if credentials are not properly configured.
 		$_site_id_v1 = get_option( '_site_id_v1', '' );
-		if ( empty( $_site_id_v1 ) ) {
+		if ( empty( $_site_id_v1 ) || $_site_id_v1!='MCO' ) {
 			$this->form_fields = array(
 				'no_credentials_title' => array(
 					'title' => sprintf(
-						__( 'It appears that your credentials are not properly configured.<br/>Please, go to %s and configure it.', 'woocommerce-mercadopago' ),
+						__( 'It appears that your credentials are not properly configured or are not from an account in Colombia.<br/>Please, go to %s and configure it.', 'woocommerce-mercadopago' ),
 						'<a href="' . esc_url( admin_url( 'admin.php?page=mercado-pago-settings' ) ) . '">' .
 						__( 'Mercado Pago Settings', 'woocommerce-mercadopago' ) .
 						'</a>'

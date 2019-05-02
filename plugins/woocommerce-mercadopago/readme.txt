@@ -4,7 +4,7 @@ Tags: ecommerce, mercadopago, woocommerce
 Requires at least: 4.9.7
 Tested up to: 4.9.7
 Requires PHP: 5.6
-Stable tag: 3.0.17
+Stable tag: 3.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -60,7 +60,7 @@ Is the upper part of the window. Shows platform statuses and system consistency 
 Here you should place your *Client Id* and *Client Secret* keys, the credentials that uniquely identifies you in Mercado Pago. *Client Id* and *Client Secret* are used for Basic Checkout and Subscriptions payment methods; 
 Also, just bellow, you can enable currency conversion mode for sells with Basic Checkout and Subscriptions. Currency conversion is a feature that enables you to set an unsupported currency in WooCommerce while maintaining Mercado Pago as payment method. It will convert the unsupported currency for the currency used in your country. Pay attention that this service converts values on-the-fly in real-time and can bring some additional delay to your server.
 
-- Custom Checkout & Tickets
+- Your Credentials of Mercado Pago
 Here you should place your *Public Key* and *Access Token* keys, the credentials that uniquely identifies you in Mercado Pago. *Public Key* and *Access Token* are used for Custom Checkout and Tickets payment methods; 
 Also, just bellow, you can enable currency conversion mode for sells with Custom Checkout and Tickets. Currency conversion is a feature that enables you to set an unsupported currency in WooCommerce while maintaining Mercado Pago as payment method. It will convert the unsupported currency for the currency used in your country. Pay attention that this service converts values on-the-fly in real-time and can bring some additional delay to your server.
 
@@ -215,6 +215,12 @@ Features: LatAm Basic Checkout support. Great for merchants who want to get goin
 
 == Changelog ==
 
+= v3.1.0 (17/04/2019) =
+* Performance Improvements 
+  - Removed unnecessary requests.
+  - Some functions have had their scope limited, in this way they will be called only when necessary.
+  - Removed Client_id and Client_secret, currently only using ACCESS_TOKEN and PUBLIC_KEY.
+  
 = v3.0.17 (07/08/2018) =
 * Feature All 
   - Adding X Product ID

@@ -615,9 +615,12 @@ if (!class_exists('FlycartWooDiscountRulesCartRules')) {
                     if ($validateDate) {
                         // Validating the Rule with its Order ID.
                         if (isset($rule->rule_order)) {
-                            // If Order ID is '-', then this rule not going to implement.
-                            if ($rule->rule_order !== '-') {
-                                $rule_set[] = $rule;
+                            $load_rule = apply_filters('woo_discount_rules_run_cart_rule', true, $rule);
+                            if($load_rule){
+                                // If Order ID is '-', then this rule not going to implement.
+                                if ($rule->rule_order !== '-') {
+                                    $rule_set[] = $rule;
+                                }
                             }
                         }
                     }
@@ -1648,6 +1651,12 @@ if (!class_exists('FlycartWooDiscountRulesCartRules')) {
          */
         public function calculateProductDiscount(array $product_ids = array(), $discount_quantity = 1,$rule_text ="")
         {
+            $have_to_do = apply_filters('woo_discount_rules_process_cart_bogo_auto_add', true);
+
+            if(!$have_to_do){
+                return true;
+            }
+
             if (empty($product_ids))
                 return true;
             if(empty($rule_text))

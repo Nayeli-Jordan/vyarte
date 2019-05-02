@@ -4,7 +4,7 @@ Donate link: https://flycart.org/
 Tags: woocommerce, discounts, dynamic pricing, Buy One Get One Free, pricing deals, price rules, bulk discounts, advanced discounts, pricing deals
 Requires at least: 4.4.1
 Tested up to: 5.1
-Stable tag: 1.7.12
+Stable tag: 1.7.13
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -311,6 +311,18 @@ Discount - Enter minimum & Maximum quantity -> Adjustment Type -> Product Discou
 * Dutch Translation - [@mvdburg1971](https://profiles.wordpress.org/mvdburg1971) - Michael van der Burg
 
 == Changelog ==
+
+= 1.7.13 - 02/05/19 =
+* Improvement - Performance improvement, while having large number of rules with specific product options.
+* Improvement - Consider only visible product variations for displaying strikeout.
+* Improvement - Event apply_filters('woo_discount_rules_exclude_product_type_for_sale_price_strikeout_adjustment', $product_types, $product) - Exclude product type for sale price strikeout adjustment.
+* Improvement - Event apply_filters('woo_discount_rules_load_cart_from_woocommerce_object', true) - To load cart from wc() object or $woocommerce variable.
+* Improvement - Event apply_filters('woo_discount_rules_apply_rules', $status) - Run rules or not.
+* Improvement - Event apply_filters('woo_discount_rules_run_price_rule', true, $rule), apply_filters('woo_discount_rules_run_cart_rule', true, $rule) - Enable/Disable specific rule.
+* Improvement - Event apply_filters('woo_discount_rules_woocs_convert_price_based_on_currency', false, $product) - For Woocommerce currency switcher compatible
+* Fix - Displaying same strike out when product is on sale (option - covered under any price based rule).
+* Fix - Loading default language product when WPML is available on product select box.
+* Fix - Not hiding all zero value of coupon while having multiple coupon based rules.
 
 = 1.7.12 - 02/04/19 =
 * Feature - Option to disable third party coupon while any rule applied.

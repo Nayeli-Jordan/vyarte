@@ -773,7 +773,7 @@ if (!class_exists('FlycartWooDiscountBase')) {
 
             $helper = new FlycartWooDiscountRulesGeneralHelper();
             $isPro = $helper->checkPluginState();
-
+            $this->checkForWPMLAndSetCookie($type);
             switch ($type) {
                 // Managing Price Rules View.
                 case 'pricing-rules':
@@ -858,6 +858,25 @@ if (!class_exists('FlycartWooDiscountBase')) {
                     break;
             }
 
+        }
+
+        /**
+         * Check for WPML available and set cookie if available
+         * */
+        protected function checkForWPMLAndSetCookie($layout){
+            $set_wpml_lang = apply_filters('woo_discount_rules_set_wpml_language_for_loading_in_product_select_box', true);
+            if($set_wpml_lang){
+                $wpml_language = FlycartWooDiscountRulesGeneralHelper::getWPMLLanguage();
+                if(!empty($wpml_language)){
+                    if(in_array($layout, array('pricing-rules-new', 'pricing-rules-view', 'cart-rules-view', 'cart-rules-new'))){
+                        setcookie('_wcml_dashboard_order_language', $wpml_language, time() + 86400, COOKIEPATH, COOKIE_DOMAIN);
+                    } else {
+                        if(!isset($_COOKIE['_wcml_dashboard_order_language']) && !empty($_COOKIE['_wcml_dashboard_order_language'])) {
+                            setcookie('_wcml_dashboard_order_language', '', time() + 86400, COOKIEPATH, COOKIE_DOMAIN);
+                        }
+                    }
+                }
+            }
         }
 
         /**

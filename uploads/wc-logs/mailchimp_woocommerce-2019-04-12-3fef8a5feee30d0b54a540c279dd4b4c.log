@@ -1,0 +1,131 @@
+2019-04-12T01:24:44+00:00 NOTICE order_submit.success :: updateStoreOrder :: #634 :: email: lizbeth.jordan.v@gmail.com
+2019-04-12T01:24:45+00:00 NOTICE order_submit.success :: updateStoreOrder :: #634 :: email: lizbeth.jordan.v@gmail.com
+2019-04-12T05:45:09+00:00 NOTICE order_submit.success :: updateStoreOrder :: #634 :: email: lizbeth.jordan.v@gmail.com
+2019-04-12T15:28:11+00:00 NOTICE member.sync :: nayeli.jordan16@gmail.com was permanently deleted and cannot be re-imported. The contact must re-subscribe to get back on the list.
+2019-04-12T15:30:24+00:00 NOTICE order_submit.success :: addStoreOrder :: #673 :: email: nayeli.jordan16@gmail.com :: landing site http://vyartesublimacion.com/
+2019-04-12T15:30:38+00:00 NOTICE member.sync :: Updated Member nayeli.jordan16@gmail.com :: Array
+(
+    [previous_status] => transactional
+    [status] => 1
+    [merge_vars] => Array
+        (
+            [FNAME] => Nayeli
+            [LNAME] => Jordan
+        )
+
+)
+
+2019-04-12T15:36:10+00:00 NOTICE order_submit.success :: addStoreOrder :: #674 :: email: nayeli.jordan16@gmail.com :: landing site http://vyartesublimacion.com/?wc-ajax=get_refreshed_fragments
+2019-04-12T15:36:24+00:00 NOTICE member.sync :: Updated Member nayeli.jordan16@gmail.com ( merge tags only ) :: Array
+(
+    [merge_vars] => Array
+        (
+            [FNAME] => Nayeli
+            [LNAME] => Jordan
+        )
+
+)
+
+2019-04-12T15:37:31+00:00 NOTICE order_submit.success :: addStoreOrder :: #675 :: email: nayeli.jordan16@gmail.com :: landing site http://vyartesublimacion.com/?wc-ajax=get_refreshed_fragments
+2019-04-12T15:37:35+00:00 NOTICE member.sync :: Updated Member nayeli.jordan16@gmail.com ( merge tags only ) :: Array
+(
+    [merge_vars] => Array
+        (
+            [FNAME] => Nayeli
+            [LNAME] => Jordan
+        )
+
+)
+
+2019-04-12T15:42:09+00:00 NOTICE order_submit.success :: updateStoreOrder :: #675 :: email: nayeli.jordan16@gmail.com
+2019-04-12T15:42:09+00:00 NOTICE order_submit.success :: updateStoreOrder :: #675 :: email: nayeli.jordan16@gmail.com
+2019-04-12T15:42:10+00:00 NOTICE order_submit.success :: updateStoreOrder :: #675 :: email: nayeli.jordan16@gmail.com
+2019-04-12T15:42:11+00:00 NOTICE order_submit.success :: addStoreOrder :: #676 :: email: nayeli.jordan16@gmail.com :: landing site http://vyartesublimacion.com/?wc-ajax=get_refreshed_fragments
+2019-04-12T15:42:17+00:00 NOTICE member.sync :: Updated Member nayeli.jordan16@gmail.com ( merge tags only ) :: Array
+(
+    [merge_vars] => Array
+        (
+            [FNAME] => Nayeli
+            [LNAME] => Jordan
+        )
+
+)
+
+2019-04-12T15:43:20+00:00 NOTICE order_submit.success :: addStoreOrder :: #677 :: email: nayeli.jordan16@gmail.com :: landing site http://vyartesublimacion.com/?wc-ajax=get_refreshed_fragments
+2019-04-12T15:43:20+00:00 NOTICE member.sync :: Updated Member nayeli.jordan16@gmail.com ( merge tags only ) :: Array
+(
+    [merge_vars] => Array
+        (
+            [FNAME] => Nayeli
+            [LNAME] => Jordan
+        )
+
+)
+
+2019-04-12T15:49:29+00:00 NOTICE order_submit.success :: updateStoreOrder :: #677 :: email: nayeli.jordan16@gmail.com
+2019-04-12T15:49:30+00:00 NOTICE order_submit.success :: updateStoreOrder :: #677 :: email: nayeli.jordan16@gmail.com
+2019-04-12T15:49:30+00:00 NOTICE order_submit.success :: updateStoreOrder :: #677 :: email: nayeli.jordan16@gmail.com
+2019-04-12T15:49:32+00:00 NOTICE order_submit.success :: addStoreOrder :: #678 :: email: nayeli.jordan16@gmail.com :: landing site http://vyartesublimacion.com/?wc-ajax=get_refreshed_fragments
+2019-04-12T15:49:52+00:00 NOTICE member.sync :: Updated Member nayeli.jordan16@gmail.com ( merge tags only ) :: Array
+(
+    [merge_vars] => Array
+        (
+            [FNAME] => Nayeli
+            [LNAME] => Jordan
+        )
+
+)
+
+2019-04-12T15:50:54+00:00 NOTICE order_submit.success :: addStoreOrder :: #679 :: email: nayeli.jordan16@gmail.com :: landing site http://vyartesublimacion.com/?wc-ajax=get_refreshed_fragments
+2019-04-12T15:51:02+00:00 NOTICE member.sync :: Updated Member nayeli.jordan16@gmail.com ( merge tags only ) :: Array
+(
+    [merge_vars] => Array
+        (
+            [FNAME] => Nayeli
+            [LNAME] => Jordan
+        )
+
+)
+
+2019-04-12T15:51:37+00:00 NOTICE order_submit.success :: updateStoreOrder :: #679 :: email: nayeli.jordan16@gmail.com
+2019-04-12T15:51:38+00:00 NOTICE order_submit.success :: updateStoreOrder :: #679 :: email: nayeli.jordan16@gmail.com
+2019-04-12T15:51:39+00:00 NOTICE order_submit.success :: updateStoreOrder :: #679 :: email: nayeli.jordan16@gmail.com
+2019-04-12T15:51:49+00:00 NOTICE member.sync :: Updated Member nayeli.jordan16@gmail.com ( merge tags only ) :: Array
+(
+    [merge_vars] => Array
+        (
+            [FNAME] => Nayeli
+            [LNAME] => Jordan
+        )
+
+)
+
+2019-04-12T15:52:30+00:00 NOTICE order_submit.success :: addStoreOrder :: #680 :: email: nayeli.jordan16@gmail.com :: landing site http://vyartesublimacion.com/?wc-ajax=get_refreshed_fragments
+2019-04-12T15:52:33+00:00 NOTICE order_submit.success :: updateStoreOrder :: #680 :: email: nayeli.jordan16@gmail.com
+2019-04-12T15:52:34+00:00 NOTICE order_submit.success :: updateStoreOrder :: #680 :: email: nayeli.jordan16@gmail.com
+2019-04-12T15:52:34+00:00 NOTICE order_submit.success :: updateStoreOrder :: #680 :: email: nayeli.jordan16@gmail.com
+2019-04-12T15:53:24+00:00 NOTICE product_submit.success :: addStoreProduct :: #682
+2019-04-12T15:54:13+00:00 NOTICE member.sync :: Updated Member nayeli.jordan16@gmail.com ( merge tags only ) :: Array
+(
+    [merge_vars] => Array
+        (
+            [FNAME] => Nayeli
+            [LNAME] => Jordan
+        )
+
+)
+
+2019-04-12T15:58:33+00:00 NOTICE member.sync :: Updated Member nayeli.jordan16@gmail.com ( merge tags only ) :: Array
+(
+    [merge_vars] => Array
+        (
+            [FNAME] => Nayeli
+            [LNAME] => Jordan
+        )
+
+)
+
+2019-04-12T16:52:45+00:00 NOTICE product_submit.success :: updateStoreProduct :: #682
+2019-04-12T17:24:25+00:00 NOTICE product_submit.success :: updateStoreProduct :: #682
+2019-04-12T17:24:33+00:00 NOTICE product_submit.success :: updateStoreProduct :: #682
+2019-04-12T17:27:10+00:00 NOTICE product_submit.success :: updateStoreProduct :: #682

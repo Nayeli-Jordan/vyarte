@@ -17,6 +17,8 @@ if ( ! class_exists( 'FlycartWooDiscountRulesGeneralHelper' ) ) {
          */
         public $default_page = 'pricing-rules';
 
+        protected static $sub_categories = array();
+
         /**
          * To Process the View.
          *
@@ -442,7 +444,7 @@ if ( ! class_exists( 'FlycartWooDiscountRulesGeneralHelper' ) ) {
                 $status = false;
             }
 
-            return $status;
+            return apply_filters('woo_discount_rules_apply_rules', $status);
         }
 
         public static function haveToApplyTheRules(){
@@ -457,7 +459,7 @@ if ( ! class_exists( 'FlycartWooDiscountRulesGeneralHelper' ) ) {
                 }
             }
 
-            return $status;
+            return apply_filters('woo_discount_rules_apply_rules', $status);
         }
 
         /**
@@ -696,15 +698,21 @@ if ( ! class_exists( 'FlycartWooDiscountRulesGeneralHelper' ) ) {
         protected static function getAllSubCategoriesRecursive($cat, $taxonomy = 'product_cat'){
             $category_with_sub_cat = $cat;
             foreach($cat as $c) {
-                $args = array('hierarchical' => 1,
-                    'show_option_none' => '',
-                    'hide_empty' => 0,
-                    'parent' => $c,
-                    'taxonomy' => $taxonomy);
-                $categories = get_categories( $args );
-                foreach($categories as $category) {
-                    //$category_with_sub_cat[] = $category->term_id;
-                    $category_with_sub_cat = array_merge($category_with_sub_cat, self::getAllSubCategoriesRecursive(array($category->term_id), $taxonomy));
+                if(isset(self::$sub_categories[$c])){
+                    $category_with_sub_cat = array_merge($category_with_sub_cat, self::$sub_categories[$c]);
+                } else {
+                    $args = array('hierarchical' => 1,
+                        'show_option_none' => '',
+                        'hide_empty' => 0,
+                        'parent' => $c,
+                        'taxonomy' => $taxonomy);
+                    $categories = get_categories( $args );
+                    foreach($categories as $category) {
+                        //$category_with_sub_cat[] = $category->term_id;
+                        $category_with_sub_cat = array_merge($category_with_sub_cat, self::getAllSubCategoriesRecursive(array($category->term_id), $taxonomy));
+                    }
+
+                    self::$sub_categories[$c] = $category_with_sub_cat;
                 }
             }
             $category_with_sub_cat = array_unique($category_with_sub_cat);
@@ -793,7 +801,11 @@ if ( ! class_exists( 'FlycartWooDiscountRulesGeneralHelper' ) ) {
                 if($has_coupon){
                     if(!empty($styles)){
                         global $styles_woo_discount;
-                        $styles_woo_discount = $styles;
+                        if(!empty($styles_woo_discount)){
+                            $styles_woo_discount .= $styles;
+                        } else {
+                            $styles_woo_discount = $styles;
+                        }
                         $is_ajax = is_ajax();
                         $wc_ajax = isset($_REQUEST['wc-ajax'])? $_REQUEST['wc-ajax']: false;
                         if(!$is_ajax){
