@@ -11,18 +11,17 @@
  * the readme will list any important changes.
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
- * @author  WooThemes
  * @package WooCommerce/Templates
- * @version 3.1.0
+ * @version 3.6.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
+	exit; // Exit if accessed directly.
 }
 
 global $product;
 
-if ( 'no' === get_option( 'woocommerce_enable_review_rating' ) ) {
+if ( ! wc_review_ratings_enabled() ) {
 	return;
 }
 
