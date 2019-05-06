@@ -46,11 +46,21 @@
 		<link rel="canonical" href="<?php echo site_url(); ?>" />
 
 		<!-- Sitemap Google Verify -->
-		<meta name="google-site-verification" content="" />
+		<meta name="google-site-verification" content="Eysra-tg4-RcHttf6fx1cXPy2TolrSOr6awUAv36bdc" />
 
 		<!-- Noscript -->
 		<noscript>Tu navegador no soporta JavaScript!</noscript>
 		<?php wp_head(); ?>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-139661150-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-139661150-1');
+		</script>
 	</head>
 	<body class="<?php if (is_page('cuenta')): echo 'vyarte_cuenta'; elseif (is_shop()): echo 'vyarte_tienda'; endif ?>">
 		<?php if (is_page('contactanos')) {

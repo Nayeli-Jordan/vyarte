@@ -148,6 +148,18 @@ if(!is_admin()) {
     add_action('wp_footer', 'wp_print_head_scripts', 5);
 }
 
+//Hide item admin menu for certain user profile
+function qo_remove_menu_items() {
+    //Editor
+    if( current_user_can( 'shop_manager' ) ):
+        remove_submenu_page( 'edit.php?post_type=product',  'product_attributes' );
+
+        remove_menu_page('themes.php');
+        remove_menu_page('tools.php'); // Tools
+    endif;
+}
+add_action( 'admin_menu', 'qo_remove_menu_items' );
+
 /**
 * SUPPORT WOOCOMMERCE
 */
@@ -196,8 +208,6 @@ function custom_cart_button_text() {
     }
 }
 
-
-
 add_filter('gettext',  'translate_text');
 add_filter('ngettext',  'translate_text');
  
@@ -218,6 +228,13 @@ remove_action( 'woocommerce_review_before', 'woocommerce_review_display_gravatar
 /*Shop - Archive*/
 remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 
+/* Single product - remove tabs*/
+add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 98 );
+function woo_remove_product_tabs( $tabs ) {
+    unset( $tabs['description'] );
+    unset( $tabs['additional_information'] );
+    return $tabs;
+}
 
 /**
 * CUSTOM FUNCTIONS

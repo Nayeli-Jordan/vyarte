@@ -60,6 +60,18 @@ video.responsive-video {
 }
 
 
+// Video
+// ==========================================================================
+figure {
+	margin: 0px!important;
+	iframe { 
+		display: block;
+		max-width: 100%;
+		margin: auto; 
+	}
+}
+
+
 #sliderHome {
 	.cycle-slideshow {
 		div.cycle-slide {
